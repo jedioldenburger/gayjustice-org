@@ -1,8 +1,148 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
 const seo = {
-  title: "Missie | Stichting Vrijheid & Gelijkheid",
+  title: "Onze Missie | Stichting Vrijheid & Gelijkheid",
   description:
-    "Missie van GayJustice.org: Rechtsbescherming, gelijke behandeling en menselijke waardigheid.",
+    "Missie van GayJustice.org: Rechtsbescherming, gelijke behandeling en menselijke waardigheid — Vrijheid, Gelijkheid, Waardigheid.",
+  canonical: "/missie/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/missie/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/mission/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Over ons", url: "https://www.gayjustice.org/over-ons/" },
+    { name: "Onze missie", url: "https://www.gayjustice.org/missie/" },
+  ],
 };
-return Astro.redirect("/over-ons/#missie", 301);
 ---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Over STVG"
+    title="Onze missie"
+    lead="Stichting Vrijheid & Gelijkheid werkt aan een samenleving waarin mensen vrij en als gelijken kunnen leven — ongeacht achtergrond, overtuiging of identiteit."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px; margin-bottom: 22px;">
+        <h2>Missie</h2>
+        <p>
+          Onze missie is het bevorderen van mensenrechten met focus op
+          rechtsbescherming, gelijke behandeling en menselijke waardigheid. Wij
+          werken vanuit kennis, zorgvuldige duiding en praktische
+          handelingsperspectieven.
+        </p>
+        <p>
+          Dit betekent dat we aandacht besteden aan <a
+            href="/thema/mensenrechten">mensenrechten</a
+          > in alle dimensies, <a href="/thema/gay-rechten"
+            >juridische bescherming van homorechten</a
+          >, en gelijke behandeling in onderwijs, werk, zorg en samenleving.
+        </p>
+        <p style="margin-bottom: 0;">
+          Vrijheid, gelijkheid en waardigheid vormen het uitgangspunt van alles
+          wat wij publiceren. Lees meer in onze <a href="/transparantie"
+            >transparantie- en governancepagina</a
+          >.
+        </p>
+      </div>
+      <div class="grid cols-3">
+        <div class="surface" style="padding: 20px;">
+          <h3>Vrijheid</h3>
+          <p>
+            Vrijheid van meningsuiting en overtuiging — en het recht om zonder
+            angst te leven. Dat betekent ook <a href="/thema/gay-rechten"
+              >bescherming van LHBTIQ+ personen</a
+            > tegen vervolging, uitsluiting en geweld.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h3>Gelijkheid</h3>
+          <p>
+            Gelijke kansen en gelijke behandeling — in beleid én in de
+            dagelijkse praktijk. Lees meer over <a
+              href="/thema/voorlichting-scholen"
+              >gelijke behandeling in onderwijs</a
+            > en wat te doen bij <a href="/contact">discriminatie</a>.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h3>Waardigheid</h3>
+          <p>
+            Respect voor ieder mens — waardigheid als basis voor alles wat we
+            doen. Dit geldt ook voor <a href="/thema/homoseksuele-vluchtelingen"
+              >LHBTIQ+ vluchtelingen</a
+            > en <a href="/thema/dakloze-homoseksuele-jongeren"
+              >dakloze LHBTIQ+ jongeren</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <div class="surface" style="padding: 20px;">
+          <h2>Waar we voor staan</h2>
+          <p>
+            STVG werkt vanuit het uitgangspunt van menselijke waardigheid. We
+            zijn helder in principes, zorgvuldig in uitvoering en zoeken
+            samenwerking met partners en experts die dezelfde waarden delen.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Hoe we werken</h2>
+          <p>
+            We werken met duidelijke doelen, <a href="/transparantie"
+              >transparantie en governance</a
+            >, en respect voor iedereen die betrokken is. Onze focus ligt op
+            duurzame maatschappelijke impact via educatie, samenwerking en
+            praktische ondersteuning.
+          </p>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .grid {
+    display: grid;
+    gap: 14px;
+  }
+
+  .cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 860px) {
+    .cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cols-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .surface {
+    border: var(--border-w) solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--surface-solid);
+  }
+
+  .section {
+    margin: 40px 0;
+  }
+</style>
