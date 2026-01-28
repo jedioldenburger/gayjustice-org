@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stvg.org/sitemap-index.xml
+Sitemap: https://www.gayjustice.org/sitemap-index.xml
