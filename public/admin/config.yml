@@ -1,20 +1,19 @@
 backend:
-  name: github
-  repo: jedioldenburger/gayjustice-org
+  name: git-gateway
   branch: main
 
 # For local development with npx decap-server
 local_backend: true
 
 # Media files stored in public folder
-media_folder: public/pictures
-public_folder: /pictures
+media_folder: public/uploads
+public_folder: /uploads
 
 # Site URL for preview
 site_url: https://www.gayjustice.org
 display_url: https://www.gayjustice.org
 
-# Publish mode (editorial workflow requires GitHub OAuth)
+# Editorial workflow: drafts + review before publish
 publish_mode: editorial_workflow
 
 collections:
@@ -22,16 +21,38 @@ collections:
     label: Blog Posts
     folder: src/content/blog
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     extension: md
     format: frontmatter
+    preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Description", name: "description", widget: "text", required: true }
-      - { label: "Author", name: "author", widget: "string", default: "STVG" }
-      - { label: "Publish Date", name: "pubDatetime", widget: "datetime", required: true }
-      - { label: "Modified Date", name: "modDatetime", widget: "datetime", required: false }
-      - { label: "Language", name: "lang", widget: "select", options: ["nl", "en"], default: "nl" }
-      - { label: "Draft", name: "draft", widget: "boolean", default: false }
-      - { label: "Tags", name: "tags", widget: "list", default: ["article"] }
+      - label: "Publish Date"
+        name: "pubDatetime"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        required: true
+      - label: "Modified Date"
+        name: "modDatetime"
+        widget: "datetime"
+        format: "YYYY-MM-DDTHH:mm:ssZ"
+        required: false
+      - label: "Language"
+        name: "lang"
+        widget: "select"
+        options: ["nl", "en"]
+        default: "nl"
+      - label: "Draft"
+        name: "draft"
+        widget: "boolean"
+        default: true
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["article"]
+      - label: "Authoring Entity"
+        name: "author"
+        widget: "hidden"
+        default: "Stichting Vrijheid & Gelijkheid"
       - { label: "Body", name: "body", widget: "markdown" }
