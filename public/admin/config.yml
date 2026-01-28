@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-# For local development with npx decap-server
-local_backend: true
+# For local development only (must be false in production)
+local_backend: false
 
 # Media files stored in public folder
 media_folder: public/uploads
@@ -27,7 +27,12 @@ collections:
     preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
-      - { label: "Description", name: "description", widget: "text", required: true }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: true,
+        }
       - label: "Publish Date"
         name: "pubDatetime"
         widget: "datetime"
