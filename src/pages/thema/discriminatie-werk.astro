@@ -1,0 +1,390 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Discriminatie op het werk vanwege seksuele oriëntatie | Juridische uitleg",
+  description:
+    "Uitleg van juridische bescherming tegen discriminatie op het werk. Wat zegt de wet, welke rechten heb je, hoe dien je klacht in.",
+  canonical: "/thema/discriminatie-werk/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/thema/discriminatie-werk/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/workplace-discrimination/",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Discriminatie op het werk",
+      url: "https://www.gayjustice.org/thema/discriminatie-werk/",
+    },
+  ],
+  faq: [
+    {
+      question: "Wat verstaan we onder discriminatie op het werk?",
+      answer:
+        "Discriminatie is ongelijke behandeling vanwege seksuele oriëntatie of geslachtsidentiteit. Dit kan gebeuren bij aanstelling, loon, bevordering, taken, opleiding of ontslag.",
+    },
+    {
+      question: "Welke wet verbiedt discriminatie op het werk?",
+      answer:
+        "De Algemene Wet Gelijke Behandeling (AWGB) verbiedt discriminatie op het werk op grond van seksuele oriëntatie. Dit is een Nederlands recht dat iedereen beschermt.",
+    },
+    {
+      question: "Mag mijn werkgever me ontslaan omdat ik homoseksueel/transgender ben?",
+      answer:
+        "Nee. Ontslag om deze reden is discriminatie en onwettig. Dit kan schadevergoeding opleveren. Wel moet het ontslag redelijk zijn (bv. reorganisatie). De reden mag alleen niet seksuele oriëntatie zijn.",
+    },
+    {
+      question: "Wat kan ik doen als ik gediscrimineerd word?",
+      answer:
+        "Documenteer het gebeurde. Meld het bij je werkgever of HR. Zoek juridische hulp (Juridisch Loket, vakbond, advocaat). Dien klacht in bij CGE (Commissie Gelijke Behandeling). Stap naar de rechter (kantonrechter, ondernemingskamer).",
+    },
+    {
+      question: "Hoe bewijs ik discriminatie?",
+      answer:
+        "Je hoeft niet altijd waterdicht bewijs te hebben. Als je aannemelijk maakt dat er discriminatie plaatsvond, kan de werkgever worden verplicht het tegenovergestelde te bewijzen. Getuigen, e-mails, brieven helpen.",
+    },
+    {
+      question: "Krijg ik schadevergoeding voor discriminatie?",
+      answer:
+        "Ja. Dit kan variëren: van paar duizend euro als correctie tot veel meer bij ernstige gevallen (bv. ontslag). CGE-klachts-uitspraken bindend; rechtelijke veroordeling ook.",
+    },
+    {
+      question: "Wat als mijn werkgever beweert dat het geen discriminatie is?",
+      answer:
+        "Dan is het aan de werkgever om te bewijzen dat de reden voor behandeling *niet* je seksuele oriëntatie was. Dit is lastiger voor werkgevers dan veel denken.",
+    },
+    {
+      question: "Kan mijn werkgever mij verplichten mijn LHBTIQ+ identiteit verborgen te houden?",
+      answer:
+        "Nee. Dit is discriminatie. Je mag jezelf zichtbaar zijn. School mag niet vereisen verborgenheid. Je hebt recht op veiligheid en gelijke behandeling.",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Discriminatie op het werk"
+    lead="LHBTIQ+ personen hebben recht op gelijke behandeling op het werk. Dit thema behandelt wat de wet zegt, wat discriminatie is, en hoe je jezelf kunt beschermen."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is discriminatie op het werk?</h2>
+
+        <p>Discriminatie op het werk betekent dat je ongelijk behandeld wordt vanwege:</p>
+        <ul>
+          <li>Je seksuele oriëntatie (homo, bi, hetero)</li>
+          <li>Je geslachtsidentiteit (transgender, cisgender)</li>
+          <li>Je uitstraling die hiermee samenhangt (kleding, gedrag)</li>
+        </ul>
+
+        <h3>Voorbeelden van discriminatie</h3>
+        <ul>
+          <li>
+            <strong>Bij aanstelling:</strong> Afwijzing omdat je gay bent of ze je "ongeschikt" achten
+          </li>
+          <li>
+            <strong>Loon:</strong> Lager salaris of geen loonsverhoging vanwege je identiteit
+          </li>
+          <li>
+            <strong>Bevordering:</strong> Voorbij gezien voor management omdat ze je niet zien als "leidinggevende type"
+          </li>
+          <li>
+            <strong>Taken & opleiding:</strong> Bepaalde projecten geweigerd of geen trainingen aangeboden
+          </li>
+          <li>
+            <strong>Werkomgeving:</strong> Pesterijen, grappen, uitsluiting van sociale activiteiten
+          </li>
+          <li>
+            <strong>Ontslag:</strong> Ontslagen omdat je LHBTIQ+ bent
+          </li>
+        </ul>
+
+        <p>
+          <strong>Let op:</strong> Subtiele discriminatie telt ook. Je hoeft niet altijd direct te horen "je bent gay dus je bent ontslagen". Discriminatie kan indirect gebeuren.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader in Nederland</h2>
+
+        <h3>Algemene Wet Gelijke Behandeling (AWGB)</h3>
+        <p>
+          <strong>De AWGB verbiedt discriminatie op het werk op grond van seksuele oriëntatie.</strong> Dit is Nederlands recht dat iedereen beschermt.
+        </p>
+        <p>
+          De AWGB zegt dat werkgevers niet mogen discrimineren bij:
+        </p>
+        <ul>
+          <li>Aanstelling of tewerkstelling</li>
+          <li>Loon en arbeidsvoorwaarden</li>
+          <li>Bevordering</li>
+          <li>Opleiding en scholing</li>
+          <li>Ontslag</li>
+        </ul>
+
+        <h3>Grondwet</h3>
+        <p>
+          <strong>Artikel 1:</strong> "Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld." Dit is het fundament.
+        </p>
+
+        <h3>Europees Verdrag voor de Rechten van de Mens (EVRM)</h3>
+        <p>
+          <strong>Artikel 8 & 14:</strong> Beschermen privéleven en verbieden discriminatie. Alle EU-landen (inclusief Nederland) moeten dit naleven.
+        </p>
+
+        <h3>Arbeidswetgeving</h3>
+        <p>
+          <strong>Burgerlijk Wetboek Boek 7:</strong> Regelt arbeidsrelaties. Werkgevers hebben zorgplicht voor veiligheid en gezondheid (inclusief psychische gezondheid).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Je rechten als werknemer</h2>
+
+        <h3>Gelijke behandeling</h3>
+        <p>Je hebt recht op dezelfde behandeling als andere werknemers, ongeacht je identiteit.</p>
+
+        <h3>Veiligheid & gezondheid</h3>
+        <p>
+          Je werkgever is verantwoordelijk voor een veilige werkomgeving. Pestgedrag moet worden aangepakt.
+        </p>
+
+        <h3>Privacy</h3>
+        <p>Je werkgever mag niet vragen naar je seksuele oriëntatie of geslachtsidentiteit zonder goede reden.</p>
+
+        <h3>Geen verplichte verborgenheid</h3>
+        <p>Je mag jezelf zichtbaar zijn op het werk. Je mag je partner bekendmaken, foto's op je bureau zetten, etc.</p>
+
+        <h3>Bescherming tegen represailles</h3>
+        <p>
+          Als je klacht indient over discriminatie, mag je werkgever je niet afstraffen met minder goede beoordelingen, kleinere taken, etc.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe bewijs je discriminatie?</h2>
+
+        <p>Je hoeft niet waterdicht bewijs te hebben. Als je aannemelijk maakt dat discriminatie plaatsvond, kan de werkgever worden verplicht het tegenovergestelde te bewijzen.</p>
+
+        <h3>Dit helpt als bewijs</h3>
+        <ul>
+          <li>E-mails, berichten, documentatie van het bedrijf</li>
+          <li>Getuigenverklaringen van collega's</li>
+          <li>Loonstroken, beoordelingen, ontslagbrieven</li>
+          <li>Verklaringen van vakbond of HR</li>
+          <li>Je eigen getuigenis (kan sterk zijn)</li>
+          <li>Statistieken (bv. weinig LHBTIQ+ personen in leidinggevende rollen)</li>
+        </ul>
+
+        <h3>Documenten alles</h3>
+        <p>
+          Zet alles op papier: data, uur, wat precies gebeurde, wie waren er, hoe voelde je je. Dit helpt bij claims later.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen bij discriminatie</h2>
+
+        <h3>Stap 1: Meld het intern</h3>
+        <p>
+          Zeg het tegen je werkgever, HR, leidinggevende. Zet het liefst schriftelijk (e-mail). Dit geeft je aankomende stappen meer gewicht.
+        </p>
+
+        <h3>Stap 2: Zoek bijstand</h3>
+        <p>
+          Contact: vakbond, <a
+            href="https://www.juridischloket.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">Juridisch Loket</a
+          >, advocaat, <a
+            href="https://www.coc.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">COC</a
+          >.
+        </p>
+
+        <h3>Stap 3: Klacht bij CGE</h3>
+        <p>
+          <strong><a
+            href="https://www.ccb.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;"
+            >Commissie Gelijke Behandeling (CGE)</a
+          ></strong> behandelt klachten over discriminatie. Gratis, onafhankelijk, bindend advies.
+        </p>
+
+        <h3>Stap 4: Rechtszaak</h3>
+        <p>
+          Via <strong>kantonrechter</strong> (kleine bedragen) of <strong>Ondernemingskamer</strong> (ontslag). Advocaat helpt.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Schadevergoeding</h2>
+
+        <p>
+          Als discriminatie wordt vastgesteld, kun je schadevergoeding krijgen. Dit varieert:
+        </p>
+        <ul>
+          <li>
+            <strong>Milde gevallen:</strong> Paar duizend euro (correctie, pijn & schade)
+          </li>
+          <li>
+            <strong>Ernstige gevallen:</strong> Veel meer (bv. ontslag, jarenlange pesterijen)
+          </li>
+          <li>
+            <strong>Immateriële schade:</strong> Emotionele impact (stress, depressie)
+          </li>
+          <li>
+            <strong>Materiële schade:</strong> Inkomstenderving, ziektekosten</li>
+        </ul>
+
+        <p>
+          CGE kan schadevergoeding toekennen. Rechter ook. Bedragen verschillen per geval.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties & ondersteuning</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">COC Nederland</a
+            > — LHBTIQ+ organisatie met ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;"
+              >Commissie Gelijke Behandeling</a
+            > — Klachten behandeling
+          </li>
+          <li>
+            <a
+              href="https://www.fno.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">FNV / Vakbonden</a
+            > — Arbeidersrechten & ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Amnesty International</a
+            > — Mensenrechtenperspectief
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde thema's</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten & bescherming</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/voorlichting-scholen/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten in het onderwijs</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten & juridische kaders</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Commissie Gelijke Behandeling</a
+            > — Klachten en jurisprudentie
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Juridisch Loket</a
+            > — Informatie & advies
+          </li>
+          <li>
+            <a
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">College voor de Rechten van de Mens</a
+            > — Mensenrechtenperspectief
+          </li>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">COC Nederland</a
+            > — LHBTIQ+ resources
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 29 januari 2026</small></p>
+  </Container>
+</Layout>
