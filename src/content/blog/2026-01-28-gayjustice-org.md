@@ -3,7 +3,7 @@ title: GayJustice.org
 description: Desc GayJustice.org
 pubDatetime: 2026-01-28T19:03:00+01:00
 lang: nl
-draft: true
+draft: false
 tags:
   - article
 author: Stichting Vrijheid & Gelijkheid
