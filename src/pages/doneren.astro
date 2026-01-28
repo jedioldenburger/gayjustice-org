@@ -1,0 +1,171 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Steun rechtsbescherming en gelijke behandeling",
+  description:
+    "Steun het werk van GayJustice.org, een initiatief van Stichting Vrijheid & Gelijkheid (STVG), gericht op rechtsbescherming en gelijke behandeling voor homoseksuele mannen.",
+  canonical: "/doneren",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/doneren" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/donate" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/doneren" },
+  ],
+};
+
+const donateJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gayjustice.org/doneren#webpage",
+      url: "https://www.gayjustice.org/doneren",
+      name: "Steun rechtsbescherming en gelijke behandeling | GayJustice.org",
+      description:
+        "Steun het werk van GayJustice.org, een initiatief van Stichting Vrijheid & Gelijkheid (STVG), gericht op rechtsbescherming en gelijke behandeling voor homoseksuele mannen.",
+      isPartOf: {
+        "@id": "https://www.gayjustice.org/#website",
+      },
+      publisher: {
+        "@id": "https://www.stvg.org/#organization",
+      },
+      inLanguage: "nl-NL",
+    },
+    {
+      "@type": "DonateAction",
+      name: "Doneer voor rechtsbescherming en gelijke behandeling",
+      description:
+        "100% van de donaties ondersteunt de missie van rechtsbescherming en gelijke behandeling voor homoseksuele mannen.",
+      recipient: {
+        "@type": "Organization",
+        "@id": "https://www.stvg.org/#organization",
+        name: "Stichting Vrijheid & Gelijkheid",
+        legalName: "Stichting Vrijheid & Gelijkheid",
+      },
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.gayjustice.org/doneren",
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+      agent: {
+        "@id": "https://www.stvg.org/#organization",
+      },
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Steun dit werk"
+    lead="GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG). Jouw steun houdt informatie brongebaseerd, neutraal en veilig voor publiek gebruik."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe je kunt steunen</h2>
+        <p>
+          Deze pagina is bewust niet commercieel ingericht: geen producten, geen
+          aanbiedingen, geen prijsstellingen. Het is simpelweg een manier om een
+          publiek initiatief te steunen.
+        </p>
+        <p>
+          100% van de donaties gaat direct naar de missie: rechtsbescherming en
+          gelijke behandeling voor homoseksuele mannen.
+        </p>
+
+        <h3 style="margin-top: 20px;">Doneermogelijkheden</h3>
+        <p class="muted">
+          Betaalintegraties worden ingericht. Tot die tijd kun je direct contact
+          opnemen om een donatie af te spreken.
+        </p>
+
+        <div
+          style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px; margin-bottom: 20px;"
+        >
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Donatie%20vraag`}
+            >Neem contact op over doneren</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vertrouwen en transparantie</h2>
+        <p>
+          GayJustice.org is een initiatief van Stichting Vrijheid &amp;
+          Gelijkheid (STVG), geregistreerd bij de Kamer van Koophandel.
+        </p>
+        {
+          SITE.identifiers.kvk && (
+            <p>
+              <strong>KvK:</strong> {SITE.identifiers.kvk}
+              {SITE.identifiers.rsin && (
+                <>
+                  {" "}
+                  | <strong>RSIN:</strong> {SITE.identifiers.rsin}
+                </>
+              )}
+            </p>
+          )
+        }
+        {
+          SITE.isANBI && (
+            <p class="anbi-notice">
+              STVG is een Algemeen Nut Beogende Instelling (ANBI). Donaties zijn
+              mogelijk fiscaal aftrekbaar.
+            </p>
+          )
+        }
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a class="btn btn-outline" href="/transparantie">Transparantie</a>
+          <a
+            class="btn btn-outline"
+            href="https://www.stvg.org/transparantie"
+            target="_blank"
+            rel="noopener noreferrer">Governance (STVG)</a
+          >
+          <a class="btn btn-ghost" href="/legal/no-legal-advice"
+            >Waarom we geen juridisch advies geven</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 2026</small></p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(donateJsonLd)} />
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .anbi-notice {
+    padding: 12px 16px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: var(--radius);
+    color: var(--text);
+  }
+</style>

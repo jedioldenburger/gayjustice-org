@@ -1,0 +1,141 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Politieke verantwoordelijkheid voor homorechten",
+  description:
+    "Gelijke rechten vragen zichtbare bestuurlijke verantwoordelijkheid. GayJustice.org duidt rollen en plichten vanuit mensenrechten en staatsrecht — zonder partijpolitiek.",
+  canonical: "/thema/politieke-verantwoordelijkheid/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
+    },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Politieke verantwoordelijkheid",
+      url: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Politieke verantwoordelijkheid voor homorechten",
+  url: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
+  inLanguage: "nl-NL",
+  about: {
+    "@type": "Thing",
+    name: "Politieke verantwoordelijkheid voor gelijke rechten",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Stichting Vrijheid & Gelijkheid",
+    url: "https://www.stvg.org/",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Politieke verantwoordelijkheid voor homorechten"
+    lead="Gelijke rechten vragen meer dan goede intenties. Ze vragen zichtbare verantwoordelijkheid op bestuurlijk niveau en consistente bescherming in beleid en uitvoering."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin-top: 0;">
+          GayJustice.org stimuleert bestuurlijke aandacht voor structurele
+          vraagstukken rond homorechten en rechtsbescherming. We duiden rollen
+          en plichten vanuit mensenrechten en staatsrecht, zonder steun voor
+          politieke partijen of persoonsgerichte campagnes.
+        </p>
+        <p style="margin-bottom: 0;" class="muted">
+          Dit is algemene duiding. We doen geen partijpolitiek.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gelijke rechten en bestuurlijke plicht</h2>
+        <p>
+          Wanneer gelijke behandeling in de praktijk onder druk staat, is
+          bestuurlijke verantwoordelijkheid essentieel: duidelijke normstelling,
+          handhaving van regels en bescherming tegen discriminatie.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Nationale verantwoordelijkheid en voorbeeldfunctie</h2>
+        <p>
+          Zichtbaarheid op nationaal niveau heeft normstellende waarde. Het laat
+          zien dat gelijke rechten geen ‘bijzaak’ zijn, maar onderdeel van de
+          kern van de rechtsstaat.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Mensenrechten en staatsrecht</h2>
+        <p>
+          Mensenrechten bieden kaders en grenzen aan discriminatie. Staatsrecht
+          beschrijft verantwoordelijkheden en de inrichting van macht. Samen
+          geven ze richting aan wat bestuurders moeten doen wanneer rechten
+          onder druk staan.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat GayJustice.org agendeert</h2>
+        <ul>
+          <li>
+            uitleg van verantwoordelijkheden zonder partijpolitieke framing;
+          </li>
+          <li>
+            bronverwijzingen naar internationale mensenrechtenstandaarden;
+          </li>
+          <li>focus op structurele bescherming en uitvoerbaarheid.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Geen partijpolitiek</h2>
+        <p style="margin-top: 0;">
+          GayJustice.org spreekt geen steun uit voor politieke partijen. We
+          richten ons op normen, plichten en structurele bescherming.
+        </p>
+        <p style="margin-bottom: 0;">
+          Wil je een bron toevoegen of een nuance aanbrengen?
+          <a class="link" href="/contact/">Neem contact op</a>.
+        </p>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+</style>

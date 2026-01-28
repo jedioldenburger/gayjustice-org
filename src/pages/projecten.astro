@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Projects",
+  description:
+    "Overview of projects and initiatives connected to Stichting Vrijheid & Gelijkheid (STVG).",
+  canonical: "/projecten/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projects", url: "https://www.gayjustice.org/projecten/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="What we do"
+    title="Projects"
+    lead="We work across themes where human rights and equal treatment are under pressure in practice. Below are our current focus areas."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-3">
+        <div class="surface" style="padding: 20px;">
+          <h2>
+            <a class="card-link" href="/projecten/gay-rechten">Gay rights</a>
+          </h2>
+          <p>
+            We support equal treatment and safety for LGBT+ people. We focus on
+            clarity, credible sources, and practical routes to help and
+            expertise.
+          </p>
+          <p style="margin: 0;">
+            <a class="btn btn-outline" href="/projecten/gay-rechten"
+              >View project</a
+            >
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Refugees</h2>
+          <p>
+            We contribute to the protection of rights and human dignity for
+            refugees and asylum seekers. We share reliable information and
+            collaborate with partners for referrals and support.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Homeless youth</h2>
+          <p>
+            Young people facing (or at risk of) homelessness deserve protection
+            and a realistic path forward. We help identify bottlenecks and
+            connect people to local organizations and available support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Have an idea?</h2>
+        <p>
+          We’re open to cooperation. Send a message with your proposal or
+          question.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="/contact">Contact</a>
+          <a class="btn btn-outline" href="/missie">Mission</a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .card-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card-link:hover {
+    text-decoration: underline;
+  }
+</style>

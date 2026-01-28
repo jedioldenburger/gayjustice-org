@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Mission",
+  description:
+    "Our mission: strengthen human rights through clarity, education, and practical cooperation—grounded in sources and real-world outcomes.",
+  canonical: "/en/mission/",
+  lang: "en-US",
+  robots: "noindex,follow",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Mission", url: "https://www.gayjustice.org/mission/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Mission"
+    title="Mission"
+    lead="We work for human rights with a focus on legal protection, equal treatment, and dignity. Sustainable change happens when knowledge, dialogue, and practical action reinforce each other."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-3">
+        <div class="surface" style="padding: 20px;">
+          <h2>Freedom</h2>
+          <p>
+            Freedom of expression and belief—and the right to live without fear.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Equality</h2>
+          <p>
+            Equal opportunities and equal treatment—in policy and in everyday
+            practice.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Dignity</h2>
+          <p>
+            Respect for every person—dignity as a baseline for everything we do.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>How you can contribute</h2>
+        <p>
+          Want to collaborate, contribute, or offer support? Reach out—we’d be
+          glad to connect.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="/contact">Contact</a>
+          <a class="btn btn-outline" href="/projecten">Projects</a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

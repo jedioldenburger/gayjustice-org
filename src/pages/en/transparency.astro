@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Transparency & governance",
+  description:
+    "Transparency and governance of Stichting Vrijheid & Gelijkheid (STVG): purpose, structure, principles, and contact for questions or complaints.",
+  canonical: "/en/transparency/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/transparantie/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/transparency/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    {
+      name: "Transparency",
+      url: "https://www.gayjustice.org/en/transparency/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Accountability"
+    title="Transparency & governance"
+    lead="How Stichting Vrijheid & Gelijkheid (STVG) is structured and how we aim to be transparent in purpose, principles, and oversight."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organization</h2>
+        <p>
+          GayJustice.org is published as an initiative of Stichting Vrijheid
+          &amp; Gelijkheid (STVG), the legally responsible organization.
+        </p>
+        <p style="margin: 0;">
+          Questions? Email
+          <a class="link" href="mailto:info@gayjustice.org"
+            >info@gayjustice.org</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Principles</h2>
+        <ul>
+          <li>source-based and verifiable information</li>
+          <li>careful language and neutral framing</li>
+          <li>privacy-friendly, static website by default</li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>

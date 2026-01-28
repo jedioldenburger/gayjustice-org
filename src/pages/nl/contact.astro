@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Contact",
+  description:
+    "Neem contact op met Stichting Vrijheid & Gelijkheid (STVG) via e-mail. We reageren zo snel mogelijk.",
+  canonical: "/contact/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/contact/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/contact/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Contact", url: "https://www.gayjustice.org/contact/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Contact"
+    title="Neem contact op"
+    lead="Wil je samenwerken, een vraag stellen of steun aanbieden? Mail ons—we reageren zo snel mogelijk."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-2">
+        <div class="surface" style="padding: 22px;">
+          <h2>Direct contact</h2>
+          <p>
+            E-mail: <a href="mailto:info@gayjustice.org">info@gayjustice.org</a
+            ><br />
+            Website: <a href="https://www.gayjustice.org"
+              >https://www.gayjustice.org</a
+            >
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a
+              class="btn btn-primary"
+              href="mailto:info@gayjustice.org?subject=Contact%20via%20gayjustice.org"
+              >Mail ons</a
+            >
+            <a class="btn btn-outline" href="/nl/over-ons">Over STVG</a>
+          </div>
+          <p style="margin-top: 14px;">
+            <small
+              >Tip: voeg hier telefoon/adres/registratiegegevens toe indien
+              nodig.</small
+            >
+          </p>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Formulier (optioneel)</h2>
+          <p>
+            Deze website is momenteel statisch. Als je later een formulier wilt,
+            kun je iets koppelen zoals Netlify Forms of Formspree.
+          </p>
+          <div
+            class="surface"
+            style="padding: 14px; box-shadow: none; background: var(--ui-bg);"
+          >
+            <p style="margin:0;">
+              <small
+                >Voor nu is e-mail het snelst: <a
+                  href="mailto:info@gayjustice.org">info@gayjustice.org</a
+                >.</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

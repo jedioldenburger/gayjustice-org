@@ -1,0 +1,296 @@
+:root {
+	--max: 1120px;
+	--radius: 14px;
+	--radius-sm: 12px;
+	--shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+	--shadow-2: 0 10px 26px rgba(15, 23, 42, 0.08);
+	--shadow-hover: 0 18px 52px rgba(15, 23, 42, 0.12);
+	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+	--brand: #4f46e5;
+	--brand-ink: #ffffff;
+	--brand-soft: rgba(79, 70, 229, 0.12);
+	--accent: #16a34a;
+
+	/* Default theme (light) */
+	--bg: #f8fafc;
+	--bg-2: #ede9fe;
+	--surface-bg: rgba(255, 255, 255, 0.78);
+	--surface-solid: #ffffff;
+	/* Borders: align with header/footer (purple chrome) */
+	--border: rgba(43, 10, 87, 0.45);
+	--border-accent: #2e1065;
+	--border-w: 2px;
+	--border-color: rgba(43, 10, 87, 0.45);
+	--border-strong: rgba(43, 10, 87, 0.65);
+	--ring: 0 0 0 1px rgba(43, 10, 87, 0.16);
+	--ring-hover: 0 0 0 1px rgba(43, 10, 87, 0.28);
+	--text: rgba(15, 23, 42, 0.94);
+	--muted: rgba(15, 23, 42, 0.72);
+	--subtle: rgba(15, 23, 42, 0.58);
+
+	--ui-bg: rgba(15, 23, 42, 0.04);
+	--ui-bg-hover: rgba(15, 23, 42, 0.06);
+	--ui-border: rgba(43, 10, 87, 0.45);
+	--ui-border-hover: rgba(43, 10, 87, 0.65);
+
+	--header-bg: rgba(248, 250, 252, 0.78);
+	--header-border: rgba(15, 23, 42, 0.08);
+	--footer-bg: rgba(248, 250, 252, 0.72);
+	--footer-border: rgba(15, 23, 42, 0.1);
+
+	/* Header/footer (chrome) */
+	--chrome-bg:
+		radial-gradient(900px 260px at 15% 0%, rgba(168, 85, 247, 0.55), transparent 60%),
+		radial-gradient(700px 240px at 90% 10%, rgba(236, 72, 153, 0.35), transparent 55%),
+		linear-gradient(135deg, #130426 0%, #2b0a57 38%, #4c1d95 72%, #6d28d9 100%);
+	--chrome-border: rgba(255, 255, 255, 0.18);
+	--header-bg: var(--chrome-bg);
+	--header-border: var(--chrome-border);
+	--footer-bg: var(--chrome-bg);
+	--footer-border: var(--chrome-border);
+}
+
+html {
+	color-scheme: light;
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+	background:
+		radial-gradient(
+			1000px 520px at 10% -10%,
+			rgba(168, 85, 247, 0.22),
+			transparent 60%
+		),
+		radial-gradient(
+			1000px 520px at 90% 0%,
+			rgba(236, 72, 153, 0.16),
+			transparent 55%
+		),
+		radial-gradient(
+			900px 520px at 55% 110%,
+			rgba(109, 40, 217, 0.12),
+			transparent 60%
+		),
+		linear-gradient(180deg, var(--bg), var(--bg-2));
+	color: var(--text);
+	font-family:
+		"Google Sans",
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		Segoe UI,
+		Roboto,
+		Helvetica,
+		Arial,
+		"Apple Color Emoji",
+		"Segoe UI Emoji";
+	line-height: 1.55;
+}
+
+::selection {
+	background: rgba(79, 70, 229, 0.22);
+}
+
+a {
+	color: inherit;
+}
+
+a.link,
+a.card-link {
+	color: var(--text);
+	font-weight: 650;
+	text-decoration: none;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+}
+
+a.link:hover,
+a.card-link:hover {
+	text-decoration: underline;
+}
+
+p {
+	color: var(--muted);
+	margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0 0 0.75rem;
+	letter-spacing: -0.03em;
+}
+
+h1 {
+	font-size: clamp(2rem, 4vw, 3.1rem);
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: clamp(1.4rem, 2.2vw, 2rem);
+	line-height: 1.2;
+}
+
+small {
+	color: var(--subtle);
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max);
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.section {
+	padding: 22px 0;
+}
+
+@media (min-width: 860px) {
+	.section {
+		padding: 32px 0;
+	}
+}
+
+.surface {
+	background:
+		linear-gradient(
+			135deg,
+			rgba(255, 255, 255, 0.92),
+			rgba(255, 255, 255, 0.76)
+		),
+		var(--surface-bg);
+	border: var(--border-w) solid var(--border-color);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow), var(--ring);
+	backdrop-filter: blur(10px);
+	transition:
+		transform 0.16s var(--ease-out),
+		box-shadow 0.22s var(--ease-out),
+		border-color 0.22s var(--ease-out);
+}
+
+.surface:hover {
+	border-color: var(--border-strong);
+	box-shadow: var(--shadow-hover), var(--ring-hover);
+	transform: translateY(-1px);
+}
+
+.surface-solid {
+	background: var(--surface-solid);
+	border: var(--border-w) solid var(--border-color);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow), var(--ring);
+	transition:
+		transform 0.16s var(--ease-out),
+		box-shadow 0.22s var(--ease-out),
+		border-color 0.22s var(--ease-out);
+}
+
+.surface-solid:hover {
+	border-color: var(--border-strong);
+	box-shadow: var(--shadow-hover), var(--ring-hover);
+	transform: translateY(-1px);
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 12px 16px;
+	border-radius: var(--radius-sm);
+	text-decoration: none;
+	font-weight: 600;
+	border: 1px solid transparent;
+	transition:
+		transform 0.16s var(--ease-out),
+		background 0.22s var(--ease-out),
+		border-color 0.22s var(--ease-out),
+		box-shadow 0.22s var(--ease-out),
+		filter 0.22s var(--ease-out);
+	user-select: none;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+.btn:active {
+	transform: translateY(1px);
+}
+
+.btn-primary {
+	background: linear-gradient(135deg, #4c1d95, #6d28d9);
+	color: var(--brand-ink);
+	box-shadow: 0 10px 22px rgba(79, 70, 229, 0.18);
+}
+
+.btn-primary:hover {
+	filter: brightness(1.02);
+	box-shadow: 0 14px 28px rgba(79, 70, 229, 0.22);
+}
+
+.btn-join {
+	background: #0b1f3a;
+	color: #facc15;
+	border-color: rgba(250, 204, 21, 0.35);
+	box-shadow: 0 10px 22px rgba(11, 31, 58, 0.25);
+}
+
+.btn-join:hover {
+	filter: brightness(1.06);
+	border-color: rgba(250, 204, 21, 0.55);
+	box-shadow: 0 14px 28px rgba(11, 31, 58, 0.32);
+}
+
+.btn-ghost {
+	background: var(--ui-bg);
+	border-color: var(--ui-border);
+}
+
+.btn-ghost:hover {
+	background: var(--ui-bg-hover);
+	border-color: var(--ui-border-hover);
+}
+
+.btn-outline {
+	background: transparent;
+	border-color: var(--ui-border);
+	color: var(--text);
+}
+
+.btn-outline:hover {
+	background: var(--ui-bg);
+	border-color: var(--ui-border-hover);
+}
+
+:focus-visible {
+	outline: 3px solid rgba(79, 70, 229, 0.35);
+	outline-offset: 2px;
+}
+
+.grid {
+	display: grid;
+	gap: 16px;
+}
+
+@media (min-width: 860px) {
+	.grid.cols-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.grid.cols-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

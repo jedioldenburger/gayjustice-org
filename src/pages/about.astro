@@ -1,0 +1,263 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "About",
+  description:
+    "Stichting Vrijheid & Gelijkheid (STVG) is a human-rights initiative focused on freedom, equality, and dignity in practice.",
+  canonical: "/en/about/",
+  lang: "en-US",
+  robots: "noindex,follow",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "About", url: "https://www.gayjustice.org/about/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="About STVG"
+    title="About"
+    lead="Stichting Vrijheid & Gelijkheid (STVG) works toward a society where people can live freely and as equals—regardless of background, beliefs, or identity."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-2">
+        <div class="surface" style="padding: 20px;">
+          <h2>What we stand for</h2>
+          <p>
+            STVG works from a human-dignity-first approach. We aim to be clear
+            in principles, careful in execution, and collaborative with partners
+            and experts who share these values.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>How we work</h2>
+          <p>
+            We work with clear goals, transparency, and respect for everyone
+            involved. Our focus is durable societal impact through education,
+            cooperation, and practical support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px; margin-top: 14px;">
+        <h2 class="org-title">Organization</h2>
+
+        <h3 class="subhead org-subhead">Board</h3>
+
+        <div class="people people--single">
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/oldenburger.webp"
+              alt="Portretfoto van P.W. Oldenburger"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">
+                Founder &amp; board member <span class="pronouns">(he/him)</span
+                >
+              </div>
+              <h3 class="name">P.W. Oldenburger</h3>
+              <p class="bio">
+                Responsible for direction, decision-making, and representation
+                of Stichting Vrijheid &amp; Gelijkheid, with a focus on care,
+                transparency, and societal impact.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="divider" aria-hidden="true">⸻</div>
+
+        <h3 class="subhead advice-title">Advisory group</h3>
+        <p class="advice-text">
+          STVG is supported by an advisory group of engaged professionals who
+          serve as a content and reflection sounding board.
+        </p>
+
+        <h4 class="minorhead advice-minor">Advisory members</h4>
+
+        <div class="people">
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/wil-groot.webp"
+              alt="Portretfoto van Wil Groot"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">Maatschappelijk initiatiefnemer</div>
+              <h3 class="name">Wil Groot</h3>
+              <p class="bio">
+                Community initiator and founder of Stichting Willen en Doen.
+                Cultural-social designer, organizer, writer, and journalist.
+                Advocate for justice with a practical, action-oriented mindset.
+              </p>
+            </div>
+          </article>
+
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/andy-va-der-Geugten.webp"
+              alt="Portretfoto van Andy van der Geugten"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">
+                Professional advisor <span class="pronouns">(he/him)</span>
+              </div>
+              <h3 class="name">Andy van der Geugten</h3>
+              <p class="bio">
+                Results-focused professional with experience in coaching, event
+                management, and marketing. Background in customer service and
+                public communication across both nonprofit and commercial
+                contexts.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .people {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .people--single {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .people--single .person {
+    width: 100%;
+  }
+
+  .org-title,
+  .org-subhead {
+    text-align: center;
+  }
+
+  .advice-title,
+  .advice-minor {
+    text-align: center;
+  }
+
+  .advice-text {
+    text-align: center;
+  }
+
+  .person {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 14px;
+    border-radius: var(--radius);
+    background: var(--surface-solid);
+    border: var(--border-w) solid var(--border-color);
+    box-shadow: var(--shadow-2);
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background: var(--ui-bg);
+    border: var(--border-w) solid var(--border-color);
+    display: grid;
+    place-items: center;
+  }
+
+  img.avatar {
+    object-fit: cover;
+  }
+
+  .avatar--placeholder {
+    color: var(--text);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  .divider {
+    margin: 10px 0;
+    color: var(--subtle);
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .subhead {
+    margin: 16px 0 10px;
+  }
+
+  .minorhead {
+    margin: 16px 0 10px;
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 750;
+  }
+
+  .role {
+    font-size: 0.9rem;
+    color: var(--subtle);
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  .pronouns {
+    color: var(--subtle);
+    font-weight: 600;
+  }
+
+  .name {
+    margin: 0 0 8px;
+  }
+
+  .bio {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  @media (min-width: 860px) {
+    .people {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .people--single {
+      grid-template-columns: 1fr;
+    }
+
+    .person {
+      grid-template-columns: 96px 1fr;
+      padding: 16px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+    }
+  }
+</style>

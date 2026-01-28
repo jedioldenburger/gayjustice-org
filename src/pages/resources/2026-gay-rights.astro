@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const assets = {
+  map: "/pictures/2026-gay-rights-country-map.pdf",
+  index: "/pictures/2026-gay-rights-country-index.pdf",
+  csv: "/pictures/2026-gay-rights-country-csv.csv",
+};
+
+const seo = {
+  title: "2026 gayrechten — datasets & bronnen",
+  description:
+    "Datasets en bronbestanden (PDF/CSV) over gayrechten per land (2026), samengesteld als referentie voor onderzoek en verificatie.",
+  canonical: "/resources/2026-gay-rights/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/resources/2026-gay-rights/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/resources/2026-gay-rights/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Resources", url: "https://www.gayjustice.org/resources/" },
+    {
+      name: "2026 gay rights",
+      url: "https://www.gayjustice.org/resources/2026-gay-rights/",
+    },
+  ],
+  dataset: {
+    name: "2026 gay-rights country dataset",
+    description:
+      "Een compacte set referentiebestanden (PDF/CSV) met een overzicht per land. Gebruik dit als startpunt; verifieer altijd met primaire bronnen.",
+    url: "/resources/2026-gay-rights/",
+    keywords: ["LGBTIQ+", "rechten", "wet", "landen", "index", "2026"],
+    distribution: [
+      { encodingFormat: "application/pdf", contentUrl: assets.map },
+      { encodingFormat: "application/pdf", contentUrl: assets.index },
+      { encodingFormat: "text/csv", contentUrl: assets.csv },
+    ],
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Resources"
+    title="2026 gayrechten — datasets & bronnen"
+    lead="Een kleine referentieset (PDF/CSV) voor onderzoek, uitleg en verificatie. Gebruik dit als startpunt en controleer altijd primaire bronnen."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Downloads</h2>
+        <ul>
+          <li>
+            <a href="/pictures/2026-gay-rights-country-map.pdf"
+              >PDF: landkaart</a
+            >
+          </li>
+          <li>
+            <a href="/pictures/2026-gay-rights-country-index.pdf"
+              >PDF: landenindex</a
+            >
+          </li>
+          <li>
+            <a href="/pictures/2026-gay-rights-country-csv.csv"
+              >CSV: landenbestand</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gebruik & context</h2>
+        <p>
+          Dit materiaal is bedoeld als overzicht en navigatiehulp. Interpretatie
+          van wetten en regels verschilt per context en verandert in de tijd.
+        </p>
+        <p style="margin: 0;">
+          Zie ook: <a href="/thema/gay-rechten"
+            >Thema: Gayrechten &amp; LGBTIQ+</a
+          >
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

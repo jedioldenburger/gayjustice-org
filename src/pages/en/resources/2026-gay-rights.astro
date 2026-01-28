@@ -1,0 +1,85 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const assets = {
+  map: "/pictures/2026-gay-rights-country-map.pdf",
+  index: "/pictures/2026-gay-rights-country-index.pdf",
+  csv: "/pictures/2026-gay-rights-country-csv.csv",
+};
+
+const seo = {
+  title: "2026 gay rights — datasets & sources",
+  description:
+    "Datasets and sources (PDF/CSV) on 2026 gay rights by country, compiled as a reference for research and verification.",
+  canonical: "/en/resources/2026-gay-rights/",
+  lang: "en-US",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/resources/2026-gay-rights/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/resources/2026-gay-rights/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "Resources", url: "https://www.gayjustice.org/en/resources/" },
+    {
+      name: "2026 gay rights",
+      url: "https://www.gayjustice.org/en/resources/2026-gay-rights/",
+    },
+  ],
+  dataset: {
+    name: "2026 gay-rights country dataset",
+    description:
+      "A compact set of reference files (PDF/CSV) with an overview per country. Use this as a starting point; always verify with primary sources.",
+    url: "/en/resources/2026-gay-rights/",
+    keywords: ["LGBTIQ+", "rights", "law", "countries", "index", "2026"],
+    distribution: [
+      { encodingFormat: "application/pdf", contentUrl: assets.map },
+      { encodingFormat: "application/pdf", contentUrl: assets.index },
+      { encodingFormat: "text/csv", contentUrl: assets.csv },
+    ],
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Resources"
+    title="2026 gay rights — datasets & sources"
+    lead="A small reference set (PDF/CSV) for research, explanation, and verification. Use this as a starting point and always check primary sources."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Downloads</h2>
+        <ul>
+          <li><a href={assets.map}>PDF: country map</a></li>
+          <li><a href={assets.index}>PDF: country index</a></li>
+          <li><a href={assets.csv}>CSV: country dataset</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Use & context</h2>
+        <p>
+          This material is intended as an overview and navigation aid.
+          Interpretation of laws and regulations varies by context and changes
+          over time.
+        </p>
+        <p style="margin: 0;">
+          See also: <a href="/en/topics/gay-rights">Topic: LGBTIQ+ rights</a>
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

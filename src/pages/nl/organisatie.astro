@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+
+const seo = {
+  title: "Organisatie",
+  description: "Deze pagina is verplaatst naar /organisatie/",
+  canonical: "/organisatie/",
+  robots: "noindex,follow",
+};
+---
+
+<Layout seo={seo}>
+  <Container>
+    <section style="text-align: center; padding: 3rem 0;">
+      <h1>Deze pagina is verplaatst</h1>
+      <p style="margin: 1rem 0 2rem;">
+        <a href="/organisatie/">Ga naar /organisatie/</a>
+      </p>
+    </section>
+  </Container>
+</Layout>

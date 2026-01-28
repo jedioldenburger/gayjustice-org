@@ -1,0 +1,150 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Homoseksuele slachtoffers van de Holocaust – erkenning en herdenking",
+  description:
+    "Veel homoseksuele mensen zijn vervolgd tijdens het naziregime. GayJustice.org pleit voor structurele erkenning en zichtbare herdenking — zorgvuldig en brongebaseerd.",
+  canonical: "/thema/holocaust-homoseksuele-slachtoffers/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
+    },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Holocaust – homoseksuele slachtoffers",
+      url: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Homoseksuele slachtoffers van de Holocaust – erkenning en herdenking",
+  url: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
+  inLanguage: "nl-NL",
+  about: {
+    "@type": "Thing",
+    name: "Holocaust en vervolging van homoseksuele personen",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Stichting Vrijheid & Gelijkheid",
+    url: "https://www.stvg.org/",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Homoseksuele slachtoffers van de Holocaust: erkenning en herdenking"
+    lead="Vervolging van homoseksuele mensen is een historisch feit dat lange tijd te weinig expliciet is benoemd. Zichtbare erkenning is onderdeel van mensenrechten en historische verantwoordelijkheid."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin-top: 0;">
+          GayJustice.org pleit voor structurele erkenning en zichtbare
+          herdenking van homoseksuele slachtoffers van vervolging in de
+          Holocaust-periode. Niet om te politiseren, maar om uitsluiting uit het
+          collectieve geheugen te doorbreken.
+        </p>
+        <p style="margin-bottom: 0;" class="muted">
+          We werken met publieke, controleerbare bronnen. Dit is algemene
+          context, geen historisch archiefonderzoek en geen individueel
+          juridisch advies.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vervolging van homoseksuele mensen tijdens de Holocaust</h2>
+        <p>
+          Homoseksuele mensen zijn in verschillende vormen vervolgd: door
+          criminalisering, registratie, opsluiting en uitsluiting. De precieze
+          omvang en terminologie verschillen per bron en land, maar de kern is
+          hetzelfde: ontmenselijking en repressie.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Historische uitsluiting en gebrek aan erkenning</h2>
+        <p>
+          Erkenning blijft soms achter doordat slachtoffers niet als zodanig
+          zijn geregistreerd of omdat maatschappelijke taboes doorwerkten na de
+          oorlog. Juist daarom is expliciete herdenking belangrijk.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Herdenking als onderdeel van mensenrechten</h2>
+        <p>
+          Herdenken gaat over waardigheid: wie wordt gezien, wie wordt benoemd
+          en wie wordt beschermd in het publieke geheugen. Het is ook
+          normstellend: vervolging en uitsluiting horen niet te worden
+          gerelativeerd.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat GayJustice.org agendeert</h2>
+        <ul>
+          <li>
+            heldere, brongebaseerde uitleg van historische en juridische
+            context;
+          </li>
+          <li>
+            stimuleren van zichtbare herdenking zonder sensatie of
+            partijpolitiek;
+          </li>
+          <li>
+            verbinden van historische erkenning aan hedendaagse
+            gelijkheidsnormen.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Afbakening en bronnen</h2>
+        <p style="margin-top: 0;">
+          GayJustice.org doet geen zelfstandig historisch archiefonderzoek. We
+          verwijzen naar bestaande publicaties en instellingen en actualiseren
+          deze pagina wanneer bronnen worden aangeleverd.
+        </p>
+        <p style="margin-bottom: 0;">
+          Heb je een bron, correctie of suggestie?
+          <a class="link" href="/contact/">Neem contact op</a>.
+        </p>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+</style>

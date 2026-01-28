@@ -1,0 +1,258 @@
+---
+import Container from "./Container.astro";
+import { SITE } from "@/config/site";
+---
+
+<footer class="footer">
+  <Container>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-title footer-org-title">
+          {SITE.name}
+        </div>
+        <div class="footer-lines">
+          <div class="footer-text">
+            GayJustice.org is a project of Stichting Vrijheid &amp; Gelijkheid
+            (STVG).
+          </div>
+          <div class="footer-text">
+            STVG is the publisher and legally responsible organization for this
+            website.
+          </div>
+
+          <div
+            style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.15);"
+          >
+            <div
+              class="footer-title"
+              style="font-weight: 650; font-size: 0.95rem; margin-bottom: 6px;"
+            >
+              Stichting Vrijheid &amp; Gelijkheid (STVG)
+            </div>
+            <div class="footer-text">Sint Olofssteeg 4 C</div>
+            <div class="footer-text">1012 AK Amsterdam</div>
+            <div class="footer-text">The Netherlands</div>
+            <div style="margin-top: 8px;">
+              <div class="footer-text">
+                <strong>E-mail (STVG):</strong>
+                <a class="footer-link" href="mailto:info@stvg.org"
+                  >info@stvg.org</a
+                >
+              </div>
+              <div class="footer-text">
+                <strong>E-mail (GayJustice.org):</strong>
+                <a class="footer-link" href="mailto:info@gayjustice.org"
+                  >info@gayjustice.org</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a
+              class="footer-link"
+              href="/transparantie"
+              target="_blank"
+              rel="noopener">Transparency &amp; governance (STVG)</a
+            >
+            <a
+              class="footer-link"
+              href="/privacy"
+              target="_blank"
+              rel="noopener">Privacy</a
+            >
+            <a
+              class="footer-link"
+              href="/legal/no-legal-advice"
+              target="_blank"
+              rel="noopener">Why we don't provide legal advice</a
+            >
+          </div>
+          {
+            (SITE.identifiers.kvk || SITE.identifiers.rsin) && (
+              <div class="footer-legal">
+                {SITE.identifiers.kvk && (
+                  <span>KvK: {SITE.identifiers.kvk}</span>
+                )}
+                {SITE.identifiers.kvk && SITE.identifiers.rsin && (
+                  <span class="separator">|</span>
+                )}
+                {SITE.identifiers.rsin && (
+                  <span>RSIN: {SITE.identifiers.rsin}</span>
+                )}
+              </div>
+            )
+          }
+          {
+            SITE.isANBI && (
+              <div class="footer-anbi">
+                Recognized Public Benefit Organization (ANBI)
+              </div>
+            )
+          }
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-side">
+          <div>
+            <div class="footer-title">Navigation</div>
+            <a class="footer-link" href="/missie">Mission</a>
+            <a class="footer-link" href="/over-ons">About</a>
+            <a class="footer-link" href="/thema">Topics</a>
+            <a class="footer-link" href="/transparantie">Transparency</a>
+            <a class="footer-link" href="/privacy">Privacy</a>
+            <a class="footer-link" href="/donate">Support</a>
+            <a class="footer-link" href="/nl/">Nederlands (NL)</a>
+            <a class="footer-link" href="/legal/no-legal-advice"
+              >Why we don’t provide legal advice</a
+            >
+          </div>
+
+          <div>
+            <div class="footer-title">Human rights</div>
+            <a
+              class="footer-link"
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            >
+            <a
+              class="footer-link"
+              href="https://www.echr.coe.int/"
+              target="_blank"
+              rel="noopener noreferrer">European Court of Human Rights (ECHR)</a
+            >
+            <a
+              class="footer-link"
+              href="https://www.centruminternationaalrecht.nl"
+              target="_blank"
+              rel="noopener noreferrer">Centre for International Law (NL)</a
+            >
+            <a
+              class="footer-link"
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Netherlands Institute for Human Rights</a
+            >
+            <a
+              class="footer-link"
+              href="https://www.rijksoverheid.nl/onderwerpen/mensenrechten/mensenrechten-nederland"
+              target="_blank"
+              rel="noopener noreferrer">Dutch Government: Human rights</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</footer>
+
+<style>
+  .footer {
+    margin-top: 56px;
+    padding: 40px 0;
+    position: relative;
+    border-top: 0;
+    background: var(--footer-bg);
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: var(--border-w);
+    background: rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+  }
+
+  .footer-grid {
+    display: grid;
+    gap: 22px;
+  }
+
+  .footer-title {
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.96);
+  }
+
+  .footer-org-title {
+    color: #facc15;
+  }
+
+  .footer-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .footer-lines {
+    display: grid;
+    gap: 0;
+    line-height: 1.35;
+  }
+
+  .footer-kicker {
+    color: rgba(255, 255, 255, 0.96);
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: calc(2 * 1.35em);
+  }
+
+  .footer-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    padding: 4px 0;
+  }
+
+  .footer-link:hover {
+    color: #facc15;
+  }
+
+  .footer-side {
+    display: grid;
+    gap: 22px;
+  }
+
+  .footer-legal {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+  }
+
+  .footer-legal .separator {
+    margin: 0 6px;
+    opacity: 0.5;
+  }
+
+  .footer-anbi {
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: rgba(250, 204, 21, 0.15);
+    border: 1px solid rgba(250, 204, 21, 0.3);
+    border-radius: 4px;
+    color: #facc15;
+    font-size: 0.85em;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  @media (min-width: 860px) {
+    .footer-grid {
+      grid-template-columns: 2fr 2fr;
+      align-items: start;
+    }
+
+    .footer-side {
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+  }
+</style>

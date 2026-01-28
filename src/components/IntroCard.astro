@@ -1,0 +1,98 @@
+---
+import { SITE } from "@/config/site";
+
+type Props = {
+  logoSrc?: string;
+  logoAlt?: string;
+  kicker: string;
+  title: string;
+  subtitle: string;
+};
+
+const {
+  logoSrc = "/pictures/gayjustice-logo.webp",
+  logoAlt = `Logo of ${SITE.shortName}`,
+  kicker,
+  title,
+  subtitle,
+} = Astro.props;
+---
+
+<div class="card intro-card">
+  <img
+    class="hero-logo hero-logo-xl"
+    src={logoSrc}
+    alt={logoAlt}
+    width="1024"
+    height="224"
+    loading="eager"
+    decoding="async"
+  />
+  <p class="kicker">{kicker}</p>
+  <h1>{title}</h1>
+  <h2 class="hero-subtitle" set:html={subtitle} />
+</div>
+
+<style>
+  .card {
+    padding: 26px;
+  }
+
+  .kicker {
+    margin: 0 0 10px;
+    color: var(--subtle);
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .hero-subtitle {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  }
+
+  .hero-logo {
+    display: block;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    object-fit: contain;
+  }
+
+  .hero-logo-xl {
+    width: min(260px, 100%);
+    height: auto;
+    margin: 0 auto 12px;
+  }
+
+  .intro-card {
+    text-align: center;
+    background: var(--surface-bg);
+    border: 0;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+
+  .intro-card .hero-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 860px) {
+    .card {
+      padding: 34px;
+    }
+
+    .hero-logo-xl {
+      width: min(380px, 100%);
+      margin-bottom: 14px;
+    }
+  }
+</style>

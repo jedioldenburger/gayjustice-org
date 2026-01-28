@@ -1,0 +1,232 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+// Alias page for the common misspelling. Not a redirect.
+// Canonical points to the preferred spelling.
+const seo = {
+  title: "Transparency & governance",
+  description:
+    "Transparency and governance of Stichting Vrijheid & Gelijkheid (STVG): purpose, structure, principles, and contact for questions or complaints.",
+  canonical: "/en/transparency/",
+  lang: "en-US",
+  robots: "noindex,follow",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    {
+      name: "Transparency",
+      url: "https://www.gayjustice.org/transparency/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Accountability"
+    title="Transparency & governance"
+    lead="Stichting Vrijheid & Gelijkheid (STVG) works independently, based on sources and transparency. This page provides core information about our organization, governance, and operating principles."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px; margin-top: 14px;">
+        <h2>Organization</h2>
+        <dl class="kv">
+          <div class="kv-row">
+            <dt>Legal name</dt>
+            <dd>Stichting Vrijheid &amp; Gelijkheid</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Abbreviation</dt>
+            <dd>STVG</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Founded</dt>
+            <dd>2026</dd>
+          </div>
+          <div class="kv-row">
+            <dt>Website</dt>
+            <dd>
+              <a href="https://www.gayjustice.org">https://www.gayjustice.org</a
+              >
+            </dd>
+          </div>
+          <div class="kv-row">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:info@gayjustice.org">info@gayjustice.org</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px;">
+        <h2>Purpose</h2>
+        <p>
+          STVG works to advance and protect human rights, equal opportunities,
+          and human dignity. We focus on identifying inequality and injustice,
+          increasing knowledge and awareness, and supporting careful,
+          rule-of-law grounded solutions.
+        </p>
+        <p>
+          <strong>Purpose (statutory)</strong><br />
+          The foundation’s purpose is to advance and protect human rights and equal
+          treatment, and everything directly or indirectly connected to that.
+        </p>
+        <p style="margin: 0;" class="muted">
+          (The exact statutory wording will be published here once the notarial
+          deed is finalized.)
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px;">
+        <h2>Board &amp; structure</h2>
+
+        <h3 class="subhead">Board</h3>
+        <p>STVG is managed by a board. The board is responsible for:</p>
+        <ul>
+          <li>the strategic direction of the foundation;</li>
+          <li>decision-making on activities and spending;</li>
+          <li>legal and external representation.</li>
+        </ul>
+        <p>
+          Board members do not receive compensation for their work. Reasonable
+          expenses made for the foundation can be reimbursed.
+        </p>
+
+        <div class="divider" aria-hidden="true">⸻</div>
+
+        <h3 class="subhead">Advisory group</h3>
+        <p>
+          To support the board, STVG works with an advisory group of engaged
+          professionals. The advisory group:
+        </p>
+        <ul>
+          <li>serves as a content and reflection sounding board.</li>
+        </ul>
+        <p style="margin: 0;">
+          The composition may change depending on expertise and needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px;">
+        <h2>Financial principles</h2>
+        <ul>
+          <li>
+            funds are used exclusively to pursue the foundation’s purpose;
+          </li>
+          <li>
+            the foundation aims for transparency about spending and priorities;
+          </li>
+          <li>unnecessary overhead is avoided;</li>
+          <li>decisions are made based on demonstrable societal impact.</li>
+        </ul>
+        <p style="margin: 0;">
+          STVG is non-profit and operates independently from political,
+          commercial, or religious interests.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px;">
+        <h2>Complaints & contact</h2>
+        <p>
+          Questions, comments, corrections, or complaints can be sent to:
+          <a href="mailto:info@gayjustice.org">info@gayjustice.org</a>
+        </p>
+        <p style="margin: 0;">
+          STVG aims for a careful and substantive response within a reasonable
+          timeframe.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px;">
+        <h2>Why this page</h2>
+        <p style="margin: 0;">
+          This accountability page is part of STVG’s broader commitment to
+          openness about our organization, working methods, and responsibility.
+          Transparency is not a formality—it is a prerequisite for trust.
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .divider {
+    margin: 10px 0;
+    color: var(--subtle);
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .subhead {
+    margin: 16px 0 10px;
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+
+  .kv {
+    margin: 0;
+  }
+
+  .kv-row {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: var(--border-w) solid var(--border-color);
+  }
+
+  .kv-row:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .kv-row:last-child {
+    padding-bottom: 0;
+  }
+
+  dt {
+    margin: 0;
+    color: var(--subtle);
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--text);
+  }
+
+  @media (max-width: 540px) {
+    .kv-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>

@@ -1,0 +1,140 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Homoseksuele vluchtelingen – urgente rechtsbescherming",
+  description:
+    "Homoseksuele vluchtelingen zijn extra kwetsbaar in asiel en opvang. GayJustice.org signaleert juridische knelpunten en beschermingsrisico’s — brongebaseerd en zorgvuldig.",
+  canonical: "/thema/homoseksuele-vluchtelingen/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
+    },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Homoseksuele vluchtelingen",
+      url: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Homoseksuele vluchtelingen – urgente rechtsbescherming",
+  url: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
+  inLanguage: "nl-NL",
+  about: {
+    "@type": "Thing",
+    name: "Asiel en rechtsbescherming voor homoseksuele vluchtelingen",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Stichting Vrijheid & Gelijkheid",
+    url: "https://www.stvg.org/",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Homoseksuele vluchtelingen en urgente rechtsbescherming"
+    lead="Vluchtelingen die hun land ontvluchten vanwege seksuele oriëntatie verdienen bescherming — niet nieuwe risico’s in procedures of opvang."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin-top: 0;">
+          GayJustice.org vraagt aandacht voor rechtsbescherming en gelijke
+          behandeling van homoseksuele vluchtelingen binnen Europese en
+          nationale kaders. We richten ons op algemene normen, knelpunten en
+          betrouwbare doorverwijzing.
+        </p>
+        <p style="margin-bottom: 0;" class="muted">
+          We behandelen geen individuele asielzaken en geven geen juridisch
+          advies.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vlucht vanwege seksuele oriëntatie</h2>
+        <p>
+          In sommige landen leidt (vermeende) homoseksualiteit tot straf, geweld
+          of maatschappelijke uitsluiting. Dat creëert een reëel
+          beschermingsvraagstuk.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Kwetsbaarheid in asiel en opvang</h2>
+        <p>
+          Kwetsbaarheid kan ontstaan door afhankelijkheid van procedures, gebrek
+          aan veilige opvang, of risico’s in gedeelde voorzieningen. Bescherming
+          vraagt om zorgvuldige beoordeling én praktische veiligheid.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Europese en nationale mensenrechtenkaders</h2>
+        <p>
+          Mensenrechtenkaders stellen grenzen aan discriminatie en verplichten
+          tot bescherming. GayJustice.org ordent de bronnen en legt begrippen
+          uit in begrijpelijke taal.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Rol van GayJustice.org</h2>
+        <ul>
+          <li>analyseren en uitleggen van algemene juridische knelpunten;</li>
+          <li>
+            signaleren van beschermingsrisico’s in opvang (op structureel
+            niveau);
+          </li>
+          <li>verwijzen naar gespecialiseerde instanties en expertise.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridische grenzen</h2>
+        <p style="margin-top: 0;">
+          We doen geen casuïstiek en geen procesbijstand. Voor individuele
+          ondersteuning verwijzen we door.
+        </p>
+        <p style="margin-bottom: 0;">
+          Wil je iets toevoegen of corrigeren?
+          <a class="link" href="/contact/">Neem contact op</a>.
+        </p>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+</style>

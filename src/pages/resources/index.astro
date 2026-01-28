@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Resources",
+  description:
+    "Overzicht van resources, datasets en bronbestanden die STVG publiceert voor onderzoek en verificatie.",
+  canonical: "/resources/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/resources/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/resources/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Resources", url: "https://www.gayjustice.org/resources/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Resources"
+    title="Resources"
+    lead="Datasets en bronbestanden die we publiek beschikbaar maken."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <ul>
+          <li>
+            <a class="link" href="/resources/2026-gay-rights">
+              2026 gayrechten — datasets &amp; bronnen
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>

@@ -1,0 +1,48 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const seo = {
+  title: "Human rights",
+  description:
+    "Source-based, practical context on human rights and equal treatment.",
+  canonical: "/en/topics/human-rights/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/mensenrechten/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/human-rights/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "Topics", url: "https://www.gayjustice.org/en/topics/" },
+    {
+      name: "Human rights",
+      url: "https://www.gayjustice.org/en/topics/human-rights/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Topic"
+    title="Human rights"
+    lead="Source-based, practical context on human rights and equal treatment."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin: 0;">
+          We focus on clarity, verifiable sources, and practical context—so the
+          information can be used responsibly.
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

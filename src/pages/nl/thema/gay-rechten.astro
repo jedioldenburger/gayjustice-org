@@ -1,0 +1,147 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const seo = {
+  title: "Gayrechten",
+  description:
+    "Feiten, bronnen en datasets over gayrechten en LGBTIQ+-rechten. STVG bundelt betrouwbare informatie en wijst naar vertrouwde organisaties.",
+  canonical: "/thema/gay-rechten/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/gay-rechten/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/gay-rights/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Gayrechten",
+      url: "https://www.gayjustice.org/thema/gay-rechten/",
+    },
+  ],
+  dataset: {
+    name: "2026 gay-rights country dataset",
+    description:
+      "Landelijk overzicht van wetgeving en rechten (kaart, index, CSV).",
+    url: "/resources/2026-gay-rights/",
+    keywords: ["LGBTIQ+", "rechten", "wet", "landen", "index", "2026"],
+    distribution: [
+      {
+        encodingFormat: "application/pdf",
+        contentUrl: "/pictures/2026-gay-rights-country-map.pdf",
+      },
+      {
+        encodingFormat: "application/pdf",
+        contentUrl: "/pictures/2026-gay-rights-country-index.pdf",
+      },
+      {
+        encodingFormat: "text/csv",
+        contentUrl: "/pictures/2026-gay-rights-country-csv.csv",
+      },
+    ],
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Gayrechten & LGBTIQ+"
+    lead="Gelijke rechten zijn mensenrechten. We werken onafhankelijk en brongebaseerd aan bescherming, gelijke behandeling en veiligheid voor LGBTIQ+ mensen."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Waar dit over gaat</h2>
+        <p>
+          Dit thema gaat over gelijke behandeling in wet en praktijk. We richten
+          ons op concrete knelpunten, heldere informatie en samenwerking met
+          betrouwbare partners.
+        </p>
+        <p>
+          In Europa zijn gayrechten ook verbonden met Europees
+          mensenrechtenrecht, waaronder bescherming via het EVRM en bredere
+          Europese non-discriminatiestandaarden.
+        </p>
+        <ul>
+          <li>gelijke behandeling en non-discriminatie</li>
+          <li>veiligheid, toegang tot zorg en bescherming tegen geweld</li>
+          <li>heldere informatie over rechten en procedures</li>
+          <li>internationale standaarden en jurisprudentie als basis</li>
+          <li>praktische doorverwijzing naar hulp en expertise</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Onze positie</h2>
+        <p style="margin: 0;">
+          STVG is geen politieke partij en geen lobbyorganisatie. We werken
+          onafhankelijk, baseren ons op bronnen en kiezen zorgvuldige taal en
+          verifieerbare claims.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Datasets &amp; resources</h2>
+        <p>
+          We publiceren ook een kleine referentieset (PDF/CSV) met een overzicht
+          per land. Gebruik dit als startpunt; verifieer altijd met primaire
+          bronnen.
+        </p>
+        <p style="margin: 0;">
+          <a class="link" href="/resources/2026-gay-rights">Bekijk resources</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Betrouwbare bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer">COC Nederland</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://ilga-europe.org"
+              target="_blank"
+              rel="noopener noreferrer">ILGA-Europe</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.unfe.org"
+              target="_blank"
+              rel="noopener noreferrer">United Nations — Free &amp; Equal</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.equaldex.com"
+              target="_blank"
+              rel="noopener noreferrer">EqualDex (wetten &amp; rechten)</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 2026</small></p>
+  </Container>
+</Layout>

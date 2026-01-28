@@ -1,0 +1,94 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../../layouts/Layout.astro";
+import Container from "../../../../components/Container.astro";
+import PageHeader from "../../../../components/PageHeader.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection(
+    "blog",
+    ({ data }) => !data.draft && data.lang === "en",
+  );
+  const allTags = new Set<string>();
+  posts.forEach((post) => post.data.tags?.forEach((tag) => allTags.add(tag)));
+
+  return [...allTags].map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const posts = await getCollection(
+  "blog",
+  ({ data }) => !data.draft && data.lang === "en" && data.tags?.includes(tag),
+);
+const sortedPosts = posts.sort(
+  (a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime(),
+);
+
+const seo = {
+  title: `${tag} | Tags | Blog | STVG`,
+  description: `Articles tagged "${tag}".`,
+  canonical: `/en/blog/tags/${tag}/`,
+  lang: "en",
+  alternates: [
+    { hreflang: "nl", href: `https://www.gayjustice.org/blog/tags/` },
+    { hreflang: "en", href: `https://www.gayjustice.org/en/blog/tags/${tag}/` },
+    { hreflang: "x-default", href: `https://www.gayjustice.org/blog/tags/` },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "Blog", url: "https://www.gayjustice.org/en/blog/" },
+    { name: "Tags", url: "https://www.gayjustice.org/en/blog/tags/" },
+    { name: tag, url: `https://www.gayjustice.org/en/blog/tags/${tag}/` },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Tag"
+    title={tag}
+    lead={`${sortedPosts.length} article${sortedPosts.length !== 1 ? "s" : ""}`}
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        {
+          sortedPosts.length > 0 ? (
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              {sortedPosts.map((post) => (
+                <li style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--subtle);">
+                  <h3 style="margin: 0 0 8px;">
+                    <a
+                      href={`/en/blog/${post.slug}/`}
+                      style="color: inherit; text-decoration: none;"
+                    >
+                      {post.data.title}
+                    </a>
+                  </h3>
+                  <p style="margin: 4px 0; color: var(--muted); font-size: 0.9em;">
+                    {post.data.pubDatetime.toLocaleDateString("en-US")} •{" "}
+                    {post.data.author}
+                  </p>
+                  <p style="margin: 8px 0 0;">{post.data.description}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p style="text-align: center; color: var(--muted);">
+              No articles with this tag.
+            </p>
+          )
+        }
+      </div>
+    </section>
+
+    <nav style="margin-top: 24px; display: flex; gap: 12px;">
+      <a href="/en/blog/tags/" class="btn btn-outline">← All tags</a>
+      <a href="/en/blog/" class="btn btn-ghost">← Blog</a>
+    </nav>
+  </Container>
+</Layout>

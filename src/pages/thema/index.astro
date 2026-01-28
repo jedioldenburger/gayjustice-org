@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Thema’s",
+  description:
+    "Thema’s waar we uitleg, bronnen en wat we doen in de praktijk publiceren.",
+  canonical: "/thema/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema’s"
+    title="Thema’s"
+    lead="Kies een thema voor uitleg, bronnen en wat we doen in de praktijk."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <ul>
+          <li>
+            <a class="link" href="/thema/mensenrechten">Mensenrechten</a>
+          </li>
+          <li>
+            <a class="link" href="/thema/gay-rechten">Gayrechten / LGBTIQ+</a>
+          </li>
+          <li>
+            <a class="link" href="/thema/homomonument">Homomonument</a>
+          </li>
+          <li>
+            <a class="link" href="/thema/holocaust-homoseksuele-slachtoffers">
+              Holocaust – homoseksuele slachtoffers
+            </a>
+          </li>
+          <li>
+            <a class="link" href="/thema/voorlichting-scholen">
+              Voorlichting op scholen
+            </a>
+          </li>
+          <li>
+            <a class="link" href="/thema/dakloze-homoseksuele-jongeren">
+              Dakloze homoseksuele jongeren
+            </a>
+          </li>
+          <li>
+            <a class="link" href="/thema/homoseksuele-vluchtelingen">
+              Homoseksuele vluchtelingen
+            </a>
+          </li>
+          <li>
+            <a class="link" href="/thema/politieke-verantwoordelijkheid">
+              Politieke verantwoordelijkheid
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>

@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Become a member",
+  description:
+    "Become a member of STVG. Join a human-rights organization working for freedom, equality, and dignity with practical action.",
+  canonical: "/word-lid/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Become a member", url: "https://www.gayjustice.org/word-lid/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Support"
+    title="Become a member"
+    lead="Membership is the fastest way to support STVG long-term. We keep it simple: clear goals, sources, and a practical approach."
+  />
+
+  <Container>
+    <div class="stack">
+      <section class="surface card">
+        <p class="lead">
+          Freedom and equality sound self-evident. In practice, they aren’t.
+          They require people who step up, commit, and keep pushing where it
+          still grinds. That is exactly what we do.
+        </p>
+
+        <p>
+          Stichting Vrijheid &amp; Gelijkheid works for human rights, equal
+          opportunity, and the protection of human values and standards—not as
+          an abstract ideal, but as something that makes a measurable difference
+          in daily life. We choose impact over symbolism, action over
+          statements.
+        </p>
+
+        <p style="margin-bottom: 0;">
+          As a member you’re not a bystander—you’re part of a network that
+          drives change. You contribute to concrete initiatives, strategic
+          campaigns, and durable solutions. No endless talk—focused effort where
+          it truly matters.
+        </p>
+
+        <div class="micro">
+          <div class="micro-title">Why now</div>
+          <p class="micro-text">
+            Human rights in the Netherlands and Europe aren’t undermined by one
+            single crisis, but by a thousand small normalizations. Exclusion,
+            unequal treatment, and legal grey areas become routine. STVG exists
+            to break that normalization—with sources, cooperation, and focused
+            action.
+          </p>
+        </div>
+      </section>
+
+      <section class="surface card">
+        <h2>Membership means:</h2>
+        <ul>
+          <li>pushing back together where inequality has become “normal”</li>
+          <li>
+            combining knowledge, influence, and resources for real outcomes
+          </li>
+          <li>standing for values, even when it’s uncomfortable</li>
+        </ul>
+
+        <p>
+          This is not a club for applause at a distance. It’s a community of
+          people who understand that freedom and equality need maintenance.
+        </p>
+
+        <p class="join-cta">
+          Join us.<br />Not because it’s easy—but because it’s necessary.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
+          <a
+            class="btn btn-primary"
+            href="mailto:info@gayjustice.org?subject=Membership"
+            >Email: info@gayjustice.org</a
+          >
+          <a class="btn btn-outline" href="/transparantie">Transparency</a>
+        </div>
+      </section>
+
+      <section class="surface card">
+        <h2>Our approach</h2>
+        <p style="margin: 0;">
+          STVG works independently, based on sources, and transparently. We do
+          not run party-political campaigns, we don’t collect personal data
+          without necessity, and we publish our sources. Impact is measured by
+          change, not visibility.
+        </p>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .lead {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+
+  li {
+    margin: 0.3rem 0;
+  }
+
+  .micro {
+    margin-top: 16px;
+    padding: 14px 14px;
+    border-radius: var(--radius-sm);
+    background: color-mix(in oklab, var(--surface-solid), var(--ui-bg) 55%);
+    border: var(--border-w) solid var(--border-color);
+  }
+
+  .micro-title {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 6px;
+  }
+
+  .micro-text {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .join-cta {
+    margin: 0;
+    color: var(--text);
+    font-weight: 650;
+  }
+</style>

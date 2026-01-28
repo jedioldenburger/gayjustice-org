@@ -1,0 +1,44 @@
+---
+import SEO from "@/components/SEO.astro";
+import "@/styles/global.css";
+import { SITE } from "@/config/site";
+import type { SeoInput } from "@/utils/seo";
+
+const { seo } = Astro.props as { seo?: SeoInput };
+const htmlLang = seo?.lang || SITE.defaultLocale;
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO {...seo ?? {}} />
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://gayjustice.org/#initiative",
+        "name": "GayJustice.org",
+        "url": "https://gayjustice.org/",
+        "description": "Initiatief gericht op juridische bescherming en gelijke behandeling van homoseksuele personen.",
+        "parentOrganization": {
+          "@id": "https://stvg.org/#organisatie"
+        },
+        "nonprofitStatus": "Initiatief zonder winstoogmerk",
+        "inLanguage": "nl"
+      })}
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Homomonument Amsterdam – erkenning, herdenking en bescherming",
+  description:
+    "Het Homomonument staat voor erkenning en herdenking van vervolging. GayJustice.org vraagt aandacht voor behoud, betekenis en bescherming — brongebaseerd en zorgvuldig.",
+  canonical: "/thema/homomonument/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/homomonument/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Homomonument",
+      url: "https://www.gayjustice.org/thema/homomonument/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Homomonument Amsterdam – erkenning en bescherming",
+  url: "https://www.gayjustice.org/thema/homomonument/",
+  inLanguage: "nl-NL",
+  about: {
+    "@type": "Thing",
+    name: "Homomonument en herdenking van vervolging van homoseksuele mensen",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Stichting Vrijheid & Gelijkheid",
+    url: "https://www.stvg.org/",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Homomonument Amsterdam: erkenning, herdenking en bescherming"
+    lead="Het Homomonument is meer dan een gedenkteken. Het staat symbool voor erkenning, herdenking en waakzaamheid tegen vervolging en uitsluiting — toen én nu."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin-top: 0;">
+          GayJustice.org vraagt aandacht voor behoud, herstel en respectvolle
+          omgang met het Homomonument. Niet als ‘campagnesymbool’, maar als
+          onderdeel van mensenrechten, historische verantwoordelijkheid en
+          publieke waardigheid.
+        </p>
+        <p style="margin-bottom: 0;" class="muted">
+          We werken brongebaseerd en vermijden beschuldigingen op individueel
+          niveau. Dit is context en duiding — geen juridisch advies.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Waarom het Homomonument ertoe doet</h2>
+        <p>
+          Monumenten dragen collectief geheugen. Ze maken zichtbaar wat er is
+          gebeurd, wie is uitgesloten, en waarom waakzaamheid nodig blijft.
+          Wanneer betekenis verdwijnt, verdwijnt ook een deel van de
+          maatschappelijke weerstand tegen herhaling.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Historische en maatschappelijke betekenis</h2>
+        <p>
+          Het Homomonument verbindt herdenking met het heden: gelijke
+          behandeling is niet alleen een principe op papier, maar een
+          maatschappelijke norm die onderhoud en bescherming vraagt.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Bescherming en verantwoordelijkheid vandaag</h2>
+        <p>
+          Publieke ruimte vraagt om verantwoordelijkheid: duidelijke
+          omgangsregels, respectvolle context en zichtbaarheid van betekenis.
+          Waar nodig hoort daar ook onderhoud en herstel bij.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat GayJustice.org signaleert en agendeert</h2>
+        <ul>
+          <li>
+            duiding van de betekenis van het Homomonument vanuit mensenrechten
+            en gelijkheidsnormen;
+          </li>
+          <li>
+            structureren van feiten en bronnen over verantwoordelijkheid en
+            beheer;
+          </li>
+          <li>
+            stimuleren van samenwerking en aanspreekbaarheid — zonder
+            partijpolitiek.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Reikwijdte en afbakening</h2>
+        <p style="margin-top: 0;">
+          GayJustice.org beheert geen monumenten en behandelt geen individuele
+          geschillen. We zijn signalerend, informerend en verbindend.
+        </p>
+        <p style="margin-bottom: 0;">
+          Heb je een correctie of bron die we moeten opnemen?
+          <a class="link" href="/contact/">Neem contact op</a>.
+        </p>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+</style>

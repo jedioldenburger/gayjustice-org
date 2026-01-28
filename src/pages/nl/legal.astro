@@ -1,0 +1,923 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Juridisch",
+  description:
+    "Interne juridische pagina (beperkt) voor Stichting Vrijheid & Gelijkheid (STVG).",
+  canonical: "/legal/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/legal/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/legal/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/legal/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Juridisch", url: "https://www.gayjustice.org/legal/" },
+  ],
+  robots: "noindex,follow",
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Menu"
+    title="Juridisch"
+    lead="Deze pagina is beperkt toegankelijk."
+  />
+
+  <Container>
+    <div class="stack">
+      <section id="gate" class="surface card" aria-live="polite">
+        <h2>Toegang</h2>
+        <p>Voer het wachtwoord in om door te gaan.</p>
+
+        <form id="gate-form" class="form" autocomplete="off">
+          <label class="label" for="legal-password">Wachtwoord</label>
+          <input
+            id="legal-password"
+            class="input"
+            type="password"
+            inputmode="text"
+            placeholder="••••••••"
+            required
+          />
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="btn btn-primary" type="submit">Openen</button>
+            <button class="btn btn-outline" type="button" id="gate-clear">
+              Reset
+            </button>
+          </div>
+          <p id="gate-error" class="error" hidden>Onjuist wachtwoord.</p>
+          <p class="hint">
+            Let op: dit is een eenvoudige client-side toegang (niet geschikt
+            voor echte beveiliging).
+          </p>
+        </form>
+      </section>
+
+      <section id="legal-content" class="surface card" hidden>
+        <h1 class="doc-title">
+          MAANDELIJKSE RECURRING DONATIES - BESTE OPLOSSINGEN
+        </h1>
+
+        <p>
+          Ah, dan wordt het anders! Tikkie kan <strong>geen</strong> automatische
+          maandelijkse donaties. Laten we de beste opties bekijken voor recurring
+          donaties bij kleine bedragen:
+        </p>
+
+        <hr />
+
+        <h2>BESTE OPTIES VOOR MAANDELIJKSE DONATIES</h2>
+
+        <h2>🏆 OPTIE 1: MOLLIE (AANGERADEN)</h2>
+
+        <h3>WAAROM MOLLIE BESTE KEUZE IS:</h3>
+
+        <p><strong>Kosten:</strong></p>
+        <ul>
+          <li><strong>Geen setup kosten</strong></li>
+          <li><strong>Geen maandelijkse kosten</strong></li>
+          <li>
+            <strong>Alleen transactiekosten: 1,8% + €0,25 per transactie</strong
+            >
+          </li>
+        </ul>
+
+        <p><strong>Berekening bij jouw model:</strong></p>
+        <ul>
+          <li>30 donateurs × €5/maand = €150/maand</li>
+          <li>Kosten: €150 × 1,8% = €2,70 + (30 × €0,25) = €7,50</li>
+          <li><strong>Totaal: €10,20/maand = €122/jaar</strong></li>
+          <li>
+            Bij €1.800 jaaromzet (30 × €5 × 12) = <strong>6,8% kosten</strong>
+          </li>
+        </ul>
+
+        <p><strong>Als gemiddelde €10/maand:</strong></p>
+        <ul>
+          <li>30 donateurs × €10/maand = €300/maand = €3.600/jaar</li>
+          <li>Kosten: €300 × 1,8% = €5,40 + €7,50 = €12,90/maand</li>
+          <li><strong>Totaal: €155/jaar = 4,3% kosten</strong></li>
+        </ul>
+
+        <h3>✅ VOORDELEN MOLLIE:</h3>
+
+        <p><strong>Functionaliteit:</strong></p>
+        <ul>
+          <li>
+            ✅ <strong>Automatische maandelijkse afschrijving</strong> (set &amp;
+            forget!)
+          </li>
+          <li>✅ Donateur geeft 1x toestemming → elke maand automatisch</li>
+          <li>✅ iDEAL, creditcard, Bancontact, PayPal</li>
+          <li>✅ Simpele integratie op website</li>
+          <li>✅ Professionele checkout-pagina</li>
+        </ul>
+
+        <p><strong>Beheer:</strong></p>
+        <ul>
+          <li>✅ Dashboard met alle donateurs</li>
+          <li>✅ Zie wie actief is, wie gestopt is</li>
+          <li>✅ Automatische emails (bevestiging, bedankjes)</li>
+          <li>✅ Export naar Excel/boekhoudprogramma</li>
+          <li>✅ Nederlandse support (email + telefoon)</li>
+        </ul>
+
+        <p><strong>Flexibiliteit donateurs:</strong></p>
+        <ul>
+          <li>✅ Kunnen zelf bedrag kiezen</li>
+          <li>✅ Kunnen zelf stoppen (via email-link)</li>
+          <li>✅ Kunnen bedrag aanpassen</li>
+          <li>✅ Transparant - geen verborgen kosten</li>
+        </ul>
+
+        <p><strong>Vertrouwen:</strong></p>
+        <ul>
+          <li>✅ Nederlandse marktleider</li>
+          <li>✅ 200.000+ bedrijven gebruiken Mollie</li>
+          <li>✅ Gecertificeerd &amp; veilig</li>
+          <li>✅ Professionele uitstraling</li>
+        </ul>
+
+        <h3>❌ NADELEN MOLLIE:</h3>
+        <ul>
+          <li>❌ 4-7% transactiekosten (vs €0 bij Tikkie)</li>
+          <li>❌ Moet geïntegreerd worden op website (technisch)</li>
+          <li>❌ Minimale setup tijd (2-3 uur)</li>
+        </ul>
+
+        <h3>SETUP PROCES:</h3>
+
+        <p><strong>Stap 1: Account aanmaken (15 min)</strong></p>
+        <ul>
+          <li>Ga naar mollie.com</li>
+          <li>Gratis account (geen kosten!)</li>
+          <li>Verifieer stichting (KvK nummer)</li>
+        </ul>
+
+        <p><strong>Stap 2: Activeer "Subscriptions" (5 min)</strong></p>
+        <ul>
+          <li>In dashboard: Subscriptions inschakelen</li>
+          <li>Kies betaalmethoden (iDEAL aanbevolen)</li>
+        </ul>
+
+        <p><strong>Stap 3: Integratie op website (1-2 uur)</strong></p>
+        <ul>
+          <li>
+            <strong>Optie A: WordPress plugin (makkelijk)</strong>
+            <ul>
+              <li>Install "Mollie Forms" plugin (gratis)</li>
+              <li>Maak donatieformulier</li>
+              <li>Kies "recurring" optie</li>
+              <li>Klaar!</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Optie B: Code integration (technisch)</strong>
+            <ul>
+              <li>Gebruik Mollie API</li>
+              <li>Zelf coderen</li>
+              <li>Meer flexibiliteit</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><strong>Stap 4: Test (15 min)</strong></p>
+        <ul>
+          <li>Doe testdonatie</li>
+          <li>Check of alles werkt</li>
+          <li>Ga live!</li>
+        </ul>
+
+        <hr />
+
+        <h2>🥈 OPTIE 2: DONORBOX</h2>
+
+        <h3>VOORDELEN:</h3>
+
+        <p><strong>Kosten:</strong></p>
+        <ul>
+          <li><strong>Platform fee: 0%</strong> (gratis!)</li>
+          <li><strong>Alleen payment processing: 1,5% + €0,25</strong></li>
+          <li>Bij €3.600/jaar: <strong>€54 + €90 = €144/jaar = 4%</strong></li>
+        </ul>
+
+        <p><strong>Extra features:</strong></p>
+        <ul>
+          <li>✅ Mooiere donatie-widget dan Mollie</li>
+          <li>✅ Embedded form op website</li>
+          <li>✅ Campagne-tracking</li>
+          <li>✅ Donor management</li>
+          <li>✅ Email marketing geïntegreerd</li>
+        </ul>
+
+        <h3>❌ NADELEN:</h3>
+        <ul>
+          <li>❌ Minder bekend in Nederland</li>
+          <li>❌ Support vaak Engels</li>
+          <li>❌ Setup complexer dan Mollie</li>
+        </ul>
+
+        <hr />
+
+        <h2>🥉 OPTIE 3: STRIPE (TECHNISCH)</h2>
+
+        <h3>VOORDELEN:</h3>
+        <p><strong>Kosten:</strong></p>
+        <ul>
+          <li><strong>1,4% + €0,25 per transactie (European cards)</strong></li>
+          <li>
+            Bij €3.600/jaar: <strong>€50 + €90 = €140/jaar = 3,9%</strong>
+          </li>
+          <li><strong>Goedkoopst van allemaal!</strong></li>
+        </ul>
+
+        <p><strong>Technisch:</strong></p>
+        <ul>
+          <li>✅ Zeer flexibel</li>
+          <li>✅ Developer-friendly</li>
+          <li>✅ Mondiale standaard</li>
+          <li>✅ Uitstekende API</li>
+        </ul>
+
+        <h3>❌ NADELEN:</h3>
+        <ul>
+          <li>❌ <strong>Technisch complex</strong> (programmeren vereist)</li>
+          <li>❌ Geen kant-en-klare oplossing</li>
+          <li>❌ Moet zelf checkout bouwen</li>
+          <li>❌ Support is Engels</li>
+        </ul>
+
+        <p><strong>Alleen als:</strong></p>
+        <ul>
+          <li>Je een developer in je team hebt</li>
+          <li>Je custom website wilt</li>
+        </ul>
+
+        <hr />
+
+        <h2>🆕 OPTIE 4: PATREON (CREATIEF)</h2>
+
+        <h3>HOE HET WERKT:</h3>
+        <p>Patreon is bedoeld voor creators, maar werkt ook voor activisme!</p>
+
+        <p><strong>Voordelen:</strong></p>
+        <ul>
+          <li>✅ Maandelijkse donaties ingebouwd</li>
+          <li>✅ Community features (updates, posts)</li>
+          <li>✅ Meerdere "tiers" (€3, €5, €10/maand)</li>
+          <li>✅ Donateurs krijgen gevoel van membership</li>
+          <li>✅ Makkelijke social sharing</li>
+        </ul>
+
+        <p><strong>Kosten:</strong></p>
+        <ul>
+          <li><strong>5% + payment processing (2,9% + €0,25)</strong></li>
+          <li>Totaal: <strong>~8% transactiekosten</strong></li>
+          <li>Bij €3.600/jaar: <strong>€288/jaar</strong></li>
+        </ul>
+
+        <h3>❌ NADELEN:</h3>
+        <ul>
+          <li>❌ Duurder dan Mollie/Stripe</li>
+          <li>❌ Gericht op creators, niet NGOs</li>
+          <li>❌ Minder professioneel voor stichting</li>
+        </ul>
+
+        <hr />
+
+        <h2>VERGELIJKING: RECURRING DONATIE PLATFORMS</h2>
+
+        <div
+          class="table-wrap"
+          role="region"
+          aria-label="Vergelijkingstabel"
+          tabindex="0"
+        >
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Setup</th>
+                <th>Maand kosten</th>
+                <th>Transactie %</th>
+                <th>Totaal/jaar</th>
+                <th>Gebruiksgemak</th>
+                <th>Professioneel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Mollie</strong> ⭐</td>
+                <td>Gratis</td>
+                <td>€0</td>
+                <td>1,8% + €0,25</td>
+                <td><strong>€122-€155</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td><strong>Stripe</strong></td>
+                <td>Gratis</td>
+                <td>€0</td>
+                <td>1,4% + €0,25</td>
+                <td><strong>€140</strong></td>
+                <td>⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td><strong>Donorbox</strong></td>
+                <td>Gratis</td>
+                <td>€0</td>
+                <td>1,5% + €0,25</td>
+                <td><strong>€144</strong></td>
+                <td>⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td><strong>Patreon</strong></td>
+                <td>Gratis</td>
+                <td>€0</td>
+                <td>~8%</td>
+                <td><strong>€288</strong></td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td><strong>PayPal</strong></td>
+                <td>Gratis</td>
+                <td>€0</td>
+                <td>2,5% + €0,25</td>
+                <td><strong>€180</strong></td>
+                <td>⭐⭐⭐⭐</td>
+                <td>⭐⭐⭐</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr />
+
+        <h2>MIJN AANBEVELING: MOLLIE 🏆</h2>
+
+        <h3>WAAROM MOLLIE VOOR JOU:</h3>
+        <ol>
+          <li>
+            <strong>Nederlands &amp; Betrouwbaar</strong>
+            <ul>
+              <li>Support in Nederlands</li>
+              <li>Iedereen kent Mollie</li>
+              <li>Donateurs vertrouwen het</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Beste prijs-kwaliteit verhouding</strong>
+            <ul>
+              <li>€122-€155/jaar (4-7% kosten)</li>
+              <li>vs Patreon €288/jaar (8%)</li>
+              <li>vs ANBI €1.100+/jaar (14-30%!)</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Makkelijk te gebruiken</strong>
+            <ul>
+              <li>WordPress plugin beschikbaar</li>
+              <li>Geen technische kennis nodig</li>
+              <li>2-3 uur setup</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Professioneel</strong>
+            <ul>
+              <li>Geeft stichting serieuze uitstraling</li>
+              <li>Officiële payment provider</li>
+              <li>Automatische administratie</li>
+            </ul>
+          </li>
+        </ol>
+
+        <hr />
+
+        <h2>HYBRIDE STRATEGIE: BESTE VAN BEIDE! 🎯</h2>
+
+        <h3>COMBINEER TIKKIE + MOLLIE:</h3>
+
+        <p><strong>TIKKIE voor eenmalige kleine donaties:</strong></p>
+        <ul>
+          <li>✅ Events/Pride (spontane €1-€10 giften)</li>
+          <li>✅ Social media QR-codes</li>
+          <li>✅ Flyers/posters</li>
+          <li>✅ 100% gratis!</li>
+          <li><strong>Verwacht: €2.000-€4.000/jaar</strong></li>
+        </ul>
+
+        <p><strong>MOLLIE voor maandelijkse donateurs:</strong></p>
+        <ul>
+          <li>✅ Website "Word maandelijks donateur"</li>
+          <li>✅ Serieuze supporters (€5-€20/maand)</li>
+          <li>✅ Stabiele inkomstenstroom</li>
+          <li>✅ Automatisch - minder werk!</li>
+          <li><strong>Verwacht: €3.000-€6.000/jaar</strong></li>
+        </ul>
+
+        <p><strong>DIRECTE BANKOVERSCHRIJVING voor grote giften:</strong></p>
+        <ul>
+          <li>✅ €50+ donaties</li>
+          <li>✅ Bedrijven/organisaties</li>
+          <li>✅ 0% kosten</li>
+          <li><strong>Verwacht: €500-€1.500/jaar</strong></li>
+        </ul>
+
+        <hr />
+
+        <h2>TOTALE KOSTEN HYBRIDE MODEL</h2>
+
+        <h3>JAAR 1:</h3>
+        <div
+          class="table-wrap"
+          role="region"
+          aria-label="Totaal kosten tabel"
+          tabindex="0"
+        >
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Kanaal</th>
+                <th>Omzet</th>
+                <th>Kosten</th>
+                <th>Netto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tikkie (events)</td>
+                <td>€3.000</td>
+                <td>€0 (0%)</td>
+                <td>€3.000</td>
+              </tr>
+              <tr>
+                <td>Mollie (maandelijks)</td>
+                <td>€4.000</td>
+                <td>€160 (4%)</td>
+                <td>€3.840</td>
+              </tr>
+              <tr>
+                <td>Bank (groot)</td>
+                <td>€1.000</td>
+                <td>€0 (0%)</td>
+                <td>€1.000</td>
+              </tr>
+              <tr>
+                <td><strong>TOTAAL</strong></td>
+                <td><strong>€8.000</strong></td>
+                <td><strong>€160</strong></td>
+                <td><strong>€7.840</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Effectieve kosten: 2% van totale omzet!</strong></p>
+
+        <h3>VERGELIJKING:</h3>
+        <div
+          class="table-wrap"
+          role="region"
+          aria-label="Vergelijking strategie tabel"
+          tabindex="0"
+        >
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Strategie</th>
+                <th>Omzet</th>
+                <th>Kosten</th>
+                <th>Netto</th>
+                <th>% kosten</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Hybride (Tikkie + Mollie)</strong> ⭐</td>
+                <td>€8.000</td>
+                <td>€160</td>
+                <td><strong>€7.840</strong></td>
+                <td><strong>2%</strong> ✅</td>
+              </tr>
+              <tr>
+                <td>Alleen Mollie</td>
+                <td>€8.000</td>
+                <td>€320</td>
+                <td>€7.680</td>
+                <td>4%</td>
+              </tr>
+              <tr>
+                <td>Alleen Patreon</td>
+                <td>€8.000</td>
+                <td>€640</td>
+                <td>€7.360</td>
+                <td>8%</td>
+              </tr>
+              <tr>
+                <td>Met ANBI</td>
+                <td>€8.000</td>
+                <td>€1.500</td>
+                <td>€6.500</td>
+                <td>19% ❌</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          <strong>Winnaar: Hybride = €7.840 aan gay-/mensenrechten! 🏳️‍🌈</strong>
+        </p>
+
+        <hr />
+
+        <h2>STAPPENPLAN: HYBRIDE IMPLEMENTATIE</h2>
+
+        <h3>WEEK 1: TIKKIE SETUP (GRATIS)</h3>
+        <ol>
+          <li>✅ Download Tikkie app</li>
+          <li>✅ Maak Tikkie Collecte</li>
+          <li>✅ Genereer QR-code</li>
+          <li>✅ Ontwerp posters (Canva)</li>
+          <li>✅ Print 50 stickers (€30)</li>
+        </ol>
+        <p><strong>Kosten: €30</strong></p>
+
+        <h3>WEEK 2-3: MOLLIE SETUP (€0 SETUP)</h3>
+        <ol>
+          <li>✅ Mollie account aanmaken</li>
+          <li>✅ Verifieer stichting (KvK upload)</li>
+          <li>✅ Activeer Subscriptions</li>
+          <li>✅ Installeer WordPress plugin OF</li>
+          <li>✅ Maak custom donatie-pagina</li>
+          <li>✅ Test recurring donatie</li>
+        </ol>
+        <p><strong>Kosten: €0 (alleen transactiekosten later)</strong></p>
+
+        <h3>WEEK 4: WEBSITE UPDATEN</h3>
+        <ol>
+          <li>✅ Maak "Steun Ons" pagina met 3 opties:</li>
+        </ol>
+
+        <pre
+          class="code"><code>🏳️‍🌈 STEUN GAYRECHTEN &amp; MENSENRECHTEN
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 EENMALIG DONEREN (Tikkie)
+Scan de QR-code voor een snelle donatie
+[QR CODE]
+Perfect voor: events, spontane steun
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+💳 WORD MAANDELIJKS DONATEUR (Mollie)
+€5/maand = Jaarlijks 100 flyers
+€10/maand = Maandelijkse social media ads
+€20/maand = Voorlichtingsles op scholen
+
+[WORD DONATEUR] → Mollie button
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+🏦 GROTE GIFT? OVERMAKEN
+IBAN: NL12 ABNA 0123 4567 89
+T.n.v.: Gayrechten &amp; Mensenrechten</code></pre>
+
+        <p><strong>Kosten: €0 (eigen tijd)</strong></p>
+
+        <h3>MAAND 2: LANCERING</h3>
+        <ol>
+          <li>✅ Social media posts (Instagram/Facebook)</li>
+          <li>✅ Email naar netwerk</li>
+          <li>✅ Persoonlijk vragen eerste 10 maandelijkse donateurs</li>
+          <li>✅ Tikkie QR verspreiden bij events</li>
+        </ol>
+        <p><strong>Kosten: €0</strong></p>
+
+        <hr />
+
+        <h2>VERWACHTE RESULTATEN HYBRIDE MODEL</h2>
+
+        <h3>SCENARIO: CONSERVATIEF</h3>
+        <p><strong>Maand 1-3:</strong></p>
+        <ul>
+          <li>Tikkie (events): 15 donaties/maand × €5 = €75/maand</li>
+          <li>Mollie (recurring): 5 donateurs × €10/maand = €50/maand</li>
+          <li><strong>Totaal: €125/maand = €1.500/jaar</strong></li>
+        </ul>
+        <p><strong>Maand 4-12:</strong></p>
+        <ul>
+          <li>Tikkie: 25 donaties/maand × €6 = €150/maand</li>
+          <li>Mollie: 15 donateurs × €10/maand = €150/maand</li>
+          <li><strong>Totaal: €300/maand = €3.600/jaar</strong></li>
+        </ul>
+        <p><strong>Jaar 1 totaal: €5.000-€6.000</strong></p>
+
+        <h3>SCENARIO: REALISTISCH</h3>
+        <p><strong>Jaar 1:</strong></p>
+        <ul>
+          <li>Tikkie: €200/maand × 12 = €2.400</li>
+          <li>Mollie: 20 × €12/maand × 12 = €2.880</li>
+          <li>Bank: €50/maand × 12 = €600</li>
+          <li><strong>Totaal: €5.880/jaar</strong></li>
+        </ul>
+        <p><strong>Kosten:</strong></p>
+        <ul>
+          <li>Mollie: €140</li>
+          <li>Tikkie: €0</li>
+          <li>Website: €50</li>
+          <li>Stickers: €50</li>
+          <li><strong>Totaal kosten: €240</strong></li>
+        </ul>
+        <p><strong>Netto: €5.640 aan LGBTQ+-rechten!</strong></p>
+
+        <h3>SCENARIO: OPTIMISTISCH</h3>
+        <p><strong>Jaar 2-3 (groei):</strong></p>
+        <ul>
+          <li>Tikkie: €300/maand = €3.600/jaar</li>
+          <li>Mollie: 40 × €15/maand = €7.200/jaar</li>
+          <li>Bank: €1.200/jaar</li>
+          <li><strong>Totaal: €12.000/jaar</strong></li>
+        </ul>
+        <p><strong>Kosten: €480 (4%)</strong></p>
+        <p><strong>Netto: €11.520!</strong></p>
+
+        <hr />
+
+        <h2>EXTRA TIP: MAANDELIJKS DONATEURS WERVEN</h2>
+
+        <h3>STRATEGIE: PERSOONLIJK VRAGEN</h3>
+        <p><strong>Meest effectieve methode:</strong></p>
+        <ol>
+          <li>
+            <strong>Identificeer superfans</strong>
+            <ul>
+              <li>Mensen die vaak Tikkie doneren</li>
+              <li>Actieve social media volgers</li>
+              <li>Event-bezoekers</li>
+            </ul>
+          </li>
+          <li><strong>Persoonlijk bericht sturen:</strong></li>
+        </ol>
+
+        <pre
+          class="code"><code>Hey [Naam]! 🏳️‍🌈
+
+Ik zag dat je ons al 3x gesteund hebt via Tikkie -
+super bedankt! ❤️
+
+Zou je overwegen om maandelijks donateur te worden?
+Al vanaf €5/maand help je ons enorm:
+
+→ Vaste inkomsten = meer impact
+→ Automatisch, jij hoeft niets te doen
+→ Stop wanneer je wilt
+
+Interesse? Klik hier: [Mollie link]
+
+Geen druk hoor! Elke steun waarderen we 🙏
+
+Groetjes,
+[Je naam]</code></pre>
+
+        <p><strong>Conversie: 20-40% zegt ja!</strong></p>
+
+        <h3>Social proof tonen:</h3>
+        <pre
+          class="code"><code>🎉 AL 23 MAANDELIJKSE DONATEURS!
+
+Help je mee om naar 50 te komen?
+
+€5/maand × 50 mensen = €250/maand
+= €3.000/jaar impact!
+
+[WORD #24]</code></pre>
+
+        <hr />
+
+        <h2>CONCLUSIE &amp; ACTIE</h2>
+        <h3>✅ MIJN DEFINITIEVE ADVIES:</h3>
+
+        <p><strong>Start HYBRIDE MODEL:</strong></p>
+        <ol>
+          <li>
+            <strong>Tikkie</strong> voor spontane/event donaties (€0 kosten)
+          </li>
+          <li>
+            <strong>Mollie</strong> voor maandelijkse recurring (€140-€160/jaar)
+          </li>
+          <li><strong>Bank</strong> voor grote giften (€0 kosten)</li>
+        </ol>
+
+        <p><strong>Totale kosten: €160-€240/jaar (2-3% van omzet)</strong></p>
+        <p><strong>Besparing vs ANBI: €900-€2.100/jaar!</strong></p>
+
+        <h3>🚀 VANDAAG BEGINNEN:</h3>
+        <p>
+          <strong>Stap 1:</strong> Mollie account aanmaken (15 min)<br />
+          <strong>Stap 2:</strong> WordPress plugin installeren (30 min)<br />
+          <strong>Stap 3:</strong> Donatiepagina maken (1 uur)<br />
+          <strong>Stap 4:</strong> Eerste 10 vrienden vragen maandelijks donateur
+          te worden
+        </p>
+
+        <p><strong>Over 3 uur heb je recurring donaties live! 🎉</strong></p>
+
+        <p style="margin: 0;">
+          <strong>Vragen over:</strong><br />
+          - Mollie technisch opzetten?<br />
+          - WordPress plugin configureren?<br />
+          - Eerste donateurs werven?<br />
+          - Communicatie naar supporters?
+        </p>
+
+        <p style="margin-top: 10px; margin-bottom: 0;">
+          <strong>Laat het me weten! Ik help je graag verder! 🏳️‍🌈</strong>
+        </p>
+      </section>
+    </div>
+  </Container>
+
+  <script is:inline>
+    (() => {
+      const STORAGE_KEY = "gayjustice_legal_ok";
+      const PASSWORD = "888login";
+
+      const gate = document.getElementById("gate");
+      const content = document.getElementById("legal-content");
+      const form = document.getElementById("gate-form");
+      const input = document.getElementById("legal-password");
+      const error = document.getElementById("gate-error");
+      const clearBtn = document.getElementById("gate-clear");
+
+      const setOpen = () => {
+        if (gate) gate.hidden = true;
+        if (content) content.hidden = false;
+      };
+
+      const setClosed = () => {
+        if (gate) gate.hidden = false;
+        if (content) content.hidden = true;
+      };
+
+      const hasAccess = () => {
+        try {
+          return localStorage.getItem(STORAGE_KEY) === "1";
+        } catch {
+          return false;
+        }
+      };
+
+      const grantAccess = () => {
+        try {
+          localStorage.setItem(STORAGE_KEY, "1");
+        } catch {}
+        setOpen();
+      };
+
+      const revokeAccess = () => {
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch {}
+        if (input) input.value = "";
+        if (error) error.hidden = true;
+        setClosed();
+      };
+
+      if (hasAccess()) {
+        setOpen();
+      } else {
+        setClosed();
+      }
+
+      form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const value = input?.value ?? "";
+        const ok = value === PASSWORD;
+        if (error) error.hidden = ok;
+        if (ok) grantAccess();
+      });
+
+      clearBtn?.addEventListener("click", () => {
+        revokeAccess();
+      });
+    })();
+  </script>
+</Layout>
+
+<style>
+  .stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .form {
+    display: grid;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .label {
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .input {
+    border-radius: var(--radius-sm);
+    padding: 12px 12px;
+    background: var(--surface-solid);
+    border: var(--border-w) solid var(--border-color);
+    color: var(--text);
+    font-size: 1rem;
+  }
+
+  .error {
+    margin: 0;
+    color: rgba(185, 28, 28, 0.95);
+    font-weight: 650;
+  }
+
+  .hint {
+    margin: 0;
+    color: var(--subtle);
+    font-size: 0.92rem;
+  }
+
+  .doc-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    opacity: 0.25;
+    margin: 18px 0;
+  }
+
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-sm);
+    border: var(--border-w) solid var(--border-color);
+    background: var(--surface-solid);
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--muted);
+  }
+
+  .table th {
+    color: var(--text);
+    font-weight: 800;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .code {
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    background: rgba(0, 0, 0, 0.04);
+    border: var(--border-w) solid var(--border-color);
+    overflow-x: auto;
+    margin: 12px 0;
+  }
+
+  .code code {
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    font-size: 0.92rem;
+    color: rgba(15, 23, 42, 0.92);
+    white-space: pre;
+  }
+</style>

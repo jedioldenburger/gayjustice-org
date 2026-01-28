@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection(
+    "blog",
+    ({ data }) => !data.draft && data.lang === "nl",
+  );
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const seo = {
+  title: `${entry.data.title} | Blog | STVG`,
+  description: entry.data.description,
+  canonical: `/blog/${entry.slug}/`,
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: `https://www.gayjustice.org/blog/${entry.slug}/` },
+    { hreflang: "en", href: `https://www.gayjustice.org/en/blog/` },
+    {
+      hreflang: "x-default",
+      href: `https://www.gayjustice.org/blog/${entry.slug}/`,
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Blog", url: "https://www.gayjustice.org/blog/" },
+    {
+      name: entry.data.title,
+      url: `https://www.gayjustice.org/blog/${entry.slug}/`,
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <Container>
+    <article class="section">
+      <header style="margin-bottom: 32px;">
+        <h1 style="margin: 0 0 12px; font-size: 2em;">{entry.data.title}</h1>
+        <div style="color: var(--muted); font-size: 0.95em;">
+          <time datetime={entry.data.pubDatetime.toISOString()}>
+            {entry.data.pubDatetime.toLocaleDateString("nl-NL")}
+          </time>
+          {
+            entry.data.author && (
+              <span> • Geschreven door {entry.data.author}</span>
+            )
+          }
+        </div>
+      </header>
+      <div class="surface" style="padding: 24px;">
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    </article>
+
+    <nav style="margin-top: 32px; display: flex; gap: 12px;">
+      <a class="btn btn-outline" href="/blog/">← Terug naar blog</a>
+      <a class="btn btn-ghost" href="/">← Home</a>
+    </nav>
+  </Container>
+</Layout>

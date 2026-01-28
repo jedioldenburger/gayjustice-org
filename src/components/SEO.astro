@@ -1,0 +1,268 @@
+---
+import { SITE } from "@/config/site";
+import {
+  absUrl,
+  canonicalUrl,
+  defaultDescription,
+  ogImageUrl,
+  pageTitle,
+  type SeoInput,
+} from "@/utils/seo";
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  twitterTitle,
+  twitterDescription,
+  canonical,
+  alternates,
+  robots = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  ogImage,
+  lang = SITE.defaultLocale,
+  type = "website",
+  breadcrumbs,
+  dataset,
+  article,
+  faq,
+} = Astro.props as SeoInput;
+
+const url = canonicalUrl(canonical, Astro.url.pathname);
+const fullTitle = pageTitle(title);
+const desc = defaultDescription(description);
+const image = ogImageUrl(ogImage);
+const ogLocale = String(lang || SITE.defaultLocale).replace("-", "_");
+
+const resolvedOgTitle = ogTitle || fullTitle;
+const resolvedOgDescription = ogDescription || desc;
+const resolvedTwitterTitle = twitterTitle || resolvedOgTitle;
+const resolvedTwitterDescription = twitterDescription || resolvedOgDescription;
+
+const crumbs =
+  breadcrumbs && breadcrumbs.length
+    ? breadcrumbs
+    : [
+        { name: SITE.displayUrl ?? "Home", url: SITE.url + "/" },
+        ...(title ? [{ name: title, url }] : []),
+      ];
+
+const orgId = `${SITE.url}/#organization`;
+const stvgId = `${SITE.parentOrganization.url}#organization`;
+const siteId = `${SITE.url}/#website`;
+const pageId = `${url}#webpage`;
+const topicId = `${SITE.url}/#topic`;
+
+const stvgNode: any = {
+  "@type": ["Organization", "NGO"],
+  "@id": stvgId,
+  name: SITE.parentOrganization.name,
+  legalName: SITE.parentOrganization.legalName || SITE.parentOrganization.name,
+  alternateName: SITE.parentOrganization.shortName,
+  url: SITE.parentOrganization.url,
+  ...(SITE.parentOrganization.logo
+    ? { logo: { "@type": "ImageObject", url: SITE.parentOrganization.logo } }
+    : {}),
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE.address.streetAddress,
+    addressLocality: SITE.address.addressLocality,
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.addressCountry,
+  },
+};
+
+const orgNode: any = {
+  "@type": ["Organization", "NGO"],
+  "@id": orgId,
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  url: SITE.url + "/",
+  logo: { "@type": "ImageObject", url: absUrl(SITE.logo) },
+  description: defaultDescription(description),
+  email: SITE.email,
+  foundingDate: "2026",
+  parentOrganization: { "@id": stvgId },
+  knowsAbout: SITE.knowsAbout,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: SITE.address.streetAddress,
+    addressLocality: SITE.address.addressLocality,
+    postalCode: SITE.address.postalCode,
+    addressCountry: SITE.address.addressCountry,
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "General Inquiries",
+      email: SITE.email,
+      availableLanguage: ["en", "nl"],
+      areaServed: ["NL", "EU"],
+    },
+  ],
+};
+
+if (SITE.sameAs?.length) orgNode.sameAs = SITE.sameAs;
+
+const ids: any[] = [];
+if (SITE.identifiers.kvk)
+  ids.push({
+    "@type": "PropertyValue",
+    name: "KVK",
+    value: SITE.identifiers.kvk,
+  });
+if (SITE.identifiers.rsin)
+  ids.push({
+    "@type": "PropertyValue",
+    name: "RSIN",
+    value: SITE.identifiers.rsin,
+  });
+if (ids.length) orgNode.identifier = ids;
+
+const graph: any[] = [
+  stvgNode,
+  orgNode,
+  {
+    "@type": "Thing",
+    "@id": topicId,
+    name: "Gay rights and equal treatment",
+    sameAs: [
+      "https://www.coe.int/en/web/human-rights",
+      "https://www.echr.coe.int/",
+      "https://fra.europa.eu/",
+    ],
+  },
+  {
+    "@type": "WebSite",
+    "@id": siteId,
+    url: SITE.url + "/",
+    name: SITE.shortName,
+    publisher: { "@id": stvgId },
+    inLanguage: lang,
+    about: { "@id": topicId },
+  },
+  {
+    "@type": "WebPage",
+    "@id": pageId,
+    url,
+    name: fullTitle,
+    description: desc,
+    isPartOf: { "@id": siteId },
+    about: { "@id": topicId },
+    publisher: { "@id": stvgId },
+    inLanguage: lang,
+  },
+  {
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumbs`,
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
+  },
+];
+
+const faqJsonLd = faq?.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+
+if (dataset) {
+  graph.push({
+    "@type": "Dataset",
+    "@id": `${absUrl(dataset.url)}#dataset`,
+    name: dataset.name,
+    ...(dataset.description ? { description: dataset.description } : {}),
+    url: absUrl(dataset.url),
+    publisher: { "@id": orgId },
+    ...(dataset.sameAs?.length ? { sameAs: dataset.sameAs } : {}),
+    ...(dataset.keywords?.length
+      ? { keywords: dataset.keywords.join(", ") }
+      : {}),
+    ...(dataset.distribution?.length
+      ? {
+          distribution: dataset.distribution.map((d) => ({
+            "@type": "DataDownload",
+            encodingFormat: d.encodingFormat,
+            contentUrl: absUrl(d.contentUrl),
+          })),
+        }
+      : {}),
+    inLanguage: lang,
+  });
+}
+
+if (type === "article") {
+  graph.push({
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@id": pageId },
+    headline: article?.headline || (title ? String(title) : fullTitle),
+    ...(article?.datePublished ? { datePublished: article.datePublished } : {}),
+    ...(article?.dateModified ? { dateModified: article.dateModified } : {}),
+    author: {
+      "@type": "Organization",
+      "@id": orgId,
+      name: SITE.name,
+    },
+    publisher: { "@id": orgId },
+  });
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": graph,
+};
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={desc} />
+<link rel="canonical" href={url} />
+
+{
+  alternates?.length
+    ? alternates.map((alt) => (
+        <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+      ))
+    : null
+}
+
+<meta name="robots" content={robots} />
+<meta name="theme-color" content={SITE.themeColor} />
+
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={resolvedOgTitle} />
+<meta property="og:description" content={resolvedOgDescription} />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content={ogLocale} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={resolvedOgTitle} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={resolvedTwitterTitle} />
+<meta name="twitter:description" content={resolvedTwitterDescription} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content={resolvedTwitterTitle} />
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+{
+  faqJsonLd ? (
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  ) : null
+}

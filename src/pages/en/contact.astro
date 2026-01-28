@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Contact",
+  description:
+    "Contact Stichting Vrijheid & Gelijkheid (STVG) by email. We respond as soon as possible.",
+  canonical: "/en/contact/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/contact/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/contact/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "Contact", url: "https://www.gayjustice.org/en/contact/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Contact"
+    title="Get in touch"
+    lead="Want to collaborate, ask a question, or offer support? Email us—we respond as soon as possible."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-2">
+        <div class="surface" style="padding: 22px;">
+          <h2>Direct contact</h2>
+          <p>
+            Email: <a href="mailto:info@gayjustice.org">info@gayjustice.org</a
+            ><br />
+            Website:
+            <a href="https://www.gayjustice.org">https://www.gayjustice.org</a>
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a
+              class="btn btn-primary"
+              href="mailto:info@gayjustice.org?subject=Contact%20via%20GayJustice.org"
+              >Email us</a
+            >
+            <a class="btn btn-outline" href="/en/about">About STVG</a>
+          </div>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Form (optional)</h2>
+          <p>
+            This website is currently static. If we add a form later, we can
+            connect a provider such as Netlify Forms or Formspree.
+          </p>
+          <div
+            class="surface"
+            style="padding: 14px; box-shadow: none; background: var(--ui-bg);"
+          >
+            <p style="margin:0;">
+              <small>
+                For now, email is fastest:
+                <a href="mailto:info@gayjustice.org">info@gayjustice.org</a>.
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

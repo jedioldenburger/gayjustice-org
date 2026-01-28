@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Project: Gay rights",
+  description:
+    "Gay rights (LGBTIQ+) project page: focus, approach, and publications such as the 2026-gay-* reference files (PDF/CSV).",
+  canonical: "/projecten/gay-rechten/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projects", url: "https://www.gayjustice.org/projecten/" },
+    {
+      name: "Gay rights",
+      url: "https://www.gayjustice.org/projecten/gay-rechten/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Project"
+    title="Gay rights"
+    lead="We work for equal treatment and safety for LGBTIQ+ people. We make discrimination visible, support awareness, and when needed we refer people to the right help and expertise."
+  />
+
+  <Container>
+    <div class="stack">
+      <section class="surface card">
+        <h2>2026-gay-*</h2>
+        <p>Reference files (PDF/CSV) for research and verification.</p>
+        <ul class="files">
+          <li>
+            <a class="link" href="/pictures/2026-gay-rights-country-map.pdf"
+              >2026-gay-rights-country-map.pdf</a
+            >
+          </li>
+          <li>
+            <a class="link" href="/pictures/2026-gay-rights-country-index.pdf"
+              >2026-gay-rights-country-index.pdf</a
+            >
+          </li>
+          <li>
+            <a class="link" href="/pictures/2026-gay-rights-country-csv.csv"
+              >2026-gay-rights-country-csv.csv</a
+            >
+          </li>
+        </ul>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
+          <a class="btn btn-primary" href="/resources/2026-gay-rights"
+            >View resources</a
+          >
+          <a class="btn btn-outline" href="/contact">Contact</a>
+        </div>
+      </section>
+
+      <section class="surface card">
+        <h2>Approach</h2>
+        <p style="margin: 0;">
+          STVG works independently, based on sources, and transparently. We
+          publish sources where possible and refer to partner organizations for
+          specific support.
+        </p>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .files {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+
+  .files li {
+    margin: 0.35rem 0;
+  }
+
+  .link {
+    color: var(--text);
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+</style>

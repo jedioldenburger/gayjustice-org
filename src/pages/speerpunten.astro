@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Onderwerpen & speerpunten",
+  description:
+    "Overzicht van de speerpunten van GayJustice.org: Homomonument, Holocaust-herdenking, scholen, dakloze jongeren, vluchtelingen en bestuurlijke verantwoordelijkheid — brongebaseerd en zorgvuldig.",
+  canonical: "/speerpunten/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/speerpunten/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Speerpunten", url: "https://www.gayjustice.org/speerpunten/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Overzicht"
+    title="Onze onderwerpen en speerpunten"
+    lead="Concrete thema’s waar rechtsbescherming en gelijke behandeling in de praktijk onder druk kunnen staan. We werken feitelijk, brongebaseerd en zonder partijpolitiek."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe wij met deze onderwerpen werken</h2>
+        <ul>
+          <li>we werken feitelijk en brongebaseerd;</li>
+          <li>we vermijden persoonlijke beschuldigingen en partijpolitiek;</li>
+          <li>
+            we richten ons op structurele verbetering, niet op incidenten.
+          </li>
+        </ul>
+        <p style="margin: 0;" class="muted">
+          Deze speerpunten vormen de basis voor onze publicaties, samenwerkingen
+          en campagnes.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid cols-2">
+        <div class="surface" style="padding: 22px;">
+          <h2>Behoud en herstel van het Homomonument</h2>
+          <p>
+            Het Homomonument is een symbool van erkenning, herinnering en
+            waakzaamheid. Wij vragen aandacht voor behoud, herstel en
+            respectvolle omgang.
+          </p>
+          <a class="link" href="/thema/homomonument/">Lees meer</a>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Holocaust – homoseksuele slachtoffers</h2>
+          <p>
+            Erkenning en herdenking van vervolging is onderdeel van historische
+            verantwoordelijkheid én hedendaagse mensenrechten.
+          </p>
+          <a class="link" href="/thema/holocaust-homoseksuele-slachtoffers/">
+            Lees meer
+          </a>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Voorlichting en bewustwording op scholen</h2>
+          <p>
+            Goede, feitelijke voorlichting helpt discriminatie en uitsluiting te
+            voorkomen en bevordert veiligheid en gelijke behandeling.
+          </p>
+          <a class="link" href="/thema/voorlichting-scholen/">Lees meer</a>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Dakloze homoseksuele jongeren</h2>
+          <p>
+            Dakloosheid is vaak een stapeling van factoren. We duiden het als
+            rechtsbeschermings- en mensenrechtenvraagstuk.
+          </p>
+          <a class="link" href="/thema/dakloze-homoseksuele-jongeren/">
+            Lees meer
+          </a>
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Homoseksuele vluchtelingen</h2>
+          <p>
+            Vlucht vanwege seksuele oriëntatie vraagt bescherming, zorgvuldige
+            procedures en praktische veiligheid in opvang.
+          </p>
+          <a class="link" href="/thema/homoseksuele-vluchtelingen/">Lees meer</a
+          >
+        </div>
+
+        <div class="surface" style="padding: 22px;">
+          <h2>Politieke en bestuurlijke verantwoordelijkheid</h2>
+          <p>
+            Gelijke rechten vragen zichtbare verantwoordelijkheid en consistente
+            bescherming in beleid en uitvoering.
+          </p>
+          <a class="link" href="/thema/politieke-verantwoordelijkheid/">
+            Lees meer
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Verder lezen</h2>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-outline" href="/thema/">Alle thema’s</a>
+          <a class="btn btn-outline" href="/resources/">Resources</a>
+          <a class="btn btn-ghost" href="/transparantie/">Transparantie</a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+</style>

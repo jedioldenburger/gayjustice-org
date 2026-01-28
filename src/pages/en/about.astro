@@ -1,0 +1,56 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "About",
+  description:
+    "Stichting Vrijheid & Gelijkheid (STVG) is a human-rights initiative focused on freedom, equality, and dignity in practice.",
+  canonical: "/en/about/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/over-ons/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/about/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "About", url: "https://www.gayjustice.org/en/about/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="About"
+    title="About STVG"
+    lead="Stichting Vrijheid & Gelijkheid (STVG) is a human-rights initiative focused on freedom, equality, and dignity in practice."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>What we do</h2>
+        <p>
+          We publish source-based explanations and practical context and work on
+          small projects that support equal treatment and legal protection.
+        </p>
+        <ul>
+          <li>careful, verifiable information</li>
+          <li>links to primary sources and trusted institutions</li>
+          <li>cooperation and referrals where appropriate</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>GayJustice.org</h2>
+        <p style="margin: 0;">
+          GayJustice.org is published as an initiative of STVG.
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

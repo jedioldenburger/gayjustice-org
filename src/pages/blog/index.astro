@@ -1,0 +1,137 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const POSTS_PER_PAGE = 10;
+const currentPage = 1;
+
+const allPosts = await getCollection(
+  "blog",
+  ({ data }) => !data.draft && data.lang === "nl",
+);
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDatetime.getTime() - a.data.pubDatetime.getTime(),
+);
+
+const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+const paginatedPosts = sortedPosts.slice(0, POSTS_PER_PAGE);
+
+// Get all unique tags for sidebar
+const allTags = new Set<string>();
+allPosts.forEach((post) => post.data.tags?.forEach((tag) => allTags.add(tag)));
+
+const seo = {
+  title: "Blog | Stichting Vrijheid & Gelijkheid",
+  description:
+    "Lees artikelen over rechtsbescherming, gelijke behandeling en mensenrechten van GayJustice.org.",
+  canonical: "/blog/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/blog/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/blog/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/blog/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Blog", url: "https://www.gayjustice.org/blog/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Artikelen"
+    title="Blog"
+    lead="Lees het laatste over rechtsbescherming, gelijke behandeling en mensenrechten."
+  />
+
+  <Container>
+    <!-- Blog navigation -->
+    <nav
+      style="margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center;"
+    >
+      <a href="/blog/search/" class="btn btn-outline">Zoeken</a>
+      <a href="/blog/tags/" class="btn btn-outline">Tags</a>
+      <a href="/rss.xml" class="btn btn-ghost" target="_blank">RSS Feed</a>
+    </nav>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        {
+          paginatedPosts.length > 0 ? (
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              {paginatedPosts.map((post) => (
+                <li style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--subtle);">
+                  <h3 style="margin: 0 0 8px;">
+                    <a
+                      href={`/blog/${post.slug}/`}
+                      style="color: inherit; text-decoration: none;"
+                    >
+                      {post.data.title}
+                    </a>
+                  </h3>
+                  <p style="margin: 4px 0; color: var(--muted); font-size: 0.9em;">
+                    {post.data.pubDatetime.toLocaleDateString("nl-NL")} •{" "}
+                    {post.data.author}
+                  </p>
+                  <p style="margin: 8px 0 0; color: var(--text);">
+                    {post.data.description}
+                  </p>
+                  {post.data.tags && post.data.tags.length > 0 && (
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+                      {post.data.tags.map((tag) => (
+                        <a
+                          href={`/blog/tags/${tag}/`}
+                          style="font-size: 0.8em; padding: 2px 8px; background: var(--subtle); border-radius: 4px; text-decoration: none; color: var(--muted);"
+                        >
+                          {tag}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p style="text-align: center; color: var(--muted); margin: 0;">
+              Nog geen blog posts. Kom binnenkort terug!
+            </p>
+          )
+        }
+
+        {/* Pagination */}
+        {
+          totalPages > 1 && (
+            <nav style="margin-top: 32px; display: flex; justify-content: center; gap: 8px;">
+              {currentPage > 1 && (
+                <a
+                  href={
+                    currentPage === 2
+                      ? "/blog/"
+                      : `/blog/page/${currentPage - 1}/`
+                  }
+                  class="btn btn-outline"
+                >
+                  ← Vorige
+                </a>
+              )}
+              <span style="padding: 8px 16px; color: var(--muted);">
+                Pagina {currentPage} van {totalPages}
+              </span>
+              {currentPage < totalPages && (
+                <a
+                  href={`/blog/page/${currentPage + 1}/`}
+                  class="btn btn-outline"
+                >
+                  Volgende →
+                </a>
+              )}
+            </nav>
+          )
+        }
+      </div>
+    </section>
+  </Container>
+</Layout>

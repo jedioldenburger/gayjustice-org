@@ -1,0 +1,172 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import IntroCard from "../../components/IntroCard.astro";
+
+const seo = {
+  title: "GayJustice.org – Legal Protection & Equal Treatment | STVG",
+  description:
+    "GayJustice.org is an initiative of Stichting Vrijheid & Gelijkheid (STVG), focused on legal protection and equal treatment for gay people where discrimination, exclusion, or unequal treatment occurs.",
+  canonical: "/en/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+  ],
+  faq: [
+    {
+      question: "Do you provide legal advice?",
+      answer:
+        "No. We provide general, source-based information and referrals. We do not take on individual cases or provide tailored legal advice.",
+    },
+    {
+      question: "Who is behind GayJustice.org?",
+      answer:
+        "GayJustice.org is an initiative of Stichting Vrijheid & Gelijkheid (STVG).",
+    },
+    {
+      question: "How can I contribute?",
+      answer:
+        "You can contribute by sharing sources, proposing corrections, collaborating on projects, or supporting the initiative.",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <Container>
+    <section class="section">
+      <IntroCard
+        kicker="Legal protection • Equal treatment"
+        title="GayJustice.org"
+        subtitle="A project of Stichting Vrijheid & Gelijkheid"
+        logoAlt="Logo of GayJustice.org"
+      />
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          GayJustice.org provides factual and legal context on legal protection
+          and equal treatment for homosexual persons, where discrimination,
+          exclusion or unequal treatment persists.
+        </p>
+
+        <p>
+          The platform is a project of Stichting Vrijheid &amp; Gelijkheid
+          (STVG) and focuses on structural human rights issues within European
+          and national legal frameworks. GayJustice.org operates independently,
+          non-commercially and without political campaigning.
+        </p>
+
+        <div class="divider" aria-hidden="true">⸻</div>
+
+        <h2>How to use this site</h2>
+        <p>
+          Use the resources of GayJustice.org to understand legal rights and
+          protection, recognize patterns of discrimination or unequal treatment,
+          and find reliable sources.
+        </p>
+        <ul>
+          <li>Start with the Topics pages for structured overviews.</li>
+          <li>Use linked sources for verification and citation.</li>
+          <li>Contact us for collaboration, corrections or contributions.</li>
+        </ul>
+
+        <div class="divider" aria-hidden="true">⸻</div>
+
+        <h2>Stichting Vrijheid &amp; Gelijkheid</h2>
+        <p>
+          STVG is the legally responsible organization behind GayJustice.org.
+          All content and operations of this platform are governed by the
+          statutes and governance guidelines of STVG.
+        </p>
+        <p style="margin-bottom: 0;">
+          STVG operates independently, non-commercially and without political
+          affiliations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>What we’re working on</h2>
+        <div class="stack">
+          <ul>
+            <li>
+              Topic pages with structured overviews and links to primary
+              sources.
+            </li>
+            <li>
+              Small reference datasets (PDF/CSV) for research and verification.
+            </li>
+            <li>Practical guidance on where to go for support or referral.</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/en/topics">Browse topics</a>
+            <a class="btn btn-outline" href="/en/resources">View resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Contact</h2>
+        <div class="stack">
+          <p>
+            For collaboration, corrections, or contributions, email:
+            <a class="link" href="mailto:info@gayjustice.org"
+              >info@gayjustice.org</a
+            >.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/en/contact">Contact</a>
+            <a class="btn btn-outline" href="/en/about">About STVG</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Scope &amp; limits</h2>
+        <div class="stack">
+          <ul>
+            <li>We do not provide individual legal advice.</li>
+            <li>We aim for careful, source-based and verifiable claims.</li>
+            <li>
+              We may link to partner organizations for support, referral, or
+              official guidance.
+            </li>
+          </ul>
+          <p style="margin:0;">
+            Read more:
+            <a class="link" href="/legal/no-legal-advice"
+              >why we do not provide legal advice</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <style>
+    .stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .divider {
+      text-align: center;
+      color: var(--muted);
+      margin: 26px 0;
+      letter-spacing: 0.2em;
+      user-select: none;
+    }
+  </style>
+</Layout>

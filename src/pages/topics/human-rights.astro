@@ -1,0 +1,128 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Human rights",
+  description:
+    "Source-based, practical context on human rights and equal treatment.",
+  canonical: "/en/topics/human-rights/",
+  lang: "en-US",
+  robots: "noindex,follow",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Topics", url: "https://www.gayjustice.org/topics/" },
+    {
+      name: "Human rights",
+      url: "https://www.gayjustice.org/topics/human-rights/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Topic"
+    title="Human rights"
+    lead="We focus on freedom, equality, and dignity in practice. We work independently and based on sources—with attention to people, rules, and implementation."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>What this is about</h2>
+        <p>
+          Human rights are not just abstract principles—they are daily reality:
+          equal treatment, access to services, protection from discrimination,
+          and the assurance that rules are applied fairly.
+        </p>
+        <p>
+          In Europe, these protections are shaped by European human rights law
+          and standards, including the European Convention on Human Rights
+          (ECHR) and equal-treatment principles that influence EU law and
+          practice.
+        </p>
+
+        <ul>
+          <li>equal treatment and non-discrimination</li>
+          <li>access to justice, healthcare, and education</li>
+          <li>protection of vulnerable groups</li>
+          <li>fair implementation of policy and law</li>
+          <li>transparency, sources, and verifiability</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Our position</h2>
+        <p style="margin: 0;">
+          STVG is not a political party and not a lobbying firm. We work
+          independently, publish sources, and prefer cooperation and practical
+          solutions.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Reliable sources</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              rel="noopener noreferrer"
+              target="_blank">European Court of Human Rights (ECHR)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.coe.int/en/web/human-rights"
+              rel="noopener noreferrer"
+              target="_blank">Council of Europe — Human Rights</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://fra.europa.eu/"
+              rel="noopener noreferrer"
+              target="_blank">EU Agency for Fundamental Rights (FRA)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer">College voor de Rechten van de Mens</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.rijksoverheid.nl/onderwerpen/mensenrechten/mensenrechten-nederland"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Rijksoverheid — Mensenrechten in Nederland</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.centruminternationaalrecht.nl"
+              target="_blank"
+              rel="noopener noreferrer">Centrum voor Internationaal Recht</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Last updated: 2026</small></p>
+  </Container>
+</Layout>

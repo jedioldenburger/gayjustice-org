@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Privacy policy",
+  description: "Privacy policy of GayJustice.org (initiative of STVG).",
+  canonical: "/privacy/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Privacy", url: "https://www.gayjustice.org/privacy/" },
+  ],
+  robots: "noindex,follow",
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Privacy"
+    title="Privacy policy"
+    lead="This website is static and does not use tracking by default. If you email us, we only use your information to respond."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Data processing</h2>
+        <p>
+          If you send us an email, we receive the information contained in that
+          email. We use it solely to respond and do not keep it longer than
+          necessary.
+        </p>
+        <p>
+          Want us to delete or correct information? Contact us via
+          <a href="mailto:info@gayjustice.org">info@gayjustice.org</a>.
+        </p>
+        <p>
+          <small
+            >Tip: add details later about hosting, server logs, and any forms
+            (if introduced).</small
+          >
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const seo = {
+  title: "Thema’s",
+  description:
+    "Thema’s waar we uitleg, bronnen en wat we doen in de praktijk publiceren.",
+  canonical: "/thema/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema’s"
+    title="Thema’s"
+    lead="Kies een thema voor uitleg, bronnen en wat we doen in de praktijk."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <ul>
+          <li>
+            <a class="link" href="/nl/thema/mensenrechten">Mensenrechten</a>
+          </li>
+          <li>
+            <a class="link" href="/nl/thema/gay-rechten">Gayrechten / LGBTIQ+</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>

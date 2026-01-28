@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Stichting Vrijheid & Gelijkheid (STVG)",
+  description:
+    "STVG is de juridisch verantwoordelijke organisatie achter GayJustice.org. Deze pagina is verplaatst naar een nieuwe URL.",
+  canonical: "/stvg/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/stvg/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/about/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "STVG", url: "https://www.gayjustice.org/stvg/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Legacy (NL)"
+    title="Stichting Vrijheid & Gelijkheid (STVG)"
+    lead="Deze pagina is verplaatst. Je wordt verwezen naar de actuele URL."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p style="margin: 0;">
+          Ga naar:
+          <a class="link" href="/stvg/">https://www.gayjustice.org/stvg/</a>
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>

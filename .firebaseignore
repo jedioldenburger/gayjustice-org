@@ -1,0 +1,22 @@
+# Firebase Hosting deploy ignore
+# (hosting.public is dist/, but ignore still helps for other deploy contexts)
+
+node_modules
+.firebase
+.firebase/**
+
+# Source folders
+automation
+scripts
+shots
+pictures
+src
+
+# Tooling
+**/.DS_Store
+**/*.log
+firebase-debug.log
+
+# Git
+.git
+.gitignore

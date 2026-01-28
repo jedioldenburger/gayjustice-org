@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const posts = await getCollection(
+  "blog",
+  ({ data }) => !data.draft && data.lang === "nl",
+);
+
+// Extract all unique tags with counts
+const tagCounts = new Map<string, number>();
+posts.forEach((post) => {
+  post.data.tags?.forEach((tag) => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+
+const sortedTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+
+const seo = {
+  title: "Tags | Blog | STVG",
+  description: "Blader door blog artikelen per onderwerp.",
+  canonical: "/blog/tags/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/blog/tags/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/blog/tags/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/blog/tags/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Blog", url: "https://www.gayjustice.org/blog/" },
+    { name: "Tags", url: "https://www.gayjustice.org/blog/tags/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Onderwerpen"
+    title="Tags"
+    lead="Blader door artikelen per onderwerp."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        {
+          sortedTags.length > 0 ? (
+            <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+              {sortedTags.map(([tag, count]) => (
+                <a
+                  href={`/blog/tags/${tag}/`}
+                  class="btn btn-outline"
+                  style="display: inline-flex; align-items: center; gap: 6px;"
+                >
+                  {tag}
+                  <span style="background: var(--subtle); padding: 2px 8px; border-radius: 12px; font-size: 0.85em;">
+                    {count}
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <p style="text-align: center; color: var(--muted);">
+              Nog geen tags.
+            </p>
+          )
+        }
+      </div>
+    </section>
+
+    <nav style="margin-top: 24px;">
+      <a href="/blog/" class="btn btn-ghost">← Terug naar blog</a>
+    </nav>
+  </Container>
+</Layout>

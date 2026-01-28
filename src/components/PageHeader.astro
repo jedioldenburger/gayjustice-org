@@ -1,0 +1,52 @@
+---
+import Container from "./Container.astro";
+
+const { eyebrow = "", title, lead = "" } = Astro.props;
+
+if (!title) {
+  throw new Error("PageHeader requires a 'title' prop");
+}
+---
+
+<section class="page-header">
+  <Container>
+    {eyebrow ? <p class="eyebrow">{eyebrow}</p> : null}
+    <h1 class="title">{title}</h1>
+    {lead ? <p class="lead">{lead}</p> : null}
+  </Container>
+</section>
+
+<style>
+  .page-header {
+    padding: 42px 0 18px;
+  }
+
+  .eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    font-weight: 650;
+  }
+
+  .title {
+    margin: 0 0 12px;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+  }
+
+  .lead {
+    margin: 0;
+    max-width: 70ch;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 860px) {
+    .page-header {
+      padding: 58px 0 22px;
+    }
+  }
+</style>

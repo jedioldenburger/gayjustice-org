@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Topics",
+  description:
+    "Topics where we publish explanations, sources, and what we do in practice.",
+  canonical: "/en/topics/",
+  lang: "en-US",
+  robots: "noindex,follow",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Topics", url: "https://www.gayjustice.org/topics/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Topics"
+    title="Topics"
+    lead="Choose a topic for explanations, sources, and what we do in practice."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <ul>
+          <li><a class="link" href="/topics/human-rights">Human rights</a></li>
+          <li>
+            <a class="link" href="/topics/gay-rights">Gay rights / LGBT+</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>

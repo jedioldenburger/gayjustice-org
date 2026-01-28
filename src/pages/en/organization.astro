@@ -1,0 +1,240 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Organization | Stichting Vrijheid & Gelijkheid",
+  description:
+    "Governance and organizational structure of Stichting Vrijheid & Gelijkheid: founder, board, advisory board.",
+  canonical: "/en/organization/",
+  lang: "en",
+  alternates: [
+    { hreflang: "en", href: "https://www.gayjustice.org/en/organization/" },
+    { hreflang: "nl", href: "https://www.gayjustice.org/organisatie/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    {
+      name: "Organization",
+      url: "https://www.gayjustice.org/en/organization/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Governance"
+    title="Organization"
+    lead="Stichting Vrijheid & Gelijkheid is governed by dedicated professionals with complementary expertise. The board is jointly responsible for policy, decision-making, and representation of the foundation."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2 style="text-align: center; margin-top: 0;">Founder</h2>
+        <p
+          style="text-align: center; color: var(--muted); margin-bottom: 18px;"
+        >
+          Responsible for the initial establishment, strategic principles, and
+          the legal and administrative foundation of the foundation.
+        </p>
+
+        <div class="people people--single">
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/oldenburger.webp"
+              alt="Portrait of P.W. Oldenburger"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">Founder &amp; Treasurer</div>
+              <h3 class="name">P.W. Oldenburger</h3>
+              <p class="bio">
+                Responsible for the initial establishment, strategic principles,
+                and the legal and administrative foundation of the foundation.
+                This role emphasizes carefulness, transparency, and sustainable
+                societal positioning. As Treasurer, he ensures alignment between
+                resources, mission, and governance.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px; margin-top: 14px;">
+        <h2 style="text-align: center; margin-top: 0;">Board</h2>
+        <p
+          style="text-align: center; color: var(--muted); margin-bottom: 18px;"
+        >
+          Board members are jointly responsible for policy, decision-making, and
+          representation of the foundation.
+        </p>
+
+        <div class="people">
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/wil-groot.webp"
+              alt="Portrait of Wil Groot"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">Chair</div>
+              <h3 class="name">Wil Groot</h3>
+              <p class="bio">
+                Quartermaster and founder of Stichting Willen en Doen.
+                Cultural-societal designer, organizer, writer, and journalist.
+                Actively involved in societal initiatives at the intersection of
+                culture, public space, and justice.
+              </p>
+            </div>
+          </article>
+
+          <article class="person">
+            <img
+              class="avatar"
+              src="/pictures/andy-va-der-Geugten.webp"
+              alt="Portrait of Andy van der Geugten"
+              loading="lazy"
+              width="640"
+              height="640"
+            />
+            <div class="person-body">
+              <div class="role">Secretary</div>
+              <h3 class="name">Andy van der Geugten</h3>
+              <p class="bio">
+                Professional advisor with expertise in coaching, event
+                management, and marketing. Extensive experience in customer
+                service and public communication within both for-profit and
+                non-profit organizations. Responsible for documentation,
+                internal processes, and organizational continuity.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="surface" style="padding: 22px; margin-top: 14px;">
+        <h2 style="text-align: center; margin-top: 0;">
+          Advisory Board / Sounding Board
+        </h2>
+        <p style="text-align: center; color: var(--muted); margin-bottom: 0;">
+          Stichting Vrijheid &amp; Gelijkheid may be supported by an advisory
+          board (sounding board) of engaged professionals. This group serves as
+          a substantive and reflective sounding board for the board, without
+          administrative or decision-making authority.
+        </p>
+        <p
+          style="text-align: center; color: var(--muted); margin-top: 12px; margin-bottom: 0;"
+        >
+          Composition and engagement of the advisory board will be determined
+          and published separately.
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .people {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
+  .people--single {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .people--single .person {
+    width: 100%;
+  }
+
+  .person {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    align-items: start;
+    padding: 14px;
+    border-radius: var(--radius);
+    background: var(--surface-solid);
+    border: var(--border-w) solid var(--border-color);
+    box-shadow: var(--shadow-2);
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background: var(--ui-bg);
+    border: var(--border-w) solid var(--border-color);
+    display: grid;
+    place-items: center;
+  }
+
+  img.avatar {
+    object-fit: cover;
+  }
+
+  .divider {
+    margin: 10px 0;
+    color: var(--subtle);
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .role {
+    font-size: 0.9rem;
+    color: var(--subtle);
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+  }
+
+  .name {
+    margin: 0 0 8px;
+  }
+
+  .bio {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  @media (min-width: 860px) {
+    .people {
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .people--single {
+      grid-template-columns: 1fr;
+    }
+
+    .person {
+      grid-template-columns: 96px 1fr;
+      padding: 16px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+    }
+  }
+</style>

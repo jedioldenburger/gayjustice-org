@@ -1,0 +1,160 @@
+---
+import Container from "./Container.astro";
+import { SITE } from "@/config/site";
+import IntroCard from "./IntroCard.astro";
+---
+
+<section class="hero">
+  <Container>
+    <div class="stack">
+      <IntroCard
+        logoAlt={`Logo of ${SITE.shortName}`}
+        kicker="Legal protection • Equal treatment"
+        title="Justice and Equal Rights for Gay People"
+        subtitle="Legal protection and equal treatment in practice"
+      />
+
+      <div class="card surface">
+        <div class="body">
+          <p class="lead">
+            GayJustice.org is an initiative of Stichting Vrijheid &amp;
+            Gelijkheid (STVG). We focus on legal protection, equal treatment,
+            and justice for gay people where discrimination, exclusion, or
+            unequal treatment persist.
+          </p>
+
+          <p style="margin-bottom: 0;">
+            We work with clarity, credibility, and long-term authority: no
+            outrage-bait, no anonymous framing, and no political campaigning.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="card surface">
+        <h2 class="section-title">Why this structure matters</h2>
+        <p>
+          Positioning GayJustice.org as a campaign initiative of STVG keeps
+          trust concentrated and avoids fragmenting authority across separate
+          entities.
+        </p>
+        <p>
+          Stichting Vrijheid &amp; Gelijkheid (STVG) acts as the publisher and
+          legally responsible organization for this site.
+        </p>
+        <p style="margin-bottom: 0;">
+          This approach strengthens credibility with search engines, donors,
+          platforms, and institutional partners—and helps ensure information
+          remains factual, safe, and sustainable.
+        </p>
+      </div>
+
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="card surface">
+        <h2 class="section-title">How to use this site</h2>
+        <p>
+          Use the resources on GayJustice.org to understand legal rights and
+          protections, identify patterns of discrimination or unequal treatment,
+          and find credible routes to information, support, or referral.
+        </p>
+        <ul>
+          <li>Start with the Topics pages for structured overviews.</li>
+          <li>Use linked sources for verification and citation.</li>
+          <li>Contact us for cooperation, corrections, or contributions.</li>
+        </ul>
+      </div>
+
+      <div class="divider" aria-hidden="true">⸻</div>
+
+      <div class="card surface">
+        <h2 class="section-title">What we do — and what we don’t</h2>
+        <p>
+          GayJustice.org publishes source-based information and practical
+          guidance on legal protection, equal treatment, and access to justice
+          for gay people. Our focus is on general legal frameworks and
+          equal-treatment principles, with reference to European human-rights
+          standards and relevant national legal frameworks. Content on this site
+          is informational and does not replace professional legal advice.
+        </p>
+        <p style="margin: 0;">
+          We do not assess individual cases, provide legal representation, or
+          run party-political campaigns. We avoid collecting personal data
+          unless it is necessary.
+        </p>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .hero {
+    padding: 34px 0 6px;
+  }
+
+  .stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 26px;
+  }
+
+  .divider {
+    margin: 6px 0;
+    color: var(--subtle);
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+
+  .intro {
+    margin-bottom: 12px;
+  }
+
+  .body {
+    max-width: none;
+  }
+
+  .body p {
+    color: var(--muted);
+    margin: 0 0 1rem;
+  }
+
+  .section-title {
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .body .lead {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 0 0 1rem;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+
+  li {
+    margin: 0.3rem 0;
+  }
+
+  .join-cta {
+    margin: 0;
+    color: var(--text);
+    font-weight: 650;
+  }
+
+  @media (min-width: 860px) {
+    .hero {
+      padding: 56px 0 18px;
+    }
+
+    .card {
+      padding: 34px;
+    }
+  }
+</style>

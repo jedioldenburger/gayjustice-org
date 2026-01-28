@@ -1,0 +1,287 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Stichting Vrijheid & Gelijkheid (STVG)",
+  description:
+    "STVG is de juridisch verantwoordelijke organisatie achter GayJustice.org. Lees over doel, werkwijze, governance, transparantie en contact.",
+  canonical: "/stvg/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/stvg/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/about/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "STVG", url: "https://www.gayjustice.org/stvg/" },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Stichting Vrijheid & Gelijkheid (STVG)",
+  url: "https://www.gayjustice.org/stvg/",
+  inLanguage: "nl-NL",
+  about: {
+    "@type": "Organization",
+    name: SITE.parentOrganization.legalName,
+    url: SITE.parentOrganization.url,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: SITE.parentOrganization.legalName,
+    url: SITE.parentOrganization.url,
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="STVG"
+    title="Stichting Vrijheid & Gelijkheid (STVG)"
+    lead="STVG is de uitgever en juridisch verantwoordelijke organisatie achter GayJustice.org. We werken onafhankelijk, brongebaseerd en niet-partijpolitiek."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wie wij zijn</h2>
+        <p>
+          Stichting Vrijheid &amp; Gelijkheid (STVG) is een onafhankelijke,
+          niet-partijpolitieke stichting met een doelstelling van algemeen
+          maatschappelijk belang. We richten ons op mensenrechten, gelijke
+          behandeling en rechtsstatelijke bescherming.
+        </p>
+        <p style="margin: 0;" class="muted">
+          Voor kerninformatie over governance en transparantie, zie ook
+          <a class="link" href="/transparantie/">Transparantie</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Onze kernactiviteiten</h2>
+        <ol>
+          <li>
+            <strong>Informatie en educatie</strong><br />
+            Publiceren van feitelijke, brongebaseerde informatie over juridische kaders,
+            gelijke behandeling en mensenrechten.
+          </li>
+          <li>
+            <strong>Toegang tot hulp en rechtvaardigheid</strong><br />
+            Verwijzen naar bevoegde instanties, meldpunten en ondersteuning waar passend.
+          </li>
+          <li>
+            <strong>Maatschappelijke bewustwording</strong><br />
+            Ondersteunen van activiteiten en campagnes die structurele knelpunten
+            zichtbaar maken.
+          </li>
+          <li>
+            <strong>Onderzoek en beleidsduiding</strong><br />
+            Signaleren van structurele problemen en ordenen van bronnen en inzichten.
+          </li>
+          <li>
+            <strong>Strategisch procederen (principeel)</strong><br />
+            Bijdragen aan rechtsontwikkeling kan onderdeel zijn van onze doelstelling,
+            uitsluitend waar dit het algemeen belang dient.
+          </li>
+          <li>
+            <strong>Samenwerking en netwerk</strong><br />
+            Werken met partners, experts en organisaties die bijdragen aan effectieve
+            bescherming.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat we niet doen</h2>
+        <ul>
+          <li>
+            STVG verleent geen individuele juridische dienstverlening,
+            rechtsbijstand of procesvertegenwoordiging.
+          </li>
+          <li>We beoordelen geen individuele dossiers.</li>
+          <li>
+            We voeren geen partijpolitieke campagnes en spreken geen
+            verkiezingssteun uit.
+          </li>
+        </ul>
+        <p style="margin: 0;" class="muted">
+          GayJustice.org publiceert algemene duiding en bronverwijzingen.
+          Individuele vragen? Zie
+          <a class="link" href="/legal/no-legal-advice/"
+            >geen juridisch advies</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Governance en transparantie</h2>
+        <p>
+          STVG hecht groot belang aan transparantie, integriteit en behoorlijk
+          bestuur. We publiceren kerninformatie en bouwen dit uit naarmate
+          documenten en registraties definitief zijn.
+        </p>
+        <ul>
+          <li>
+            Bestuur en werkwijze: <a class="link" href="/over-ons/">Over ons</a>
+          </li>
+          <li>
+            Governance-kerninformatie:
+            <a class="link" href="/transparantie/">Transparantie</a>
+          </li>
+        </ul>
+        <p style="margin: 0;" class="muted">
+          Bestuursleden zijn onbezoldigd; redelijke onkosten kunnen met
+          bewijsstukken worden vergoed.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Financiering en onafhankelijkheid</h2>
+        <p>
+          STVG financiert zich via giften en donaties, en waar passend via
+          subsidies van fondsen of ethisch verantwoorde sponsoring. We streven
+          naar diversificatie van inkomsten om onafhankelijk te blijven.
+        </p>
+        <p style="margin: 0;" class="muted">
+          Het vermogen wordt uitsluitend aangewend ter verwezenlijking van de
+          doelstelling.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 12px;">
+          <a class="btn btn-outline" href="/doneren">Doneren</a>
+          <a class="btn btn-ghost" href="/transparantie">Transparantie</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>De relatie tussen STVG en GayJustice.org</h2>
+        <p>
+          GayJustice.org is een campagne-initiatief van STVG. Het is geen aparte
+          rechtspersoon, maar een project binnen de stichting.
+        </p>
+        <p style="margin: 0;">
+          Deze structuur houdt governance en verantwoordelijkheid helder en
+          versterkt vertrouwen richting zoekmachines, donateurs en
+          institutionele partners.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Contact</h2>
+        <dl class="kv">
+          <div class="kv-row">
+            <dt>Adres</dt>
+            <dd>
+              {SITE.address.streetAddress}, {SITE.address.postalCode}
+              {" "}{SITE.address.addressLocality}
+            </dd>
+          </div>
+          <div class="kv-row">
+            <dt>E-mail</dt>
+            <dd>
+              <a class="link" href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            </dd>
+          </div>
+          {
+            (SITE.identifiers.kvk || SITE.identifiers.rsin) && (
+              <>
+                {SITE.identifiers.kvk && (
+                  <div class="kv-row">
+                    <dt>KvK</dt>
+                    <dd>{SITE.identifiers.kvk}</dd>
+                  </div>
+                )}
+                {SITE.identifiers.rsin && (
+                  <div class="kv-row">
+                    <dt>RSIN</dt>
+                    <dd>{SITE.identifiers.rsin}</dd>
+                  </div>
+                )}
+              </>
+            )
+          }
+        </dl>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Onze uitgangspunten</h2>
+        <div class="grid cols-3">
+          <div>
+            <h3>Feitelijkheid</h3>
+            <p>Brongebaseerd, controleerbaar en zorgvuldig geformuleerd.</p>
+          </div>
+          <div>
+            <h3>Onafhankelijkheid</h3>
+            <p>Niet gebonden aan politieke partijen of commerciële belangen.</p>
+          </div>
+          <div>
+            <h3>Transparantie</h3>
+            <p>Open over doel, werkwijze en aanspreekbaarheid.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+  </Container>
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+  }
+
+  .kv {
+    margin: 0;
+  }
+
+  .kv-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: var(--border-w) solid var(--border-color);
+  }
+
+  .kv-row:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  dt {
+    margin: 0;
+    color: var(--subtle);
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--text);
+  }
+
+  @media (max-width: 540px) {
+    .kv-row {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>

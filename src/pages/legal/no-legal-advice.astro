@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Why we do not provide legal advice",
+  description:
+    "Explanation of why GayJustice.org provides general information but not individual legal advice.",
+  canonical: "/legal/no-legal-advice/",
+  lang: "en-US",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Legal", url: "https://www.gayjustice.org/legal/" },
+    {
+      name: "No legal advice",
+      url: "https://www.gayjustice.org/legal/no-legal-advice/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Why we do not provide legal advice",
+  description:
+    "Explanation of why GayJustice.org provides general information but not individual legal advice.",
+  publisher: {
+    "@id": "https://www.stvg.org/#organization",
+  },
+  inLanguage: "en-US",
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Legal"
+    title="Why we don’t provide legal advice"
+    lead="This page explains the scope and limitations of the information published on GayJustice.org."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Why we don’t provide legal advice</h2>
+        <p>
+          GayJustice.org publishes general, source-based information about legal
+          protection and equal treatment. We do not provide individual legal
+          advice, representation, or case assessment.
+        </p>
+        <p>
+          Legal situations differ by country, context, and individual
+          circumstances. For personal legal advice, we recommend contacting a
+          qualified lawyer or an appropriate support organization.
+        </p>
+        <p>
+          This approach helps ensure that information on GayJustice.org remains:
+        </p>
+        <ul>
+          <li>accurate and verifiable;</li>
+          <li>safe for public use;</li>
+          <li>suitable for institutions, donors, and platforms.</li>
+        </ul>
+        <p>
+          GayJustice.org is an initiative of Stichting Vrijheid &amp; Gelijkheid
+          (STVG).
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 12px;">
+          <a class="btn btn-outline" href="/contact">Contact</a>
+          <a class="btn btn-ghost" href="/transparantie">Transparency</a>
+          <a
+            class="btn btn-outline"
+            href="https://www.stvg.org/"
+            target="_blank"
+            rel="noopener noreferrer">STVG.org</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <p><small>Last updated: 2026</small></p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>

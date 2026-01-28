@@ -1,0 +1,73 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Missie",
+  description:
+    "Onze missie: mensenrechten versterken met heldere, brongebaseerde informatie en praktische samenwerking — gericht op echte resultaten.",
+  canonical: "/missie/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/missie/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/mission/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Missie", url: "https://www.gayjustice.org/missie/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Missie"
+    title="Onze missie"
+    lead="We zetten ons in voor mensenrechten met focus op rechtsbescherming, gelijke behandeling en waardigheid. Duurzame verandering ontstaat wanneer kennis, dialoog en praktische actie elkaar versterken."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="grid cols-3">
+        <div class="surface" style="padding: 20px;">
+          <h2>Vrijheid</h2>
+          <p>
+            Vrijheid van meningsuiting en overtuiging — en het recht om zonder
+            angst te leven.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Gelijkheid</h2>
+          <p>
+            Gelijke kansen en gelijke behandeling — in beleid én in de
+            dagelijkse praktijk.
+          </p>
+        </div>
+        <div class="surface" style="padding: 20px;">
+          <h2>Waardigheid</h2>
+          <p>
+            Respect voor ieder mens — waardigheid als basis voor alles wat we
+            doen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe je kunt bijdragen</h2>
+        <p>
+          Wil je samenwerken, bijdragen of steun aanbieden? Neem contact op — we
+          denken graag mee.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="/nl/contact">Contact</a>
+          <a class="btn btn-outline" href="/projecten">Projecten</a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

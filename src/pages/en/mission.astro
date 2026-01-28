@@ -1,0 +1,84 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Our mission | Stichting Vrijheid & Gelijkheid",
+  description:
+    "Our mission is to promote human rights with a focus on legal protection, equal treatment and human dignity.",
+  canonical: "/en/mission/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/missie/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/mission/" },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    { name: "Mission", url: "https://www.gayjustice.org/en/mission/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Mission"
+    title="Our mission"
+    lead="To promote human rights with a focus on legal protection, equal treatment and human dignity."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          Our mission is to promote human rights with a focus on legal
+          protection, equal treatment and human dignity. We work through
+          knowledge, careful analysis and practical guidance.
+        </p>
+        <p style="margin-bottom: 0;">
+          Freedom, equality and dignity form the foundation of everything we
+          publish.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="grid cols-3">
+        <div class="surface" style="padding: 22px;">
+          <h2>Freedom</h2>
+          <p style="margin: 0;">
+            Freedom means having real options in practice—not just on paper.
+          </p>
+        </div>
+        <div class="surface" style="padding: 22px;">
+          <h2>Equality</h2>
+          <p style="margin: 0;">
+            Equality means equal treatment, clear procedures, and access to
+            institutions.
+          </p>
+        </div>
+        <div class="surface" style="padding: 22px;">
+          <h2>Dignity</h2>
+          <p style="margin: 0;">
+            Dignity means safety, respect, and the ability to live without
+            discrimination.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>How you can contribute</h2>
+        <p>
+          Want to collaborate, contribute, or offer support? Reach out—we’d be
+          glad to connect.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="/en/contact">Contact</a>
+          <a class="btn btn-outline" href="/en/donate">Support</a>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>

@@ -1,0 +1,122 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Container from "../../../components/Container.astro";
+import PageHeader from "../../../components/PageHeader.astro";
+
+const seo = {
+  title: "Mensenrechten",
+  description:
+    "Ballengebaseerde, praktische context over mensenrechten en gelijke behandeling.",
+  canonical: "/thema/mensenrechten/",
+  lang: "nl-NL",
+  robots: "noindex,follow",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/thema/mensenrechten/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/human-rights/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    {
+      name: "Mensenrechten",
+      url: "https://www.gayjustice.org/thema/mensenrechten/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Thema"
+    title="Mensenrechten"
+    lead="We richten ons op vrijheid, gelijkheid en waardigheid in de praktijk. We werken onafhankelijk en brongebaseerd — met aandacht voor mensen, regels en uitvoering."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Waar dit over gaat</h2>
+        <p>
+          Mensenrechten zijn niet alleen abstracte principes — het is dagelijkse
+          realiteit: gelijke behandeling, toegang tot diensten, bescherming
+          tegen discriminatie en de zekerheid dat regels eerlijk worden
+          toegepast.
+        </p>
+        <p>
+          In Europa worden deze waarborgen mede gevormd door Europees
+          mensenrechtenrecht en standaarden, waaronder het Europees Verdrag voor
+          de Rechten van de Mens (EVRM) en gelijkebehandelingsprincipes die
+          EU-recht en praktijk beïnvloeden.
+        </p>
+
+        <ul>
+          <li>gelijke behandeling en non-discriminatie</li>
+          <li>toegang tot recht, zorg en onderwijs</li>
+          <li>bescherming van kwetsbare groepen</li>
+          <li>zorgvuldige uitvoering van beleid en wetgeving</li>
+          <li>transparantie, bronnen en verifieerbaarheid</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Onze positie</h2>
+        <p style="margin: 0;">
+          STVG is geen politieke partij en geen lobbyorganisatie. We werken
+          onafhankelijk, publiceren bronnen en geven de voorkeur aan
+          samenwerking en praktische oplossingen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Betrouwbare bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              rel="noopener noreferrer"
+              target="_blank">Europees Hof voor de Rechten van de Mens (EHRM)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.coe.int/en/web/human-rights"
+              rel="noopener noreferrer"
+              target="_blank">Raad van Europa — Mensenrechten</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://fra.europa.eu/"
+              rel="noopener noreferrer"
+              target="_blank">EU Agency for Fundamental Rights (FRA)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer">College voor de Rechten van de Mens</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 2026</small></p>
+  </Container>
+</Layout>
