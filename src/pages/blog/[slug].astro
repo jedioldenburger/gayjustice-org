@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Container from "../../components/Container.astro";
+import Cusdis from "../../components/Cusdis.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection(
@@ -62,6 +63,13 @@ const seo = {
           <Content />
         </div>
       </div>
+
+      <Cusdis
+        pageId={entry.slug}
+        pageTitle={entry.data.title}
+        pageUrl={`https://www.gayjustice.org/blog/${entry.slug}/`}
+        lang="nl"
+      />
     </article>
 
     <nav style="margin-top: 32px; display: flex; gap: 12px;">
