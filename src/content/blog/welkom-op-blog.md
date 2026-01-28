@@ -1,11 +1,13 @@
 ---
-title: "Welkom op de Blog van GayJustice.org"
-description: "Ontdek artikelen over rechtsbescherming, gelijke behandeling en mensenrechten."
-author: "STVG"
-pubDatetime: 2026-01-28T00:00:00Z
-lang: "nl"
+title: tItLE
+description: hello
+author: STVG
+pubDatetime: 2026-01-28T00:00:00.000Z
+lang: nl
 draft: false
-tags: ["welkom", "blog"]
+tags:
+  - welkom
+  - blog
 ---
 
 # Welkom op de Blog van GayJustice.org
