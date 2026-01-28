@@ -10,7 +10,7 @@ type Props = {
 };
 
 const {
-  logoSrc = "",
+  logoSrc = "/pictures/gayjustice-logo.webp",
   logoAlt = `Logo of ${SITE.shortName}`,
   kicker,
   title,
@@ -19,17 +19,15 @@ const {
 ---
 
 <div class="card intro-card">
-  {logoSrc && (
-    <img
-      class="hero-logo hero-logo-xl"
-      src={logoSrc}
-      alt={logoAlt}
-      width="1024"
-      height="224"
-      loading="eager"
-      decoding="async"
-    />
-  )}
+  <img
+    class="hero-logo hero-logo-xl"
+    src={logoSrc}
+    alt={logoAlt}
+    width="1024"
+    height="224"
+    loading="eager"
+    decoding="async"
+  />
   <p class="kicker">{kicker}</p>
   <h1>{title}</h1>
   <h2 class="hero-subtitle" set:html={subtitle} />
