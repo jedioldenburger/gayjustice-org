@@ -1,17 +1,17 @@
 ---
-title: Blog Post 2.0
-description: Welkom op de Blog van GayJustice.org
-author: STVG
-pubDatetime: 2026-01-28T00:00:00.000Z
+title: Blog Post Gay Justice Org
+description: Welkom op de Blog van GayJustice.org - Blog Post Gay Justice Org
+pubDatetime: 2026-01-28T19:20:00+01:00
 lang: nl
 draft: false
 tags:
   - welkom
   - blog
+author: STVG
 ---
-# 2.0 Welkom op de Blog van GayJustice.org
+# Welkom op de Blog van GayJustice.org
 
-Dit is het eerste artikel op onze blog. Hier zullen we artikelen publiceren over rechtsbescherming, gelijke behandeling en mensenrechten.
+Dit is het eerste artikel op onze blog. Hier zullen we artikelen publiceren over rechtsbescherming, gelijke behandeling en mensenrechten. Blog Post Gay Justice Organisation
 
 ## Wat u hier vindt
 
@@ -20,4 +20,6 @@ Dit is het eerste artikel op onze blog. Hier zullen we artikelen publiceren over
 * Analyses van mensenrechtenonderwerpen
 * Resources voor verder onderzoek
 
-Volgt u ons blog voor het laatste nieuws en inzichten!
+Volgt u ons blog voor het laatste nieuws en inzichten!\
+\
+Blog Post Gay Justice Organisation
