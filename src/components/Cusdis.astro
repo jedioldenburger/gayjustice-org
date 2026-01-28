@@ -11,8 +11,11 @@ const { pageId, pageTitle, pageUrl, lang = "nl" } = Astro.props;
 const APP_ID = "d5c623e8-37b9-44d2-87a6-a10fbcd900dc";
 ---
 
-<section class="comments" style="margin-top: 48px;">
-  <h2 style="margin-bottom: 16px; font-size: 1.25em;">
+<section
+  class="comments"
+  style="margin-top: 48px; padding: 24px; background: var(--surface, #f9f9f9); border-radius: 8px;"
+>
+  <h2 style="margin-bottom: 24px; font-size: 1.25em;">
     {lang === "nl" ? "Reacties" : "Comments"}
   </h2>
 
@@ -24,6 +27,7 @@ const APP_ID = "d5c623e8-37b9-44d2-87a6-a10fbcd900dc";
     data-page-url={pageUrl}
     data-page-title={pageTitle}
     data-theme="auto"
+    style="min-height: 300px;"
   >
   </div>
 
