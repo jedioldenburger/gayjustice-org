@@ -37,6 +37,7 @@ export type SeoAlternate = {
 export type SeoInput = {
   title?: string; // Page title (without suffix)
   description?: string;
+  keywords?: string[]; // Meta keywords array
   ogTitle?: string;
   ogDescription?: string;
   twitterTitle?: string;
