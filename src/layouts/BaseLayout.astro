@@ -43,5 +43,18 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
   </head>
   <body>
     <slot />
+    
+    <!-- Handle Netlify Identity login redirect -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
