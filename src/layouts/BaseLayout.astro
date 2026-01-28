@@ -45,7 +45,7 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
     <slot />
     
     <!-- Handle Netlify Identity login redirect -->
-    <script>
+    <script is:inline>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -54,6 +54,17 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
             });
           }
         });
+      }
+      // Handle invite token in URL hash
+      if (window.location.hash.includes("invite_token") || 
+          window.location.hash.includes("confirmation_token") ||
+          window.location.hash.includes("recovery_token")) {
+        // Let Identity widget process token, then redirect
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
       }
     </script>
   </body>
