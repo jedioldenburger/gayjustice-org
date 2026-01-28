@@ -41,10 +41,10 @@
 
 	/* Header/footer (chrome) */
 	--chrome-bg:
-		radial-gradient(900px 260px at 15% 0%, rgba(168, 85, 247, 0.55), transparent 60%),
-		radial-gradient(700px 240px at 90% 10%, rgba(236, 72, 153, 0.35), transparent 55%),
-		linear-gradient(135deg, #130426 0%, #2b0a57 38%, #4c1d95 72%, #6d28d9 100%);
-	--chrome-border: rgba(255, 255, 255, 0.18);
+		radial-gradient(900px 260px at 15% 0%, rgba(100, 30, 180, 0.35), transparent 60%),
+		radial-gradient(700px 240px at 90% 10%, rgba(150, 30, 100, 0.2), transparent 55%),
+		linear-gradient(135deg, #0a0215 0%, #16032a 38%, #240a4a 72%, #2d0f6b 100%);
+	--chrome-border: rgba(255, 255, 255, 0.14);
 	--header-bg: var(--chrome-bg);
 	--header-border: var(--chrome-border);
 	--footer-bg: var(--chrome-bg);
