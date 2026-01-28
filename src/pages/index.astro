@@ -4,9 +4,10 @@ import Container from "../components/Container.astro";
 import IntroCard from "../components/IntroCard.astro";
 
 const seo = {
-  title: "GayJustice.org – Rechtsbescherming & gelijke behandeling | STVG",
+  title:
+    "GayJustice.org — Rechtsbescherming & gelijke behandeling | Stichting Vrijheid & Gelijkheid",
   description:
-    "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), gericht op rechtsbescherming en gelijke behandeling voor homoseksuele personen waar discriminatie, uitsluiting of ongelijke behandeling voorkomt.",
+    "GayJustice.org is een onafhankelijk, niet-commercieel initiatief van Stichting Vrijheid & Gelijkheid, gericht op rechtsbescherming en gelijke behandeling van homoseksuele personen binnen Europese en nationale rechtskaders.",
   canonical: "/",
   lang: "nl-NL",
   alternates: [
@@ -15,6 +16,43 @@ const seo = {
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [{ name: "GayJustice.org", url: "https://www.gayjustice.org/" }],
+  faq: [
+    {
+      question: "Wat is GayJustice.org?",
+      answer:
+        "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), gericht op rechtsbescherming en gelijke behandeling van homoseksuele personen.",
+    },
+    {
+      question: "Is GayJustice.org onderdeel van STVG?",
+      answer:
+        "Ja. GayJustice.org is een campagne-initiatief van Stichting Vrijheid & Gelijkheid (STVG) en geen aparte rechtspersoon.",
+    },
+    {
+      question: "Geven jullie juridisch advies?",
+      answer:
+        "Nee. GayJustice.org biedt algemene, feitelijke informatie en juridische duiding. Er wordt geen individueel juridisch advies of rechtsbijstand verleend.",
+    },
+    {
+      question: "Behandelen jullie individuele zaken?",
+      answer:
+        "Nee. GayJustice.org richt zich op structurele vraagstukken en publieke informatievoorziening. Individuele dossierbehandeling vindt niet plaats.",
+    },
+    {
+      question: "Welke thema's behandelen jullie?",
+      answer:
+        "Rechtsbescherming, gelijke behandeling, discriminatie en toegang tot rechtvaardigheid rond homorechten, met focus op juridische realiteit en betrouwbare bronnen.",
+    },
+    {
+      question: "Wie is verantwoordelijk voor de inhoud?",
+      answer:
+        "Bestuurlijke en juridische verantwoordelijkheid berust bij Stichting Vrijheid & Gelijkheid (STVG).",
+    },
+    {
+      question: "Hoe kan ik bijdragen of correcties doorgeven?",
+      answer:
+        "Via de contactgegevens op deze website of per e-mail naar info@gayjustice.org.",
+    },
+  ],
 };
 ---
 
@@ -253,7 +291,11 @@ const seo = {
       </div>
     </section>
 
-    <p><small>Laatst bijgewerkt: 2026</small></p>
+    <p class="last-updated">
+      <small
+        >Laatst bijgewerkt: <time datetime="2026-01-28">28 januari 2026</time
+        ></small>
+    </p>
   </Container>
 </Layout>
 

@@ -18,7 +18,8 @@ const {
   twitterDescription,
   canonical,
   alternates,
-  robots = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  robots = "index,follow",
+  pageType = "WebPage",
   ogImage,
   lang = SITE.defaultLocale,
   type = "website",
@@ -54,7 +55,7 @@ const pageId = `${url}#webpage`;
 const topicId = `${SITE.url}/#topic`;
 
 const stvgNode: any = {
-  "@type": ["Organization", "NGO"],
+  "@type": "Organization",
   "@id": stvgId,
   name: SITE.parentOrganization.name,
   legalName: SITE.parentOrganization.legalName || SITE.parentOrganization.name,
@@ -73,7 +74,7 @@ const stvgNode: any = {
 };
 
 const orgNode: any = {
-  "@type": ["Organization", "NGO"],
+  "@type": "Organization",
   "@id": orgId,
   name: SITE.name,
   alternateName: SITE.shortName,
@@ -142,7 +143,7 @@ const graph: any[] = [
     about: { "@id": topicId },
   },
   {
-    "@type": "WebPage",
+    "@type": pageType,
     "@id": pageId,
     url,
     name: fullTitle,

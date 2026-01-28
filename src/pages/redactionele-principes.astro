@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Redactionele principes — GayJustice.org",
+  description:
+    "Redactionele uitgangspunten die gelden voor alle publicaties op GayJustice.org.",
+  canonical: "/redactionele-principes/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/redactionele-principes/",
+    },
+    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    {
+      name: "Redactionele principes",
+      url: "https://www.gayjustice.org/redactionele-principes/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Governance"
+    title="Redactionele principes"
+    lead="Uitgangspunten die gelden voor alle publicaties op GayJustice.org."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          GayJustice.org publiceert feitelijke, controleerbare informatie over
+          rechtsbescherming en gelijke behandeling. Deze pagina beschrijft de
+          redactionele uitgangspunten die gelden voor alle publicaties op dit
+          platform.
+        </p>
+
+        <h2>1. Onafhankelijkheid</h2>
+        <p>
+          GayJustice.org opereert onafhankelijk van politieke partijen,
+          commerciële belangen en religieuze organisaties. Inhoud wordt niet
+          afgestemd met externe belanghebbenden.
+        </p>
+
+        <h2>2. Geen juridisch advies</h2>
+        <p>
+          Publicaties bieden algemene informatie en duiding. Er wordt geen
+          individueel juridisch advies of rechtsbijstand verleend.
+        </p>
+
+        <h2>3. Bronvermelding en controleerbaarheid</h2>
+        <p>
+          Waar mogelijk worden primaire bronnen, wetgeving, jurisprudentie of
+          gezaghebbende instituten vermeld.
+        </p>
+
+        <h2>4. Reikwijdte</h2>
+        <p>
+          De focus ligt op structurele vraagstukken binnen mensenrechten en
+          gelijke behandeling. Individuele casuïstiek wordt niet beoordeeld.
+        </p>
+
+        <h2>5. Correcties</h2>
+        <p>
+          Feitelijke correcties kunnen worden gemeld via
+          <a href="mailto:info@gayjustice.org">info@gayjustice.org</a> en worden transparant
+          verwerkt.
+        </p>
+
+        <h2>6. Verantwoordelijkheid</h2>
+        <p style="margin-bottom: 0;">
+          De redactionele verantwoordelijkheid berust bij
+          <strong>Stichting Vrijheid &amp; Gelijkheid (STVG)</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde pagina's</h2>
+        <ul>
+          <li><a href="/transparantie">Transparantie</a></li>
+          <li><a href="/oprichting">Oprichting</a></li>
+          <li><a href="/missie">Missie</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="last-updated">
+      <small
+        >Laatst bijgewerkt: <time datetime="2026-01-28">28 januari 2026</time
+        ></small>
+    </p>
+  </Container>
+</Layout>

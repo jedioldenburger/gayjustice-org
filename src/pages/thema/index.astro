@@ -4,11 +4,12 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Thema’s",
+  title: "Thema's — GayJustice.org",
   description:
-    "Thema’s waar we uitleg, bronnen en wat we doen in de praktijk publiceren.",
+    "Kies een thema voor juridische uitleg, context en verwijzingen naar betrouwbare bronnen.",
   canonical: "/thema/",
   lang: "nl-NL",
+  pageType: "CollectionPage",
   alternates: [
     { hreflang: "nl", href: "https://www.gayjustice.org/thema/" },
     { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
@@ -25,7 +26,7 @@ const seo = {
   <PageHeader
     eyebrow="Thema’s"
     title="Thema’s"
-    lead="Kies een thema voor uitleg, bronnen en wat we doen in de praktijk."
+    lead="Kies een thema voor juridische uitleg, context en verwijzingen naar betrouwbare bronnen."
   />
 
   <Container>
