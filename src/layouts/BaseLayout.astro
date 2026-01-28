@@ -22,17 +22,19 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
     <meta name="generator" content={Astro.generator} />
 
     <!-- Netlify Identity widget for Decap CMS authentication -->
-    <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
+    <script
+      src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"
+    ></script>
 
     <SEO {...seo ?? {}} />
   </head>
   <body>
     <slot />
-    
+
     <!-- Handle Netlify Identity login redirect -->
     <script is:inline>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
+        window.netlifyIdentity.on("init", (user) => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
@@ -41,9 +43,11 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
         });
       }
       // Handle invite token in URL hash
-      if (window.location.hash.includes("invite_token") || 
-          window.location.hash.includes("confirmation_token") ||
-          window.location.hash.includes("recovery_token")) {
+      if (
+        window.location.hash.includes("invite_token") ||
+        window.location.hash.includes("confirmation_token") ||
+        window.location.hash.includes("recovery_token")
+      ) {
         // Let Identity widget process token, then redirect
         if (window.netlifyIdentity) {
           window.netlifyIdentity.on("login", () => {
