@@ -52,7 +52,6 @@ const orgId = `${SITE.url}/#organization`;
 const stvgId = `${SITE.parentOrganization.url}#organization`;
 const siteId = `${SITE.url}/#website`;
 const pageId = `${url}#webpage`;
-const topicId = `${SITE.url}/#topic`;
 
 const stvgNode: any = {
   "@type": "Organization",
@@ -124,23 +123,12 @@ const graph: any[] = [
   stvgNode,
   orgNode,
   {
-    "@type": "Thing",
-    "@id": topicId,
-    name: "Gay rights and equal treatment",
-    sameAs: [
-      "https://www.coe.int/en/web/human-rights",
-      "https://www.echr.coe.int/",
-      "https://fra.europa.eu/",
-    ],
-  },
-  {
     "@type": "WebSite",
     "@id": siteId,
     url: SITE.url + "/",
     name: SITE.shortName,
     publisher: { "@id": stvgId },
     inLanguage: lang,
-    about: { "@id": topicId },
   },
   {
     "@type": pageType,
@@ -149,7 +137,6 @@ const graph: any[] = [
     name: fullTitle,
     description: desc,
     isPartOf: { "@id": siteId },
-    about: { "@id": topicId },
     publisher: { "@id": stvgId },
     inLanguage: lang,
   },

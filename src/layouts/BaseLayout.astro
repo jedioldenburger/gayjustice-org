@@ -25,21 +25,6 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
     <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
 
     <SEO {...seo ?? {}} />
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://gayjustice.org/#initiative",
-        "name": "GayJustice.org",
-        "url": "https://gayjustice.org/",
-        "description": "Initiatief gericht op juridische bescherming en gelijke behandeling van homoseksuele personen.",
-        "parentOrganization": {
-          "@id": "https://stvg.org/#organisatie"
-        },
-        "nonprofitStatus": "Initiatief zonder winstoogmerk",
-        "inLanguage": "nl"
-      })}
-    </script>
   </head>
   <body>
     <slot />
