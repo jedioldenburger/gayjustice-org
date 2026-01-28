@@ -28,6 +28,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Mensenrechten als juridische grondslag"
 
 **H2 Structure:**
+
 - Wat zijn mensenrechten? (definitie + recht op privacy, gelijkheid)
 - Nederlandse wettelijke basis (Grondwet, AWGB)
 - EVRM en Europese bescherming
@@ -35,11 +36,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Hoe wetten bescherming afdwingen
 
 **Internal Links (Outgoing Anchors):**
+
 - → mensenrechten van LHBTIQ+ personen
 - → EVRM artikel 8 en 14 non-discriminatie
 - → juridische grondslag [/thema/mensenrechten/](/thema/mensenrechten/)
 
 **Article Type Schema:**
+
 ```json
 {
   "@type": "Article",
@@ -56,6 +59,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 ```
 
 **Target Keywords (LSI):**
+
 - mensenrechten LHBTIQ+ personen
 - juridische grondslag seksuele oriëntatie
 - EVRM artikel 8 bescherming
@@ -74,6 +78,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Hoe mensenrechten juridisch worden afgedwongen"
 
 **H2 Structure:**
+
 - Rol van nationale rechtbanken (kanton, ondernemingskamer)
 - Commissie Gelijke Behandeling (CGE) vorderingen
 - Europees Hof voor de Rechten van de Mens (EHRM)
@@ -81,11 +86,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Schadevergoeding en herstel
 
 **Internal Links:**
+
 - → EHRM jurisprudentie LHBTIQ+
 - → CGE klachtenprocedure
 - → rechtsbescherming [/thema/mensenrechten/](/thema/mensenrechten/)
 
 **Keywords:**
+
 - EHRM jurisprudentie
 - CGE klacht indienen
 - rechtsbescherming LHBTIQ+
@@ -106,6 +113,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Homorechten in Nederland: het juridische kader"
 
 **H2 Structure:**
+
 - Wettelijke basis (Grondwet, AWGB, Burgerlijk Wetboek)
 - Gelijke behandeling in werk, onderwijs, huisvesting
 - Genderneutraal huwelijk en ouderschap
@@ -113,11 +121,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Praktische toepassing
 
 **Internal Links:**
+
 - → gelijke behandeling werk [/thema/discriminatie-werk/](/thema/discriminatie-werk/)
 - → onderwijs bescherming [/thema/voorlichting-scholen/](/thema/voorlichting-scholen/)
 - → homorechten [/thema/gay-rechten/](/thema/gay-rechten/)
 
 **Keywords:**
+
 - homorechten wetgeving
 - gelijke behandeling LHBTIQ+
 - seksuele oriëntatie beschermde grond
@@ -136,6 +146,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Discriminatie herkennen en bestrijden: praktische gids"
 
 **H2 Structure:**
+
 - Wat telt als discriminatie? (voorbeelden per domein)
 - Bewijs en documentatie
 - Escalatiepad: melden → klacht → rechtszaak
@@ -143,11 +154,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Succesvolle rechtszaken
 
 **Internal Links:**
+
 - → discriminatie op het werk
 - → onderwijs pesterijen
 - → klacht indienen procedures
 
 **Keywords:**
+
 - discriminatie herkennen
 - juridische klacht indienen
 - rechtsbescherming LHBTIQ+
@@ -168,6 +181,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Juridische rechten van LHBTIQ+ leerlingen"
 
 **H2 Structure:**
+
 - Anti-pesterijen / anti-bullying wetgeving
 - Schoolverantwoordelijkheid (zorgplicht)
 - Onderwijsinspectie rol en toezicht
@@ -175,11 +189,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Inclusief curriculum
 
 **Internal Links:**
+
 - → AWGB discriminatieverbod
 - → Onderwijsinspectie klacht indienen
 - → pesterijen veiligheid [/thema/voorlichting-scholen/](/thema/voorlichting-scholen/)
 
 **Keywords:**
+
 - LHBTIQ+ veiligheid school
 - anti-pesterijenbeleid
 - onderwijsinspectie klacht
@@ -198,6 +214,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Praktische stappen tegen pesterijen: wat je kunt doen"
 
 **H2 Structure:**
+
 - Herken pesterijen / discriminatie
 - Documenteren (datum, place, getuigen)
 - Meld het (school, vertrouwensperson, ouders)
@@ -206,10 +223,12 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Succesverhalen
 
 **Internal Links:**
+
 - → vertrouwensinstanties COC / juridisch loket
 - → onderwijsinspectie klacht
 
 **Keywords:**
+
 - pesterijen tegen LHBTIQ+ leerlingen
 - juridische hulp school
 - vertrouwensperson school
@@ -230,6 +249,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "AWGB: de juridische bescherming tegen werkdiscriminatie"
 
 **H2 Structure:**
+
 - AWGB uitgelegd (werkingssfeer, verboden gronden)
 - Gelijke behandeling in alle aspecten werk
 - Werkgeversplichten
@@ -237,11 +257,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Schadevergoeding
 
 **Internal Links:**
+
 - → discriminatieverbodengronden
 - → werknemersrechten AWGB
 - → schadevergoeding [/thema/discriminatie-werk/](/thema/discriminatie-werk/)
 
 **Keywords:**
+
 - AWGB werkdiscriminatie
 - gelijke behandeling werk
 - seksuele oriëntatie beschermde grond
@@ -260,6 +282,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Actieplan bij werkdiscriminatie: wat je kunt doen"
 
 **H2 Structure:**
+
 - Herken discriminatie
 - Documenteer (datum, getuigen, bewijzen)
 - Meld bij werkgever / HR
@@ -269,11 +292,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Schadevergoeding claim
 
 **Internal Links:**
+
 - → CGE klachtenprocedure
 - → juridisch loket
 - → werknemersrechten
 
 **Keywords:**
+
 - werkdiscriminatie klacht
 - juridische hulp werk
 - schadevergoeding
@@ -294,6 +319,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Asielwetgeving voor LHBTIQ+ personen"
 
 **H2 Structure:**
+
 - VN Vluchtelingenverdrag en LHBTIQ+ bescherming
 - EVRM artikel 3 (geen foltering) en 8 (privéleven)
 - EU asielprocedures
@@ -301,11 +327,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Landenanalyse (onveilige landen)
 
 **Internal Links:**
+
 - → mensenrechten EVRM
 - → VN verdragen
 - → asiel [/thema/homoseksuele-vluchtelingen/](/thema/homoseksuele-vluchtelingen/)
 
 **Keywords:**
+
 - LHBTIQ+ asiel wetgeving
 - VN vluchtelingenverdrag
 - EVRM bescherming vervolgden
@@ -324,6 +352,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Praktische gids: asiel aanvragen als LHBTIQ+ persoon"
 
 **H2 Structure:**
+
 - Asielverzoek indienen
 - IND interview voorbereiding
 - Bewijs en documentatie
@@ -333,11 +362,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Psychische ondersteuning
 
 **Internal Links:**
+
 - → LIWC organisatie
 - → juridisch loket
 - → IND informatie
 
 **Keywords:**
+
 - LHBTIQ+ asielverzoek
 - IND interview
 - juridische bijstand vluchtelingen
@@ -358,6 +389,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 **H1:** "Transgender zorgrechten: geslachtsherkenning en medische zorg"
 
 **H2 Structure:**
+
 - Geslachtsverandering procedure (sinds 2019)
 - Medische transitie: hormonen en chirurgie
 - Zorgverzekeringswet vergoeding
@@ -366,11 +398,13 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 - Klacht procedures (IGJ, AWGB)
 
 **Internal Links:**
+
 - → transgender geslachtsherkenning
 - → medische autonomie
 - → zorgrechten [/thema/gezondheidszorg/](/thema/gezondheidszorg/)
 
 **Keywords:**
+
 - transgender geslachtsverandering
 - medische transitie verzekering
 - gezondheidszorg LHBTIQ+
@@ -385,6 +419,7 @@ This document outlines the SEO, schema, and topical strategy for the 12-article 
 Use these anchor texts consistently to reinforce topical authority:
 
 ### Mensenrechten
+
 - mensenrechten van LHBTIQ+ personen
 - juridische grondslag gelijkheid
 - EVRM bescherming
@@ -392,12 +427,14 @@ Use these anchor texts consistently to reinforce topical authority:
 - CGE klachtenprocedure
 
 ### Homorechten
+
 - homorechten en seksuele oriëntatie
 - gelijke behandeling AWGB
 - discriminatieverbod Nederland
 - praktische toepassing rechten
 
 ### Onderwijs
+
 - LHBTIQ+ veiligheid school
 - pesterijen tegen leerlingen
 - onderwijsinspectie toezicht
@@ -405,6 +442,7 @@ Use these anchor texts consistently to reinforce topical authority:
 - geslachtsnaam wijziging
 
 ### Discriminatie werk
+
 - werkdiscriminatie AWGB
 - gelijke behandeling werk
 - schadevergoeding claim
@@ -412,6 +450,7 @@ Use these anchor texts consistently to reinforce topical authority:
 - juridische bijstand werk
 
 ### Vluchtelingen
+
 - LHBTIQ+ asiel
 - VN vluchtelingenverdrag
 - EVRM artikel 3 en 8
@@ -419,6 +458,7 @@ Use these anchor texts consistently to reinforce topical authority:
 - juridische hulp vluchtelingen
 
 ### Gezondheidszorg
+
 - transgender geslachtsverandering
 - medische transitie zorg
 - zorgverzekeringswet vergoeding
@@ -430,20 +470,24 @@ Use these anchor texts consistently to reinforce topical authority:
 ## SEO PATTERNS
 
 ### Title Formula
+
 `[KEYWORD PHRASE] | [LEGAL ANGLE] — GayJustice.org`
 
 Example: "Discriminatie op het werk | AWGB bescherming en praktische stappen"
 
 ### Meta Description Length
+
 120–160 characters. Include keyword + benefit/question.
 
 Example: "Wat zegt de AWGB? Hoe bescherm je jezelf tegen werkdiscriminatie? Gids met stappen en contactgegevens."
 
 ### H1 Placement
+
 - Exactly 1 H1 per article (matches SEO title concept)
 - Positioned after intro, before first H2
 
 ### H2 Count
+
 - 4–6 H2 sections per article
 - Clear topical progression (foundation → application → action)
 
@@ -492,6 +536,7 @@ Example: "Wat zegt de AWGB? Hoe bescherm je jezelf tegen werkdiscriminatie? Gids
 **Per article:** Min 3–5 links to thema pages + related articles.
 
 **Example for Article 4.1 (work discrimination):**
+
 - Work discrimination definition → /thema/discriminatie-werk/
 - AWGB explanation → /thema/gay-rechten/
 - Mensenrechten basis → /thema/mensenrechten/
@@ -519,11 +564,13 @@ Example: "Wat zegt de AWGB? Hoe bescherm je jezelf tegen werkdiscriminatie? Gids
 ## NEXT PHASES
 
 ### Phase 6 (After blog launch)
+
 - Monitor performance (Search Console, traffic)
 - Update FAQ sections on thema pages with blog links
 - Create topical clusters (3–4 articles per thema eventually)
 
 ### Phase 7 (Content Operations)
+
 - Establish editorial calendar
 - Create contributor guidelines
 - Document publishing workflow
