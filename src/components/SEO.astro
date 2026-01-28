@@ -86,7 +86,7 @@ const orgNode: any = {
   },
   description: defaultDescription(description),
   email: SITE.email,
-  foundingDate: "2019",
+  foundingDate: "2026",
   parentOrganization: { "@id": stvgId },
   knowsAbout: SITE.knowsAbout,
   address: {
@@ -144,7 +144,6 @@ const graph: any[] = [
     isPartOf: { "@id": siteId },
     publisher: { "@id": stvgId },
     inLanguage: lang,
-    datePublished: "2019-01-01",
     dateModified: new Date().toISOString().split("T")[0],
   },
   {
@@ -158,81 +157,6 @@ const graph: any[] = [
     })),
   },
 ];
-
-// Add LegalService schema for pages on the homepage
-if (Astro.url.pathname === "/" || Astro.url.pathname === "/index.html") {
-  const legalServiceNode = {
-    "@type": "LegalService",
-    "@id": `${SITE.url}/#legalservice`,
-    name: "GayJustice.org - Juridische Informatievoorziening LHBTIQ+",
-    description:
-      "Onafhankelijke juridische informatie, brongebaseerde duiding en betrouwbare doorverwijzing voor LHBTIQ+ personen in Nederland",
-    url: SITE.url + "/",
-    provider: {
-      "@id": stvgId,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Nederland",
-      sameAs: "https://www.wikidata.org/wiki/Q55",
-    },
-    availableLanguage: ["nl", "en"],
-    serviceType: [
-      "Juridische informatie",
-      "Mensenrechten educatie",
-      "Doorverwijzing hulpinstanties",
-      "Discriminatierecht uitleg",
-    ],
-    priceRange: "Gratis",
-    knowsAbout: [
-      "Discriminatierecht",
-      "LHBTIQ+ wetgeving",
-      "Mensenrechten",
-      "Gelijke behandeling",
-      "Asielrecht",
-    ],
-  };
-  graph.push(legalServiceNode);
-
-  const howToNode = {
-    "@type": "HowTo",
-    "@id": `${SITE.url}/#howto`,
-    name: "Hoe je GayJustice.org het best gebruikt",
-    description:
-      "Stappen om juridische informatie over LHBTIQ+ rechten op GayJustice.org te vinden",
-    step: [
-      {
-        "@type": "HowToStep",
-        position: 1,
-        name: "Begin met thema-pagina's",
-        text: "Ga naar het Thema's-onderdeel om wettelijke onderwerpen te begrijpen. We hebben pagina's over homorechten, discriminatie op het werk, onderwijs, transgender rechten en meer.",
-        url: `${SITE.url}/thema/`,
-      },
-      {
-        "@type": "HowToStep",
-        position: 2,
-        name: "Zoek in Resources",
-        text: "Vind links naar officiele wetteksten, jurisprudentie, organisaties die juridische hulp bieden, en downloadbare informatie.",
-        url: `${SITE.url}/resources/`,
-      },
-      {
-        "@type": "HowToStep",
-        position: 3,
-        name: "Lees Blog-artikelen",
-        text: "Lees updates over actuele zaken, juridische ontwikkelingen, praktische gidsen en interviews met experts.",
-        url: `${SITE.url}/blog/`,
-      },
-      {
-        "@type": "HowToStep",
-        position: 4,
-        name: "Neem contact op",
-        text: "Heb je vragen of wil je iets melden? Neem contact op met Stichting Vrijheid & Gelijkheid via het contactformulier.",
-        url: `${SITE.url}/contact/`,
-      },
-    ],
-  };
-  graph.push(howToNode);
-}
 
 const faqJsonLd = faq?.length
   ? {

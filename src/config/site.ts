@@ -42,5 +42,5 @@ export const SITE = {
     "Legal protection",
   ],
 
-  sameAs: ["https://www.stvg.org/"] as string[],
+  sameAs: [] as string[],
 };
