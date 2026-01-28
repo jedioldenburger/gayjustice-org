@@ -40,21 +40,26 @@ const APP_ID = "d5c623e8-37b9-44d2-87a6-a10fbcd900dc";
     }
   </style>
 
-  <script is:inline async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  <script is:inline async defer src="https://cusdis.com/js/cusdis.es.js"
+  ></script>
 
   <!-- Auto-resize iframe based on content -->
   <script is:inline>
-    (function() {
-      const checkIframe = setInterval(function() {
-        const iframe = document.querySelector('#cusdis_thread iframe');
+    (function () {
+      const checkIframe = setInterval(function () {
+        const iframe = document.querySelector("#cusdis_thread iframe");
         if (iframe) {
           clearInterval(checkIframe);
-          iframe.style.height = '500px';
-          
+          iframe.style.height = "500px";
+
           // Listen for resize messages from Cusdis
-          window.addEventListener('message', function(e) {
-            if (e.origin === 'https://cusdis.com' && e.data && typeof e.data.height === 'number') {
-              iframe.style.height = (e.data.height + 50) + 'px';
+          window.addEventListener("message", function (e) {
+            if (
+              e.origin === "https://cusdis.com" &&
+              e.data &&
+              typeof e.data.height === "number"
+            ) {
+              iframe.style.height = e.data.height + 50 + "px";
             }
           });
         }
