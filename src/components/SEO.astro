@@ -193,6 +193,14 @@ if (dataset) {
 }
 
 if (type === "article") {
+  const articleAuthor = article?.author
+    ? article.author
+    : {
+        "@type": "Organization",
+        "@id": orgId,
+        name: SITE.name,
+      };
+
   graph.push({
     "@type": "BlogPosting",
     "@id": `${url}#article`,
@@ -200,11 +208,7 @@ if (type === "article") {
     headline: article?.headline || (title ? String(title) : fullTitle),
     ...(article?.datePublished ? { datePublished: article.datePublished } : {}),
     ...(article?.dateModified ? { dateModified: article.dateModified } : {}),
-    author: {
-      "@type": "Organization",
-      "@id": orgId,
-      name: SITE.name,
-    },
+    author: articleAuthor,
     publisher: { "@id": orgId },
   });
 }

@@ -23,6 +23,7 @@ const seo = {
   description: entry.data.description,
   canonical: `/blog/${entry.slug}/`,
   lang: "nl-NL",
+  type: "article",
   alternates: [
     { hreflang: "nl", href: `https://www.gayjustice.org/blog/${entry.slug}/` },
     { hreflang: "en", href: `https://www.gayjustice.org/en/blog/` },
@@ -39,6 +40,15 @@ const seo = {
       url: `https://www.gayjustice.org/blog/${entry.slug}/`,
     },
   ],
+  article: {
+    headline: entry.data.title,
+    datePublished: entry.data.pubDatetime.toISOString(),
+    dateModified: entry.data.pubDatetime.toISOString(),
+    author: {
+      "@type": entry.data.author === "STVG" ? "Organization" : "Person",
+      name: entry.data.author,
+    },
+  },
 };
 ---
 
