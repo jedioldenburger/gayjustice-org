@@ -30,20 +30,16 @@ const APP_ID = "d5c623e8-37b9-44d2-87a6-a10fbcd900dc";
   >
   </div>
 
-  <script is:inline async defer src="https://cusdis.com/js/cusdis.es.js"
-  ></script>
+  <style>
+    #cusdis_thread iframe {
+      width: 100% !important;
+      min-height: 400px !important;
+      border: none !important;
+    }
+  </style>
 
-  <!-- Auto-resize iframe to fit content -->
-  <script is:inline>
-    window.addEventListener('message', function(e) {
-      if (e.data && e.data.from === 'cusdis') {
-        const iframe = document.querySelector('#cusdis_thread iframe');
-        if (iframe && e.data.event === 'resize') {
-          iframe.style.height = e.data.data + 'px';
-        }
-      }
-    });
-  </script>
+  <script is:inline async defer src="https://cusdis.com/js/cusdis.es.js"
+  ></style>
 
   <p style="margin-top: 16px; font-size: 0.85em; color: var(--muted);">
     {
