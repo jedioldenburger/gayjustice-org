@@ -4,7 +4,8 @@ import Container from "../components/Container.astro";
 
 const seo = {
   title: "404 - Pagina niet gevonden | GayJustice.org",
-  description: "De pagina die u zoekt, is niet (meer) beschikbaar. Bezoek onze startpagina of navigeer naar een ander onderdeel.",
+  description:
+    "De pagina die u zoekt, is niet (meer) beschikbaar. Bezoek onze startpagina of navigeer naar een ander onderdeel.",
   canonical: "/404/",
   lang: "nl-NL",
   noindex: true,
@@ -16,21 +17,42 @@ const seo = {
   <Container>
     <article style="text-align: center; padding: 60px 20px;">
       <h1 style="font-size: 4rem; margin: 0 0 12px; line-height: 1;">404</h1>
-      <h2 style="font-size: 1.8rem; margin: 0 0 24px; color: var(--muted);">Pagina niet gevonden</h2>
-      
-      <p style="font-size: 1.1rem; color: var(--muted); margin: 0 0 32px; max-width: 60ch; margin-left: auto; margin-right: auto;">
-        De pagina die u zoekt, is niet (meer) beschikbaar. Dit kan gebeuren als u een verouderde link volgt of er een typfout in de URL is.
+      <h2 style="font-size: 1.8rem; margin: 0 0 24px; color: var(--muted);">
+        Pagina niet gevonden
+      </h2>
+
+      <p
+        style="font-size: 1.1rem; color: var(--muted); margin: 0 0 32px; max-width: 60ch; margin-left: auto; margin-right: auto;"
+      >
+        De pagina die u zoekt, is niet (meer) beschikbaar. Dit kan gebeuren als
+        u een verouderde link volgt of er een typfout in de URL is.
       </p>
 
-      <nav style="margin: 48px 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a href="/" class="btn btn-primary" style="display: inline-block; padding: 12px 24px;">← Terug naar startpagina</a>
-        <a href="/thema/" class="btn btn-outline" style="display: inline-block; padding: 12px 24px;">Thema's verkennen</a>
+      <nav
+        style="margin: 48px 0; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;"
+      >
+        <a
+          href="/"
+          class="btn btn-primary"
+          style="display: inline-block; padding: 12px 24px;"
+          >← Terug naar startpagina</a
+        >
+        <a
+          href="/thema/"
+          class="btn btn-outline"
+          style="display: inline-block; padding: 12px 24px;"
+          >Thema's verkennen</a
+        >
       </nav>
 
-      <div style="background: var(--surface-bg); padding: 32px; border-radius: var(--radius); margin-top: 48px; max-width: 100%; text-align: left;">
+      <div
+        style="background: var(--surface-bg); padding: 32px; border-radius: var(--radius); margin-top: 48px; max-width: 100%; text-align: left;"
+      >
         <h3 style="margin-top: 0;">Waar kunt u naartoe?</h3>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px;">
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px;"
+        >
           <div>
             <h4 style="margin-top: 0;">Helpzoeken</h4>
             <ul style="margin: 0; padding-left: 20px;">
@@ -39,7 +61,7 @@ const seo = {
               <li><a href="/missie/">Missie</a> — wat we doen</li>
             </ul>
           </div>
-          
+
           <div>
             <h4 style="margin-top: 0;">Kernthema's</h4>
             <ul style="margin: 0; padding-left: 20px;">

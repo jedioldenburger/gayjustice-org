@@ -794,6 +794,7 @@ Maak `/expertise` pagina met:
 ## 📱 7. TECHNISCHE SEO
 
 ### 7.1 Core Web Vitals
+
 📱 7. TECHNISCHE SEO
 7.1 Core Web Vitals
 Check & optimaliseer:
@@ -895,28 +896,28 @@ rechtsbescherming
 maatschappelijke acceptatie
 
 📊 9. IMPLEMENTATIE ROADMAP
-Fase 1: Foundation (Week 1-2)
+Fase 1: Foundation (Chapter 1-2)
 
  Content audit complete
  Keyword research finaliseren
  Metadata templates maken
  Schema.org templates ontwikkelen
 
-Fase 2: Content (Week 3-6)
+Fase 2: Content (Chapter 3-6)
 
  Homepage uitbreiden (1500 woorden)
  Alle themapagina's schrijven (800-1200 woorden elk)
  10 blog artikelen publiceren
  5 pillar pages creëren
 
-Fase 3: Technical (Week 7-8)
+Fase 3: Technical (Chapter 7-8)
 
  Alle schema's implementeren
  Internal linking optimaliseren
  Core Web Vitals verbeteren
  Mobile optimization finaliseren
 
-Fase 4: Authority (Week 9-12)
+Fase 4: Authority (Chapter 9-12)
 
  Expert profiles toevoegen
  Case studies publiceren
@@ -954,7 +955,7 @@ Domain Authority: 40+
 Monthly visitors: 15,000+
 
 ⚠️ PRIORITEIT ACTIES (Start Vandaag)
-Must-Do's Deze Week:
+Must-Do's Dit Chapter:
 
 ✅ Homepage content uitbreiden naar 1500 woorden
 ✅ Alle meta descriptions herschrijven (150-160 chars)
