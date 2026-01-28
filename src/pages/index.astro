@@ -5,15 +5,14 @@ import IntroCard from "../components/IntroCard.astro";
 
 const seo = {
   title:
-    "LHBTIQ+ Rechten Nederland: Juridische Info, Discriminatie & Hulp | GayJustice.org",
+    "LHBTIQ+ rechten in Nederland en Europa | Juridische informatie – GayJustice.org",
   description:
-    "Ervaar je discriminatie als LHBTIQ+ persoon? GayJustice.org biedt gratis juridische informatie over je rechten, stap-voor-stap hulproutes en doorverwijzing naar specialisten. Onafhankelijk, brongebaseerd, 20+ jaar expertise.",
+    "Juridische informatie over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa. Uitleg van wetgeving, rechtspraak en beschermingskaders. Geen juridisch advies.",
   canonical: "/",
   lang: "nl-NL",
   alternates: [
     { hreflang: "nl", href: "https://www.gayjustice.org/" },
     { hreflang: "en", href: "https://www.gayjustice.org/en/" },
-    { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [{ name: "GayJustice.org", url: "https://www.gayjustice.org/" }],
   keywords: [
@@ -21,147 +20,25 @@ const seo = {
     "juridische bescherming",
     "discriminatie melden",
     "homorechten",
-    "transgender rechten",
-    "college rechten van de mens",
+    "mensenrechten",
+    "gelijke behandeling",
     "awgb",
   ],
   faq: [
     {
       question: "Wat is GayJustice.org?",
       answer:
-        "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), gericht op rechtsbescherming en gelijke behandeling van homoseksuele personen.",
+        "GayJustice.org is een juridisch-informatief platform over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa.",
     },
     {
-      question: "Is GayJustice.org onderdeel van STVG?",
+      question: "Geeft GayJustice.org juridisch advies?",
       answer:
-        "Ja. GayJustice.org is een thematisch initiatief van Stichting Vrijheid & Gelijkheid (STVG) en geen aparte rechtspersoon.",
+        "Nee. GayJustice.org biedt feitelijke informatie en juridische duiding, maar geen individueel juridisch advies of rechtsbijstand.",
     },
     {
-      question: "Geven jullie juridisch advies?",
+      question: "Wie is verantwoordelijk voor GayJustice.org?",
       answer:
-        "Nee. GayJustice.org biedt algemene, feitelijke informatie en juridische duiding. Er wordt geen individueel juridisch advies of rechtsbijstand verleend.",
-    },
-    {
-      question: "Behandelen jullie individuele zaken?",
-      answer:
-        "Nee. GayJustice.org richt zich op structurele vraagstukken en publieke informatievoorziening. Individuele dossierbehandeling vindt niet plaats.",
-    },
-    {
-      question: "Welke thema's behandelen jullie?",
-      answer:
-        "Rechtsbescherming, gelijke behandeling, discriminatie en toegang tot rechtvaardigheid rond homorechten, met focus op juridische realiteit en betrouwbare bronnen.",
-    },
-    {
-      question: "Wie is verantwoordelijk voor de inhoud?",
-      answer:
-        "Bestuurlijke en juridische verantwoordelijkheid berust bij Stichting Vrijheid & Gelijkheid (STVG).",
-    },
-    {
-      question: "Hoe kan ik bijdragen of correcties doorgeven?",
-      answer:
-        "Via de contactgegevens op deze website of per e-mail naar info@gayjustice.org.",
-    },
-    {
-      question: "Biedt GayJustice.org hulp bij discriminatie?",
-      answer:
-        "We bieden geen juridische bijstand, maar wel informatie, voorlichting en doorverwijzing naar organisaties die dat wel doen.",
-    },
-    {
-      question: "Is dit platform alleen voor homoseksuele personen?",
-      answer:
-        "Onze focus ligt op LHBTIQ+ personen en seksuele oriëntatie/geslachtsidentiteit. We helpen iedereen die juridische informatie over deze onderwerpen zoekt.",
-    },
-    {
-      question:
-        "Wat is het verschil tussen discriminatie en ongelijke behandeling?",
-      answer:
-        "Discriminatie is onrechtmatige onderscheiding; ongelijke behandeling is breder. Beide kunnen juridisch problematisch zijn. Onze site helpt u beide te herkennen.",
-    },
-    {
-      question: "Welke wetten beschermen homorechten in Nederland?",
-      answer:
-        "De Algemene wet gelijke behandeling (AWGB), het Burgerlijk Wetboek, de Grondwet en internationale verdragen zoals de EVRM. Lees meer op onze themapagina's.",
-    },
-    {
-      question:
-        "Kan ik discriminatie melden zonder mijn identiteit prijs te geven?",
-      answer:
-        "Ja, veel meldpunten en organisaties werken anoniem. We linken naar gespecialiseerde partners die u kan advies geven.",
-    },
-    {
-      question: "Hoe herken ik discriminatie op het werk?",
-      answer:
-        "Discriminatie op het werk is verboden op grond van seksuele oriëntatie en geslachtsidentiteit. Voorbeelden: weigering eindiging, pestgedrag, oneerlijke ontslag. Lees onze gids.",
-    },
-    {
-      question: "Wat zijn mijn rechten in onderwijs?",
-      answer:
-        "Scholen mogen niet discrimineren op basis van seksuele oriëntatie of geslacht. Pesterijen, uitsluiting en beperkte eerbiediging zijn juridisch adresseerbaar.",
-    },
-    {
-      question: "Hebben transgender personen andere rechten?",
-      answer:
-        "Ja, met eigen juridische kaders. Transgender personen hebben recht op geslachtsherkenning, medische zorg en bescherming tegen discriminatie. We behandelen dit ook.",
-    },
-    {
-      question: "Hoe zit het met LHBTIQ+ vluchtelingen?",
-      answer:
-        "LHBTIQ+ vluchtelingen kunnen asielprocedures starten op basis van vervolgingsvrees. Onze site biedt informatie over asielprocedures en rechtsbescherming.",
-    },
-    {
-      question: "Kan ik anoniem contact opnemen?",
-      answer:
-        "Ja, je kunt het contactformulier gebruiken en aangeven dat je anoniem wilt blijven. Voor juridische hulp adviseren we directe contact met gespecialiseerde organisaties.",
-    },
-    {
-      question: "Is GayJustice.org in het Engels beschikbaar?",
-      answer:
-        "Ja, veel inhoud is vertaald naar het Engels. Klik op /en/ in de navigatie of selecteer 'English' voor volledige Engelse versie.",
-    },
-    {
-      question: "Hoe actueel is de informatie op GayJustice.org?",
-      answer:
-        "We werken continu aan updates als wetgeving verandert. Controleer de 'Laatst bijgewerkt' datum per artikel. Juridische situaties veranderen snel—check altijd huidige bronnen.",
-    },
-    {
-      question: "Wat moet ik doen als ik discriminatie ervaar?",
-      answer:
-        "Eerst: documenteer wat er gebeurde (datum, plaats, getuigen). Dan: meld het bij vertrouwde personen of organisaties (werkgever, school, politie afhankelijk van context). Zoek juridisch advies bij gespecialiseerde partners. Wij helpen je doorverwijzen—zie onze contactpagina.",
-    },
-    {
-      question: "Wat kost juridische hulp bij discriminatie?",
-      answer:
-        "Eerste juridisch advies bij Juridisch Loket is gratis. Het College voor de Rechten van de Mens beoordeelt discriminatiezaken kosteloos. Voor rechtsbijstand gelden inkomenstoetsen. GayJustice.org verwijst door naar organisaties met gratis of betaalbare hulp.",
-    },
-    {
-      question: "Hoe lang duurt een discriminatiemelding?",
-      answer:
-        "Een beoordeling door het College voor de Rechten van de Mens duurt gemiddeld 6-9 maanden. Spoedprocedures zijn mogelijk bij dreigend ontslag. Melding bij Anti Discriminatie Bureau krijgt vaak binnen weken reactie. Timing verschilt per instantie en complexiteit zaak.",
-    },
-    {
-      question: "Kan mijn werkgever ontdekken dat ik discriminatie meldde?",
-      answer:
-        "Bij College voor de Rechten van de Mens wordt je werkgever gehoord - volledige anonimiteit is niet mogelijk. Bij Anti Discriminatie Bureaus kun je anoniem melden. Belangrijk: represailles na melding zijn wettelijk verboden (artikel 1 Grondwet, AWGB artikel 5). Onterecht ontslag na melding is aanvechtbaar.",
-    },
-    {
-      question: "Heeft Stichting Vrijheid & Gelijkheid een ANBI-status?",
-      answer:
-        "Nee. Stichting Vrijheid & Gelijkheid (STVG) is een Sociaal Belang Behartigende Instelling (SBBI). De stichting heeft geen ANBI-status.",
-    },
-    {
-      question: "Zijn donaties aan STVG fiscaal aftrekbaar?",
-      answer:
-        "Nee. Donaties aan STVG zijn niet fiscaal aftrekbaar. We communiceren hier transparant over om misverstanden te voorkomen.",
-    },
-    {
-      question: "Waarom is gekozen voor een SBBI-status en niet voor ANBI?",
-      answer:
-        "STVG richt zich op maatschappelijke en juridische belangenbehartiging en publieke informatievoorziening. De SBBI-status sluit beter aan bij deze rol en biedt ruimte voor onafhankelijke analyse zonder fiscale claims.",
-    },
-    {
-      question: "Wie is juridisch verantwoordelijk voor GayJustice.org?",
-      answer:
-        "De bestuurlijke en juridische verantwoordelijkheid berust bij Stichting Vrijheid & Gelijkheid (STVG).",
+        "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), een onafhankelijke stichting naar Nederlands recht.",
     },
   ],
 };
@@ -173,615 +50,303 @@ const seo = {
       <div class="stack">
         <IntroCard
           logoAlt="LHBTIQ+ Rechtsbescherming en Gelijke Behandeling - Logo van GayJustice.org, juridische hulp en informatie over homorechten, transgender rechten en discriminatie in Nederland"
-          kicker="Rechtsbescherming • Gelijke behandeling"
+          kicker="Juridische informatie • Mensenrechten"
           title="GayJustice.org"
           subtitle="Juridische informatie over LHBTIQ+ rechten in Nederland en Europa"
         />
 
         <div class="surface" style="padding: 22px;">
+          <h1>Juridische informatie over LHBTIQ+ rechten in Nederland en Europa</h1>
+
           <p>
-            <strong
-              >GayJustice.org biedt feitelijke en juridische duiding</strong
-            > over rechtsbescherming en gelijke behandeling van LHBTIQ+ personen in
-            Nederland en Europa. We focussen op onderwerpen waar discriminatie, uitsluiting
-            of ongelijke behandeling voortduurt: werkplek, onderwijs, huisvesting,
-            gezondheidszorg, en rechtsbescherming voor kwetsbare groepen zoals transgender
-            personen en LHBTIQ+ vluchtelingen.
+            <strong>GayJustice.org biedt feitelijke en juridische duiding</strong> over LHBTIQ+
+            rechten, gelijke behandeling en mensenrechten in Nederland en Europa.
           </p>
 
           <p>
-            Het platform is een initiatief van <strong
-              ><a
-                href="/over-ons/"
-                style="text-decoration: underline; color: inherit;"
-                >Stichting Vrijheid &amp; Gelijkheid (STVG)</a
-              ></strong
-            >, een onafhankelijke, niet-winstgevende organisatie met meer dan 20
-            jaar expertise in juridische bescherming van LHBTIQ+ personen.
-            GayJustice.org richt zich op <strong
-              >structurele mensenrechtenvraagstukken</strong
-            > binnen Europese en nationale rechtskaders. We voeren geen partijpolitieke
-            campagnes, maar baseren alles op juridische feiten, officële wetteksten
-            en erkende rechtspraak.
-          </p>
-
-          <h2 style="margin-top: 28px;">Waarom dit platform nodig is</h2>
-          <p>
-            Nederland staat internationaal bekend om homorechten—het eerste land
-            ter wereld met geslachtsgeregistratie voor transgender personen en
-            huwelijksgelijkheid. <strong
-              >Maar <a
-                href="/thema/gay-rechten/"
-                style="text-decoration: underline; color: inherit;"
-                >discriminatie</a
-              > blijft realiteit:</strong
-            >
-          </p>
-          <ul style="margin: 10px 0;">
-            <li>
-              <strong>Op het werk:</strong> Verborgen discriminatie bij aanstelling,
-              promotie of ontslag op basis van seksuele oriëntatie of geslachtsidentiteit
-            </li>
-            <li>
-              <strong
-                ><a
-                  href="/thema/voorlichting-scholen/"
-                  style="text-decoration: underline; color: inherit;"
-                  >In onderwijs</a
-                >:</strong
-              > Pesterijen, uitsluiting en onvoldoende veiligheid voor LHBTIQ+ jongeren
-            </li>
-            <li>
-              <strong>Bij huisvesting:</strong> Weigering huurovereenkomsten of discriminatie
-              door verhuurders
-            </li>
-            <li>
-              <strong>In gezondheidszorg:</strong> Weigering zorg op basis van seksuele
-              oriëntatie; transitiezorg ontoereikend bereikbaar
-            </li>
-            <li>
-              <strong
-                ><a
-                  href="/thema/homoseksuele-vluchtelingen/"
-                  style="text-decoration: underline; color: inherit;"
-                  >Voor vluchtelingen</a
-                >:</strong
-              > LHBTIQ+ personen die vervolgd worden hebben recht op asiel, maar kennen
-              hun rechten vaak niet
-            </li>
-          </ul>
-
-          <p>
-            Het probleem: veel mensen weten niet welke rechten ze wettelijk
-            hebben, hoe ze die kunnen afdwingen, welk bewijs relevant is, of
-            waar ze naartoe kunnen voor juridische steun. Organisaties die
-            helpen zijn ingewikkeld te vinden. Wetteksten zijn moeilijk
-            zugankelijk. Jurisprudentie—de uitspraken van rechters—is verspreid
-            en omvangrijk. <strong>GayJustice.org overbrugt deze kloof.</strong>
+            Het platform legt uit welke rechten bestaan, hoe wettelijke bescherming is geregeld en welke juridische kaders
+            gelden, gebaseerd op wetgeving, rechtspraak en erkende mensenrechtenbronnen.
           </p>
 
           <p>
-            We bieden: <strong>praktische juridische informatie</strong> (wat zegt
-            de wet?), <strong
-              >betrouwbare <a
-                href="/resources/"
-                style="text-decoration: underline; color: inherit;">bronnen</a
-              ></strong
-            > (waar kom je het vandaan?),
-            <strong>duidelijke routes</strong> (wat kun je doen?), en <strong
-              ><a
-                href="/contact/"
-                style="text-decoration: underline; color: inherit;"
-                >doorverwijzingen</a
-              ></strong
-            > (naar wie kan je gaan?). Alles in begrijpelijk Nederlands, met juridische
-            nauwkeurigheid.
+            GayJustice.org richt zich op structurele vraagstukken zoals <a
+              href="/thema/discriminatie-werk"
+              style="text-decoration: underline; color: inherit;">discriminatie op het werk</a
+            >, gelijke behandeling in <a
+              href="/thema/onderwijs"
+              style="text-decoration: underline; color: inherit;">onderwijs</a
+            > en zorg, <a
+              href="/thema/gezondheidszorg"
+              style="text-decoration: underline; color: inherit;">transgender rechten</a
+            >, en rechtsbescherming van <a
+              href="/thema/vluchtelingen"
+              style="text-decoration: underline; color: inherit;">LHBTIQ+ vluchtelingen</a
+            >.
+          </p>
+
+          <p>
+            GayJustice.org is een initiatief van <strong><a
+              href="/transparantie/"
+              style="text-decoration: underline; color: inherit;"
+              >Stichting Vrijheid &amp; Gelijkheid (STVG)</a
+            ></strong>, een onafhankelijke, niet-winstgevende organisatie met meer dan 20 jaar expertise
+            in juridische bescherming van LHBTIQ+ personen.
           </p>
 
           <div
             style="background: rgba(11, 15, 20, 0.05); border-left: 4px solid rgba(11, 15, 20, 0.1); padding: 14px; margin: 16px 0; border-radius: 2px;"
           >
             <p style="margin: 0; font-size: 0.95em;">
-              <strong>Belangrijk:</strong> GayJustice.org geeft geen juridisch advies
-              en behandelt geen individuele zaken. We bieden informatie, educatie
-              en doorverwijzing. Voor juridische bijstand en vertegenwoordiging verwijzen
-              we je door naar organisaties die daarin gespecialiseerd zijn.
+              <strong>⚖️ Let op:</strong> GayJustice.org biedt geen juridisch advies en behandelt
+              geen individuele zaken.
             </p>
           </div>
 
-          <h2 style="margin-top: 28px;">Juridische grondslag in Nederland</h2>
+          <h2 style="margin-top: 28px;">Waarom dit platform nodig is</h2>
           <p>
-            LHBTIQ+ personen in Nederland worden beschermd door meerdere
-            juridische kaders:
+            Nederland staat internationaal bekend om wettelijke bescherming van LHBTIQ+ personen.
+            <strong>Toch blijft discriminatie in de praktijk bestaan:</strong>
           </p>
           <ul style="margin: 10px 0;">
             <li>
-              <strong>Grondwet (artikelen 1 en 6):</strong> Gelijkheid en gelijke
-              behandeling—juridische basis voor alle discriminatiewetgeving
+              <strong>Op het werk:</strong> verboden onderscheid bij aanstelling, promotie of ontslag
             </li>
             <li>
-              <strong>Algemene Wet Gelijke Behandeling (AWGB):</strong> Verbiedt discriminatie
-              op grond van seksuele oriëntatie in werk, onderwijs en diensten
+              <strong>In het onderwijs:</strong> pesten, uitsluiting en gebrek aan sociale veiligheid
             </li>
             <li>
-              <strong
-                >Europees Verdrag voor de Rechten van de Mens (EVRM):</strong
-              > Artikel 8 (privéleven) en Artikel 14 (non-discriminatie) beschermen
-              LHBTIQ+ personen
+              <strong>Bij huisvesting:</strong> ongelijke behandeling door verhuurders
             </li>
             <li>
-              <strong>Burgerlijk Wetboek:</strong> Regelingen voor geslachtsverandering,
-              huwelijk en gezinswetgeving zijn genderneutraal
+              <strong>In de gezondheidszorg:</strong> ongelijke toegang tot zorg, met name voor transgender
+              personen
             </li>
             <li>
-              <strong>Internationale verdragen:</strong> VN-verdragen op mensenrechten
-              (ICCPR) erkennen LHBTIQ+ bescherming
+              <strong>Voor LHBTIQ+ vluchtelingen:</strong> vervolging en onzekerheid over juridische
+              bescherming
             </li>
           </ul>
 
+          <p style="margin-top: 14px;">
+            <strong>Veel mensen weten niet:</strong>
+          </p>
+          <ul>
+            <li>welke rechten zij wettelijk hebben</li>
+            <li>hoe bescherming juridisch is geregeld</li>
+            <li>welke instanties bevoegd zijn</li>
+            <li>welke bronnen betrouwbaar zijn</li>
+          </ul>
+
           <p>
-            In de praktijk betekent dit dat discriminatie adresseerbaar is via
-            rechtbanken, commissies voor gelijke behandeling, ombudsman, en
-            andere instituties. <a
-              href="/thema/mensenrechten/"
-              style="text-decoration: underline;"
-              >Lees meer over juridische kaders en mensenrechten →</a
+            <strong>GayJustice.org overbrugt deze kenniskloof</strong> met toegankelijke, juridisch correcte
+            informatie.
+          </p>
+
+          <div class="divider" aria-hidden="true">⸻</div>
+
+          <h2>Wat wij bieden</h2>
+          <ul>
+            <li>
+              <strong>Juridische uitleg:</strong> wat zegt de wet daadwerkelijk?
+            </li>
+            <li>
+              <strong>Mensenrechtenkaders:</strong> nationaal en Europees recht
+            </li>
+            <li>
+              <strong>Bronverwijzingen:</strong> wetgeving, rechtspraak en officiële instanties
+            </li>
+            <li>
+              <strong>Thematische routes:</strong> overzicht per rechtsgebied
+            </li>
+            <li>
+              <strong>Doorverwijzing:</strong> naar bevoegde organisaties en publieke instanties
+            </li>
+          </ul>
+
+          <p style="margin-top: 14px;">
+            Alles in begrijpelijk Nederlands, zonder activistische framing en zonder juridisch advies.
+          </p>
+
+          <div class="divider" aria-hidden="true">⸻</div>
+
+          <h2>Juridische grondslag</h2>
+          <p>
+            De rechtsbescherming van LHBTIQ+ personen in Nederland is onder meer gebaseerd op:
+          </p>
+          <ul>
+            <li>
+              <strong>Grondwet</strong> – artikel 1 (gelijke behandeling)
+            </li>
+            <li>
+              <strong>Algemene Wet Gelijke Behandeling (AWGB)</strong>
+            </li>
+            <li>
+              <strong>Europees Verdrag voor de Rechten van de Mens (EVRM)</strong> – artikelen
+              8 en 14
+            </li>
+            <li>
+              <strong>Burgerlijk Wetboek</strong> – genderneutrale gezins- en persoonsrechten
+            </li>
+            <li>
+              <strong>Internationale mensenrechtenverdragen</strong> (o.a. ICCPR)
+            </li>
+          </ul>
+
+          <p style="margin-top: 14px;">
+            👉 <a href="/thema/mensenrechten" style="text-decoration: underline;
+              ">Lees meer op Mensenrechten en juridische kaders →</a
             >
           </p>
 
           <div class="divider" aria-hidden="true">⸻</div>
 
-          <h2>Hoe je deze site gebruikt</h2>
-          <p>
-            GayJustice.org is opgedeeld in logische secties. Hieronder vindt je
-            hoe je elk onderdeel beste kunt gebruiken.
-          </p>
+          <section class="section">
+            <h2>Thema's</h2>
+            <p>Begin bij het thema dat past bij jouw vraag:</p>
+
+            <div class="grid cols-2">
+              <div>
+                <ul style="margin: 0;">
+                  <li>
+                    <a href="/thema/gayrechten" style="text-decoration: underline;"
+                      >Homorechten en LHBTIQ+ rechten</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/thema/discriminatie-werk" style="text-decoration: underline;"
+                      >Discriminatie op het werk</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/thema/onderwijs" style="text-decoration: underline;"
+                      >LHBTIQ+ rechten in het onderwijs</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul style="margin: 0;">
+                  <li>
+                    <a href="/thema/gezondheidszorg" style="text-decoration: underline;"
+                      >Transgender rechten in de gezondheidszorg</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/thema/vluchtelingen" style="text-decoration: underline;"
+                      >LHBTIQ+ vluchtelingen en asiel</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/thema/mensenrechten" style="text-decoration: underline;"
+                      >Mensenrechten</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p style="margin-top: 16px;">
+              Elke themapagina bevat:
+            </p>
+            <ul>
+              <li>juridische context</li>
+              <li>uitleg van rechten</li>
+              <li>verwijzingen naar officiële bronnen</li>
+              <li>links naar verdiepende artikelen</li>
+            </ul>
+          </section>
+
+          <div class="divider" aria-hidden="true">⸻</div>
+
+          <h2>Hoe gebruik je deze site</h2>
           <ul>
+            <li>Start bij een themapagina voor overzicht</li>
+            <li>Lees artikelen voor verdieping en actualiteit</li>
+            <li>Controleer altijd de "Laatst bijgewerkt" datum</li>
             <li>
-              <strong>Thema-pagina's:</strong> Begin hier als je wilt begrijpen hoe
-              rechtsgebieden werken. We hebben pagina's over homorechten, discriminatie
-              op het werk, onderwijs, vluchteling-procedures, transgender rechten
-              en meer. Elke pagina geeft juridische uitleg, voorbeelden en links naar
-              meer informatie. <a
-                href="/thema/"
-                style="text-decoration: underline;">Naar alle thema's →</a
-              >
-            </li>
-            <li>
-              <strong>Blog &amp; Artikelen:</strong> Lees hieronder over actuele zaken,
-              juridische updates, praktische gidsen en het hoe-en-waarvan. We publiceren
-              regelmatig nieuwe inzichten. <a
-                href="/blog/"
-                style="text-decoration: underline;">Naar het blog →</a
-              >
-            </li>
-            <li>
-              <strong>Resources:</strong> Vindt links naar officiële wetteksten, jurisprudentie,
-              organisaties die juridische hulp bieden, en downloadbare informatie.
-              <a href="/resources/" style="text-decoration: underline;"
-                >Naar resources →</a
-              >
-            </li>
-            <li>
-              <strong>Contact:</strong> Heb je vragen, wil je iets melden of heb je
-              correcties? Neem contact op met Stichting Vrijheid en Gelijkheid. <a
-                href="/contact/"
-                style="text-decoration: underline;">Contact →</a
-              >
+              Gebruik zoektermen zoals "discriminatie werk seksuele oriëntatie" of
+              "transgender rechten Nederland"
             </li>
           </ul>
 
           <p style="margin-top: 14px;">
-            <strong>Tips voor je zoektocht:</strong>
+            <strong>Voor individuele rechtsbijstand verwijzen wij door naar gespecialiseerde organisaties.</strong>
           </p>
-          <ul>
-            <li>
-              Weet je niet waar te beginnen? Gebruik de zoekfunctie (bovenkant
-              pagina) met trefwoorden zoals "discriminatie werk", "transgender
-              rechten", of "vluchteling asiel"
-            </li>
-            <li>
-              Elke pagina geeft links naar gerelateerde onderwerpen. Volg deze
-              paden als je dieper wilt graven.
-            </li>
-            <li>
-              Controleer de "Laatst bijgewerkt" datum op elke pagina. Juridische
-              situaties veranderen snel.
-            </li>
-            <li>
-              Voor individuele juridische advies: neem contact op met
-              gespecialiseerde organisaties (zie Resources)
-            </li>
-          </ul>
 
           <div class="divider" aria-hidden="true">⸻</div>
 
-          <section class="section">
-            <h2>Onze focusgebieden</h2>
-            <p>
-              We concentreren ons op vier kernpijlers van juridische
-              bescherming:
-            </p>
-            <div class="grid cols-3">
-              <div class="surface" style="padding: 18px;">
-                <h3>Juridische helderheid</h3>
-                <p>
-                  We publiceren duidelijke, brongebaseerde uitleg over
-                  individuele rechten. Wat zegt de wetgeving echt? Hoe
-                  interpreteren rechters het? Welke internationale normen
-                  gelden? We vertalen juridische complexiteit in begrijpelijk
-                  Nederlands, met concrete voorbeelden en links naar officiële
-                  bronnen.
-                </p>
-                <ul style="font-size: 0.9em; margin: 8px 0 0 0;">
-                  <li>
-                    <strong>Juridische kaders:</strong> Wetteksten, verdragen, rechtspraak
-                  </li>
-                  <li>
-                    <strong>Praktische duiding:</strong> Wat betekent dit voor jou?
-                  </li>
-                  <li>
-                    <strong>Actuele trends:</strong> Hoe verandert de rechtspraak?
-                  </li>
-                </ul>
-              </div>
-              <div class="surface" style="padding: 18px;">
-                <h3>Beschermingsroutes</h3>
-                <p>
-                  Voor veel LHBTIQ+ personen is het onduidelijk wat hun volgende
-                  stap is na discriminatie. We brengen praktische routes in
-                  kaart: welke organisaties kunnen helpen, welk proces volg je,
-                  wat voor bewijs is relevant, en waar kan je terechtkomen als
-                  je hulp nodig hebt. Van melding tot rechtszaak—stap voor stap.
-                </p>
-                <ul style="font-size: 0.9em; margin: 8px 0 0 0;">
-                  <li>
-                    <strong>Stappenplannen:</strong> Wat te doen bij discriminatie
-                  </li>
-                  <li>
-                    <strong>Contactgegevens:</strong> Organisaties die helpen
-                  </li>
-                  <li>
-                    <strong>Juridische stappen:</strong> Klacht, rechtszaak, bezwaar
-                  </li>
-                </ul>
-              </div>
-              <div class="surface" style="padding: 18px;">
-                <h3>Betrouwbare coördinatie</h3>
-                <p>
-                  LHBTIQ+ personen verdienen betrouwbare, gecentraliseerde
-                  informatie. We werken samen met partners (verenigingen,
-                  rechtshulporganisaties, onderzoeksinstellingen) om people niet
-                  van het kastje naar de muur te sturen. Onze hyperlinks en
-                  netwerk brengen je bij de juiste expert, op het juiste moment.
-                </p>
-                <ul style="font-size: 0.9em; margin: 8px 0 0 0;">
-                  <li><strong>Netwerk:</strong> Geverifieerde partners</li>
-                  <li><strong>Expertise:</strong> Specialisten per thema</li>
-                  <li>
-                    <strong>Transparantie:</strong> Open over wie we zijn en doen
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
+          <h2>Onafhankelijk en transparant</h2>
+          <p>
+            GayJustice.org:
+          </p>
+          <ul>
+            <li>werkt zonder winstoogmerk</li>
+            <li>is politiek en religieus onafhankelijk</li>
+            <li>baseert zich uitsluitend op controleerbare bronnen</li>
+          </ul>
 
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>Waar we aan werken</h2>
-              <p>
-                <strong
-                  >GayJustice.org bouwt voort op de expertise van STVG.</strong
-                > Stichting Vrijheid &amp; Gelijkheid heeft 20+ jaar ervaring in rechtsbescherming
-                van LHBTIQ+ personen. Dit platform concentreert deze kennis en maakt
-                het toegankelijk.
-              </p>
-              <p>
-                <strong>Onze vier werkpijlers:</strong>
-              </p>
-              <ul>
-                <li>
-                  <strong>Juridische informatievoorziening:</strong> Officiële wetteksten
-                  (AWGB, Burgerlijk Wetboek), jurisprudentie (rechtszaken), internationale
-                  verdragen (EVRM, VN-Verdragen) en praktische duiding in Nederlands.
-                  Allemaal met bronverwijzingen.
-                </li>
-                <li>
-                  <strong>Thematische gidsen:</strong> Diepgaande resources over specifieke
-                  rechtstvraagstukken. Bijvoorbeeld: juridische eisen voor geslachtsverandering,
-                  asielprocedures voor LHBTIQ+ vluchtelingen, discriminatie in werk/onderwijs,
-                  transgender medische zorg, huwelijksen partnerschapsrecht, erfrecht
-                  en ouderschap.
-                </li>
-                <li>
-                  <strong>Hulproutes &amp; doorverwijzing:</strong> Praktische contactgegevens
-                  van organisaties die juridische steun, matschappelijke ondersteuning,
-                  of medische zorg bieden. We checken deze regelmatig.
-                </li>
-                <li>
-                  <strong>Bewustzording &amp; updating:</strong> Blog posts over actuele
-                  zaken, sterke rechtszaken, nieuwe wetgeving, internationale ontwikkelingen
-                  en interviews met experts in het veld.
-                </li>
-              </ul>
-
-              <p style="margin-top: 14px;">
-                <strong>Wat maakt GayJustice.org betrouwbaar?</strong>
-              </p>
-              <ul>
-                <li>
-                  <strong>Onafhankelijkheid:</strong> We hebben geen commerciële belangen,
-                  geen politieke bindingen, en geen religieuze agenda. STVG wordt
-                  gefinancierd uit donaties en doelmatige fondsen.
-                </li>
-                <li>
-                  <strong>Juridische expertise:</strong> STVG werkt sinds 2001 met
-                  juridische professionals, rechtbanken en internationale organisaties.
-                </li>
-                <li>
-                  <strong>Brongebaseerd:</strong> Alles wat we zeggen is traceerbaar
-                  terug te voeren op wetteksten, rechtspraak of erkende bronnen.
-                </li>
-                <li>
-                  <strong>Transparantie:</strong> We zijn open over wie we zijn, hoe
-                  we werken, en wat onze beperkingen zijn. Lees meer op onze <a
-                    href="/transparantie/"
-                    style="text-decoration: underline;">transparantiepagina →</a
-                  >
-                </li>
-              </ul>
-
-              <div
-                style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;"
-              >
-                <a class="btn btn-outline" href="/resources">Alle resources</a>
-                <a class="btn btn-outline" href="/thema/gay-rechten"
-                  >Homorechten</a
-                >
-                <a class="btn btn-outline" href="/blog">Blog lezen</a>
-                <a class="btn btn-ghost" href="/transparantie"
-                  >Over ons (Transparantie)</a
-                >
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>Voor wie is GayJustice.org?</h2>
-              <p>
-                Dit platform is voor iedereen met vragen over LHBTIQ+ rechten:
-              </p>
-              <ul>
-                <li>
-                  <strong>LHBTIQ+ personen zelf:</strong> Die willen begrijpen welke
-                  rechten ze hebben, hoe die beschermd zijn, en wat te doen bij discriminatie
-                </li>
-                <li>
-                  <strong>Werkgevers, scholem &amp; organisaties:</strong> Die willen
-                  weten hoe ze inclusief en juridisch correct kunnen werken
-                </li>
-                <li>
-                  <strong>Journalisten &amp; onderzoekers:</strong> Die betrouwbare
-                  informatie zoeken over LHBTIQ+ rechtskwesties
-                </li>
-                <li>
-                  <strong>Onderwijzers &amp; maatschappelijk werkers:</strong> Die
-                  hun kennis willen opfrissen en door willen verwijzen
-                </li>
-                <li>
-                  <strong>Iedereen:</strong> Die nieuwsgierig is naar juridische bescherming
-                  en gelijke behandeling
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>Stichting Vrijheid &amp; Gelijkheid (STVG)</h2>
-
-              <p>
-                <strong
-                  >STVG is een onafhankelijke organisatie met 20+ jaar
-                  expertise.</strong
-                > We werken aan juridische bescherming, maatschappelijke bewustwording
-                en politieke verantwoordingswording rond LHBTIQ+ rechten. GayJustice.org
-                is ons flagship-project voor publieke informatievoorziening.
-              </p>
-
-              <p>
-                <strong>Onze werkwijze:</strong>
-              </p>
-              <ul>
-                <li>
-                  <strong>Onafhankelijk:</strong> We werken niet-winstgevend, zonder
-                  politieke bindingen, en gefinancierd door donaties en doelmatige
-                  fondsen.
-                </li>
-                <li>
-                  <strong>Wetenschappelijk:</strong> We baseren alles op onderzoek,
-                  rechtspraak en erkende bronnen.
-                </li>
-                <li>
-                  <strong>Praktisch:</strong> We focussen op real-world problemen,
-                  niet op theoretische abstracties.
-                </li>
-                <li>
-                  <strong>Transparent:</strong> We publiceren jaarlijkse verslagen
-                  en zijn open over hoe we werken en waar we tegen aanlopen.
-                </li>
-              </ul>
-
-              <p>
-                <strong>STVG werkt samen met:</strong> Rechtbanken, universiteiten,
-                internationale organisaties (ECHR, UN), andere NGO's, gemeenten en
-                bedrijven die inclusie willen verbeteren.
-              </p>
-
-              <p>
-                <strong>Bestuurlijke verantwoording:</strong> STVG is ingeschreven
-                bij het Handelsregister (KvK) en voldoet aan alle Nederlandse NGO-normen.
-                Wij hebben een onafhankelijk bestuur en volgen strenge financiële
-                richtlijnen.
-              </p>
-
-              <p style="margin-top: 14px;">
-                <a class="btn btn-outline" href="/over-ons">Meer over STVG</a>
-                <a class="btn btn-ghost" href="/organisatie"
-                  >Organisatiestructuur</a
-                >
-              </p>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>Contact &amp; samenwerking</h2>
-              <p>
-                Voor samenwerking, vragen, correcties of bijdragen: neem contact
-                op.
-              </p>
-              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="btn btn-outline" href="/contact">Contactformulier</a>
-                <a class="btn btn-ghost" href="/over-ons">Over STVG</a>
-                <a
-                  class="btn btn-outline"
-                  href="mailto:info@gayjustice.org?subject=Contact%20via%20gayjustice.org"
-                >
-                  E-mail direct
-                </a>
-              </div>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>Reikwijdte en beperkingen</h2>
-              <p style="margin: 0;">
-                GayJustice.org behandelt algemene juridische kaders en
-                gelijkebehandelingsnormen. We beoordelen geen individuele zaken
-                en bieden geen juridische vertegenwoordiging of advies.
-              </p>
-            </div>
-          </section>
-
-          <section class="section">
-            <div class="surface" style="padding: 22px;">
-              <h2>FAQ</h2>
-              <div style="display: grid; gap: 10px;">
-                <details>
-                  <summary><strong>Wat is GayJustice.org?</strong></summary>
-                  <p>
-                    GayJustice.org is een initiatief van Stichting Vrijheid
-                    &amp; Gelijkheid (STVG), gericht op rechtsbescherming,
-                    gelijke behandeling en rechtvaardigheid voor homoseksuele
-                    personen waar discriminatie of uitsluiting voorkomt.
-                  </p>
-                </details>
-
-                <details>
-                  <summary
-                    ><strong>Is GayJustice.org onderdeel van STVG?</strong
-                    ></summary
-                  >
-                  <p>
-                    Ja. GayJustice.org is een thematisch initiatief van
-                    Stichting Vrijheid &amp; Gelijkheid (STVG) en geen aparte
-                    rechtspersoon.
-                  </p>
-                </details>
-
-                <details>
-                  <summary
-                    ><strong>Geven jullie juridisch advies?</strong></summary
-                  >
-                  <p>
-                    Nee. GayJustice.org geeft algemene, brongebaseerde
-                    informatie en duiding. We geven geen individueel juridisch
-                    advies of vertegenwoordiging.
-                  </p>
-                </details>
-
-                <details>
-                  <summary
-                    ><strong>Welke onderwerpen behandelen jullie?</strong
-                    ></summary
-                  >
-                  <p>
-                    We behandelen rechtsbescherming, gelijke behandeling,
-                    discriminatie en toegang tot rechtvaardigheid rond
-                    homorechten, met focus op praktische juridische realiteit en
-                    betrouwbare bronnen.
-                  </p>
-                </details>
-
-                <details>
-                  <summary
-                    ><strong>Hoe kan ik contact opnemen of samenwerken?</strong
-                    ></summary
-                  >
-                  <p>
-                    Voor samenwerking, correcties of bijdragen kun je contact
-                    opnemen via de contactgegevens op deze website.
-                  </p>
-                </details>
-              </div>
-            </div>
-          </section>
+          <p style="margin-top: 14px;">
+            👉 <a href="/transparantie" style="text-decoration: underline;"
+              >Meer hierover lees je op Transparantie & governance →</a
+            >
+          </p>
 
           <section class="section">
             <div class="divider" aria-hidden="true">⸻</div>
-            <div class="surface" style="padding: 22px; margin-top: 14px;">
-              <h2>Transparantie — GayJustice.org</h2>
-              <h3>Naam initiatief</h3>
-              <p>GayJustice.org</p>
 
-              <h3>Organisatorische inbedding</h3>
-              <p>
-                GayJustice.org is een initiatief van Stichting Vrijheid &amp;
-                Gelijkheid (STVG).
-              </p>
+            <h2 style="margin-top: 0;">Veelgestelde vragen</h2>
 
-              <h3>Doel</h3>
-              <p>
-                Het bevorderen van juridische bescherming en gelijke behandeling
-                van homoseksuele personen door middel van feitelijke informatie,
-                juridische duiding en maatschappelijke bewustwording.
-              </p>
+            <div style="display: grid; gap: 10px;">
+              <details>
+                <summary><strong>Wat is GayJustice.org?</strong></summary>
+                <p>
+                  Een juridisch-informatief platform over LHBTIQ+ rechten, gelijke
+                  behandeling en mensenrechten in Nederland en Europa.
+                </p>
+              </details>
 
-              <h3>Werkwijze</h3>
-              <p>
-                Het initiatief richt zich op structurele vraagstukken en
-                publieke informatievoorziening. Er vindt geen individuele
-                rechtsbijstand of dossierbehandeling plaats.
-              </p>
+              <details>
+                <summary
+                  ><strong>Geeft GayJustice.org juridisch advies?</strong></summary
+                >
+                <p>
+                  Nee. Wij bieden algemene informatie en juridische duiding, geen
+                  individueel juridisch advies.
+                </p>
+              </details>
 
-              <h3>Onafhankelijkheid</h3>
-              <p>
-                GayJustice.org opereert zonder winstoogmerk en onafhankelijk van
-                politieke, commerciële of religieuze belangen.
-              </p>
+              <details>
+                <summary
+                  ><strong>Wie is verantwoordelijk voor GayJustice.org?</strong></summary
+                >
+                <p>
+                  GayJustice.org is een initiatief van Stichting Vrijheid &
+                  Gelijkheid (STVG), een onafhankelijke stichting naar Nederlands
+                  recht.
+                </p>
+              </details>
 
-              <h3>Verantwoordelijkheid</h3>
-              <p style="margin: 0;">
-                Bestuurlijke en juridische verantwoordelijkheid berust bij
-                Stichting Vrijheid &amp; Gelijkheid.
-              </p>
+              <details>
+                <summary><strong>Hoe kan ik contact opnemen?</strong></summary>
+                <p>
+                  Via de <a
+                    href="/contact/"
+                    style="text-decoration: underline;">contactpagina</a
+                  > of info@gayjustice.org.
+                </p>
+              </details>
             </div>
           </section>
 
           <p class="last-updated">
             <small
-              >Laatst bijgewerkt: <time datetime="2026-01-28"
-                >28 januari 2026</time
-              ></small
+              >Laatst bijgewerkt: <time datetime="2026-01-29">29 januari 2026</time></small
             >
           </p>
         </div>
       </div>
 
-      <style>
+      <style is:global>
         .stack {
           display: grid;
           gap: 18px;
@@ -792,6 +357,29 @@ const seo = {
           color: var(--subtle);
           text-align: center;
           letter-spacing: 0.08em;
+        }
+
+        .grid {
+          display: grid;
+          gap: 14px;
+        }
+
+        .cols-2 {
+          grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 860px) {
+          .cols-2 {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        .last-updated {
+          display: block;
+          margin-top: 40px;
+          text-align: center;
+          color: var(--subtle);
+          font-size: 0.9em;
         }
       </style>
     </section></Container

@@ -1,0 +1,45 @@
+# llms.txt — AI & Language Model Usage Policy
+# Site: https://gayjustice.org
+# Publisher: Stichting Vrijheid & Gelijkheid (STVG)
+# Jurisdiction: Netherlands / European Union
+# Last updated: 29 January 2026
+
+## Purpose
+GayJustice.org is a public, non-commercial information platform providing
+factual and legal-contextual information on LHBTIQ+ rights, human rights,
+and equality under Dutch and European law.
+
+The website does NOT provide legal advice, legal representation,
+or individual case assessments.
+
+## Allowed Use
+Large Language Models (LLMs) and AI systems MAY:
+- Crawl and index publicly available content
+- Use content for informational, educational, and research purposes
+- Summarize legal frameworks, human rights standards, and public-law context
+- Quote short excerpts with attribution to GayJustice.org
+
+## Disallowed Use
+LLMs and AI systems MUST NOT:
+- Represent content as legal advice or legal services
+- Attribute professional legal opinions to GayJustice.org
+- Generate individualized legal guidance based on this content
+- Imply attorney-client, advisory, or counseling relationships
+- Use content for surveillance, profiling, or discrimination
+
+## Attribution
+When referencing this site, attribute as:
+"GayJustice.org – public legal information platform of Stichting Vrijheid & Gelijkheid (STVG)."
+
+## Scope & Accuracy
+Content is based on:
+- Dutch legislation
+- European and international human rights law
+- Published jurisprudence
+- Official public sources
+
+Content may change over time. Always verify with primary legal sources.
+
+## Contact
+For questions about data use or attribution:
+info@gayjustice.org

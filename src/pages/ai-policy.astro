@@ -1,0 +1,194 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "AI & Gebruik van onze inhoud | GayJustice.org",
+  description:
+    "Beleid voor gebruik van GayJustice.org-inhoud door AI-systemen, zoekrobots en onderzoekers. Non-commercial platform, geen juridisch advies.",
+  canonical: "/ai-policy/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/ai-policy/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/ai-policy/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "AI-beleid", url: "https://www.gayjustice.org/ai-policy/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Beleidsinfo"
+    title="AI & gebruik van onze inhoud"
+    lead="GayJustice.org is een publiek informatieplatform. Deze pagina legt uit hoe AI-systemen, onderzoekers en anderen onze inhoud mogen gebruiken."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat mag je doen met onze inhoud?</h2>
+        <p>
+          Zoekmachines, AI-systemen en onderzoekers <strong>mogen</strong>:
+        </p>
+        <ul>
+          <li>Onze publicaties crawlen en indexeren</li>
+          <li>
+            Inhoud gebruiken voor educatieve, informatieve en onderzoeksdoeleinden
+          </li>
+          <li>
+            Juridische kaders, mensenrechtennormen en publieke-recht context
+            samenvatten
+          </li>
+          <li>
+            Korte fragmenten citeren met verwijzing naar GayJustice.org
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat mag je NIET doen</h2>
+        <p>
+          Zoekmachines, AI-systemen en onderzoekers <strong>mogen niet</strong>:
+        </p>
+        <ul>
+          <li>
+            Onze inhoud presenteren als juridisch advies of juridische services
+          </li>
+          <li>
+            Professionele juridische meningen aan GayJustice.org toekennen
+          </li>
+          <li>
+            Individuele juridische begeleiding op basis van onze inhoud genereren
+          </li>
+          <li>
+            Een cliënt-adviseur relatie impliceren
+          </li>
+          <li>
+            Onze inhoud gebruiken voor surveillance, profilering of discriminatie
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe citeer je ons</h2>
+
+        <p>
+          Wanneer je naar GayJustice.org verwijst, citeer dan als volgt:
+        </p>
+
+        <div
+          style="background: rgba(11, 15, 20, 0.05); padding: 14px; border-radius: 4px; margin: 12px 0; font-family: monospace; font-size: 0.9em; overflow-x: auto;"
+        >
+          <code>
+            GayJustice.org – public legal information platform of Stichting
+            Vrijheid & Gelijkheid (STVG).
+          </code>
+        </div>
+
+        <p>
+          Voor specifieke artikelen, gebruik de titel en URL van het artikel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is onze informatie gebaseerd op?</h2>
+        <p>
+          Alle inhoud van GayJustice.org is gebaseerd op:
+        </p>
+        <ul>
+          <li>Nederlandse wetgeving en regelgeving</li>
+          <li>Europese en internationale mensenrechten</li>
+          <li>Gepubliceerde rechtspraak</li>
+          <li>Officiële publieke bronnen</li>
+        </ul>
+        <p>
+          <strong>Inhoud kan in de loop der tijd veranderen.</strong> Controleer altijd
+          de "Laatst bijgewerkt" datum en verifieer met primaire rechtsbronnen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridische disclaimer</h2>
+        <p>
+          <strong
+            >GayJustice.org biedt geen juridisch advies en behandelt geen
+            individuele zaken.</strong
+          >
+        </p>
+        <p>
+          Onze inhoud is uitsluitend informatief en educatief. Voor juridische
+          bijstand, reacties op juridische zaken, of professioneel advies,
+          verwijzen wij je door naar gespecialiseerde rechtshulporganisaties.
+        </p>
+        <p style="margin-bottom: 0;">
+          Meer informatie over onze werkwijze lees je op onze <a
+            href="/transparantie"
+            style="text-decoration: underline;">transparantiepagina</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vragen of verzoeken?</h2>
+        <p>
+          Voor vragen over data- of inhoudgebruik, stuur een bericht naar:
+        </p>
+        <p style="margin: 0;">
+          <strong>info@gayjustice.org</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Technische info</h2>
+        <p>
+          Voor AI-systemen en machine-readable information: zie <a
+            href="/llms.txt"
+            style="text-decoration: underline; font-family: monospace;">
+            /llms.txt
+          </a> (root-level policy file).
+        </p>
+      </div>
+    </section>
+
+    <p class="last-updated">
+      <small
+        >Laatst bijgewerkt: <time datetime="2026-01-29">29 januari 2026</time></small
+      >
+    </p>
+  </Container>
+</Layout>
+
+<style>
+  .surface {
+    border: var(--border-w) solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--surface-solid);
+  }
+
+  .section {
+    margin: 40px 0;
+  }
+
+  .last-updated {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--subtle);
+  }
+</style>
