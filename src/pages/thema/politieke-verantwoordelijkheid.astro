@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Politieke verantwoordelijkheid voor homorechten",
+  title: "Politieke Verantwoordelijkheid & LHBTIQ+ Advocacy",
   description:
-    "Politieke verantwoording homorechten: mensenrechten, staatsrecht & bestuurlijke rol. Onpartijdig, brongebaseerd. Hoe regerenngen gelijke rechten waarborgen.",
+    "Politieke verantwoordelijkheid LHBTIQ+: inspraak, advocacy, politieke actie. Hoe beleidsmakers aanspreken. Recht op participatie.",
   canonical: "/thema/politieke-verantwoordelijkheid/",
   lang: "nl-NL",
   alternates: [
@@ -14,104 +14,315 @@ const seo = {
       hreflang: "nl",
       href: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
     },
-    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/political-accountability/",
+    },
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
-      name: "Politieke verantwoordelijkheid",
+      name: "Politieke Verantwoordelijkheid",
       url: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
     },
   ],
-};
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Politieke verantwoordelijkheid voor homorechten",
-  url: "https://www.gayjustice.org/thema/politieke-verantwoordelijkheid/",
-  inLanguage: "nl-NL",
-  about: {
-    "@type": "Thing",
-    name: "Politieke verantwoordelijkheid voor gelijke rechten",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Stichting Vrijheid & Gelijkheid",
-    url: "https://www.stvg.org/",
-  },
+  faq: [
+    {
+      question: "Wat is politieke verantwoordelijkheid?",
+      answer:
+        "Dat politieke leiders en instituties verantwoording afleggen voor hun beleid en besluiten, en bereid zijn dit aan te passen op basis van feedback van burgers en belanghebbenden.",
+    },
+    {
+      question: "Welke LHBTIQ+ beleidskwesties zijn het meest urgent?",
+      answer:
+        "Discriminatiebescherming in werk/huisvesting, transgender geslachtsherkenning, asiel voor LHBTIQ+ vervolgden, veiligheid tegen haatzaaien, gelijke adoptierechtən, medische zorg toegang.",
+    },
+    {
+      question: "Hoe kan ik politici aanspreken op LHBTIQ+ kwesties?",
+      answer:
+        "Letter, email, telefoon, protestactie, petitie, media, rechtstreekse ontmoeting. Deelname aan raadsvergaderingen (inspraak moment). Campagne voering.",
+    },
+    {
+      question: "Wat is advocacy &amp; hoe doe ik het?",
+      answer:
+        "Advocacy = actief bepleiten van beleid verandering. Aansluitbij organisaties (COC, Amnesty, NUYORICAN), participeer in campagnes, informeer beleidsmakers, verhaal delen.",
+    },
+    {
+      question: "Heb ik recht op inspraak in politieke processen?",
+      answer:
+        "Ja. Recht op vrijheid van meningsuiting, vergaderrechten raad (inspraaksessies), verschillende commissies, participatie burgercomité's.",
+    },
+    {
+      question: "Wat doet de EU met LHBTIQ+ rechten?",
+      answer:
+        "EU heeft diverse directieven tegen discriminatie genomen, handhavingsverordeningen. Lidstaten (NL) moet deze naleven. EHRM en Hof van Justitie controleren.",
+    },
+    {
+      question: "Hoe monitoren normen naleving LHBTIQ+ rechten?",
+      answer:
+        "Internationale NGO's (Amnesty, HRW), VN speciale rapporteurs, EHRM, nationale ombudsman, gelijkebehandelingscommissies, onderzoeksjournalisten.",
+    },
+    {
+      question: "Kan ik politieke partijen aansprakelijk stellen?",
+      answer:
+        "Indirect. Via mediadruk, kiezers (stemmen), parlement (vragen), rechtszaker individuele leden. Politieke schande is sterke pressure tool.",
+    },
+  ],
 };
 ---
 
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Politieke verantwoordelijkheid voor homorechten"
-    lead="Gelijke rechten vragen meer dan goede intenties. Ze vragen zichtbare verantwoordelijkheid op bestuurlijk niveau en consistente bescherming in beleid en uitvoering."
+    title="Politieke Verantwoordelijkheid & Advocacy"
+    lead="Beleidsmakers moeten verantwoording afleggen over LHBTIQ+ rechten. Dit thema behandelt advocacy, participatie, en hoe je politieke verandering nastreeft."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <p style="margin-top: 0;">
-          GayJustice.org stimuleert bestuurlijke aandacht voor structurele
-          vraagstukken rond homorechten en rechtsbescherming. We duiden rollen
-          en plichten vanuit mensenrechten en staatsrecht, zonder steun voor
-          politieke partijen of persoonsgerichte campagnes.
-        </p>
-        <p style="margin-bottom: 0;" class="muted">
-          Dit is algemene duiding. We doen geen partijpolitiek.
-        </p>
-      </div>
-    </section>
+        <h2>Wat is Politieke Verantwoordelijkheid?</h2>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Gelijke rechten en bestuurlijke plicht</h2>
         <p>
-          Wanneer gelijke behandeling in de praktijk onder druk staat, is
-          bestuurlijke verantwoordelijkheid essentieel: duidelijke normstelling,
-          handhaving van regels en bescherming tegen discriminatie.
+          Politieke verantwoordelijkheid betekent dat politici en
+          overheidsinstituties:
         </p>
-      </div>
-    </section>
+        <ul>
+          <li>Duidelijk uitleggen waarom ze keuzes maken</li>
+          <li>Luisteren naar input van burgers &amp; belanghebbenden</li>
+          <li>
+            Bereid zijn om beleid aan te passen op basis van feedback &amp;
+            evidence
+          </li>
+          <li>
+            Verandering doorvoeren als huiing ineffectief of schadelijk is
+          </li>
+          <li>De gevolgen van beleid monitoren &amp; rapporteren</li>
+        </ul>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Nationale verantwoordelijkheid en voorbeeldfunctie</h2>
         <p>
-          Zichtbaarheid op nationaal niveau heeft normstellende waarde. Het laat
-          zien dat gelijke rechten geen ‘bijzaak’ zijn, maar onderdeel van de
-          kern van de rechtsstaat.
+          Voor LHBTIQ+ betekent dit: regering blijkt verantwoording afleggen
+          voor hoe beleid LGBTIQ+ personen af affects, en werkt samen aan
+          verbetering.
         </p>
       </div>
     </section>
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Mensenrechten en staatsrecht</h2>
-        <p>
-          Mensenrechten bieden kaders en grenzen aan discriminatie. Staatsrecht
-          beschrijft verantwoordelijkheden en de inrichting van macht. Samen
-          geven ze richting aan wat bestuurders moeten doen wanneer rechten
-          onder druk staan.
-        </p>
-      </div>
-    </section>
+        <h2>Hangende LHBTIQ+ Beleidskwesties in Nederland</h2>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Wat GayJustice.org agendeert</h2>
+        <h3>Urgente Prioriteiten</h3>
         <ul>
           <li>
-            uitleg van verantwoordelijkheden zonder partijpolitieke framing;
+            <strong>Transgender Geslachtsherkenning:</strong> Eenvoudiger proces,
+            medische zorg, identiteitspapieren zonder medische vereisten
           </li>
           <li>
-            bronverwijzingen naar internationale mensenrechtenstandaarden;
+            <strong>Huisvesting Discriminatie:</strong> Enforcement van anti-discriminatie
+            bij verhuur
           </li>
-          <li>focus op structurele bescherming en uitvoerbaarheid.</li>
+          <li>
+            <strong>Werkdiscriminatie:</strong> Meer ondersteuning slachtoffers, strengere
+            sancties
+          </li>
+          <li>
+            <strong>Onderwijs Inclusie:</strong> Schoolbeleid, leerlingenondersteuning,
+            docenten training
+          </li>
+          <li>
+            <strong>LHBTIQ+ Vluchteling Asiel:</strong> Betere ondersteuning, rechtsbijstand,
+            veiliger procedures
+          </li>
+          <li>
+            <strong>Haatzaaien &amp; Geweld:</strong> Strengere wetten, meer 1:1 enforcement
+          </li>
+          <li>
+            <strong>Medische Zorg:</strong> Transgender zorg toegankelijk, psycho-ondersteuning
+            beschikbaar
+          </li>
+          <li>
+            <strong>Ouderschap &amp; Adopcie:</strong> Gelijke adoptierechtən, co-ouderschap
+            herkenning
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe Advocatie Werkt</h2>
+
+        <h3>Advocacy Strategieen</h3>
+        <ol style="padding-left: 20px;">
+          <li>
+            <strong>Onderzoek:</strong> Verstaan probleem, verzamel data/onderzoek
+          </li>
+          <li>
+            <strong>Coalitie:</strong> Verbind met organisaties &amp; anderen
+          </li>
+          <li>
+            <strong>Boodschap:</strong> Crafted helder argument voor verandering
+          </li>
+          <li><strong>Outreach:</strong> Informeer media, politici, publiek</li>
+          <li><strong>Druk:</strong> Protesten, petities, media campagne</li>
+          <li><strong>Dialoog:</strong> Onderhandeling met beleidsmakers</li>
+          <li>
+            <strong>Implementatie:</strong> Volg op naleving &amp; monitor gevolgen
+          </li>
+        </ol>
+
+        <h3>Advocacy Kanalen</h3>
+        <ul>
+          <li>
+            <strong>Direct:</strong> Email/brief naar politici, ontmoetingen, telefoongesprekken
+          </li>
+          <li>
+            <strong>Publiek:</strong> Persconferenties, pers releases, media interviews
+          </li>
+          <li>
+            <strong>Community:</strong> Bijeenkomsten, workshops, sociale media
+          </li>
+          <li>
+            <strong>Institutie:</strong> Raad vergaderingen (inspraak), commissie
+            deelname, petities
+          </li>
+          <li>
+            <strong>Juridisch:</strong> Rechtszaken, klachten bij instanties
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe Je Politici Aanspreken Kunt</h2>
+
+        <h3>Methoden</h3>
+        <ul>
+          <li>
+            <strong>E-mail:</strong> Duidelijk, samenvatting, wat je wilt (3-4 zinnen)
+          </li>
+          <li><strong>Brief:</strong> Formele brief naar kantoor/thuis</li>
+          <li>
+            <strong>Telefoon:</strong> Bel kantoor, spreek met stafmedewerker
+          </li>
+          <li>
+            <strong>Meetings:</strong> Schedule ontmoeting (lokaal/Den Haag)
+          </li>
+          <li>
+            <strong>Raad sessies:</strong> Veel gemeentes hebben publieke inspank
+            momenten (spreek 3 min)
+          </li>
+          <li>
+            <strong>Protesten:</strong> Demonstraties, flashmobs, performatieve acties
+          </li>
+        </ul>
+
+        <h3>Wat Werkt Het Meest?</h3>
+        <p>
+          <strong>Combinatie:</strong> Veel brieven + media druk + persoonlijke ontmoeting.
+          Politici luisteren naar combinatie: veel support (brieven) + media aandacht
+          (publieke druk) + dialoog (persoon).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Je Rechten in Participatie</h2>
+
+        <h3>Juridische Basis</h3>
+        <p>
+          <strong>Grondwet artikel 2:</strong> Recht op inspraak om betrokken te zijn
+          in publieke zaken.
+        </p>
+        <p>
+          <strong>Grondwet artikel 7:</strong> Vrijheid van meningsuiting, vergeeringsrecht,
+          demonstratierecht.
+        </p>
+        <p>
+          <strong>EVRM artikel 10 &amp; 11:</strong> Vrijheid van meningsuiting &amp;
+          vergeeringsrecht.
+        </p>
+
+        <h3>Inspraakkanalen</h3>
+        <ul>
+          <li>
+            Raadsvergaderingen (inspraak moment, meestal 3 min per persoon)
+          </li>
+          <li>Participatie burgercommissies (gemeente kan je uitnodigen)</li>
+          <li>Ombudsman (beklagen overheid)</li>
+          <li>Petities (gemeente processen)</li>
+          <li>Lokale verordeningen (publieke formeel advies)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties &amp; Advocacy Tools</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer">COC Nederland</a
+            > — LHBTIQ+ advocacy &amp; politieke werk
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            > — Mensenrechten campagnes
+          </li>
+          <li>
+            <a
+              href="https://www.hrw.org"
+              target="_blank"
+              rel="noopener noreferrer">Human Rights Watch</a
+            > — Internationaal advocacy
+          </li>
+          <li>
+            <a
+              href="https://www.gju.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GJU &amp; Regionale LHBTIQ+ Organisaties</a
+            > — Lokale advocacy
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Juridisch advies te advocatie
+          </li>
+        </ul>
+
+        <h3>Online Platforms</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.change.org"
+              target="_blank"
+              rel="noopener noreferrer">Change.org</a
+            > — Petities
+          </li>
+          <li>
+            <a
+              href="https://www.parliament.uk/get-involved/petitions/"
+              target="_blank"
+              rel="noopener noreferrer">Petities platforms</a
+            > — Diverse landen
+          </li>
+          <li>
+            Social media (#advocacyhashtags) — Bereik, campagne organizing
+          </li>
         </ul>
       </div>
     </section>
@@ -121,24 +332,27 @@ const pageJsonLd = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten/"
-              >→ Homorechten & juridische bescherming</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten &amp; bescherming</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten/"
-              >→ Mensenrechten & juridische kaders</a>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten &amp; juridische kaders</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/homoseksuele-vluchtelingen/"
-              >→ Homoseksuele vluchtelingen & asiel</a>
+            <a
+              href="/thema/voorlichting-scholen/"
+              style="text-decoration: underline;">→ LHBTIQ+ in Scholen</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/dakloze-homoseksuele-jongeren/"
-              >→ Dakloze LHBTIQ+ jongeren</a>
-          </li>
-          <li style="margin-bottom: 0px;">
-            <a href="/thema/voorlichting-scholen/"
-              >→ Voorlichting & onderwijs</a>
+            <a
+              href="/thema/homoseksuele-vluchtelingen/"
+              style="text-decoration: underline;"
+              >→ LHBTIQ+ vluchtelingen &amp; asiel</a
+            >
           </li>
         </ul>
       </div>
@@ -146,24 +360,47 @@ const pageJsonLd = {
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Geen partijpolitiek</h2>
-        <p style="margin-top: 0;">
-          GayJustice.org spreekt geen steun uit voor politieke partijen. We
-          richten ons op normen, plichten en structurele bescherming.
-        </p>
-        <p style="margin-bottom: 0;">
-          Wil je een bron toevoegen of een nuance aanbrengen?
-          <a class="link" href="/contact/">Neem contact op</a>.
-        </p>
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer">COC Nederland</a
+            > — Advocacy &amp; politiek werk
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            > — Mensenrechten
+          </li>
+          <li>
+            <a
+              href="https://www.hrw.org"
+              target="_blank"
+              rel="noopener noreferrer">Human Rights Watch</a
+            > — Internationaal advocacy
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Juridische ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              target="_blank"
+              rel="noopener noreferrer">EHRM</a
+            > — Politieke accountability via rechtbank
+          </li>
+        </ul>
       </div>
     </section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
   </Container>
 </Layout>
-
-<style>
-  .muted {
-    color: var(--muted);
-  }
-</style>

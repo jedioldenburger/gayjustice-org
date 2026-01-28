@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Dakloze homoseksuele jongeren – rechtsbescherming en gelijke kansen",
+  title: "Dakloze LHBTIQ+ Jongeren: Rechten & Ondersteuning",
   description:
-    "Dakloze LHBTIQ+ jongeren: oorzaken, rechten & ondersteuning. Juridische bescherming, hulproutes. Info voor jongeren, ouders, professionals.",
+    "Dakloze LHBTIQ+ jongeren: oorzaken, risico's, rechten. Huisvesting, ondersteuning, bescherming. Praktische hulp en juridische kaders.",
   canonical: "/thema/dakloze-homoseksuele-jongeren/",
   lang: "nl-NL",
   alternates: [
@@ -14,99 +14,285 @@ const seo = {
       hreflang: "nl",
       href: "https://www.gayjustice.org/thema/dakloze-homoseksuele-jongeren/",
     },
-    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/homeless-lgbtiq-youth/",
+    },
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
-      name: "Dakloze homoseksuele jongeren",
+      name: "Dakloze LHBTIQ+ jongeren",
       url: "https://www.gayjustice.org/thema/dakloze-homoseksuele-jongeren/",
     },
   ],
-};
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Dakloze homoseksuele jongeren – rechtsbescherming en gelijke kansen",
-  url: "https://www.gayjustice.org/thema/dakloze-homoseksuele-jongeren/",
-  inLanguage: "nl-NL",
-  about: {
-    "@type": "Thing",
-    name: "Dakloosheid onder homoseksuele jongeren",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Stichting Vrijheid & Gelijkheid",
-    url: "https://www.stvg.org/",
-  },
+  faq: [
+    {
+      question: "Waarom raken LHBTIQ+ jongeren dakloos?",
+      answer:
+        "Eerste reden: gezinsuitstoting vanwege identiteit. Tweede: discriminatie op woningmarkt. Derde: geweld, pesterijen thuis. Vierde: geen ondersteuning, financieel onvermogen.",
+    },
+    {
+      question: "Hoeveel LHBTIQ+ jongeren zijn dakloos?",
+      answer:
+        "Precieze cijfers ontbreken, maar LHBTIQ+ jongeren zijn oververtegenwoordigd. Onderzoeken schetsen 25-40% van dakloze jongeren heeft LHBTIQ+ identiteit.",
+    },
+    {
+      question: "Welke specifieke risico's hebben dakloze LHBTIQ+ jongeren?",
+      answer:
+        "Seksueel geweld, fysieke agressie, misbruik, exploitatie, verslaving, psychisch leed, sekswerk, AIDS-risico, geen medische zorg.",
+    },
+    {
+      question: "Wat zijn mijn rechten als je dakloos bent?",
+      answer:
+        "Recht op noodhulp (onderdak, voedsel), identiteitspapieren, school, werk, veiligheid, gelijke behandeling, geen discriminatie op basis van LHBTIQ+ identiteit.",
+    },
+    {
+      question: "Kan ik mijn ouders aansprakelijk stellen voor uitstoting?",
+      answer:
+        "Ja, via civiele procedures. Als uitstoting wettig gezag-schending is of voorziet in ontoereikende zorg, kan mediation of rechtszaak helpen. Child abuse reporting is ook mogelijkheid.",
+    },
+    {
+      question: "Waar kan ik heen als ik dakloos ben?",
+      answer:
+        "Noodhulp: Jongerentelefoon (0900-0113), 113 Zelfmoordpreventie, lokale daklozenopvang. Specifiek LHBTIQ+: organisaties als GJU, NUYORICAN, Scharlaken Kruis.",
+    },
+    {
+      question: "Kan ik naar school als je dakloos bent?",
+      answer:
+        "Ja, onderwijs is recht. Je hebt geen vast adres nodig (briefadres gebruiken). School kan helpen met vervoer, maaltijden, kleding.",
+    },
+    {
+      question: "Is huisvesting een mensenrecht?",
+      answer:
+        "Ja. ICCPR artikel 11, EHRM jurisprudentie: adequate huisvesting is mensenrecht. Staat moet voorkomen dat je dakloos wordt.",
+    },
+  ],
 };
 ---
 
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Dakloze homoseksuele jongeren en rechtsbescherming"
-    lead="Dakloosheid is zelden een individueel falen. Voor homoseksuele jongeren hangt het vaak samen met onveiligheid, afwijzing of gebrek aan bescherming."
+    title="Dakloze LHBTIQ+ Jongeren"
+    lead="Dakloosheid voor LHBTIQ+ jongeren is vaak gevolg van gezinsuitstoting of discriminatie. Dit thema behandelt oorzaken, risico's, rechten en ondersteuning."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <p style="margin-top: 0;">
-          GayJustice.org brengt deze problematiek onder de aandacht als
-          mensenrechten- en rechtsbeschermingsvraagstuk. We richten ons op
-          structurele oorzaken, normen en routes naar hulp.
-        </p>
-        <p style="margin-bottom: 0;" class="muted">
-          We bieden geen opvang of individuele hulpverlening.
-        </p>
-      </div>
-    </section>
+        <h2>Waarom raken LHBTIQ+ jongeren dakloos?</h2>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Waarom homoseksuele jongeren extra kwetsbaar zijn</h2>
+        <h3>Gezinsuitstoting</h3>
         <p>
-          Afwijzing, geweld of druk in de thuissituatie kan leiden tot vertrek
-          of uithuisplaatsing. Zonder netwerk en informatie raken jongeren
-          sneller buiten beeld.
+          Meest voorkomende oorzaak: jongere vertelt over LHBTIQ+ identiteit,
+          ouders reageren afwijzend, jongere moet weg. Dit gebeurt al op vroeg
+          moment: 13-17 jaar oud.
         </p>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Dakloosheid als structureel probleem</h2>
+        <h3>Discriminatie op woningmarkt</h3>
         <p>
-          Dakloosheid ontstaat vaak door een stapeling van factoren: veiligheid,
-          inkomen, zorg, school, en toegang tot ondersteuning. Discriminatie en
-          uitsluiting kunnen die stapeling versnellen.
+          Huisbazen weigeren LHBTIQ+ jongeren. Geen reden gegeven. "Niet
+          beschikbaar," geen antwoord, discreet afwijzing.
+        </p>
+
+        <h3>Geweld &amp; onveiligheid thuis</h3>
+        <p>
+          Lichamelijk geweld, seksueel misbruik, psychologisch terroriseren.
+          Jongere voelt geen veiligheid thuis vanwege identiteit.
+        </p>
+
+        <h3>Financiële redenen</h3>
+        <p>
+          Familie weigert financiële ondersteuning. Jongere kan zelfstandig niet
+          rondkomen bij studiebasis of minimumloon.
+        </p>
+
+        <h3>Geen ondersteuning, geen netwerk</h3>
+        <p>
+          LHBTIQ+ jongeren hebben minder familiefamilie-ondersteuning. Vrienden
+          kunnen niet permanent helpen. Sociale netwerk ontbreekt.
         </p>
       </div>
     </section>
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Juridische en maatschappelijke knelpunten</h2>
+        <h2>Omvang &amp; Risico's</h2>
+
+        <h3>Hoeveel dakloze LHBTIQ+ jongeren?</h3>
+        <p>
+          Nederland: geen centraal register, maar onderzoeken wijzen uit dat
+          25-40% van dakloze jongeren LHBTIQ+ identiteit heeft. Dit is veel
+          hoger dan LHBTIQ+ percentage in totale bevolking (5-7%).
+        </p>
+
+        <h3>Specifieke risico's</h3>
         <ul>
-          <li>toegang tot veilige opvang en passende begeleiding;</li>
-          <li>kennis van rechten, meldroutes en ondersteuning;</li>
-          <li>continuïteit in onderwijs, zorg en bestaanszekerheid.</li>
+          <li>
+            <strong>Seksueel geweld &amp; exploitatie:</strong> Hoger risico op straatgrepen,
+            sekswerk, commerciële exploitatie
+          </li>
+          <li>
+            <strong>Gezondheidsrisico:</strong> Geen preventieve zorg, slechte voeding,
+            lichamelijke ziekte, PTSS
+          </li>
+          <li>
+            <strong>Verslaving:</strong> Hogere geneigdheid drugs/alcohol gebruik
+            vanwege coping
+          </li>
+          <li>
+            <strong>Zelfmoord &amp; zelfbeschadiging:</strong> Suïcidaal gedachten,
+            pogingen hoger bij LHBTIQ+ jongeren
+          </li>
+          <li>
+            <strong>Geen identiteitspapieren:</strong> Toegang tot scholing, werk,
+            medische zorg bemoeilijkt
+          </li>
+          <li>
+            <strong>Onderwijsverzuim:</strong> School verlaten, geen diploma, lange-termijn
+            gevolgen
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Wat GayJustice.org zichtbaar maakt</h2>
+        <h2>Juridisch kader &amp; Rechten</h2>
+
+        <h3>Nederland</h3>
+        <p>
+          <strong>Grondwet (artikel 1):</strong> Gelijke behandeling, geen discriminatie.
+        </p>
+        <p>
+          <strong>Jeugdwet:</strong> Gemeenten zijn verplicht jongeren in nood te
+          helpen met onderdak, ondersteuning.
+        </p>
+        <p>
+          <strong>Leerplichtnet:</strong> Jongeren hebben recht op onderwijs, ongeacht
+          woonplek of thuissituatie.
+        </p>
+
+        <h3>Internationaal</h3>
+        <p>
+          <strong>VN Kinderrechtenverdrag (CRC):</strong> Kinderen hebben recht op
+          onderdak, voeding, gezondheid, bescherming tegen uitbuit. Staat moet "het
+          belang van het kind" voorgaan.
+        </p>
+        <p>
+          <strong>EHRM artikel 3:</strong> Geen onmenselijke behandeling. Extreme
+          armoede/dakloosheid telt.
+        </p>
+        <p>
+          <strong>ICCPR artikel 11:</strong> Recht op adequate standaard van leven
+          inclusief voeding, huisvesting, geneeskundige zorg.
+        </p>
+
+        <h3>Antidiscriminatie</h3>
+        <p>
+          <strong>AWGB:</strong> Verbiedt discriminatie op basis van seksuele oriëntatie
+          of geslachtsidentiteit. Geldt voor huisvesting, ondersteuningsservices,
+          etc.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Praktische Ondersteuning &amp; Services</h2>
+
+        <h3>Noodhulp</h3>
         <ul>
-          <li>duiding van gelijke-behandelingsnormen en bescherming;</li>
-          <li>overzicht van betrouwbare hulp- en meldroutes (waar passend);</li>
-          <li>signaleren van hiaten zonder personen te beschuldigen.</li>
+          <li>
+            <strong>Jongerentelefoon:</strong>
+            <a href="tel:0900-0113">0900-0113</a> (dagelijks 14:00-20:00), gratis
+            advies
+          </li>
+          <li>
+            <strong>113 Zelfmoordpreventie:</strong>
+            <a href="tel:113">113</a> (24/7), als je suïcidaal gedacht hebt
+          </li>
+          <li><strong>Politie:</strong> 112 bij onmiddellijk gevaar</li>
         </ul>
+
+        <h3>Huisvesting &amp; Opvang</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.nuyorican.nl"
+              target="_blank"
+              rel="noopener noreferrer">NUYORICAN</a
+            > — LHBTIQ+ jongeren centrum Amsterdam
+          </li>
+          <li>
+            <a
+              href="https://www.schaliegroep.nl"
+              target="_blank"
+              rel="noopener noreferrer">Scharlaken Kruis</a
+            > — LHBTIQ+ ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.gju.nl"
+              target="_blank"
+              rel="noopener noreferrer">GJU (Gay Jongeren Utrecht)</a
+            > — Regionale LHBTIQ+ hub
+          </li>
+          <li>Locale daklozenopvang — Bepaal per gemeente</li>
+        </ul>
+
+        <h3>Juridische Hulp</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+          <li>
+            <a
+              href="https://www.kinderrechtscommissie.nl"
+              target="_blank"
+              rel="noopener noreferrer">Kinderrechtscommissie</a
+            > — Bij schending kinderrechten
+          </li>
+          <li>Gemeentelijke juridische bureaus</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen als je dakloos bent</h2>
+
+        <ol style="padding-left: 20px;">
+          <li>
+            <strong>Bel noodhulp:</strong> Jongerentelefoon, 113, of lokale opvang
+          </li>
+          <li>
+            <strong>Verzamel papieren:</strong> Paspoort/ID, schoolgegevens (kopie)
+          </li>
+          <li>
+            <strong>Meld bij gemeente:</strong> Zij zijn verplicht jongeren te helpen
+          </li>
+          <li>
+            <strong>Zorg voor adres:</strong> Briefadres bij opvang/organisatie
+          </li>
+          <li>
+            <strong>Blijf naar school gaan:</strong> School kan helpen, vervoer, maaltijden
+          </li>
+          <li>
+            <strong>Zoek juridische bijstand:</strong> Bezwaar tegen gezinsuitstoting,
+            discriminatie-claim
+          </li>
+          <li>
+            <strong>Bouw netwerk:</strong> LHBTIQ+-vriendschappen, mentors, vertrouwenspersonen
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -115,24 +301,27 @@ const pageJsonLd = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten/"
-              >→ Homorechten & juridische bescherming</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten &amp; bescherming</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten/"
-              >→ Mensenrechten & juridische kaders</a>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten &amp; juridische kaders</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/homoseksuele-vluchtelingen/"
-              >→ Homoseksuele vluchtelingen & asiel</a>
+            <a
+              href="/thema/voorlichting-scholen/"
+              style="text-decoration: underline;">→ LHBTIQ+ in scholen</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/voorlichting-scholen/"
-              >→ Voorlichting & onderwijs</a>
-          </li>
-          <li style="margin-bottom: 0px;">
-            <a href="/thema/politieke-verantwoordelijkheid/"
-              >→ Politieke verantwoordelijkheid</a>
+            <a
+              href="/thema/homoseksuele-vluchtelingen/"
+              style="text-decoration: underline;"
+              >→ LHBTIQ+ vluchtelingen &amp; asiel</a
+            >
           </li>
         </ul>
       </div>
@@ -140,25 +329,54 @@ const pageJsonLd = {
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Afbakening van onze rol</h2>
-        <p style="margin-top: 0;">
-          GayJustice.org geeft geen individuele begeleiding of juridische
-          vertegenwoordiging. Voor directe hulp verwijzen we naar professionele
-          organisaties.
-        </p>
-        <p style="margin-bottom: 0;">
-          Wil je samenwerken of een bron delen?
-          <a class="link" href="/contact/">Neem contact op</a>.
-        </p>
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.nuyorican.nl"
+              target="_blank"
+              rel="noopener noreferrer">NUYORICAN Amsterdam</a
+            > — LHBTIQ+ jongeren centrum
+          </li>
+          <li>
+            <a
+              href="https://www.gju.nl"
+              target="_blank"
+              rel="noopener noreferrer">GJU Utrecht</a
+            > — LHBTIQ+ jongeren ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.schaliegroep.nl"
+              target="_blank"
+              rel="noopener noreferrer">Scharlaken Kruis</a
+            > — LHBTIQ+ services
+          </li>
+          <li>
+            <a
+              href="https://www.fos.nl"
+              target="_blank"
+              rel="noopener noreferrer">FOS (Federatie Opvang Stelsel)</a
+            > — Daklozenopvang organisaties
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis advies
+          </li>
+          <li>
+            <a
+              href="https://www.unicef-irc.org"
+              target="_blank"
+              rel="noopener noreferrer">UNICEF IRC</a
+            > — Kinderrechten onderzoek
+          </li>
+        </ul>
       </div>
     </section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
   </Container>
 </Layout>
-
-<style>
-  .muted {
-    color: var(--muted);
-  }
-</style>

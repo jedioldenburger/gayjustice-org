@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Homoseksuele vluchtelingen – urgente rechtsbescherming",
+  title: "LHBTIQ+ Vluchtelingen & Asiel: Rechtsbescherming",
   description:
-    "Homoseksuele vluchtelingen & asielprocedures: rechtsbescherming in opvang. Juridische info, knelpunten & praktische routes. Zorgvuldig & brongebaseerd.",
+    "LHBTIQ+ vluchtelingen: vervolging, asielprocedure, veilige landen. Rechtsbescherming, bewijsvoering, praktische hulp. Juridische gids.",
   canonical: "/thema/homoseksuele-vluchtelingen/",
   lang: "nl-NL",
   alternates: [
@@ -14,104 +14,294 @@ const seo = {
       hreflang: "nl",
       href: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
     },
-    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/lgbtiq-refugees/",
+    },
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
       name: "Homoseksuele vluchtelingen",
       url: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
     },
   ],
-};
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Homoseksuele vluchtelingen – urgente rechtsbescherming",
-  url: "https://www.gayjustice.org/thema/homoseksuele-vluchtelingen/",
-  inLanguage: "nl-NL",
-  about: {
-    "@type": "Thing",
-    name: "Asiel en rechtsbescherming voor homoseksuele vluchtelingen",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Stichting Vrijheid & Gelijkheid",
-    url: "https://www.stvg.org/",
-  },
+  faq: [
+    {
+      question: "Kan je LHBTIQ+ identiteit als reden voor asiel gebruiken?",
+      answer:
+        "Ja. Als je vervolging riskeert op grond van seksuele oriëntatie of geslachtsidentiteit, kan dit grond voor asiel zijn onder VN Vluchtelingenverdrag. Dit valt meestal onder 'bepaalde sociale groep' of 'politieke overtuiging'.",
+    },
+    {
+      question: "Wat telt als vervolging vanwege LHBTIQ+ identiteit?",
+      answer:
+        "Dreigingen, geweld, arrestatie, mishandeling, executie door staat of niet-staatse actoren. Ook discriminatie in diensten, werk, onderwijs als ernstig genoeg kan tellen.",
+    },
+    {
+      question: "Welke landen keren LHBTIQ+ vluchtelingen terug?",
+      answer:
+        "Landen waar homoseksualiteit strafbaar is of ernstige discriminatie bestaat: delen Afrika, Midden-Oosten, Azië. Nederland beschouwt deze meestal als onveilig voor LHBTIQ+ personen.",
+    },
+    {
+      question: "Hoe bewijs je je LHBTIQ+ identiteit in asielprocedure?",
+      answer:
+        "Via getuigenis, medische/psychologische rapportage, brieven, sociale media, vrienden. Documenten uit thuisland helpen. Geen 'seksuele activiteit' test nodig—identiteit zelf volstaat.",
+    },
+    {
+      question: "Wat als je in je thuisland je identiteit niet kon uiten?",
+      answer:
+        "Dat is normaal en ondersteunt je claim. Vervolging kan reden zijn waarom je voorzichtig was. Asielprocedures begrijpen dat LHBTIQ+ personen zich in vervolgingslanden onderdrukken.",
+    },
+    {
+      question: "Wie helpt LHBTIQ+ vluchtelingen in Nederland?",
+      answer:
+        "IND (Immigratie- en Naturalisatiedienst) beoordeelt asiels. Organisaties als LIWC, RFSL, ISVP geven ondersteuning. Juridische bijstand via advocaten.",
+    },
+    {
+      question: "Kan ik terugkijken op eerder asielbesluit?",
+      answer:
+        "Ja. Via hernieuwing (nieuwe omstandigheden) of rechtszaak. EHRM bepaalt: onderdrukking van LHBTIQ+ identiteit telt als vervolging.",
+    },
+    {
+      question: "Wat gebeurt met LHBTIQ+ vluchtelingen in kampen?",
+      answer:
+        "Ze risico's: geweld, discriminatie, uitsluiting, geslachtsgezondheid ontoegankelijk. Organisaties werken aan veiligheid, medische zorg, juridische ondersteuning.",
+    },
+  ],
 };
 ---
 
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Homoseksuele vluchtelingen en urgente rechtsbescherming"
-    lead="Vluchtelingen die hun land ontvluchten vanwege seksuele oriëntatie verdienen bescherming — niet nieuwe risico’s in procedures of opvang."
+    title="LHBTIQ+ Vluchtelingen & Asiel"
+    lead="LHBTIQ+ personen vluchten voor vervolging. Seksuele oriëntatie en geslachtsidentiteit kunnen gronden zijn voor asiel. Dit thema behandelt rechten, procedures en bescherming."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <p style="margin-top: 0;">
-          GayJustice.org vraagt aandacht voor rechtsbescherming en gelijke
-          behandeling van homoseksuele vluchtelingen binnen Europese en
-          nationale kaders. We richten ons op algemene normen, knelpunten en
-          betrouwbare doorverwijzing.
-        </p>
-        <p style="margin-bottom: 0;" class="muted">
-          We behandelen geen individuele asielzaken en geven geen juridisch
-          advies.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Vlucht vanwege seksuele oriëntatie</h2>
+        <h2>Wat is LHBTIQ+ vervolging?</h2>
         <p>
-          In sommige landen leidt (vermeende) homoseksualiteit tot straf, geweld
-          of maatschappelijke uitsluiting. Dat creëert een reëel
-          beschermingsvraagstuk.
+          Vervolging op grond van LHBTIQ+ identiteit kan vele vormen aannemen:
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Kwetsbaarheid in asiel en opvang</h2>
-        <p>
-          Kwetsbaarheid kan ontstaan door afhankelijkheid van procedures, gebrek
-          aan veilige opvang, of risico’s in gedeelde voorzieningen. Bescherming
-          vraagt om zorgvuldige beoordeling én praktische veiligheid.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Europese en nationale mensenrechtenkaders</h2>
-        <p>
-          Mensenrechtenkaders stellen grenzen aan discriminatie en verplichten
-          tot bescherming. GayJustice.org ordent de bronnen en legt begrippen
-          uit in begrijpelijke taal.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Rol van GayJustice.org</h2>
         <ul>
-          <li>analyseren en uitleggen van algemene juridische knelpunten;</li>
           <li>
-            signaleren van beschermingsrisico’s in opvang (op structureel
-            niveau);
+            <strong>Fysiek geweld:</strong> Agressie, mishandeling door staat of menigtes
           </li>
-          <li>verwijzen naar gespecialiseerde instanties en expertise.</li>
+          <li>
+            <strong>Juridische straf:</strong> Arrestatie, gevangenisstraf, executie
+            (in sommige landen)
+          </li>
+          <li>
+            <strong>Sociale straf:</strong> Uitstoting door familie, verlies van baan,
+            onderwijs
+          </li>
+          <li>
+            <strong>Medische kwaad:</strong> Gedwongen conversatietherapie, hormoonbehandeling
+          </li>
+          <li>
+            <strong>Voortdurende bedreiging:</strong> Geen veiligheid, permanente
+            angst, geen toekomst
+          </li>
         </ul>
+
+        <p>
+          In meer dan 60 landen is homoseksualiteit strafbaar. In sommige landen
+          staat daarop de doodstraf. LHBTIQ+ personen werken en studeren niet,
+          krijgen geen ID, kunnen niet reizen. Dit is vervolging.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader voor LHBTIQ+ vluchtelingen</h2>
+
+        <h3>VN Vluchtelingenverdrag (1951)</h3>
+        <p>
+          Vluchteling: persoon die vervolgd wordt om redenen van ras, religie,
+          nationaliteit, politieke overtuiging, of bepaalde sociale groep.
+          LHBTIQ+ personen vallen onder "bepaalde sociale groep" en/of
+          "politieke overtuiging" (identiteit is politiek gezien in veel
+          landen).
+        </p>
+
+        <h3>EVRM &amp; EU Richtlijnen</h3>
+        <p>
+          <strong>EVRM Artikel 3:</strong> Geen uitzetting naar landen waar foltering/onmenselijke
+          behandeling dreigt.
+        </p>
+        <p>
+          <strong>EU Richtlijn 2004/83/EG:</strong> Seksuele oriëntatie en geslachtsidentiteit
+          kunnen grond zijn voor asielbescherming. "Bepaalde sociale groep" inclusief
+          LHBTIQ+ personen.
+        </p>
+
+        <h3>Nederland</h3>
+        <p>
+          <strong
+            >Vreemdelingenwet (VW) &amp; Regeling Procedures Derde Landen:</strong
+          > Nederland erkent LHBTIQ+ personen als vervolgde groep. IND (Immigratie-
+          en Naturalisatiedienst) beoordeelt asielverzoeken.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Asielprocedure in Nederland</h2>
+
+        <h3>Stap 1: Asielverzoek</h3>
+        <p>
+          Je meldt je en vraagt asiel. IND registreert je en geeft papieren. Je
+          mag in Nederland blijven tijdens procedure (meestal).
+        </p>
+
+        <h3>Stap 2: Uitgebreide procedure</h3>
+        <p>
+          IND interviewt je. Je vertelt je verhaal, waarom je weg bent, wat je
+          riskeert. Juridische bijstand is belangrijk. Ze controleren of je land
+          voor jou veilig is.
+        </p>
+
+        <h3>Stap 3: Besluit &amp; Bezwaar</h3>
+        <p>
+          IND beslist: afwijzing of toekenning van verblijfstatus. Bij afwijzing
+          kun je bezwaar maken. Rechtbank beoordeelt opnieuw.
+        </p>
+
+        <h3>LHBTIQ+ specifieke punten</h3>
+        <p>
+          Je hoeft je LHBTIQ+ identiteit niet te "bewijzen" met seksuele
+          activiteiten. IND begrijpt dat je jezelf in thuisland niet kon uiten.
+          Je wordt geloofd op basis van getuigenis + context.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Landen met ernstig LHBTIQ+ risico</h2>
+
+        <p>
+          Landen waar homoseksualiteit of transgenderidentiteit strafbaar is of
+          zeer gevaarlijk:
+        </p>
+        <ul>
+          <li>
+            <strong>Afrika:</strong> Egypte, Uganda, Nigeria, Ghana, Kenia (strafbar
+            + discriminatie)
+          </li>
+          <li>
+            <strong>Midden-Oosten:</strong> Iran, Saoedi-Arabië, Jemen, etc. (doodstraf
+            of hoge straffen)
+          </li>
+          <li>
+            <strong>Azië:</strong> Pakistan, Afghanistan, Bangladesh, Myanmar (strafbar
+            + geweld)
+          </li>
+          <li>
+            <strong>Andere:</strong> Rusland, Tsjetsjenië (anti-propaganda wetten,
+            geweld)
+          </li>
+        </ul>
+
+        <p>
+          Nederland beschouwt deze landen als onveilig voor LHBTIQ+ personen.
+          Uitzetting naar deze landen bij recent asielbesluit van kracht kan
+          EVRM-schending zijn.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Bewijsvoering in asielzaken</h2>
+
+        <h3>Wat helpt?</h3>
+        <ul>
+          <li>Getuigenis: je eigen verhaal, consistent, gedetailleerd</li>
+          <li>Medisch/psychologisch rapport: trauma, PTSS, onderdrukking</li>
+          <li>Brieven van vrienden/partners: ondersteunend</li>
+          <li>Sociale media/foto's: tonen je identiteit</li>
+          <li>
+            Documenten uit thuisland: arrestatiebeweizen, dreigbrieven, etc.
+          </li>
+          <li>Landrapport: situatie LHBTIQ+ in jouw land</li>
+        </ul>
+
+        <h3>Wat hoeft niet?</h3>
+        <ul>
+          <li>Seksuele activiteiten bewijzen (onacceptabel)</li>
+          <li>Psychologische test (hoeft niet, je identiteit voldoende)</li>
+          <li>
+            Traditioneel huwelijks-/relatiebewijs (LHBTIQ+ kunnen dit niet
+            officieel hebben)
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Praktische hulp &amp; ondersteuning</h2>
+
+        <h3>Organisaties &amp; services</h3>
+        <ul>
+          <li>
+            <a
+              href="https://www.liwc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LIWC (Lesbian &amp; Gay Immigration Counseling)</a
+            > — Specifiek voor LHBTIQ+ vluchtelingen
+          </li>
+          <li>
+            <a
+              href="https://www.isvp.org"
+              target="_blank"
+              rel="noopener noreferrer">ISVP (Hulporganisatie vluchtelingen)</a
+            > — Juridische ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.rfsl.se"
+              target="_blank"
+              rel="noopener noreferrer">RFSL Sweden (internationaal)</a
+            > — LHBTIQ+ hulp
+          </li>
+          <li>
+            <a
+              href="https://www.unhcr.org"
+              target="_blank"
+              rel="noopener noreferrer">UNHCR</a
+            > — VN Vluchtelingenbureau
+          </li>
+          <li>
+            <a
+              href="https://www.ind.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >IND (Immigratie- en Naturalisatiedienst)</a
+            > — Dit beslist asiel
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis advies
+          </li>
+        </ul>
+
+        <h3>Wat je krijgt</h3>
+        <p>
+          Juridische bijstand, begeleiding in procedures, trauma-ondersteuning,
+          huisvesting, basisvoorzieningen, taal- en cultuurondersteuning.
+        </p>
       </div>
     </section>
 
@@ -120,24 +310,27 @@ const pageJsonLd = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten/"
-              >→ Homorechten & juridische bescherming</a>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten &amp; juridische kaders</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten/"
-              >→ Mensenrechten & juridische kaders</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten &amp; bescherming</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/voorlichting-scholen/"
-              >→ Voorlichting & onderwijs</a>
+            <a
+              href="/thema/dakloze-homoseksuele-jongeren/"
+              style="text-decoration: underline;">→ Dakloze LHBTIQ+ jongeren</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/dakloze-homoseksuele-jongeren/"
-              >→ Dakloze LHBTIQ+ jongeren</a>
-          </li>
-          <li style="margin-bottom: 0px;">
-            <a href="/thema/politieke-verantwoordelijkheid/"
-              >→ Politieke verantwoordelijkheid</a>
+            <a
+              href="/thema/politieke-verantwoordelijkheid/"
+              style="text-decoration: underline;"
+              >→ Politieke verantwoordelijkheid</a
+            >
           </li>
         </ul>
       </div>
@@ -145,24 +338,49 @@ const pageJsonLd = {
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Juridische grenzen</h2>
-        <p style="margin-top: 0;">
-          We doen geen casuïstiek en geen procesbijstand. Voor individuele
-          ondersteuning verwijzen we door.
-        </p>
-        <p style="margin-bottom: 0;">
-          Wil je iets toevoegen of corrigeren?
-          <a class="link" href="/contact/">Neem contact op</a>.
-        </p>
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.unhcr.org/en-us/topics/lgbtiq-persons"
+              target="_blank"
+              rel="noopener noreferrer">UNHCR — LGBTIQ+ personen zaken</a
+            > — Internationale richtlijnen
+          </li>
+          <li>
+            <a
+              href="https://www.ind.nl/en"
+              target="_blank"
+              rel="noopener noreferrer">IND Netherlands</a
+            > — Nederlandse asielinfo
+          </li>
+          <li>
+            <a
+              href="https://www.iom.int"
+              target="_blank"
+              rel="noopener noreferrer"
+              >IOM — Internationale Organisatie voor Migratie</a
+            > — Hulp vluchtelingen
+          </li>
+          <li>
+            <a
+              href="https://www.liwc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LIWC — Lesbian &amp; Gay Immigration Counseling</a
+            > — Specialisten
+          </li>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              target="_blank"
+              rel="noopener noreferrer">EHRM</a
+            > — Jurisprudentie vluchteling + LHBTIQ+
+          </li>
+        </ul>
       </div>
     </section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
   </Container>
 </Layout>
-
-<style>
-  .muted {
-    color: var(--muted);
-  }
-</style>

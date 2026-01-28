@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Mensenrechten",
+  title: "Mensenrechten & Juridische Kaders voor LHBTIQ+ Personen",
   description:
-    "Mensenrechten & gelijke behandeling LHBTIQ+: juridische kaders, Europese verdragen, discriminatierecht. Praktische gidsen & bronnen voor iedereen.",
+    "Mensenrechten LHBTIQ+: Europees Verdrag, Grondwet, internationale verdragen. Juridische bescherming, enforcement, praktische toepassing. Onafhankelijke analyse.",
   canonical: "/thema/mensenrechten/",
   lang: "nl-NL",
   alternates: [
@@ -19,10 +19,53 @@ const seo = {
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
       name: "Mensenrechten",
       url: "https://www.gayjustice.org/thema/mensenrechten/",
+    },
+  ],
+  faq: [
+    {
+      question: "Wat zijn mensenrechten voor LHBTIQ+ personen?",
+      answer:
+        "Mensenrechten zijn universele, onvervreemdbare rechten zoals vrijheid, gelijkheid, waardigheid. LHBTIQ+ personen hebben dezelfde mensenrechten als iedereen, inclusief recht op privéleven, gelijke behandeling en bescherming tegen discriminatie.",
+    },
+    {
+      question: "Welke internationale verdragen beschermen LHBTIQ+ rechten?",
+      answer:
+        "Het Europees Verdrag voor de Rechten van de Mens (EVRM), het VN-Handvest, het Internationaal Verdrag Burgerrechten en Politieke Rechten (ICCPR), EU Handvest, en diverse andere internationale instrumenten.",
+    },
+    {
+      question: "Wat doet het Europees Hof voor de Rechten van de Mens (EHRM)?",
+      answer:
+        "Het EHRM beoordeelt inbreuken op EVRM-rechten. Het heeft in honderden zaken bepaald dat discriminatie op grond van seksuele oriëntatie onwettig is. Nederlandse rechters verwijzen naar EHRM-uitspraken.",
+    },
+    {
+      question: "Wie kan ik aanspreken op schending van mensenrechten?",
+      answer:
+        "In Nederland: Commissie Gelijke Behandeling, College voor de Rechten van de Mens, rechter. Internationaal: Europees Hof voor de Rechten van de Mens (na uitputting binnenlandse rechtsmiddelen). Organisaties als Amnesty helpen.",
+    },
+    {
+      question: "Wat is het verschil tussen mensenrechten en rechtsgelijkheid?",
+      answer:
+        "Mensenrechten zijn universele rechten van alle personen. Rechtsgelijkheid is het principe dat iedereen gelijk voor de wet staat. LHBTIQ+ mensenrechten betekent: gelijk behandeld zonder onderscheid.",
+    },
+    {
+      question: "Hoe dwingt een land mensenrechten af?",
+      answer:
+        "Via wetgeving (AWGB, grondwet), rechtbanken (jurisprudentie), ombudsman, gelijkebehandelingscommissies. Bij niet-naleving: schadevergoeding, rectificatie, straffen. Internationaal: EHRM kan veroordeling uitspreken.",
+    },
+    {
+      question: "Zijn transgender rechten mensenrechten?",
+      answer:
+        "Ja. Geslachtsherkenning, medische zorg, bescherming tegen discriminatie zijn mensenrechten onder EHRM artikel 8 (privéleven). Het EHRM erkent geslachtsidentiteit als mensenrecht.",
+    },
+    {
+      question:
+        "Kan ik naar het Europees Hof als Nederland mijn rechten schendt?",
+      answer:
+        "Ja, als je binnenlandse rechtsmiddelen hebt uitgeput. Je kunt dan een klacht indienen bij het EHRM. Dit kan tegen wetten, bestuursacties of omissies van de Nederlandse staat.",
     },
   ],
 };
@@ -31,83 +74,262 @@ const seo = {
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Mensenrechten"
-    lead="We richten ons op vrijheid, gelijkheid en waardigheid in de praktijk. We werken onafhankelijk en brongebaseerd — met aandacht voor mensen, regels en uitvoering."
+    title="Mensenrechten & Juridische Kaders"
+    lead="Mensenrechten zijn niet alleen idealen. Ze zijn juridisch afgedwingbaar, internationaal erkend en regelmatig onderwerp van rechtszaken. Dit thema behandelt het juridische kader dat LHBTIQ+ personen beschermt."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Waar dit over gaat</h2>
+        <h2>Wat zijn mensenrechten in context van LHBTIQ+?</h2>
         <p>
-          Mensenrechten zijn niet alleen abstracte principes — het is dagelijkse
-          realiteit: gelijke behandeling, toegang tot diensten, bescherming
-          tegen discriminatie en de zekerheid dat regels eerlijk worden
-          toegepast.
+          Mensenrechten zijn universele rechten die iedereen toebehoort
+          simpelweg omdat hij of zij mens is. Ze zijn niet afhankelijk van
+          nationaliteit, geslacht, seksuele oriëntatie of geslachtsidentiteit.
+          Ze omvatten:
         </p>
-        <p>
-          In Europa worden deze waarborgen mede gevormd door Europees
-          mensenrechtenrecht en standaarden, waaronder het Europees Verdrag voor
-          de Rechten van de Mens (EVRM) en gelijkebehandelingsprincipes die
-          EU-recht en praktijk beïnvloeden.
-        </p>
-
-        <p>
-          GayJustice.org richt zich met name op deze mensenrechten voor LHBTIQ+
-          personen:
-          <a href="/thema/gay-rechten">homorechten en LHBTIQ+ bescherming</a>,
-          <a href="/thema/voorlichting-scholen"
-            >gelijke behandeling in onderwijs</a
-          >, en <a href="/thema/homoseksuele-vluchtelingen"
-            >bescherming van vluchtelingen</a
-          >.
-        </p>
-
         <ul>
-          <li>gelijke behandeling en non-discriminatie</li>
-          <li>toegang tot recht, zorg en onderwijs</li>
-          <li>bescherming van kwetsbare groepen</li>
-          <li>zorgvuldige uitvoering van beleid en wetgeving</li>
-          <li>transparantie, bronnen en verifieerbaarheid</li>
+          <li>
+            <strong>Recht op privéleven:</strong> Inclusief intimiteit, relaties (of
+            je heteroseksueel bent of niet)
+          </li>
+          <li>
+            <strong>Gelijke behandeling:</strong> Geen onderscheid op grond van wie
+            je bent
+          </li>
+          <li>
+            <strong>Vrijheid van uitdrukking:</strong> Het recht om jezelf uit te
+            drukken
+          </li>
+          <li>
+            <strong>Toegang tot gerechtigheid:</strong> Eerlijke rechtszaken en rechtsbescherming
+          </li>
+          <li>
+            <strong>Bescherming tegen geweld:</strong> Het recht op veiligheid en
+            integriteit
+          </li>
+        </ul>
+
+        <p>
+          Voor LHBTIQ+ personen betekent dit concreet: geen discriminatie bij
+          werk, onderwijs, huisvesting; erkenning van relaties; medische zorg;
+          veiligheid. In de praktijk zien we dat deze rechten niet altijd
+          automatisch gelden—vandaar wetgeving en rechtszaken die ze afdwingen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader: Wat beschermt LHBTIQ+ mensenrechten?</h2>
+
+        <h3>Nederland</h3>
+        <p>
+          <strong>Grondwet:</strong> Artikel 1 ("gelijk voor de wet") en Artikel 6
+          (privéleven, gezinsvorming).
+        </p>
+        <p>
+          <strong>Algemene Wet Gelijke Behandeling (AWGB):</strong> Verbiedt discriminatie
+          op grond van seksuele oriëntatie in werk, onderwijs, diensten, huisvesting.
+        </p>
+
+        <h3>Europa</h3>
+        <p>
+          <strong>Europees Verdrag voor de Rechten van de Mens (EVRM):</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Artikel 8:</strong> Recht op privéleven, gezinsleven, gezinsvorming.
+            EHRM heeft bepaald dit beschermt LGBTIQ+ relaties en geslachtsidentiteit.
+          </li>
+          <li>
+            <strong>Artikel 14:</strong> Discriminatieverbod bij aanwending van EVRM-rechten.
+            Geen onderscheid naar seksuele oriëntatie.
+          </li>
+        </ul>
+
+        <p>
+          <strong>EU Handvest:</strong> Verbiedt discriminatie op grond van seksuele
+          oriëntatie. EU-lidstaten (inclusief Nederland) moeten dit naleven.
+        </p>
+
+        <h3>Internationaal</h3>
+        <p>
+          <strong>VN-Handvest:</strong> Erkent universele mensenrechten voor alle
+          personen.
+        </p>
+        <p>
+          <strong
+            >Internationaal Verdrag Burgerrechten en Politieke Rechten (ICCPR):</strong
+          > Artikel 26 beschermt geligheid. VN-Commissie heeft bepaald seksuele oriëntatie
+          onder "geslacht" valt.
+        </p>
+        <p>
+          <strong>VN-Verklaring homorechten (2011, 2016, 2019):</strong> Oproepen
+          aan landen om LGBTIQ+ personen beter te beschermen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Enforcement: Hoe worden mensenrechten afgedwongen?</h2>
+
+        <h3>Nationaal niveau</h3>
+        <p>
+          Rechtbanken, bestuurskamer, Commissie Gelijke Behandeling, College
+          voor de Rechten van de Mens. Nederland hoort klachten en kan
+          schadevergoeding toekennen of wetten ongeldig verklaren.
+        </p>
+
+        <h3>Europees niveau</h3>
+        <p>
+          <strong>Europees Hof voor de Rechten van de Mens (EHRM):</strong> Kan landen
+          veroordeelden als zij EVRM-rechten schenden. EHRM-uitspraken zijn bindend.
+          Nederlandse rechters volgen EHRM-jurisprudentie.
+        </p>
+        <p>
+          <strong>EU-niveau:</strong> Europese Commissie en Hof van Justitie handhaven
+          gelijkebehandelingsverplichting.
+        </p>
+
+        <h3>Praktijkvoorbeelden</h3>
+        <p>
+          EHRM heeft bepaald: geslachtsverandering is mensenrecht (S. & Marper
+          v. UK), homohuwelijk discriminatieverbod (Dudgeon v. UK), transgender
+          medische zorg toegankelijk moet zijn (Pretty v. UK).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Waar mensenrechtenschendingen voorkomen voor LHBTIQ+ personen</h2>
+
+        <h3>Discriminatie</h3>
+        <p>
+          Op werk, onderwijs, huisvesting: weigering, beperking van kansen,
+          ongelijke behandeling. Dit schendt anti-discriminatierechten.
+        </p>
+
+        <h3>Geen erkenning</h3>
+        <p>
+          Partners niet erkend, geslachtsidentiteit niet gerespecteerd in
+          officiële documenten, gezamelijke adoptievergunning geweigerd. Schendt
+          recht op privéleven en gezinsvorming.
+        </p>
+
+        <h3>Geweld &amp; bedreiging</h3>
+        <p>
+          Haatzaaiing, pesterijen, mishandeling. Schendt recht op veiligheid en
+          fysieke integriteit.
+        </p>
+
+        <h3>Geen toegang tot services</h3>
+        <p>
+          Arts weigert zorg, school weigert inschrijving, ziekenhuis weigert
+          bezoekrecht partner. Schendt rechten op gezondheid en
+          non-discriminatie.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen bij schending van mensenrechten?</h2>
+
+        <ol style="padding-left: 20px;">
+          <li>
+            <strong>Documenteer:</strong> Datum, plaats, wat gebeurde, getuigen, bewijzen
+          </li>
+          <li>
+            <strong>Meld het:</strong> Bij organisatie zelf, werkgever, school, politie
+          </li>
+          <li>
+            <strong>Zoek juridische hulp:</strong> College voor de Rechten van de
+            Mens, Commissie Gelijke Behandeling, Juridisch Loket, organisaties als
+            Amnesty
+          </li>
+          <li>
+            <strong>Rechtszaak:</strong> Via rechtbank of EHRM (na binnenlandse uitputting)
+          </li>
+        </ol>
+
+        <p>
+          <strong>Organisaties die helpen:</strong>
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer">College voor de Rechten van de Mens</a
+            > — Adviezen en onderzoeken
+          </li>
+          <li>
+            <a href="https://ccb.nl" target="_blank" rel="noopener noreferrer"
+              >Commissie Gelijke Behandeling</a
+            > — Gratis klachtenprocedure
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International</a
+            > — Mensenrechten advocacy
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+          <li>
+            <a
+              href="https://www.echr.coe.int"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Europees Hof voor de Rechten van de Mens</a
+            > — Internationale klachten
+          </li>
         </ul>
       </div>
     </section>
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Onze positie</h2>
-        <p style="margin: 0;">
-          STVG is geen politieke partij en geen lobbyorganisatie. We werken
-          onafhankelijk, publiceren bronnen en geven de voorkeur aan
-          samenwerking en praktische oplossingen.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px; margin-bottom: 20px;">
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten">→ Homorechten & LHBTIQ+ bescherming</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ Homorechten & LHBTIQ+ bescherming</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/voorlichting-scholen"
+            <a
+              href="/thema/voorlichting-scholen/"
+              style="text-decoration: underline;"
               >→ Gelijke behandeling in onderwijs</a
             >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/homoseksuele-vluchtelingen"
+            <a
+              href="/thema/homoseksuele-vluchtelingen/"
+              style="text-decoration: underline;"
               >→ LHBTIQ+ vluchtelingen & asiel</a
             >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/dakloze-homoseksuele-jongeren"
-              >→ Dakloze LHBTIQ+ jongeren</a
+            <a
+              href="/thema/dakloze-homoseksuele-jongeren/"
+              style="text-decoration: underline;">→ Dakloze LHBTIQ+ jongeren</a
             >
           </li>
           <li>
-            <a href="/thema/politieke-verantwoordelijkheid"
+            <a
+              href="/thema/politieke-verantwoordelijkheid/"
+              style="text-decoration: underline;"
               >→ Politieke verantwoordelijkheid</a
             >
           </li>
@@ -116,45 +338,58 @@ const seo = {
     </section>
 
     <section class="section">
-      <ul>
-        <li>
-          <a
-            href="https://www.echr.coe.int/"
-            rel="noopener noreferrer"
-            target="_blank">Europees Hof voor de Rechten van de Mens (EHRM)</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.coe.int/en/web/human-rights"
-            rel="noopener noreferrer"
-            target="_blank">Raad van Europa — Mensenrechten</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://fra.europa.eu/"
-            rel="noopener noreferrer"
-            target="_blank">EU Agency for Fundamental Rights (FRA)</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.amnesty.nl"
-            target="_blank"
-            rel="noopener noreferrer">Amnesty International (NL)</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.mensenrechten.nl"
-            target="_blank"
-            rel="noopener noreferrer">College voor de Rechten van de Mens</a
-          >
-        </li>
-      </ul>
+      <div class="surface" style="padding: 22px;">
+        <h2>Externe bronnen &amp; referenties</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Europees Hof voor de Rechten van de Mens (EHRM)</a
+            > — Jurisprudentie, zakenlijst
+          </li>
+          <li>
+            <a
+              href="https://www.coe.int/en/web/human-rights"
+              target="_blank"
+              rel="noopener noreferrer">Raad van Europa — Mensenrechten</a
+            > — Richtlijnen, instrumenten
+          </li>
+          <li>
+            <a
+              href="https://fra.europa.eu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >EU Agency for Fundamental Rights (FRA)</a
+            > — Onderzoeken, aanbevelingen
+          </li>
+          <li>
+            <a
+              href="https://www.mensenrechten.nl"
+              target="_blank"
+              rel="noopener noreferrer">College voor de Rechten van de Mens</a
+            > — Nederlandse expertise
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            > — Campagnes, hulp
+          </li>
+          <li>
+            <a
+              href="https://www.un.org/en/universal-declaration-human-rights/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >VN Universele Verklaring Mensenrechten</a
+            > — Grondslag
+          </li>
+        </ul>
+      </div>
     </section>
-  </Container>
 
-  <p><small>Laatst bijgewerkt: 2026</small></p>
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
+  </Container>
 </Layout>

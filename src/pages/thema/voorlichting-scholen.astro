@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Voorlichting over homorechten op scholen – kennis en bescherming",
+  title: "LHBTIQ+ in Scholen: Rechten, Pesterijen en Inclusief Onderwijs",
   description:
-    "Homorechten & gelijke behandeling in onderwijs: juridische kaders voor scholen. Discriminatie voorkomen, ondersteuning jongeren. Betrouwbare richtlijnen.",
+    "LHBTIQ+ leerlingen rechten: gelijke behandeling, bescherming tegen pesterijen. Inclusive scholen, anti-bullying beleid. Juridisch kader.",
   canonical: "/thema/voorlichting-scholen/",
   lang: "nl-NL",
   alternates: [
@@ -14,104 +14,271 @@ const seo = {
       hreflang: "nl",
       href: "https://www.gayjustice.org/thema/voorlichting-scholen/",
     },
-    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/lgbtiq-schools/",
+    },
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
-      name: "Voorlichting op scholen",
+      name: "Voorlichting in Scholen",
       url: "https://www.gayjustice.org/thema/voorlichting-scholen/",
     },
   ],
-};
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Voorlichting over homorechten op scholen",
-  url: "https://www.gayjustice.org/thema/voorlichting-scholen/",
-  inLanguage: "nl-NL",
-  about: {
-    "@type": "Thing",
-    name: "Onderwijs, voorlichting en gelijke behandeling",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Stichting Vrijheid & Gelijkheid",
-    url: "https://www.stvg.org/",
-  },
+  faq: [
+    {
+      question: "Welke rechten heb ik als LHBTIQ+ leerling?",
+      answer:
+        "Gelijke behandeling zonder discriminatie (AWGB), veiligheid, bescherming tegen pesterijen, recht om jezelf te zijn, gelijke toegang tot onderwijs en activiteiten.",
+    },
+    {
+      question: "Wat is pesterijen vanwege LHBTIQ+ identiteit?",
+      answer:
+        "Herhaald lastigvallen vanwege seksuele oriëntatie/geslachtsidentiteit. Kan verbaal zijn (scheldwoorden), fysiek (geweld), sociaal (uitsluiting) of voelbaar (bedreiging).",
+    },
+    {
+      question:
+        "Kan mijn school mij verplichten mijn LHBTIQ+ identiteit verborgen te houden?",
+      answer:
+        "Nee. School mag niet vereisen dat je jezelf verbergt. Dit schendt je mensenrechten en discriminatie. Je kunt zichtbaar LHBTIQ+ zijn.",
+    },
+    {
+      question: "Wat moet een school doen tegen pesterijen?",
+      answer:
+        "Anti-bullying beleid hebben, pesterijen serieus nemen, onderzoeken, dader sanctioneren, slachtoffer ondersteunen, voorkoming (lessen, diversiteit, inclusie).",
+    },
+    {
+      question: "Kan ik mijn school aansprakelijk stellen voor pesterijen?",
+      answer:
+        "Ja. School heeft zorgplicht (Leerplichtwet, Onderwijsinspectie). Bij onvoldoende actie: klacht bij inspectie, schadevergoeding claim, mogelijk rechtszaak.",
+    },
+    {
+      question: "Heb ik recht op transgenderhulp op school?",
+      answer:
+        "Ja. School moet geslachtsnaam/voornaam wijzigen in administratie, juiste toiletten/kleedkamers toestaan, medische afspraken faciliteren.",
+    },
+    {
+      question: "Wat kan ik doen als school discrimineert?",
+      answer:
+        "Documenteer, meld bij school, klacht bij Onderwijsinspectie, zoek juridische hulp (Juridisch Loket, anti-discriminatiebureaus), eskaleer naar rechtbank.",
+    },
+    {
+      question: "Moet school LHBTIQ+ onderwerpen onderwijzen?",
+      answer:
+        "Bij seksuele voorlichting: ja, inclusief LHBTIQ+ is verpicht (curriculum). Schools moeten inclusief seksuele gezondheid onderwijzen.",
+    },
+  ],
 };
 ---
 
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Voorlichting over homorechten op scholen"
-    lead="Discriminatie ontstaat vaak uit onwetendheid. Goede, feitelijke en veilige voorlichting helpt leerlingen en scholen om gelijke behandeling in de praktijk waar te maken."
+    title="LHBTIQ+ in Scholen & Onderwijs"
+    lead="LHBTIQ+ leerlingen hebben recht op veilig, inclusief onderwijs. Dit thema behandelt scholen, anti-pesterijen beleid, geweld, discriminatie en juridische bescherming."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <p style="margin-top: 0;">
-          GayJustice.org ondersteunt het belang van onderwijs dat gelijke
-          rechten, respect en basiskennis over discriminatie helder uitlegt. We
-          benaderen dit zorgvuldig: brongebaseerd, niet polariserend, en binnen
-          juridische kaders.
-        </p>
-        <p style="margin-bottom: 0;" class="muted">
-          Dit is algemene informatie. We beoordelen geen individuele
-          schoolsituaties.
-        </p>
-      </div>
-    </section>
+        <h2>LHBTIQ+ Ervaringen op School</h2>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Waarom voorlichting essentieel is</h2>
-        <p>
-          Scholen zijn vormend. Wat niet wordt benoemd, wordt vaak genegeerd.
-          Dat vergroot de kans op pesten, uitsluiting en onveiligheid.
-          Voorlichting helpt om taal, normen en grenzen helder te maken.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Juridische kaders in het onderwijs</h2>
-        <p>
-          Onderwijsinstellingen hebben een verantwoordelijkheid voor een veilig
-          leerklimaat en gelijke behandeling. Welke plichten precies gelden,
-          hangt af van context en regelgeving. GayJustice.org ordent de kaders
-          en verwijst naar betrouwbare bronnen.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Gelijke behandeling en veiligheid op school</h2>
-        <p>
-          Gelijke behandeling is niet alleen ‘beleid’, maar praktijk: hoe wordt
-          grensoverschrijdend gedrag herkend, gemeld en opgevolgd? Welke taal is
-          feitelijk en veilig? Waar kunnen leerlingen en ouders terecht?
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Rol van GayJustice.org</h2>
+        <h3>Pesterijen &amp; Geweld</h3>
+        <p>Veel LHBTIQ+ leerlingen kennen pesterijen:</p>
         <ul>
           <li>
-            uitleg van basisbegrippen rond discriminatie en gelijke behandeling;
+            Verbale pesterijen: homofobe scheldwoorden, grappen, opmerkingen
           </li>
-          <li>duiding van relevante juridische normen en procedures;</li>
+          <li>Fysieke geweld: duwen, slaan, spugen</li>
+          <li>Sociaal geweld: buitensluiting, roddels, reputatieschade</li>
           <li>
-            doorverwijzing naar gespecialiseerde organisaties waar passend.
+            Seksueel geweld: ongewenste aanraking, seksuele grappen, harassment
+          </li>
+          <li>Online pesterijen: sociale media, memes, doxing</li>
+        </ul>
+
+        <p>
+          Dit leidt tot: depressie, angststoornis, slecht schoolprestaties,
+          schoolverzuim, zelfselfbeschadiging, suïcidale gedachten.
+        </p>
+
+        <h3>Discriminatie &amp; Uitsluiting</h3>
+        <p>Schools discrimineren op verschillende manieren:</p>
+        <ul>
+          <li>Omschrijving als "abnormaal" in lessen</li>
+          <li>Weigering om geslachtsnaam/voornaam correct te gebruiken</li>
+          <li>
+            Verbod op LHBTIQ+ zichtbaarheid (geen vlaggen, geen voornaam change)
+          </li>
+          <li>Uitsluiting van activiteiten (feesten, sport, teams)</li>
+          <li>Minder aandacht/begeleiding van docenten</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch Kader voor LHBTIQ+ op School</h2>
+
+        <h3>Nederland</h3>
+        <p>
+          <strong>Grondwet (artikel 1):</strong> Gelijk voor de wet, geen discriminatie.
+        </p>
+        <p>
+          <strong>AWGB (Algemene Wet Gelijke Behandeling):</strong> Verbiedt discriminatie
+          op basis van seksuele oriëntatie/ geslachtsidentiteit bij onderwijs, toelating,
+          instellingen.
+        </p>
+        <p>
+          <strong>Leerplichtwet:</strong> Recht op veilige, inclusieve onderwijsomgeving.
+          School is verantwoordelijk voor leerlingveiligheid.
+        </p>
+        <p>
+          <strong>Onderwijsinspectie (IGJ):</strong> Toezicht op schoolkwaliteit,
+          kwaliteit van ondersteuning, vegen inclusie &amp; veiligheid. Kan sancties
+          opleggen.
+        </p>
+
+        <h3>Europa</h3>
+        <p>
+          <strong>EVRM artikel 2 &amp; 8:</strong> Recht op onderwijs &amp; privéleven.
+          Discriminatie in school schendt deze rechten.
+        </p>
+        <p>
+          <strong>EU Handvest:</strong> Verbiedt discriminatie in alle contexten,
+          inclusief onderwijs.
+        </p>
+
+        <h3>Schoolwetgeving</h3>
+        <p>
+          <strong>Veiligheid &amp; Integriteit:</strong> School moet anti-pesterijen
+          beleid hebben, incidenten rapporteren, sancties opleggen tegen daders.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is Inclusief Onderwijs?</h2>
+
+        <h3>Inclusieve school kenmerken</h3>
+        <ul>
+          <li>
+            <strong>Acceptatie:</strong> LHBTIQ+ identiteiten worden erkend en gerespecteerd
+          </li>
+          <li>
+            <strong>Veilighed:</strong> Anti-pesterijen beleid, consequenties voor
+            daders
+          </li>
+          <li>
+            <strong>Zichtbaarheid:</strong> LHBTIQ+ personen, geschiedenis, relaties
+            in curriculum &amp; decoratie erkend
+          </li>
+          <li>
+            <strong>Ondersteuning:</strong> School biedt ondersteuning transgender
+            medicatie/naam, geslachtsnaam wijziging, counseling
+          </li>
+          <li>
+            <strong>Seksuele gezondheid:</strong> Inclusief LHBTIQ+ in seksuele voorlichting
+            onderwijst
+          </li>
+          <li>
+            <strong>Personeel training:</strong> Docenten/administratie getraind in
+            LHBTIQ+ kwesties
+          </li>
+        </ul>
+
+        <h3>Praktische maatregelen</h3>
+        <p>
+          Geslachtsneutraal toiletten, inclusief curriculum, LHBTIQ+
+          vlaggen/symbolen permitteren, homoseksualiteit niet beschouwen als
+          "onderwerp" maar als normaal, medische afspraken faciliteren
+          (transgender zorg), ouders uitnodigen voor ondersteuning.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen tegen discriminatie &amp; pesterijen</h2>
+
+        <h3>Stap 1: Documenteer &amp; Rapporteer</h3>
+        <p>
+          Noteer datum, plaats, wat gebeurde, getuigen. Meld onmiddellijk bij
+          vertrouwensperson, docent, schoolleiding.
+        </p>
+
+        <h3>Stap 2: Zorg voor Ondersteuning</h3>
+        <p>
+          Zoek mentor, vertrouwensperson, friend, ouder. Zorg voor psychische
+          ondersteuning (hulpverlening, therapie).
+        </p>
+
+        <h3>Stap 3: Juridische Actie</h3>
+        <p>
+          Klacht bij school (formeel). Klacht bij Onderwijsinspectie (IGJ).
+          Juridische hulp zoeken (Juridisch Loket, anti-discriminatiebureaus).
+          Schadevergoeding claim. Rechtszaak.
+        </p>
+
+        <h3>Stap 4: Escalatie</h3>
+        <p>
+          Media, politieke advocaten, organisaties als LIWC, COC, PON. Petitie,
+          campagne. Openbare druk op schoolbestuur/gemeente.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties &amp; Ondersteuning</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer">COC Nederland</a
+            > — LHBTIQ+ organisatie met onderwijs programma's
+          </li>
+          <li>
+            <a
+              href="https://www.pon.nl"
+              target="_blank"
+              rel="noopener noreferrer">PAN (Platform Allochtone Nederlands)</a
+            > — Inclusie thema
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+          <li>
+            <a
+              href="https://www.onderwijsinspectie.nl"
+              target="_blank"
+              rel="noopener noreferrer">Onderwijsinspectie (IGJ)</a
+            > — Klachten tegen scholen
+          </li>
+          <li>
+            <a
+              href="https://www.gju.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GJU Utrecht &amp; Regionale LHBTIQ+ Hubs</a
+            > — Jongeren ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.liwc.nl"
+              target="_blank"
+              rel="noopener noreferrer">LIWC</a
+            > — Discriminatie-ondersteuning
           </li>
         </ul>
       </div>
@@ -122,24 +289,20 @@ const pageJsonLd = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten/"
-              >→ Homorechten & juridische bescherming</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten &amp; bescherming</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten/"
-              >→ Mensenrechten & juridische kaders</a>
+            <a
+              href="/thema/dakloze-homoseksuele-jongeren/"
+              style="text-decoration: underline;">→ Dakloze LHBTIQ+ jongeren</a
+            >
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/dakloze-homoseksuele-jongeren/"
-              >→ Dakloze LHBTIQ+ jongeren</a>
-          </li>
-          <li style="margin-bottom: 8px;">
-            <a href="/thema/homoseksuele-vluchtelingen/"
-              >→ Homoseksuele vluchtelingen & asiel</a>
-          </li>
-          <li style="margin-bottom: 0px;">
-            <a href="/thema/politieke-verantwoordelijkheid/"
-              >→ Politieke verantwoordelijkheid</a>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten &amp; juridische kaders</a
+            >
           </li>
         </ul>
       </div>
@@ -147,24 +310,47 @@ const pageJsonLd = {
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Wat wij niet doen</h2>
-        <p style="margin-top: 0;">
-          We verzorgen geen lessen, bemiddelen niet in individuele casussen en
-          geven geen juridisch advies.
-        </p>
-        <p style="margin-bottom: 0;">
-          Wil je iets aanvullen of corrigeren?
-          <a class="link" href="/contact/">Neem contact op</a>.
-        </p>
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer">COC Nederland</a
+            > — LHBTIQ+ onderwijs initiatieven
+          </li>
+          <li>
+            <a
+              href="https://www.onderwijsinspectie.nl"
+              target="_blank"
+              rel="noopener noreferrer">Onderwijsinspectie (IGJ)</a
+            > — Schoolbeoordeling, klachten
+          </li>
+          <li>
+            <a
+              href="https://www.rechtsbijstand.nl"
+              target="_blank"
+              rel="noopener noreferrer">Juridisch Loket</a
+            > — Gratis advies
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer">Amnesty International (NL)</a
+            > — Mensenrechten en onderwijs
+          </li>
+          <li>
+            <a
+              href="https://www.echr.coe.int/"
+              target="_blank"
+              rel="noopener noreferrer">EHRM</a
+            > — Jurisprudentie onderwis + non-discriminatie
+          </li>
+        </ul>
       </div>
     </section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
   </Container>
 </Layout>
-
-<style>
-  .muted {
-    color: var(--muted);
-  }
-</style>

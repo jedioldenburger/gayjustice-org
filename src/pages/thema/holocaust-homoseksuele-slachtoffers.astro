@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Homoseksuele slachtoffers van de Holocaust – erkenning en herdenking",
+  title: "Holocaust & LHBTIQ+ slachtoffers: Historische Vervolgingen & Herinnering",
   description:
-    "Homoseksuele Holocaust-slachtoffers: vervolgingsgeschiedenis, erkenning & herdenking. Juridische en historische context. Zichtbaarheid & respect.",
+    "Holocaust LHBTIQ+: Nazi vervolging, concentratiekampen, Röchm-moord. Historische context, slachtoffersmonumenten, lessen, gedenkteken.",
   canonical: "/thema/holocaust-homoseksuele-slachtoffers/",
   lang: "nl-NL",
   alternates: [
@@ -14,112 +14,237 @@ const seo = {
       hreflang: "nl",
       href: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
     },
-    { hreflang: "en", href: "https://www.gayjustice.org/en/topics/" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/topics/holocaust-lgbtiq-victims/",
+    },
     { hreflang: "x-default", href: "https://www.gayjustice.org/" },
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
-      name: "Holocaust – homoseksuele slachtoffers",
+      name: "Holocaust & LHBTIQ+ slachtoffers",
       url: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
     },
   ],
-};
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Homoseksuele slachtoffers van de Holocaust – erkenning en herdenking",
-  url: "https://www.gayjustice.org/thema/holocaust-homoseksuele-slachtoffers/",
-  inLanguage: "nl-NL",
-  about: {
-    "@type": "Thing",
-    name: "Holocaust en vervolging van homoseksuele personen",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Stichting Vrijheid & Gelijkheid",
-    url: "https://www.stvg.org/",
-  },
+  faq: [
+    {
+      question: "Hoeveel homoseksuele mannen werden vervolgd in de Holocaust?",
+      answer: "Ongeveer 50,000 mannen vervolgd, waarvan 15,000 in concentratiekampen. Ongeveer 5,000-11,000 stierven van honger, ziektes, medische experimenten, executies.",
+    },
+    {
+      question: "Hoe vervolgde Nazi-Duitsland homoseksuele mannen?",
+      answer: "Via Paragraaf 175 (strafwet). Arrestatie, concentratiecamp (roze driehoek-badge), minder voeding/water, medische experimenten, werk tot dood.",
+    },
+    {
+      question: "Wat gebeurde met lesbische vrouwen in de Holocaust?",
+      answer: "Minder geregistreerd, niet systematisch vervolgd zoals mannen. Veel gearresteerd in politieke vervolging of als 'asocialen'. Exact aantal onbekend.",
+    },
+    {
+      question: "Welke concentratiekampen vervolgden homoseksuale mannen?",
+      answer: "Especially Sachsenhausen, Ravensbrück, Buchenwald, Mauthausen, Flossenbürg. Dachau, Neuengamme eveneens. Meeste doodsvallen in Auschwitz-Birkenau.",
+    },
+    {
+      question: "Wat gebeurde na 1945 met homo-ervaring in concentratiekampen?",
+      answer: "Lange negatie. Veel slachtoffers spraken niet. West-Duitsland behield Paragraaf 175 tot 1969. Communistische Oost-Duitsland eveneens. Volle erkenning kwam pas decennia later.",
+    },
+    {
+      question: "Waarom is Holocaust-herinnering belangrijk voor LHBTIQ+ rechten?",
+      answer: "Toont dat vervolging van minderheidsgroepen langzaam begint. Laat belang zien van alert-zijn, weerstand, juridische bescherming, omstandigheid van oppositie.",
+    },
+    {
+      question: "Wat was de Röchm-moord?",
+      answer: "Nazi purge (1934): Hitler liet SA-leider Ernst Röchm doden vanwege homoseksuele relaties. Werd pretext voor verdere homofobie en vervolging (Paragraaf 175 verscherping).",
+    },
+    {
+      question: "Hoe herdenken we LHBTIQ+ Holocaust-slachtoffers vandaag?",
+      answer: "Monumenten (Homomonument Amsterdam, Berlin Pink Triangle, etc.), jaarlijkse herdenking, onderwijsprogramma's, onderzoekscheiding. Politiek erkent heden.",
+    },
+  ],
 };
 ---
 
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Homoseksuele slachtoffers van de Holocaust: erkenning en herdenking"
-    lead="Vervolging van homoseksuele mensen is een historisch feit dat lange tijd te weinig expliciet is benoemd. Zichtbare erkenning is onderdeel van mensenrechten en historische verantwoordelijkheid."
+    title="Holocaust & LHBTIQ+ Slachtoffers"
+    lead="De Nazi-Holocaust vervolgde niet alleen Joden, maar ook homoseksuele mannen. Dit thema behandelt geschiedenis, slachtoffers, herinnering en lessen."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <p style="margin-top: 0;">
-          GayJustice.org pleit voor structurele erkenning en zichtbare
-          herdenking van homoseksuele slachtoffers van vervolging in de
-          Holocaust-periode. Niet om te politiseren, maar om uitsluiting uit het
-          collectieve geheugen te doorbreken.
-        </p>
-        <p style="margin-bottom: 0;" class="muted">
-          We werken met publieke, controleerbare bronnen. Dit is algemene
-          context, geen historisch archiefonderzoek en geen individueel
-          juridisch advies.
-        </p>
-      </div>
-    </section>
+        <h2>Historische Context: Nazi-Vervolging van Homoseksuele Mannen</h2>
 
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Vervolging van homoseksuele mensen tijdens de Holocaust</h2>
+        <h3>Paragraaf 175 (Strafwet)</h3>
         <p>
-          Homoseksuele mensen zijn in verschillende vormen vervolgd: door
-          criminalisering, registratie, opsluiting en uitsluiting. De precieze
-          omvang en terminologie verschillen per bron en land, maar de kern is
-          hetzelfde: ontmenselijking en repressie.
+          <strong>1871:</strong> Duitse strafwet: "Paragraaf 175" criminaliseerde homosexualiteit. Straf: 1-4 jaar gevängenis.
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Historische uitsluiting en gebrek aan erkenning</h2>
         <p>
-          Erkenning blijft soms achter doordat slachtoffers niet als zodanig
-          zijn geregistreerd of omdat maatschappelijke taboes doorwerkten na de
-          oorlog. Juist daarom is expliciete herdenking belangrijk.
+          <strong>1933:</strong> Nazis komen aan macht. Hitler gebruikt Paragraaf 175 voor systematische vervolging.
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="surface" style="padding: 22px;">
-        <h2>Herdenking als onderdeel van mensenrechten</h2>
         <p>
-          Herdenken gaat over waardigheid: wie wordt gezien, wie wordt benoemd
-          en wie wordt beschermd in het publieke geheugen. Het is ook
-          normstellend: vervolging en uitsluiting horen niet te worden
-          gerelativeerd.
+          <strong>1935:</strong> Paragraaf 175 verscherpt. Straf verdubbeld naar 1-10 jaar. Meer arrestaties (gemiddeld 1.000+ per jaar tussen 1936-1944).
+        </p>
+
+        <h3>The Röchm Purge (1934)</h3>
+        <p>
+          <strong>Ernst Röchm:</strong> Leider van de SA (stormtroopers). Homoseksueel man, bekend relatie met Adolf Lenk.
+        </p>
+        <p>
+          <strong>30 juni 1934:</strong> Hitler, paranoia over macht Röchm/SA, beveelt politieke moord. Röchm en ~80-100 SA-leiders geëxecuteerd.
+        </p>
+        <p>
+          <strong>Gevolg:</strong> Nazi-propaganda gebruikt Röchm-moord als pretext voor homofobie campagne. Vervolging_homoseksuele mannen intensifieert, Paragraaf 175 benuttes actief.
         </p>
       </div>
     </section>
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Wat GayJustice.org agendeert</h2>
+        <h2>Systematische Vervolging &amp; Concentratiekampen</h2>
+
+        <h3>Getallen &amp; Omvang</h3>
         <ul>
-          <li>
-            heldere, brongebaseerde uitleg van historische en juridische
-            context;
-          </li>
-          <li>
-            stimuleren van zichtbare herdenking zonder sensatie of
-            partijpolitiek;
-          </li>
-          <li>
-            verbinden van historische erkenning aan hedendaagse
-            gelijkheidsnormen.
-          </li>
+          <li><strong>~50,000</strong> homoseksuele mannen vervolgd under Paragraaf 175</li>
+          <li><strong>~15,000</strong> in concentratiekampen geplaatst</li>
+          <li><strong>~5,000-11,000</strong> doodden in kampen (honger, ziektes, marteling, experimenten)</li>
+          <li><strong>Veel meer</strong> stierven na concentratiecamp (psychische trauma, verwondingen)</li>
+        </ul>
+
+        <h3>Concentratiekampen &amp; Condities</h3>
+        <p>
+          Homoseksuele gevangenen krijgen <strong>roze driehoeken</strong> badges (identiteit). Namen plaats op onderkant rangorde:
+        </p>
+        <ol style="padding-left: 20px;">
+          <li>Joden (gele sterren)</li>
+          <li>Politieke gevangenen (rode driehoeken)</li>
+          <li>Homoseksuele mannen (roze driehoeken)</li>
+          <li>Anderen</li>
+        </ol>
+
+        <p>
+          <strong>Behandeling:</strong> Minder voeding, zwaarste werk, geen bescherming tegen misbruik door andere gevangenen &amp; bewakers. Medische experimenten (castratie, hormoonbehandelingen). Hoge sterftetarief.
+        </p>
+
+        <h3>Bijzonder Kampen</h3>
+        <ul>
+          <li><strong>Sachsenhausen:</strong> Veel roze-driehoeks gevangenen</li>
+          <li><strong>Ravensbrück:</strong> Lesbische vrouwen en politieke vriouwen met homokaractéristiek</li>
+          <li><strong>Buchenwald:</strong> Diversiteit, inclusief homosexuele gevangenen</li>
+          <li><strong>Auschwitz-Birkenau:</strong> Meeste doodslachtoffers</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Lesbische Vrouwen &amp; Transgender Personen</h2>
+
+        <h3>Lesbische Vrouwen</h3>
+        <p>
+          Minder systematisch vervolgd dan homoseksuele mannen. Niet primair gericht; veel gearresteerd als "politieke" of "asociale."
+        </p>
+        <p>
+          Sommige lesbische vrouwen gearresteerd, gedwongen sterilisatie, concentratiecamp. Exact aantal onbekend (veel niet geregistreerd met "roze badge").
+        </p>
+
+        <h3>Transgender Personen</h3>
+        <p>
+          Zeer zwak gedocumenteerd. Sommige geidentificeerd als homosexuel/asociaal gearresteerd. Exect aantal en ervaringen historisch onduidelijk, maar aanwezig in vervolgingen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Na 1945: Erkenning &amp; Negatie</h2>
+
+        <h3>Ongelegen Waarheid</h3>
+        <p>
+          Na beëindiging WWII, veel overleverden willen vergeten. Homoseksuele slachtoffers hadden minder stem dan anderen.
+        </p>
+        <p>
+          <strong>West-Duitsland:</strong> Behield Paragraaf 175 tot 1969. Veel overleverden vervolgd opnieuw voor homo-sexualiteit als wet intact bleef.
+        </p>
+        <p>
+          <strong>Oost-Duitsland:</strong> Eveneens homovernieligd. Maar meer "herkenning" van het probleem; echter geen compensatie tot later.
+        </p>
+
+        <h3>Herkenning &amp; Compensatie</h3>
+        <p>
+          <strong>1980s-1990s:</strong> Activisten en overleverden begonnen te spreken. Media aandacht. Memorials gestart (Homomonument Amsterdam: 1987).
+        </p>
+        <p>
+          <strong>2000s-2010s:</strong> Volle erkenning begon. Duitsland bood formele excuses (2002). Onderzoek naar slachtoffers, monumenten, educatie.
+        </p>
+        <p>
+          <strong>Heden:</strong> Holocaust-slachtoffers (inclusief LHBTIQ+) erkend &amp; herdenkt. Angeboren herinnering, jaarlijkse Erinnerung (Gedenktag).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Monumenten &amp; Herdenking</h2>
+
+        <h3>Internationale Monumenten</h3>
+        <ul>
+          <li><strong>Homomonument (Amsterdam, 1987):</strong> Eerste monument ter wereld ter herdenking LHBTIQ+ vervolging</li>
+          <li><strong>Pink Triangle Memorial (Berlin):</strong> Herdenkingsplek voor Nazi-slachtoffers</li>
+          <li><strong>Sachsenhausen Memorial:</strong> Concentratiecamp site, educatie</li>
+          <li><strong>Centrum voor Gedenking Oorlogen (Various):</strong> Collections, exhibitions</li>
+        </ul>
+
+        <h3>Jaarlijkse Herdenking</h3>
+        <p>
+          <strong>27 januari:</strong> Internationale Holokeust Herdenking (Auschwitz bevrijding). Inclusief LHBTIQ+ slachtoffers.
+        </p>
+        <p>
+          <strong>May Pride Marches:</strong> Vele steden betrekken LHBTIQ+ Holocaust-slachtoffers-herdenkingen.
+        </p>
+
+        <h3>Educatie &amp; Onderzoek</h3>
+        <ul>
+          <li>Documentaire films ("Paragraph Sum", "The Pink Triangle")</li>
+          <li>Boeken &amp; historisch onderzoek</li>
+          <li>Schoolcurricula programma's (historische lessen + LHBTIQ+ bevrijding)</li>
+          <li>Gehoor getuigenissen (overleverden interviews)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Lessen voor Vandaag</h2>
+
+        <h3>Waarom Belangrijke Herinnering?</h3>
+        <ul>
+          <li><strong>Voorkoming:</strong> Herinnering helpt herhalingen voorkomen</li>
+          <li><strong>Waarschuwing:</strong> Vervolging van minderheden begint langzaam; alert zijn belangrijk</li>
+          <li><strong>Weerstand:</strong> LHBTIQ+ (en anderen) moeten active verzetten tegen onderdrukking</li>
+          <li><strong>Juridische bescherming:</strong> Wetten enrechtstelsels essentieel voor minderheidsschutz</li>
+          <li><strong>Herdenking:</strong> Slachtoffers verdienen erkennon &amp; memorialisering</li>
+        </ul>
+
+        <h3>Modern Parallellen</h3>
+        <p>
+          Vandaag blijven LHBTIQ+ personen vervolgd in veel landen (60+ strafbare). Politieke retorica demoniseert LHBTIQ+ (zoals Nazi-propaganda). Voorzichtigheid &amp; advocacy essentiëel.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties &amp; Ressourcen</h2>
+
+        <ul>
+          <li><a href="https://www.homomonument.nl" target="_blank" rel="noopener noreferrer">Homomonument (Amsterdam)</a> — Monument &amp; Educatie</li>
+          <li><a href="https://www.auschwitz.org" target="_blank" rel="noopener noreferrer">Auschwitz Memorial</a> — Concentratiecamp site educatie</li>
+          <li><a href="https://www.ushmm.org" target="_blank" rel="noopener noreferrer">US Holocaust Memorial Museum</a> — Internationale educatie</li>
+          <li><a href="https://www.amnesty.nl" target="_blank" rel="noopener noreferrer">Amnesty International (NL)</a> — Mensenrechtên context</li>
+          <li><a href="https://www.coc.nl" target="_blank" rel="noopener noreferrer">COC Nederland</a> — LHBTIQ+ History archives</li>
         </ul>
       </div>
     </section>
@@ -129,23 +254,13 @@ const pageJsonLd = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/gay-rechten/"
-              >→ Homorechten & juridische bescherming</a>
+            <a href="/thema/homomonument/" style="text-decoration: underline;">→ Homomonument & Herinnering</a>
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten/"
-              >→ Mensenrechten & juridische kaders</a>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;">→ Mensenrechten & juridische kaders</a>
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/homomonument/">→ Herdenking & Homomonument</a>
-          </li>
-          <li style="margin-bottom: 8px;">
-            <a href="/thema/politieke-verantwoordelijkheid/"
-              >→ Politieke verantwoordelijkheid</a>
-          </li>
-          <li style="margin-bottom: 0px;">
-            <a href="/thema/voorlichting-scholen/"
-              >→ Voorlichting & onderwijs</a>
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;">→ LHBTIQ+ rechten & bescherming</a>
           </li>
         </ul>
       </div>
@@ -153,25 +268,17 @@ const pageJsonLd = {
 
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Afbakening en bronnen</h2>
-        <p style="margin-top: 0;">
-          GayJustice.org doet geen zelfstandig historisch archiefonderzoek. We
-          verwijzen naar bestaande publicaties en instellingen en actualiseren
-          deze pagina wanneer bronnen worden aangeleverd.
-        </p>
-        <p style="margin-bottom: 0;">
-          Heb je een bron, correctie of suggestie?
-          <a class="link" href="/contact/">Neem contact op</a>.
-        </p>
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li><a href="https://www.homomonument.nl" target="_blank" rel="noopener noreferrer">Homomonument Amsterdam</a> — Monument & Documentatie</li>
+          <li><a href="https://www.ushmm.org/learn/timeline/persecution-of-homosexuals-in-the-holocaust" target="_blank" rel="noopener noreferrer">US Holocaust Memorial - Homosexuals in Holocaust</a></li>
+          <li><a href="https://www.auschwitz.org" target="_blank" rel="noopener noreferrer">Auschwitz-Birkenau Memorial</a> — Concentratiecamp archivering</li>
+          <li><a href="https://www.memorial-sachsenhausen.de" target="_blank" rel="noopener noreferrer">Sachsenhausen Memorial</a> — Concentratiecamp site</li>
+          <li><a href="https://www.coc.nl/en/who-we-are/history" target="_blank" rel="noopener noreferrer">COC Nederland - History</a> — LHBTIQ+ geschiedenis</li>
+        </ul>
       </div>
     </section>
 
-    <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
   </Container>
 </Layout>
-
-<style>
-  .muted {
-    color: var(--muted);
-  }
-</style>
