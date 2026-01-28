@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: jedioldenburger/gayjustice-org
+  branch: main
+
+# For local development with npx decap-server
+local_backend: true
+
+# Media files stored in public folder
+media_folder: public/pictures
+public_folder: /pictures
+
+# Site URL for preview
+site_url: https://www.gayjustice.org
+display_url: https://www.gayjustice.org
+
+# Publish mode (editorial workflow requires GitHub OAuth)
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Description", name: "description", widget: "text", required: true }
+      - { label: "Author", name: "author", widget: "string", default: "STVG" }
+      - { label: "Publish Date", name: "pubDatetime", widget: "datetime", required: true }
+      - { label: "Modified Date", name: "modDatetime", widget: "datetime", required: false }
+      - { label: "Language", name: "lang", widget: "select", options: ["nl", "en"], default: "nl" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Tags", name: "tags", widget: "list", default: ["article"] }
+      - { label: "Body", name: "body", widget: "markdown" }
