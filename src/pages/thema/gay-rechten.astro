@@ -4,9 +4,9 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const seo = {
-  title: "Gayrechten",
+  title: "Homorechten & LGBTIQ+ Juridische Bescherming in Nederland",
   description:
-    "Homorechten & LHBTIQ+ juridische bescherming in Nederland. Wetten, historische context, discriminatie, huisvesting, werk & media. Betrouwbare bronnen.",
+    "Homorechten & LHBTIQ+ juridische bescherming in Nederland. Grondwet, AWGB, EVRM. Waar werken discriminatie, hoe zetten rechters het uit, wat kun je doen?",
   canonical: "/thema/gay-rechten/",
   lang: "nl-NL",
   alternates: [
@@ -19,10 +19,44 @@ const seo = {
   ],
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
-    { name: "Thema’s", url: "https://www.gayjustice.org/thema/" },
+    { name: "Thema's", url: "https://www.gayjustice.org/thema/" },
     {
-      name: "Gayrechten",
+      name: "Homorechten",
       url: "https://www.gayjustice.org/thema/gay-rechten/",
+    },
+  ],
+  faq: [
+    {
+      question: "Welke wetten beschermen homorechten in Nederland?",
+      answer: "De Grondwet (artikelen 1 en 6), de Algemene Wet Gelijke Behandeling (AWGB), het Europees Verdrag voor de Rechten van de Mens (EVRM artikel 8 en 14), en internationale VN-verdragen. Deze vormen samen het juridische kader.",
+    },
+    {
+      question: "Mag ik worden gediscrimineerd op het werk vanwege mijn seksuele oriëntatie?",
+      answer: "Nee. De AWGB verbiedt discriminatie op grond van seksuele oriëntatie in werkrelaties. Discriminatie bij aanstelling, bevordering, loon en ontslag is onwettig. Je kunt klacht indienen bij de commissie gelijke behandeling.",
+    },
+    {
+      question: "Wat zijn mijn rechten in onderwijs?",
+      answer: "Je mag niet worden uitgestoten, gepest of gediscrimineerd vanwege je seksuele oriëntatie of geslachtsidentiteit. Scholen moeten veiligheid bieden. Bij inbreuken kan je bezwaar indienen bij de school en krijg je ondersteuning van organisaties als COC.",
+    },
+    {
+      question: "Kunnen transgender personen hun geslacht in documenten veranderen?",
+      answer: "Ja. Sinds 2019 kunnen transgender personen hun geslacht rechtstreeks wijzigen via de gemeente, zonder medische vereisten. Dit recht is vastgelegd in de Wet geslachtsverandering.",
+    },
+    {
+      question: "Mag een huurbaas me weigeren vanwege mijn seksuele oriëntatie?",
+      answer: "Nee. Discriminatie in huisvesting is verboden onder AWGB artikel 5. Bij weigering kan je klacht indienen bij commissie gelijke behandeling of naar de rechter.",
+    },
+    {
+      question: "Welke rechten hebben samenwonende partners?",
+      answer: "Samenwonende partners hebben geen automatische rechten. Een geregistreerd partnerschap of huwelijk geeft juridische rechten (erfenis, belastingen, zorgmachtiging). Dit geldt genderneutraal.",
+    },
+    {
+      question: "Aan wie kan ik klacht indienen bij discriminatie?",
+      answer: "Je kunt klacht indienen bij: commissie gelijke behandeling (CGB), politie, werkgever/school, huurverhuurder, of via een rechtsgang. Organisaties als COC en Juridisch Loket helpen je door.",
+    },
+    {
+      question: "Hoe zet de Europese Hof voor de Rechten van de Mens homorechten door?",
+      answer: "Het EHRM beschermt privéleven (artikel 8) en verbiedt discriminatie (artikel 14). In tientallen uitspraken heeft het gesteld dat discriminatie op grond van seksuele oriëntatie onwettig is.",
     },
   ],
   dataset: {
@@ -52,35 +86,137 @@ const seo = {
 <Layout seo={seo}>
   <PageHeader
     eyebrow="Thema"
-    title="Gayrechten & LGBTIQ+"
-    lead="Gelijke rechten zijn mensenrechten. We werken onafhankelijk en brongebaseerd aan bescherming, gelijke behandeling en veiligheid voor LGBTIQ+ mensen."
+    title="Homorechten & LGBTIQ+ Bescherming"
+    lead="Gelijke rechten zijn mensenrechten. In Nederland hebben LGBTIQ+ personen wettelijke bescherming, maar discriminatie blijft voorkomen. Dit thema behandelt wat de wet zegt en hoe die werkt in de praktijk."
   />
 
   <Container>
     <section class="section">
       <div class="surface" style="padding: 22px;">
-        <h2>Waar dit over gaat</h2>
+        <h2>Wat zijn homorechten?</h2>
         <p>
-          Dit thema gaat over gelijke behandeling in wet en praktijk. We richten
-          ons op concrete knelpunten, heldere informatie en samenwerking met
-          betrouwbare partners. Dit is nauw verbonden met ons werk op <a
-            href="/thema/mensenrechten">mensenrechten</a
-          > en <a href="/thema/voorlichting-scholen"
-            >gelijke behandeling in onderwijs</a
-          >.
-        </p>
-        <p>
-          In Europa zijn gayrechten ook verbonden met <a
-            href="/thema/mensenrechten">Europees mensenrechtenrecht</a
-          >, waaronder bescherming via het EVRM en bredere Europese
-          non-discriminatiestandaarden.
+          Homorechten zijn de juridische rechten van homoseksuele, biseksuele en transgender personen om:
         </p>
         <ul>
-          <li>gelijke behandeling en non-discriminatio</li>
-          <li>veiligheid, toegang tot zorg en bescherming tegen geweld</li>
-          <li>heldere informatie over rechten en procedures</li>
-          <li>internationale standaarden en jurisprudentie als basis</li>
-          <li>praktische doorverwijzing naar hulp en expertise</li>
+          <li><strong>Gelijk behandeld te worden</strong> zonder discriminatie op grond van seksuele oriëntatie of geslachtsidentiteit</li>
+          <li><strong>Privéleven te beschermen</strong> inclusief relaties, gezinssituaties en lichamelijke autonomie</li>
+          <li><strong>Veiligheid te hebben</strong> tegen geweld, bedreiging en haatzaaien</li>
+          <li><strong>Zorg te ontvangen</strong> inclusief transgender medische zorg</li>
+          <li><strong>Economische rechten</strong> gelijk aan heteroseksuele personen (werk, eigendom, erfenis)</li>
+        </ul>
+
+        <p>
+          In Nederland zijn deze rechten vastgelegd in wetten, verdragen en rechtspraak. Dit thema legt uit hoe die werken en wat je kunt doen als je rechten geschonden worden.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader in Nederland</h2>
+        
+        <h3>Grondwet</h3>
+        <p>
+          <strong>Artikel 1:</strong> "Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld." Dit is de juridische basis—niemand mag worden gediscrimineerd.
+        </p>
+        <p>
+          <strong>Artikel 6:</strong> Beschermt het recht op privéleven, gezinsleven en gezinsvorming—inclusief voor LGBTIQ+ personen.
+        </p>
+
+        <h3>Algemene Wet Gelijke Behandeling (AWGB)</h3>
+        <p>
+          De AWGB verbiedt discriminatie op grond van seksuele oriëntatie in:
+        </p>
+        <ul>
+          <li><strong>Arbeid:</strong> Aanstelling, bevordering, loon, ontslag, training</li>
+          <li><strong>Onderwijs:</strong> Toegang, behandeling, huisvesting op school</li>
+          <li><strong>Goederen &amp; diensten:</strong> Winkel, restaurant, hotel, ziekenhuis</li>
+          <li><strong>Huisvesting:</strong> Huurovereenkomsten en aankoop</li>
+        </ul>
+
+        <p>
+          Bij schending kan je klacht indienen bij de Commissie Gelijke Behandeling of rechtszaak starten.
+        </p>
+
+        <h3>Europees Verdrag voor de Rechten van de Mens (EVRM)</h3>
+        <p>
+          <strong>Artikel 8:</strong> "Recht op privéleven" beschermt je relaties, gezinssituaties en lichaamsintegriteit. Hier vallen transgender geslachtsherkenning en medische zorg onder.
+        </p>
+        <p>
+          <strong>Artikel 14:</strong> "Discriminatieverbod" zorgt dat alle rechten uit het verdrag gelden zonder onderscheid naar seksuele oriëntatie.
+        </p>
+
+        <p>
+          De Europese Hof voor de Rechten van de Mens heeft in honderden zaken bepaald dat discriminatie onwettig is. Nederlandse rechten gebruiken deze jurisprudentie.
+        </p>
+
+        <h3>Internationale verdragen</h3>
+        <p>
+          <strong>VN-Handvest:</strong> Erkent LGBTIQ+ mensen als draagsters van mensenrechten zonder discriminatie.
+        </p>
+        <p>
+          <strong>Internationaal Verdrag Burgerrechten &amp; Politieke Rechten (ICCPR):</strong> Nederland erkent dat seksuele oriëntatie beschermd is onder artikel 26 (gelijkheid).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Waar homorechten in de praktijk spelen</h2>
+
+        <h3>Op het werk</h3>
+        <p>
+          Discriminatie op het werk kan voorkomen bij: aanstelling ("je bent niet geschikt"), bevordering ("we zien je niet als leidinggevende"), loon (lager betaald), pestgedrag (grappen, exclusie), ontslag ("bedrijfscultuur").
+        </p>
+        <p>
+          <strong>Je rechten:</strong> Je mag gelijk salaris krijgen, voor promotie in aanmerking komen, en zonder angst werken. Bij discriminatie kan je klacht indienen bij CGE of naar de ondernemingskamer.
+        </p>
+
+        <h3>In onderwijs</h3>
+        <p>
+          LGBTIQ+ kinderen en jongeren ervaren pesterijen, uitsluiting en onvoldoende veiligheid. Sommige scholen weigeren inclusie.
+        </p>
+        <p>
+          <strong>Je rechten:</strong> Onderwijs moet inclusief en veilig zijn. Bij discriminatie kan school aansprakelijk gesteld worden. COC en Juridisch Loket helpen.
+        </p>
+
+        <h3>Bij huisvesting</h3>
+        <p>
+          Verhuurders weigeren soms huurovereenkomsten of stellen voorwaarden ("geen 'geliefde's' in huis").
+        </p>
+        <p>
+          <strong>Je rechten:</strong> Weigering is discriminatie. Je kunt klacht indienen bij CGE of naar de civiele rechter.
+        </p>
+
+        <h3>In gezondheidszorg</h3>
+        <p>
+          Sommige zorgverleners weigeren zorg of stellen zich kritisch op ten aanzien van transgender zorg.
+        </p>
+        <p>
+          <strong>Je rechten:</strong> Je hebt recht op zorg zonder discriminatie. Voor transgender medische zorg kan je terecht bij gespecialiseerde centra. <a href="/thema/mensenrechten/" style="text-decoration: underline;">Lees meer →</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen bij schending van je rechten?</h2>
+
+        <ol style="padding-left: 20px;">
+          <li><strong>Documenteer:</strong> Zet datum, plaats, wat er gebeurde, en getuigen op papier</li>
+          <li><strong>Meld het:</strong> Bij werkgever, school, huurverhuurder of politie</li>
+          <li><strong>Zoek juridische hulp:</strong> Commissie Gelijke Behandeling, Juridisch Loket, COC, Amnesty International</li>
+          <li><strong>Overweeg rechtszaak:</strong> Via civiel, bestuurs- of strafrecht</li>
+        </ol>
+
+        <p>
+          <strong>Organisaties die helpen:</strong>
+        </p>
+        <ul>
+          <li><a href="https://www.ccb.nl" target="_blank" rel="noopener noreferrer">Commissie Gelijke Behandeling (CGB)</a> — Gratis klachtenprocedure</li>
+          <li><a href="https://www.juridischloket.nl" target="_blank" rel="noopener noreferrer">Juridisch Loket</a> — Gratis juridisch advies</li>
+          <li><a href="https://www.coc.nl" target="_blank" rel="noopener noreferrer">COC Nederland</a> — Steun &amp; advocacy</li>
+          <li><a href="https://www.amnesty.nl" target="_blank" rel="noopener noreferrer">Amnesty International</a> — Mensenrechten</li>
         </ul>
       </div>
     </section>
@@ -88,10 +224,11 @@ const seo = {
     <section class="section">
       <div class="surface" style="padding: 22px;">
         <h2>Onze positie</h2>
-        <p style="margin: 0;">
-          STVG is geen politieke partij en geen lobbyorganisatie. We werken
-          onafhankelijk, baseren ons op bronnen en kiezen zorgvuldige taal en
-          verifieerbare claims.
+        <p>
+          STVG is geen politieke partij en geen lobbyorganisatie. We werken onafhankelijk op basis van bronnen, wetteksten en rechtspraak. We kiezen zorgvuldige taal en verifieerbare claims.
+        </p>
+        <p>
+          We geloven dat juridische bescherming van LGBTIQ+ personen essentieel is voor een rechtsstaat die gelijkheid en waardigheid respecteert.
         </p>
       </div>
     </section>
@@ -100,12 +237,10 @@ const seo = {
       <div class="surface" style="padding: 22px;">
         <h2>Datasets &amp; resources</h2>
         <p>
-          We publiceren ook een kleine referentieset (PDF/CSV) met een overzicht
-          per land. Gebruik dit als startpunt; verifieer altijd met primaire
-          bronnen.
+          GayJustice.org publiceert ook referentiesets (PDF/CSV) met overzichten per land en internationale vergelijkingen. Gebruik dit als startpunt; verifieer altijd met primaire bronnen en officiele instanties.
         </p>
-        <p style="margin: 0;">
-          <a class="link" href="/resources/2026-gay-rights">Bekijk resources</a>
+        <p>
+          <a class="btn btn-outline" href="/resources/2026-gay-rights/" style="margin-top: 10px;">Datasets &amp; resources</a>
         </p>
       </div>
     </section>
@@ -115,65 +250,38 @@ const seo = {
         <h2>Gerelateerde thema's</h2>
         <ul style="list-style: none; padding: 0;">
           <li style="margin-bottom: 8px;">
-            <a href="/thema/mensenrechten"
-              >→ Mensenrechten & juridische kaders</a
-            >
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;">→ Mensenrechten &amp; juridische kaders</a>
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/voorlichting-scholen"
-              >→ Gelijke behandeling in onderwijs</a
-            >
+            <a href="/thema/voorlichting-scholen/" style="text-decoration: underline;">→ Gelijke behandeling in onderwijs</a>
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/homoseksuele-vluchtelingen"
-              >→ LHBTIQ+ vluchtelingen & asiel</a
-            >
+            <a href="/thema/homoseksuele-vluchtelingen/" style="text-decoration: underline;">→ LHBTIQ+ vluchtelingen &amp; asiel</a>
           </li>
           <li style="margin-bottom: 8px;">
-            <a href="/thema/dakloze-homoseksuele-jongeren"
-              >→ Dakloze LHBTIQ+ jongeren</a
-            >
+            <a href="/thema/dakloze-homoseksuele-jongeren/" style="text-decoration: underline;">→ Dakloze LHBTIQ+ jongeren</a>
           </li>
           <li>
-            <a href="/thema/politieke-verantwoordelijkheid"
-              >→ Politieke verantwoordelijkheid voor homorechten</a
-            >
+            <a href="/thema/politieke-verantwoordelijkheid/" style="text-decoration: underline;">→ Politieke verantwoordelijkheid</a>
           </li>
         </ul>
       </div>
     </section>
 
     <section class="section">
-      <ul>
-        <li>
-          <a href="https://www.coc.nl" target="_blank" rel="noopener noreferrer"
-            >COC Nederland</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://ilga-europe.org"
-            target="_blank"
-            rel="noopener noreferrer">ILGA-Europe</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.unfe.org"
-            target="_blank"
-            rel="noopener noreferrer">United Nations — Free &amp; Equal</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.equaldex.com"
-            target="_blank"
-            rel="noopener noreferrer">EqualDex (wetten &amp; rechten)</a
-          >
-        </li>
-      </ul>
+      <div class="surface" style="padding: 22px;">
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li><a href="https://www.coc.nl" target="_blank" rel="noopener noreferrer">COC Nederland</a> — LGBTIQ+ organisatie &amp; hulp</li>
+          <li><a href="https://ilga-europe.org" target="_blank" rel="noopener noreferrer">ILGA-Europe</a> — Europese LGBTIQ+ federatie</li>
+          <li><a href="https://www.unfe.org" target="_blank" rel="noopener noreferrer">United Nations — Free &amp; Equal</a> — VN LGBTIQ+ programma</li>
+          <li><a href="https://www.equaldex.com" target="_blank" rel="noopener noreferrer">EqualDex</a> — Internationale wetten &amp; rechten database</li>
+          <li><a href="https://www.ccb.nl" target="_blank" rel="noopener noreferrer">Commissie Gelijke Behandeling</a> — Officiële klaaginstantie</li>
+          <li><a href="https://www.rechtspraak.nl" target="_blank" rel="noopener noreferrer">Rechtspraak.nl</a> — Nederlandse rechtszaken</li>
+        </ul>
+      </div>
     </section>
-  </Container>
 
-  <p><small>Laatst bijgewerkt: 2026</small></p>
+    <p><small>Laatst bijgewerkt: 28 januari 2026</small></p>
+  </Container>
 </Layout>
