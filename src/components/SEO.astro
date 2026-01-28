@@ -103,42 +103,6 @@ const orgNode: any = {
   ],
 };
 
-// Add LegalService schema for pages on the homepage
-if (Astro.url.pathname === "/" || Astro.url.pathname === "/index.html") {
-  const legalServiceNode = {
-    "@type": "LegalService",
-    "@id": `${SITE.url}/#legalservice`,
-    name: "GayJustice.org - Juridische Informatievoorziening LHBTIQ+",
-    description:
-      "Onafhankelijke juridische informatie, brongebaseerde duiding en betrouwbare doorverwijzing voor LHBTIQ+ personen in Nederland",
-    url: SITE.url + "/",
-    provider: {
-      "@id": stvgId,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Nederland",
-      sameAs: "https://www.wikidata.org/wiki/Q55",
-    },
-    availableLanguage: ["nl", "en"],
-    serviceType: [
-      "Juridische informatie",
-      "Mensenrechten educatie",
-      "Doorverwijzing hulpinstanties",
-      "Discriminatierecht uitleg",
-    ],
-    priceRange: "Gratis",
-    knowsAbout: [
-      "Discriminatierecht",
-      "LHBTIQ+ wetgeving",
-      "Mensenrechten",
-      "Gelijke behandeling",
-      "Asielrecht",
-    ],
-  };
-  graph.push(legalServiceNode);
-}
-
 if (SITE.sameAs?.length) orgNode.sameAs = SITE.sameAs;
 
 const ids: any[] = [];
@@ -188,6 +152,42 @@ const graph: any[] = [
     })),
   },
 ];
+
+// Add LegalService schema for pages on the homepage
+if (Astro.url.pathname === "/" || Astro.url.pathname === "/index.html") {
+  const legalServiceNode = {
+    "@type": "LegalService",
+    "@id": `${SITE.url}/#legalservice`,
+    name: "GayJustice.org - Juridische Informatievoorziening LHBTIQ+",
+    description:
+      "Onafhankelijke juridische informatie, brongebaseerde duiding en betrouwbare doorverwijzing voor LHBTIQ+ personen in Nederland",
+    url: SITE.url + "/",
+    provider: {
+      "@id": stvgId,
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Nederland",
+      sameAs: "https://www.wikidata.org/wiki/Q55",
+    },
+    availableLanguage: ["nl", "en"],
+    serviceType: [
+      "Juridische informatie",
+      "Mensenrechten educatie",
+      "Doorverwijzing hulpinstanties",
+      "Discriminatierecht uitleg",
+    ],
+    priceRange: "Gratis",
+    knowsAbout: [
+      "Discriminatierecht",
+      "LHBTIQ+ wetgeving",
+      "Mensenrechten",
+      "Gelijke behandeling",
+      "Asielrecht",
+    ],
+  };
+  graph.push(legalServiceNode);
+}
 
 const faqJsonLd = faq?.length
   ? {
