@@ -34,25 +34,16 @@ import { SITE } from "@/config/site";
             <div class="footer-text">The Netherlands</div>
             <div style="margin-top: 8px;">
               <div class="footer-text">
-                <strong>E-mail (STVG):</strong>
-                <a class="footer-link" href="mailto:info@stvg.org"
-                  >info@stvg.org</a
-                >
-              </div>
-              <div class="footer-text">
-                <strong>E-mail (GayJustice.org):</strong>
-                <a class="footer-link" href="mailto:info@gayjustice.org"
-                  >info@gayjustice.org</a
-                >
+                <strong>E-mail:</strong>
+                <a class="footer-link" href="mailto:info@stvg.org">info@stvg.org</a>
               </div>
             </div>
           </div>
 
           <div style="margin-top: 14px;">
             <a class="footer-link" href="/transparantie"
-              >Transparency &amp; governance (STVG)</a
+              >Transparency &amp; governance</a
             >
-            <a class="footer-link" href="/oprichting">Oprichting</a>
             <a class="footer-link" href="/redactionele-principes"
               >Redactionele principes</a
             >
@@ -90,15 +81,14 @@ import { SITE } from "@/config/site";
         <div class="footer-side">
           <div>
             <div class="footer-title">Navigation</div>
-            <a class="footer-link" href="/missie">Mission</a>
             <a class="footer-link" href="/over-ons">About</a>
-            <a class="footer-link" href="/thema">Topics</a>            <a class="footer-link" href="/oprichting">Oprichting</a>            <a class="footer-link" href="/transparantie">Transparency</a>
-            <a class="footer-link" href="/privacy">Privacy</a>
-            <a class="footer-link" href="/donate">Support</a>
-            <a class="footer-link" href="/nl/">Nederlands (NL)</a>
-            <a class="footer-link" href="/legal/no-legal-advice"
-              >Why we don’t provide legal advice</a
-            >
+            <a class="footer-link" href="/thema">Topics</a>
+            <a class="footer-link" href="/transparantie">Transparency</a>
+            <a class="footer-link" href="/resources">Resources</a>
+            <a class="footer-link" href="/blog">Blog</a>
+            <a class="footer-link" href="/contact">Contact</a>
+            <a class="footer-link" href="/doneren">Support</a>
+            <a class="footer-link" href="/en/">English</a>
           </div>
 
           <div>
@@ -187,12 +177,28 @@ import { SITE } from "@/config/site";
     line-height: 1.35;
   }
 
-  .footer-kicker {
-    color: rgba(255, 255, 255, 0.96);
-    font-weight: 850;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-top: calc(2 * 1.35em);
+  .footer-section-divider {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .footer-section-title {
+    font-weight: 650;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-links-group {
+    margin-top: 14px;
+  }
+
+  .footer-address-item {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .footer-contact-group {
+    margin-top: 8px;
   }
 
   .footer-link {
