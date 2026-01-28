@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import Container from "../../../components/Container.astro";
-import Giscus from "../../../components/Giscus.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection(
@@ -62,8 +61,6 @@ const seo = {
           <Content />
         </div>
       </div>
-
-      <Giscus lang="en" />
     </article>
 
     <nav style="margin-top: 32px; display: flex; gap: 12px;">
