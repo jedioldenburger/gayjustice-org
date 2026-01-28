@@ -79,10 +79,13 @@ const orgNode: any = {
   name: SITE.name,
   alternateName: SITE.shortName,
   url: SITE.url + "/",
-  logo: { "@type": "ImageObject", url: absUrl(SITE.logo) },
+  logo: {
+    "@type": "ImageObject",
+    url: SITE.logo || absUrl("/pictures/gayjustice-logo.webp"),
+  },
   description: defaultDescription(description),
   email: SITE.email,
-  foundingDate: "2026",
+  foundingDate: "2019",
   parentOrganization: { "@id": stvgId },
   knowsAbout: SITE.knowsAbout,
   address: {
@@ -187,6 +190,45 @@ if (Astro.url.pathname === "/" || Astro.url.pathname === "/index.html") {
     ],
   };
   graph.push(legalServiceNode);
+
+  const howToNode = {
+    "@type": "HowTo",
+    "@id": `${SITE.url}/#howto`,
+    name: "Hoe je GayJustice.org het best gebruikt",
+    description:
+      "Stappen om juridische informatie over LHBTIQ+ rechten op GayJustice.org te vinden",
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Begin met thema-pagina's",
+        text: "Ga naar het Thema's-onderdeel om wettelijke onderwerpen te begrijpen. We hebben pagina's over homorechten, discriminatie op het werk, onderwijs, transgender rechten en meer.",
+        url: `${SITE.url}/thema/`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Zoek in Resources",
+        text: "Vind links naar officiele wetteksten, jurisprudentie, organisaties die juridische hulp bieden, en downloadbare informatie.",
+        url: `${SITE.url}/resources/`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "Lees Blog-artikelen",
+        text: "Lees updates over actuele zaken, juridische ontwikkelingen, praktische gidsen en interviews met experts.",
+        url: `${SITE.url}/blog/`,
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Neem contact op",
+        text: "Heb je vragen of wil je iets melden? Neem contact op met Stichting Vrijheid & Gelijkheid via het contactformulier.",
+        url: `${SITE.url}/contact/`,
+      },
+    ],
+  };
+  graph.push(howToNode);
 }
 
 const faqJsonLd = faq?.length
