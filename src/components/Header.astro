@@ -132,6 +132,14 @@ const isActive = (href: string) => {
   <Container>
     <div class="top">
       <a class="sr-only" href={brand.href}>Go to homepage</a>
+      
+      <img
+        src="/pictures/gay-eagle.webp"
+        alt="GayJustice.org eagle logo"
+        class="header-logo"
+        width="40"
+        height="40"
+      />
 
       <a
         class={`brand-link ${isActive(brand.href) ? "is-active" : ""}`}
@@ -339,6 +347,12 @@ const isActive = (href: string) => {
     position: relative;
     justify-content: flex-end;
     align-items: center;
+    gap: 12px;
+  }
+
+  .header-logo {
+    margin-right: auto;
+    border-radius: 6px;
   }
 
   .brand-link {

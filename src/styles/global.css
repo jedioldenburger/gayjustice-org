@@ -39,11 +39,11 @@
 	--footer-bg: rgba(248, 250, 252, 0.72);
 	--footer-border: rgba(15, 23, 42, 0.1);
 
-	/* Header/footer (chrome) */
+	/* Header/footer (chrome) - Blue gradient */
 	--chrome-bg:
-		radial-gradient(900px 260px at 15% 0%, rgba(168, 85, 247, 0.55), transparent 60%),
-		radial-gradient(700px 240px at 90% 10%, rgba(236, 72, 153, 0.35), transparent 55%),
-		linear-gradient(135deg, #130426 0%, #2b0a57 38%, #4c1d95 72%, #6d28d9 100%);
+		radial-gradient(900px 260px at 15% 0%, rgba(59, 130, 246, 0.55), transparent 60%),
+		radial-gradient(700px 240px at 90% 10%, rgba(37, 99, 235, 0.35), transparent 55%),
+		linear-gradient(135deg, #0c2340 0%, #1a3a52 38%, #2563eb 72%, #3b82f6 100%);
 	--chrome-border: rgba(255, 255, 255, 0.18);
 	--header-bg: var(--chrome-bg);
 	--header-border: var(--chrome-border);
