@@ -22,7 +22,7 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
     <meta name="generator" content={Astro.generator} />
 
     <!-- Netlify Identity widget for Decap CMS authentication -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
 
     <SEO {...seo ?? {}} />
     <script type="application/ld+json">
