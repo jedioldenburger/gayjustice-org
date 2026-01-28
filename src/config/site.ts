@@ -8,9 +8,6 @@ export const SITE = {
   themeColor: "#0b0f14",
 
   email: "info@gayjustice.org",
-  logo: "/pictures/gayjustice-logo.webp",
-
-  // 1200x630
   defaultOgImage: "/pictures/og-gayjustice.webp",
 
   parentOrganization: {
