@@ -69,22 +69,35 @@ const brand = {
 
 const nav = [
   {
-    hrefEn: "/en/about",
-    hrefNl: "/over-ons",
     labelEn: "About",
     labelNl: "Over ons",
+    isGroup: true,
+    submenu: [
+      {
+        hrefEn: "/en/mission",
+        hrefNl: "/missie",
+        labelEn: "Our Mission",
+        labelNl: "Onze missie",
+      },
+      {
+        hrefEn: "/en/organization",
+        hrefNl: "/organisatie",
+        labelEn: "Organization & Board",
+        labelNl: "Organisatie & Bestuur",
+      },
+      {
+        hrefEn: "/en/transparency",
+        hrefNl: "/transparantie",
+        labelEn: "Transparency & Governance",
+        labelNl: "Transparantie & governance",
+      },
+    ],
   },
   {
     hrefEn: "/en/topics",
     hrefNl: "/thema",
     labelEn: "Topics",
-    labelNl: "Thema’s",
-  },
-  {
-    hrefEn: "/en/transparency",
-    hrefNl: "/transparantie",
-    labelEn: "Transparency",
-    labelNl: "Transparantie",
+    labelNl: "Thema's",
   },
   {
     hrefEn: "/en/blog",
@@ -98,15 +111,27 @@ const nav = [
     labelEn: "Support",
     labelNl: "Steun",
   },
-].map((item) => ({
-  href: isEn ? item.hrefEn : item.hrefNl,
+].map((item: any) => ({
   label: isEn ? item.labelEn : item.labelNl,
+  href: !item.isGroup ? (isEn ? item.hrefEn : item.hrefNl) : undefined,
+  isGroup: item.isGroup ?? false,
+  submenu:
+    item.submenu?.map((sub: any) => ({
+      href: isEn ? sub.hrefEn : sub.hrefNl,
+      label: isEn ? sub.labelEn : sub.labelNl,
+    })) ?? [],
 }));
 
-const isActive = (href: string) => {
+const isActive = (href: string | undefined) => {
+  if (!href) return false;
   const target = normalizeForRoute(href);
   if (target === "/") return currentPath === "/";
   return currentPath === target || currentPath.startsWith(target + "/");
+};
+
+const isGroupActive = (submenu: any[] | undefined) => {
+  if (!submenu) return false;
+  return submenu.some((item) => isActive(item.href));
 };
 ---
 
@@ -146,15 +171,44 @@ const isActive = (href: string) => {
         </a>
 
         {
-          nav.map((item) => (
-            <a
-              class={`nav-link ${isActive(item.href) ? "is-active" : ""}`}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          ))
+          nav.map((item) => {
+            if (item.isGroup) {
+              return (
+                <div
+                  class={`nav-group ${isGroupActive(item.submenu) ? "is-active" : ""}`}
+                >
+                  <button
+                    class="nav-group-trigger"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    {item.label}
+                  </button>
+                  <div class="nav-submenu">
+                    {item.submenu?.map((sub) => (
+                      <a
+                        class={`nav-submenu-link ${isActive(sub.href) ? "is-active" : ""}`}
+                        href={sub.href}
+                        aria-current={isActive(sub.href) ? "page" : undefined}
+                      >
+                        {sub.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <a
+                  class={`nav-link ${isActive(item.href) ? "is-active" : ""}`}
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+          })
         }
 
         <div class="lang-switch" aria-label="Language switch">
@@ -203,15 +257,44 @@ const isActive = (href: string) => {
     <Container>
       <nav class="mobile-nav" aria-label="Mobile navigation">
         {
-          nav.map((item) => (
-            <a
-              class={`mobile-link ${isActive(item.href) ? "is-active" : ""}`}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          ))
+          nav.map((item) => {
+            if (item.isGroup) {
+              return (
+                <div
+                  class={`mobile-group ${isGroupActive(item.submenu) ? "is-active" : ""}`}
+                >
+                  <button
+                    class="mobile-group-trigger"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    {item.label}
+                  </button>
+                  <div class="mobile-submenu">
+                    {item.submenu?.map((sub) => (
+                      <a
+                        class={`mobile-submenu-link ${isActive(sub.href) ? "is-active" : ""}`}
+                        href={sub.href}
+                        aria-current={isActive(sub.href) ? "page" : undefined}
+                      >
+                        {sub.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <a
+                  class={`mobile-link ${isActive(item.href) ? "is-active" : ""}`}
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+          })
         }
         <div class="mobile-lang" aria-label="Language switch">
           <a
@@ -265,13 +348,46 @@ const isActive = (href: string) => {
 
   <script is:inline>
     (() => {
+      // Mobile menu toggle
       const toggle = document.querySelector(".menu-toggle");
       const menu = document.getElementById("mobile-menu");
-      if (!toggle || !menu) return;
-      toggle.addEventListener("click", () => {
-        const open = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", String(!open));
-        menu.hidden = open;
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          const open = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!open));
+          menu.hidden = open;
+        });
+      }
+
+      // Desktop dropdown groups (hover)
+      const desktopGroups = document.querySelectorAll(".nav-group");
+      desktopGroups.forEach((group) => {
+        const trigger = group.querySelector(".nav-group-trigger");
+        if (!trigger) return;
+
+        group.addEventListener("mouseenter", () => {
+          trigger.setAttribute("aria-expanded", "true");
+          group.setAttribute("aria-expanded", "true");
+        });
+
+        group.addEventListener("mouseleave", () => {
+          trigger.setAttribute("aria-expanded", "false");
+          group.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // Mobile dropdown groups (toggle on click)
+      const mobileGroups = document.querySelectorAll(".mobile-group");
+      mobileGroups.forEach((group) => {
+        const trigger = group.querySelector(".mobile-group-trigger");
+        if (!trigger) return;
+
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isOpen = trigger.getAttribute("aria-expanded") === "true";
+          trigger.setAttribute("aria-expanded", String(!isOpen));
+          group.setAttribute("aria-expanded", String(!isOpen));
+        });
       });
     })();
   </script>
@@ -388,7 +504,94 @@ const isActive = (href: string) => {
 
   .nav-link:hover {
     background: transparent;
+   nav-group {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-group-trigger {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 650;
+    padding: 0.45rem 0.65rem;
+    border-radius: 10px;
+    border: var(--border-w) solid transparent;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav-group-trigger::after {
+    content: "▼";
+    font-size: 0.7rem;
+    transition: transform 200ms ease;
+  }
+
+  .nav-group-trigger[aria-expanded="true"]::after {
+    transform: rotateX(180deg);
+  }
+
+  .nav-group-trigger:hover {
     color: #facc15;
+  }
+
+  .nav-group.is-active .nav-group-trigger {
+    color: #facc15;
+  }
+
+  .nav-submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    z-index: 100;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-group[aria-expanded="true"] .nav-submenu,
+  .nav-group:hover .nav-submenu {
+    display: flex;
+  }
+
+  .nav-submenu-link {
+    padding: 0.6rem 1rem;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    transition: all 150ms ease;
+  }
+
+  .nav-submenu-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #facc15;
+    border-left-color: #facc15;
+  }
+
+  .nav-submenu-link.is-active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #facc15;
+    border-left-color: #facc15;
+  }
+
+  . color: #facc15;
     border-color: transparent;
   }
 
@@ -548,6 +751,88 @@ const isActive = (href: string) => {
   .mobile-link:hover {
     color: #facc15;
     border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .mobile-group {
+    width: min(420px, 100%);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .mobile-group-trigger {
+    display: block;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.06);
+    border: var(--border-w) solid rgba(255, 255, 255, 0.18);
+    font-weight: 650;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .mobile-group-trigger::after {
+    content: "▼";
+    font-size: 0.7rem;
+    transition: transform 200ms ease;
+  }
+
+  .mobile-group-trigger[aria-expanded="true"]::after {
+    transform: rotateX(180deg);
+  }
+
+  .mobile-group-trigger:hover {
+    color: #facc15;
+  }
+
+  .mobile-group.is-active .mobile-group-trigger {
+    color: #facc15;
+  }
+
+  .mobile-submenu {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .mobile-group[aria-expanded="true"] .mobile-submenu {
+    display: grid;
+  }
+
+  .mobile-submenu-link {
+    display: block;
+    padding: 0.75rem 0.75rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.04);
+    border: var(--border-w) solid rgba(255, 255, 255, 0.14);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    font-size: 0.95rem;
+    margin-left: 1rem;
+    transition: all 150ms ease;
+  }
+
+  .mobile-submenu-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #facc15;
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .mobile-submenu-link.is-active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #facc15;
+    border-color: rgba(255, 255, 255, 0.24);
   }
 
   @media (min-width: 860px) {

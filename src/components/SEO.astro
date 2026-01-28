@@ -19,7 +19,6 @@ const {
   canonical,
   alternates,
   robots = "index,follow",
-  pageType = "WebPage",
   ogImage,
   lang = SITE.defaultLocale,
   type = "website",
@@ -29,6 +28,8 @@ const {
   faq,
   keywords,
 } = Astro.props as SeoInput;
+
+const pageType = (Astro.props as any).pageType || "WebPage";
 
 const url = canonicalUrl(canonical, Astro.url.pathname);
 const fullTitle = pageTitle(title);
@@ -274,13 +275,11 @@ if (dataset) {
 }
 
 if (type === "article") {
-  const articleAuthor = article?.author
-    ? article.author
-    : {
-        "@type": "Organization",
-        "@id": orgId,
-        name: SITE.name,
-      };
+  const articleAuthor = {
+    "@type": "Organization",
+    "@id": orgId,
+    name: SITE.name,
+  };
 
   graph.push({
     "@type": "BlogPosting",

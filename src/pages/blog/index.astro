@@ -5,7 +5,7 @@ import Container from "../../components/Container.astro";
 import PageHeader from "../../components/PageHeader.astro";
 
 const POSTS_PER_PAGE = 10;
-const currentPage = 1;
+const currentPage: number = 1;
 
 const allPosts = await getCollection(
   "blog",
