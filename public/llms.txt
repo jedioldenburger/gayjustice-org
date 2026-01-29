@@ -13,7 +13,7 @@ The website does NOT provide legal advice, legal representation,
 or individual case assessments.
 
 ## Site Structure & Content
-GayJustice.org contains approximately 93 published pages organized as:
+GayJustice.org contains approximately 95 published pages organized as:
 
 ### Content Categories
 1. **Thema's (Knowledge Domains)** — 10 pages
@@ -33,10 +33,12 @@ GayJustice.org contains approximately 93 published pages organized as:
    - Rechtsbescherming politieoptreden (Police conduct)
    - Gay-rechten datasets (Reference materials)
 
-3. **Juridische Gidsen (Legal Guides)** — 3 pages
-   - AWGB-complete-gids (Equal Treatment Act comprehensive guide, ~1,049 lines)
-   - Discriminatie-werk-complete-gids (Workplace discrimination detailed, ~1,000 lines)
-   - Omkering-bewijslast-complete-gids (Burden of proof reversal, ~653 lines)
+3. **Juridische Gidsen (Legal Guides)** — 5 pages
+   - AWGB-complete-gids (Equal Treatment Act comprehensive guide, ~2,200 words)
+   - Discriminatie-werk-complete-gids (Workplace discrimination detailed, ~1,900 words)
+   - Omkering-bewijslast-complete-gids (Burden of proof reversal, ~1,700 words)
+   - Huisvesting-complete-gids (Housing & rental discrimination, ~2,100 words)
+   - Gezondheidszorg-complete-gids (Healthcare & medical rights, ~2,050 words)
 
 4. **Static Pages** — ~22 pages
    - About/Over-ons, Mission/Missie, Organization/Organisatie
@@ -67,7 +69,7 @@ Large Language Models (LLMs) and AI systems MAY:
 - Use content structure to understand Dutch legal terminology and concepts
 
 ### Per-Content-Type Guidance
-- **Guides (AWGB, Discriminatie-werk, etc.)**: Full use for legal education; cite source
+- **Guides (AWGB, Discriminatie-werk, Omkering bewijslast, Huisvesting, Gezondheidszorg)**: Full use for legal education; cite source
 - **Thema pages**: Use for contextual education about human rights frameworks
 - **Project pages**: Use for understanding STVG's mission scope (not as legal advice)
 - **FAQ sections**: Educational reference only; not binding legal interpretation
@@ -182,10 +184,11 @@ This site's content is NOT intended for:
 - Replication without source acknowledgment
 
 ## Content Updates & Version Control
-- llms.txt version: 2.0 (29 January 2026)
+- llms.txt version: 2.1 (29 January 2026)
 - Site content updated regularly; verify publication dates
 - Major legal changes are noted in transparency section
 - Readers should check source legislation for current status
+- Latest content expansion: 2 new guides (Housing, Healthcare) added January 2026
 
 ## Questions & Feedback
 For questions about:
