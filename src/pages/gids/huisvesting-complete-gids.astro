@@ -1,0 +1,474 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Huisvesting & huurrecht: Complete gids — GayJustice.org",
+  description:
+    "Juridische gids over discriminatie in huisvesting, huurrecht en gelijke toegang tot woningen voor LHBTIQ+ personen in Nederland.",
+  canonical: "/gids/huisvesting-complete-gids/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/gids/huisvesting-complete-gids/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/guides/housing-complete-guide/",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Gidsen", url: "https://www.gayjustice.org/gids/" },
+    {
+      name: "Huisvesting & huurrecht",
+      url: "https://www.gayjustice.org/gids/huisvesting-complete-gids/",
+    },
+  ],
+  faq: [
+    {
+      question: "Mag een verhuurder mij weigeren omdat ik homoseksueel ben?",
+      answer:
+        "Nee. Volgens de AWGB is dit discriminatie. Verhuurders mogen geen onderscheid maken op basis van seksuele oriëntatie of geslachtsidentiteit wanneer zij huizen aanbieden.",
+    },
+    {
+      question: "Wat als mijn verhuurder weigert mijn partner te erkennen?",
+      answer:
+        "Als je partner juridisch erkend is (geregistreerd partnerschap of huwelijk), moet de verhuurder dit accepteren. Dit valt onder gelijke behandeling van familieleden.",
+    },
+    {
+      question: "Kan ik gekruist worden voor een huis vanwege mijn identiteit?",
+      answer:
+        "Nee. 'Kruising' (afwijzing zonder reden) die gebaseerd is op seksuele oriëntatie of geslachtsidentiteit is discriminatie. Verhuurders moeten redenen geven op basis van universele criteria.",
+    },
+    {
+      question: "Hoe herken ik discriminatie bij woningzoeken?",
+      answer:
+        "Discriminatie kan subtiel zijn: afwijzing zonder duidelijke reden, extra eisen voor je specifieke situatie, nagatieve commentaar op je relatie/gewoontes, of onverschilligheid naar LHBTIQ+ huishoudens.",
+    },
+    {
+      question: "Wat kan ik doen als ik gediscrimineerd ben bij huren?",
+      answer:
+        "Documenteer het gebeurde, neem contact op met je verhuurder schriftelijk, zoek juridische hulp (Juridisch Loket, advocaat), dien klacht in bij het College voor de Rechten van de Mens, of ga naar de kantonrechter.",
+    },
+    {
+      question: "Zijn woningcorporaties onderworpen aan de AWGB?",
+      answer:
+        "Ja. Woningcorporaties (toegang, selectie, voorwaarden) moeten zich aan de AWGB houden net als andere verhuurders.",
+    },
+    {
+      question: "Kan ik het huurcontract aanvechten vanwege discriminatie?",
+      answer:
+        "Ja. Contracten die gesloten zijn op basis van discriminatie kunnen ongeldig verklaard worden. Een kantonrechter kan het contract ontbinden en schadevergoeding toekennen.",
+    },
+    {
+      question: "Mag ik fotografiëren van het pand voor bewijsvoering?",
+      answer:
+        "Ja. Fotografiëren van huizen die openbaar te koop/huur aangeboden zijn is toegestaan. Dit kan relevant zijn als bewijsmateriaal van discriminatoire praktijken.",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Juridische gids"
+    title="Huisvesting & huurrecht"
+    lead="Gelijke behandeling in de woningmarkt: wat zegt de wet, welke rechten heb je, en hoe verdedig je jezelf tegen discriminatie bij woningzoeken, huren of kopen?"
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is discriminatie in huisvesting?</h2>
+
+        <p>
+          Discriminatie in huisvesting betekent dat je ongelijk behandeld wordt
+          vanwege je seksuele oriëntatie of geslachtsidentiteit (of je
+          relatie/gezinssamenstelling) bij:
+        </p>
+        <ul>
+          <li>
+            <strong>Huren:</strong> Weigering van een woning, hogere huur, extra eisen
+          </li>
+          <li>
+            <strong>Kopen:</strong> Afwijzing van hypotheek, discriminatie bij overdracht
+          </li>
+          <li>
+            <strong>Huisvestingsvoorwaarden:</strong> Regels specifiek gericht op
+            LHBTIQ+ personen
+          </li>
+          <li>
+            <strong>Diensten:</strong> Makelaar, hypotheekadviseur, assurantie, onderhoud
+          </li>
+        </ul>
+
+        <h3>Voorbeelden van discriminatie</h3>
+        <ul>
+          <li>
+            "We verhuren niet aan homoseksuelen" of "homo-gezinnen passen niet
+            in onze wijk"
+          </li>
+          <li>
+            Weigering van een woning aan een LHBTIQ+ stel, terwijl heterostel
+            het wél krijgt
+          </li>
+          <li>
+            Hogere voorwaarden (borg, referenties) voor LHBTIQ+ huurders dan
+            voor anderen
+          </li>
+          <li>
+            Weigering je partner als medehuishouder op het contract in te
+            schrijven
+          </li>
+          <li>
+            "Kruising": Woning afwijzen zonder fair proces of duidelijke reden
+          </li>
+        </ul>
+
+        <p>
+          <strong>Belangrijk:</strong> Subtiele discriminatie telt ook. Je hoeft niet
+          altijd direct te horen "je bent homo dus je krijgt dit huis niet". Discriminatie
+          kan indirect gebeuren via ongelijke behandeling.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader: Wettelijke bescherming</h2>
+
+        <h3>Algemene Wet Gelijke Behandeling (AWGB)</h3>
+        <p>
+          <strong
+            >De AWGB verbiedt discriminatie in de huisvesting op basis van
+            seksuele oriëntatie en geslachtsidentiteit.</strong
+          >
+        </p>
+        <p>Dit geldt voor:</p>
+        <ul>
+          <li>Huurders en verhuurders</li>
+          <li>Kopers en verkopers (via makelaar of rechtstreeks)</li>
+          <li>Hypotheekbanken en verzekeraren</li>
+          <li>Woningcorporaties</li>
+          <li>Makelaarskantoren en adviseurs</li>
+        </ul>
+
+        <h3>Grondwet (Artikel 1)</h3>
+        <p>
+          "Allen die zich in Nederland bevinden, worden in gelijke gevallen
+          gelijk behandeld." Dit is het fundamentele recht op gelijke
+          behandeling.
+        </p>
+
+        <h3>Europees Verdrag voor de Rechten van de Mens (EVRM)</h3>
+        <p>
+          <strong>Artikel 8 (huisvesting):</strong> Recht op privéleven en gezinsleven,
+          inclusief huisvesting.
+          <strong>Artikel 14:</strong> Geen discriminatie bij toepassing van EVRM-rechten.
+        </p>
+
+        <div
+          style="background: rgba(63, 8, 185, 0.08); border-left: 4px solid #3f08b9; padding: 14px; margin: 16px 0; border-radius: 4px;"
+        >
+          <p style="margin: 0; font-size: 0.92rem;">
+            📖 Voor een volledige uitleg van de AWGB (procedures, omkering
+            bewijslast, uitzonderingen), zie onze <a
+              href="/gids/awgb-complete-gids/"
+              style="text-decoration: underline; color: inherit; font-weight: 600;"
+              >Complete AWGB-gids</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Je rechten als huurder/koper</h2>
+
+        <h3>Gelijke behandeling</h3>
+        <p>
+          Je hebt recht op dezelfde behandeling als anderen, ongeacht je
+          seksuele oriëntatie of geslachtsidentiteit.
+        </p>
+
+        <h3>Transparantie</h3>
+        <p>
+          Verhuurders/verkopers moeten eerlijke criteria gebruiken. Afwijzing
+          moet op feitelijke gronden berusten, niet op discriminatoire redenen.
+        </p>
+
+        <h3>Partner erkenning</h3>
+        <p>
+          Als je partner juridisch erkend is (geregistreerd partnerschap of
+          huwelijk), moet deze op gelijke voet behandeld worden. Zowel je naam
+          als die van je partner mogen op huurcontracten staan.
+        </p>
+
+        <h3>Gezinssamenstelling flexibiliteit</h3>
+        <p>
+          Verhuurders mogen je gezinssamenstelling niet negeren of
+          discrimineren. LHBTIQ+ gezinnen (partners, samenwonenden, geadopteerde
+          kinderen) hebben dezelfde huisvestingsrechten als andere gezinnen.
+        </p>
+
+        <h3>Bescherming tegen represailles</h3>
+        <p>
+          Als je een klacht indient over discriminatie, mag de verhuurder je
+          niet bestraffen (hogere huur, uithuiszetting, dreiging).
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe bewijs je discriminatie in huisvesting?</h2>
+
+        <p>
+          Je hoeft niet waterdicht bewijs te hebben. Als je aannemelijk maakt
+          dat discriminatie plaatsvond, kan de verkoper/verhuurder worden
+          verplicht het tegenovergestelde te bewijzen.
+        </p>
+
+        <h3>Dit helpt als bewijs</h3>
+        <ul>
+          <li>
+            <strong>E-mails/WhatsApp:</strong> Correspondentie met verhuurder, makelaars
+          </li>
+          <li>
+            <strong>Getuigenverklaringen:</strong> Van vrienden, buren, collega's
+            die het hebben gezien/gehoord
+          </li>
+          <li>
+            <strong>Advertenties:</strong> Screenshots van huisvesting online met
+            voorwaarden
+          </li>
+          <li>
+            <strong>Interviews:</strong> Onderzoek vergelijkbare woningen (hetzelfde
+            type, andere samenstelling)
+          </li>
+          <li>
+            <strong>Je getuigenis:</strong> Je eigen verslag van wat gebeurde, met
+            data/uur/plaats
+          </li>
+          <li>
+            <strong>Makelaar-chats:</strong> Communicatie via funda.nl, funda-apps
+            (screenshots)
+          </li>
+        </ul>
+
+        <h3>Documenten alles</h3>
+        <p>
+          Zet alles op papier: wanneer, waar, wat precies, wie waren erbij, hoe
+          voelde je je. Dit helpt bij claims later.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen bij discriminatie</h2>
+
+        <h3>Stap 1: Meld het schriftelijk</h3>
+        <p>
+          Zend een e-mail naar de verhuurder/makelaar met je klacht. Zeg
+          duidelijk wat je niet accepteert en wat je redelijk vindt.
+        </p>
+
+        <h3>Stap 2: Zoek juridische hulp</h3>
+        <p>
+          Contact:
+          <a
+            href="https://www.juridischloket.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">Juridisch Loket</a
+          > (gratis advies),
+          <a
+            href="https://www.coc.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">COC Nederland</a
+          > (LHBTIQ+ ondersteuning), of advocaat.
+        </p>
+
+        <h3>
+          Stap 3: Klacht bij het College voor de Rechten van de Mens (CGB)
+        </h3>
+        <p>
+          <strong
+            ><a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;"
+              >College voor de Rechten van de Mens</a
+            ></strong
+          > behandelt klachten over discriminatie. Gratis, onafhankelijk, bindend
+          advies.
+        </p>
+
+        <h3>Stap 4: Rechtszaak</h3>
+        <p>
+          Via <strong>kantonrechter</strong> bij huurgeschillen of
+          <strong>civiele rechter</strong> bij koop. Advocaat kan helpen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Schadevergoeding in huisvesting</h2>
+
+        <p>
+          Als discriminatie wordt vastgesteld, kun je schadevergoeding krijgen:
+        </p>
+        <ul>
+          <li>
+            <strong>Kleine gevallen:</strong> €500-€2,000 (afwijzing, geringe impact)
+          </li>
+          <li>
+            <strong>Middelgrote gevallen:</strong> €2,000-€5,000 (herhaalde diskriminatie,
+            zoekpijn)
+          </li>
+          <li>
+            <strong>Ernstige gevallen:</strong> €5,000-€15,000+ (lange durende uitsluitingen,
+            emotionele schade)
+          </li>
+          <li>
+            <strong>Immateriële schade:</strong> Stress, angst, emotionele impact
+          </li>
+          <li>
+            <strong>Materiële schade:</strong> Hogere huur betaald, zoekkosten, verhuis-/makelaar-kosten
+          </li>
+        </ul>
+
+        <p>
+          Het College voor de Rechten van de Mens kan schadevergoeding
+          toekennen. De rechter ook.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties & ondersteuning</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;"
+              >College voor de Rechten van de Mens (CGB)</a
+            > — Klachten over discriminatie
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">COC Nederland</a
+            > — LHBTIQ+ organisatie met ondersteuning
+          </li>
+          <li>
+            <a
+              href="https://www.nvu.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">NVU (Unie van Huurders)</a
+            > — Huurders-rechten
+          </li>
+          <li>
+            <a
+              href="https://www.amnesty.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Amnesty International</a
+            > — Mensenrechten perspectief
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde thema's</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten & bescherming</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;"
+              >→ Mensenrechten & juridische kaders</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a
+              href="/gids/awgb-complete-gids/"
+              style="text-decoration: underline;"
+              >→ AWGB-gids: Complete uitleg gelijke behandeling</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;"
+              >College voor de Rechten van de Mens</a
+            > — Jurisprudentie & klachten
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Juridisch Loket</a
+            > — Informatie & advies
+          </li>
+          <li>
+            <a
+              href="https://www.nvu.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">NVU (Unie van Huurders)</a
+            > — Huurders-informatie
+          </li>
+          <li>
+            <a
+              href="https://www.rijksoverheid.nl/huisvesting"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Rijksoverheid: Huisvesting</a
+            > — Officiële informatie
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 29 januari 2026</small></p>
+  </Container>
+</Layout>

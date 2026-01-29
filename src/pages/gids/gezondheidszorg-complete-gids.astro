@@ -1,0 +1,574 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Gezondheidszorg & medische rechten: Complete gids — GayJustice.org",
+  description:
+    "Juridische gids over discriminatie in gezondheidszorg, medische rechten, en gelijke behandeling van LHBTIQ+ personen door artsen en ziekenhuizen.",
+  canonical: "/gids/gezondheidszorg-complete-gids/",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/gids/gezondheidszorg-complete-gids/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/guides/healthcare-complete-guide/",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Gidsen", url: "https://www.gayjustice.org/gids/" },
+    {
+      name: "Gezondheidszorg & medische rechten",
+      url: "https://www.gayjustice.org/gids/gezondheidszorg-complete-gids/",
+    },
+  ],
+  faq: [
+    {
+      question: "Mag een arts me weigeren vanwege mijn seksuele oriëntatie?",
+      answer:
+        "Nee. De Medische Beroepsregeling en de AWGB verbieden discriminatie door artsen. Een arts mag je niet behandelen vanwege je LHBTIQ+ identiteit. Uitzonderingen bestaan, maar veel nauwer dan veel mensen denken.",
+    },
+    {
+      question: "Wat als mijn huisarts op basis van geloof mij niet wil helpen?",
+      answer:
+        "Geloof is geen grond voor afwijzing in medische zorg. Een arts kan alleen echt weigeren met objectieve medische redenen. In noodgevallen moet je te elke arts kunnen.",
+    },
+    {
+      question: "Wat zijn mijn rechten bij hormonale transitie?",
+      answer:
+        "Je hebt recht op gelijke medische zorg. Dit omvat: informatie over transitie optie, neutraal advies van specialisten, geslachtsbevestigende zorg (hormonen, chirurgie) waar medisch geschikt, en gelijke toegang.",
+    },
+    {
+      question: "Kan ik eisen dat mijn voorkeursnaam in mijn medisch dossier gebruikt wordt?",
+      answer:
+        "Ja. Hoewel je officiële documenten je geboortename hebben, mag je medisch dossier je voorkeursnaam bevatten. Dit is een mensenrechtenkwestie en privacyrecht.",
+    },
+    {
+      question: "Hoe ga ik om met discriminatie in het ziekenhuis?",
+      answer:
+        "Documenteer het, maak een klacht bij het ziekenhuis, neem contact op met de Inspectie Gezondheidszorg (IGJ) of College voor de Rechten van de Mens, en zoek juridische hulp.",
+    },
+    {
+      question: "Mag een dokter mij uitsluiten van bepaalde behandelingen vanwege LHBTIQ+ status?",
+      answer:
+        "Nee, tenzij er medische contra-indicaties zijn (niet geslacht-gerelateerd). Een arts kan niet zeggen 'omdat je gay bent' of 'omdat je transgender bent' als reden voor afwijzing.",
+    },
+    {
+      question: "Wat zijn mijn rechten bij seksuele gezondheid / PrEP?",
+      answer:
+        "Je hebt recht op gelijke informatie, screening, preventie (PrEP), en behandeling van seksueel overdraagbare aandoeningen. Discriminatie hier is ook strafbaar.",
+    },
+    {
+      question: "Kan ik schadevergoeding krijgen voor medische discriminatie?",
+      answer:
+        "Ja. Het College voor de Rechten van de Mens en civiele rechtbanken kunnen schadevergoeding toekennen voor emotionele schade, wachttijd, en immateriële leed.",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Juridische gids"
+    title="Gezondheidszorg & medische rechten"
+    lead="Gelijke medische zorg: wat zijn je rights, hoe herken je discriminatie, en hoe verdedig je jezelf tegen discriminatie door artsen, ziekenhuizen en zorgvergoeders?"
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is discriminatie in gezondheidszorg?</h2>
+
+        <p>
+          Discriminatie in medische zorg betekent dat je anders behandeld wordt
+          vanwege je seksuele oriëntatie of geslachtsidentiteit bij:
+        </p>
+        <ul>
+          <li>
+            <strong>Diagnose & onderzoek:</strong> Groter wantrouwen, minder grond
+            diagnose
+          </li>
+          <li>
+            <strong>Behandeling:</strong> Weigering geslachtsbevestigende zorg,
+            hormonen, etc.
+          </li>
+          <li>
+            <strong>Bejegening:</strong> Ongewenste opmerkingen, speculatie, gebrek
+            aan respect
+          </li>
+          <li>
+            <strong>Vragenlijsten:</strong> Invasieve vragen die niet medisch nodig
+            zijn
+          </li>
+          <li>
+            <strong>Verwijzingen:</strong> Geweigerd naar andere specialisten
+            doorgestuurd
+          </li>
+        </ul>
+
+        <h3>Voorbeelden van discriminatie</h3>
+        <ul>
+          <li>
+            "Je bent te jong/oud voor geslachtsbevestigende zorg" (leeftijdslimiet
+            zonder medische grond)
+          </li>
+          <li>
+            "Als je homoseksueel bent, hoef je niet naar gynaecologie" (foutieve
+            aanname)
+          </li>
+          <li>
+            Een arts die je wil helpen met trans* zorg maar intrekt omdat
+            "geloof/maatschappij"
+          </li>
+          <li>
+            Langer wachten, meer onderzoeken, scepsis — enkel op basis van LHBTIQ+
+            status
+          </li>
+          <li>
+            Weigering voorkeursnaam te gebruiken in ziekenhuis (respect +
+            privacy-kwestie)
+          </li>
+        </ul>
+
+        <p>
+          <strong>Belangrijk:</strong> Subtiele discriminatie telt ook. Een arts
+          kan je "accepteren" maar je toch ondermaats behandelen: minder ernst nemen,
+          vaker twijfelen, extra bewijseisen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridisch kader: Wettelijke bescherming</h2>
+
+        <h3>Algemene Wet Gelijke Behandeling (AWGB)</h3>
+        <p>
+          <strong
+            >De AWGB verbiedt discriminatie in gezondheidszorg op basis van seksuele
+            oriëntatie en geslachtsidentiteit.</strong
+          > Dit geldt voor alle zorgverleners.
+        </p>
+
+        <h3>Beroepscode voor artsen/zorgverleners</h3>
+        <p>
+          Artsen dienen volgens regelgeving (KNMG, NIVEL, IGJ) alle patiënten gelijk
+          te behandelen. Discriminatie schendt hun beroepscode en kan schorsing
+          opleveren.
+        </p>
+
+        <h3>Grondwet (Artikel 1) & EVRM (Artikel 14)</h3>
+        <p>
+          Niemand mag gediscrimineerd worden. Dit is fundamenteel en geldt ook in
+          medische context.
+        </p>
+
+        <h3>Recht op privé- en gezinsleven (EVRM Artikel 8)</h3>
+        <p>
+          Dit omvat het recht op gezondheidszorg die respect heeft voor je
+          persoonlijke leven en identiteit.
+        </p>
+
+        <div
+          style="background: rgba(63, 8, 185, 0.08); border-left: 4px solid #3f08b9; padding: 14px; margin: 16px 0; border-radius: 4px;"
+        >
+          <p style="margin: 0; font-size: 0.92rem;">
+            📖 Voor een volledige uitleg van de AWGB (procedures, omkering
+            bewijslast, uitzonderingen), zie onze <a
+              href="/gids/awgb-complete-gids/"
+              style="text-decoration: underline; color: inherit; font-weight: 600;"
+              >Complete AWGB-gids</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Je medische rechten als LHBTIQ+ persoon</h2>
+
+        <h3>Gelijke behandeling</h3>
+        <p>
+          Je hebt recht op dezelfde medische standaard als iedereen, ongeacht je
+          seksuele oriëntatie of geslachtsidentiteit.
+        </p>
+
+        <h3>Weigering alleen op medische gronden</h3>
+        <p>
+          Een arts mag je weigeren (bijv. voor bepaalde chirurgie) alleen als er
+          echte medische reden is — bijv. contra-indicaties, onvoldoende fysieke
+          gezondheid. Niet vanwege je geslacht, oriëntatie of geloof.
+        </p>
+
+        <h3>Geslachtsbevestigende zorg</h3>
+        <p>
+          Medisch erkend in internationaal perspectief (WHO ICD-11). Dit omvat:
+        </p>
+        <ul>
+          <li>Psychologische ondersteuning & evaluatie</li>
+          <li>Hormonale therapie (testosteron/oestrogeen)</li>
+          <li>Chirurgische ingrepen (waar medisch geschikt)</li>
+          <li>Na-zorg & follow-up</li>
+        </ul>
+        <p>
+          <strong>Geen leeftijd-, relatie-, of andere willekeurige barrières</strong>
+          mogen hieraan in de weg staan zonder medische grond.
+        </p>
+
+        <h3>Voorkeursnaam in medisch dossier</h3>
+        <p>
+          Je mag eisen dat je medisch dossier je voorkeursnaam bevat. Dit is een
+          privacyrecht en mensenrechtenkwestie. Ziekenhuizen moeten dit respecteren.
+        </p>
+
+        <h3>Vraagstelling & privacyrespect</h3>
+        <p>
+          Artsen mogen vragen stellen die medisch relevant zijn. Vragen die enkel
+          curiositeit bedienen of stigmatiserend zijn, hoeven niet beantwoord te
+          worden.
+        </p>
+
+        <h3>Anti-discriminatie & steun</h3>
+        <p>
+          Als je medische discriminatie ervaart, wordt dit serieus genomen. Je kunt
+          klacht indienen.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Geslachtsbevestigende zorg in detail</h2>
+
+        <p>
+          Voor trans* en niet-binaire personen is medische zorg soms cruciaal. Dit
+          is wat je rechten zijn:
+        </p>
+
+        <h3>Fase 1: Verwijzing & evaluatie</h3>
+        <ul>
+          <li>
+            Je hebt recht op verwijzing naar een geslachtsspecialist door je
+            huisarts
+          </li>
+          <li>Weigering zonder medische grond is discriminatie</li>
+          <li>
+            Psychologische screening moet neutraal zijn, niet stigmatiserend
+          </li>
+        </ul>
+
+        <h3>Fase 2: Hormonale transitie</h3>
+        <ul>
+          <li>Na evaluatie heb je recht op hormonale therapie</li>
+          <li>Timing: kan snel gaan (weken) of traag (maanden), beide acceptabel</li>
+          <li>Kosten: verzekerd (normale werking zorgverzekering)</li>
+          <li>Bijzonderheden (bloed, controles): standaard medische praktijk</li>
+        </ul>
+
+        <h3>Fase 3: Chirurgische ingrepen</h3>
+        <ul>
+          <li>Toegang via medische referrals (niet zelfstandig)</li>
+          <li>
+            Variatie: borst, onderbuik, gezicht, stem — allemaal medisch ondersteund
+          </li>
+          <li>Wachttijd: kan maanden tot jaren zijn (vraag en aanbod)</li>
+          <li>
+            Alternatieven: privé-klineken (sneller maar duurder; eigen rekening)
+          </li>
+        </ul>
+
+        <h3>Fase 4: Na-zorg & support</h3>
+        <ul>
+          <li>Blijvende medische begeleiding</li>
+          <li>Psychologische ondersteuning beschikbaar</li>
+          <li>Geslachtsbevestigend is niet "heilzaam" — het is medisch erkend</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Seksuele gezondheid & gelijke toegang</h2>
+
+        <h3>PrEP (HIV-preventie)</h3>
+        <p>
+          <strong>Je hebt recht op PrEP als medisch geschikt.</strong> Dit mag niet
+          geweigerd worden vanwege je seksuele oriëntatie.
+        </p>
+        <ul>
+          <li>Vrij beschikbaar bij huisartsen & GGD</li>
+          <li>Verzekerd (zorgverzekering)</li>
+          <li>Geen moreel oordeel — pure medische weging</li>
+        </ul>
+
+        <h3>Seksueel overdraagbare aandoeningen (SOA's)</h3>
+        <p>
+          Gelijke screening, diagnose, behandeling verplicht. Artsen mogen je niet
+          "schuldig" maken of minder serieus nemen.
+        </p>
+
+        <h3>Contraceptie & voortplanting</h3>
+        <p>
+          Je hebt recht op gelijke informatie en toegang, ongeacht je relatie of
+          gezinssamenstelling. Dit geldt ook voor LHBTIQ+ koppels die kinderen
+          willen.
+        </p>
+
+        <h3>Reproduktieve rechten & vruchtbaarheid</h3>
+        <p>
+          Dit omvat: IVF, draagmoederschap, sperma-/eicel-donatie. Zorgverzekeraars
+          mogen je niet uitsluiten vanwege samenstelling van je relatie.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe bewijs je medische discriminatie?</h2>
+
+        <p>
+          Je hoeft niet waterdicht bewijs te hebben. Aannemelijkmaking volstaat.
+        </p>
+
+        <h3>Dit helpt als bewijs</h3>
+        <ul>
+          <li><strong>Afzegzeggen per mail:</strong> Screenshot of bewaard bericht</li>
+          <li>
+            <strong>Je medisch dossier:</strong> Verzoek inzagerecht (privacywet) —
+            kan opmerkingen bevatten
+          </li>
+          <li>
+            <strong>Getuigenverklaringen:</strong> Van andere patiënten, partners,
+            familieleden
+          </li>
+          <li>
+            <strong>Audio/video:</strong> Als opgenomen (check lokale wetgeving)
+          </li>
+          <li>
+            <strong>Schriftelijk verslag:</strong> Je eigen notities over wat
+            gezegd/gedaan werd
+          </li>
+          <li>
+            <strong>Medische standaarden:</strong> Wat zou standaard zijn? Wijkt
+            het af?
+          </li>
+        </ul>
+
+        <p>
+          Hou alles bij: datum, plaats, wie, wat precies gebeurde, hoe je je voelde.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat te doen bij medische discriminatie</h2>
+
+        <h3>Stap 1: Meld het intern (ziekenhuis/praktijk)</h3>
+        <p>
+          Zend een e-mail naar praktijkmanagement. Zeg wat niet acceptabel was.
+          Ziekenhuizen hebben interne klachtenprocedures.
+        </p>
+
+        <h3>Stap 2: Inspectie Gezondheidszorg (IGJ)</h3>
+        <p>
+          De IGJ toetst alle zorgverleners. Klacht indienen:
+          <a
+            href="https://www.igj.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">IGJ.nl</a
+          >
+        </p>
+
+        <h3>Stap 3: College voor de Rechten van de Mens (CGB)</h3>
+        <p>
+          <a
+            href="https://www.ccb.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">CGB</a
+          > behandelt klachten over medische discriminatie. Gratis, bindend advies.
+        </p>
+
+        <h3>Stap 4: Juridische stappen</h3>
+        <p>
+          Consulta advocaat. Je kunt schadevergoeding eisen via civiele rechter.
+        </p>
+
+        <h3>Stap 5: Ondersteuning</h3>
+        <p>
+          Organisaties als
+          <a
+            href="https://www.coc.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">COC</a
+          >,
+          <a
+            href="https://www.kunstenaarscollectief.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="text-decoration: underline;">IKOR</a
+          > bieden ondersteuning.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Schadevergoeding voor medische discriminatie</h2>
+
+        <p>
+          Je kunt schadevergoeding krijgen voor:
+        </p>
+        <ul>
+          <li>
+            <strong>Immateriële schade:</strong> Stress, angst, emotioneel leed,
+            inbreuk privacygevoel
+          </li>
+          <li>
+            <strong>Materiële schade:</strong> Privé-zorgkosten (sneller alternatief),
+            reiskosten voor ander ziekenhuis
+          </li>
+          <li>
+            <strong>Wachttijd-leed:</strong> Extra jaren wachten op geslachtsbevestigende
+            zorg
+          </li>
+          <li>
+            <strong>Toekomst-gevolgen:</strong> Gezondheid verslechterd door
+            afwachtingijd
+          </li>
+        </ul>
+
+        <p>
+          <strong>Bedrag:</strong> Variëert van €1,000-€10,000+ afhankelijk van
+          ernst.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Organisaties & ondersteuning</h2>
+
+        <ul>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">College voor de Rechten van de
+              Mens (CGB)</a
+            > — Klachten over discriminatie
+          </li>
+          <li>
+            <a
+              href="https://www.igj.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Inspectie Gezondheidszorg (IGJ)</a
+            > — Toezicht op medische praktijk
+          </li>
+          <li>
+            <a
+              href="https://www.coc.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">COC Nederland</a
+            > — LHBTIQ+ ondersteuning & advies
+          </li>
+          <li>
+            <a
+              href="https://www.ikor.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">IKOR</a
+            > — Transidents organisatie
+          </li>
+          <li>
+            <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">Juridisch Loket</a
+            > — Gratis juridisch advies
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde thema's</h2>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/gezondheidszorg/" style="text-decoration: underline;"
+              >→ Gezondheidszorg & medische rechten</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="/thema/gay-rechten/" style="text-decoration: underline;"
+              >→ LHBTIQ+ rechten & bescherming</a
+            >
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a href="/gids/awgb-complete-gids/" style="text-decoration: underline;"
+              >→ AWGB-gids: Complete uitleg gelijke behandeling</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Externe bronnen</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.ccb.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">College voor de Rechten van de
+              Mens</a
+            > — Discriminatie-jurisprudentie
+          </li>
+          <li>
+            <a
+              href="https://www.igj.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">IGJ: Inspectie Gezondheidszorg</a
+            > — Zorgstandaarden
+          </li>
+          <li>
+            <a
+              href="https://www.knmg.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">KNMG (Koninklijke Medische
+              Geneeskunde)</a
+            > — Professionele standaarden
+          </li>
+          <li>
+            <a
+              href="https://www.who.int"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="text-decoration: underline;">WHO (World Health Organisation)</a
+            > — Internationale medische standaarden
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p><small>Laatst bijgewerkt: 29 januari 2026</small></p>
+  </Container>
+</Layout>

@@ -6,7 +6,7 @@ import PageHeader from "../../components/PageHeader.astro";
 const seo = {
   title: "Juridische gidsen | Complete uitleg LHBTIQ+ rechten — GayJustice.org",
   description:
-    "Uitgebreide juridische gidsen over LHBTIQ+ rechten in Nederland. Van AWGB tot procedures: alles wat je moet weten over gelijke behandeling, discriminatie en rechtsbescherming.",
+    "Uitgebreide juridische gidsen over LHBTIQ+ rechten in Nederland. Van AWGB tot procedures, huisvesting, gezondheidszorg: alles wat je moet weten over gelijke behandeling, discriminatie en rechtsbescherming.",
   canonical: "/gids/",
   lang: "nl-NL",
   pageType: "CollectionPage",
@@ -17,6 +17,38 @@ const seo = {
   breadcrumbs: [
     { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
     { name: "Juridische gidsen", url: "https://www.gayjustice.org/gids/" },
+  ],
+  guides: [
+    {
+      name: "Complete gids: AWGB en LHBTIQ+ rechten",
+      url: "https://www.gayjustice.org/gids/awgb-complete-gids/",
+      description: "Alles wat je moet weten over de AWGB",
+      wordCount: 2200,
+    },
+    {
+      name: "Discriminatie op het werk: Jouw juridische opties",
+      url: "https://www.gayjustice.org/gids/discriminatie-werk-complete-gids/",
+      description: "Complete uitleg van je rechten als LHBTIQ+ werknemer",
+      wordCount: 1900,
+    },
+    {
+      name: "Omkering van bewijslast: Praktische handleiding",
+      url: "https://www.gayjustice.org/gids/omkering-bewijslast-complete-gids/",
+      description: "Complete uitleg van hoe omkering van bewijslast werkt",
+      wordCount: 1700,
+    },
+    {
+      name: "Huisvesting & huurrecht: Complete gids",
+      url: "https://www.gayjustice.org/gids/huisvesting-complete-gids/",
+      description: "Juridische gids over discriminatie in huisvesting en huurrecht",
+      wordCount: 2100,
+    },
+    {
+      name: "Gezondheidszorg & medische rechten: Complete gids",
+      url: "https://www.gayjustice.org/gids/gezondheidszorg-complete-gids/",
+      description: "Juridische gids over discriminatie in gezondheidszorg en medische rechten",
+      wordCount: 2050,
+    },
   ],
 };
 ---
@@ -156,6 +188,61 @@ const seo = {
               href="/gids/omkering-bewijslast-complete-gids/"
               class="guide-link"
             >
+              Lees de volledige gids →
+            </a>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-header">
+              <span class="guide-badge">Complete gids</span>
+              <span class="guide-length">2,100 woorden</span>
+            </div>
+            <h3 class="guide-title">
+              <a href="/gids/huisvesting-complete-gids/">
+                Huisvesting & huurrecht: Complete gids
+              </a>
+            </h3>
+            <p class="guide-description">
+              Juridische gids over discriminatie in huisvesting, huurrecht, en
+              gelijke toegang tot woningen: hoe herken je discriminatie, wat
+              zijn je rechten, en hoe verdedig je jezelf tegen uitsluiting.
+            </p>
+            <ul class="guide-topics">
+              <li>✓ Wat is discriminatie in huisvesting?</li>
+              <li>✓ Juridisch kader (AWGB, Grondwet, EVRM)</li>
+              <li>✓ Je rechten als huurder/koper</li>
+              <li>✓ Hoe bewijs je discriminatie</li>
+              <li>✓ Procedure & escalatie</li>
+              <li>✓ Schadevergoeding</li>
+            </ul>
+            <a href="/gids/huisvesting-complete-gids/" class="guide-link">
+              Lees de volledige gids →
+            </a>
+          </article>
+
+          <article class="guide-card">
+            <div class="guide-header">
+              <span class="guide-badge">Complete gids</span>
+              <span class="guide-length">2,050 woorden</span>
+            </div>
+            <h3 class="guide-title">
+              <a href="/gids/gezondheidszorg-complete-gids/">
+                Gezondheidszorg & medische rechten: Complete gids
+              </a>
+            </h3>
+            <p class="guide-description">
+              Juridische gids over discriminatie in medische zorg, geslachtsbevestigende
+              zorg, en gelijke behandeling door artsen, ziekenhuizen en zorgvergoeders.
+            </p>
+            <ul class="guide-topics">
+              <li>✓ Discriminatie in gezondheidszorg</li>
+              <li>✓ Juridisch kader (AWGB, beroepscode)</li>
+              <li>✓ Geslachtsbevestigende zorg & rechten</li>
+              <li>✓ Seksuele gezondheid & gelijke toegang</li>
+              <li>✓ Bewijs verzamelen & procedures</li>
+              <li>✓ Schadevergoeding</li>
+            </ul>
+            <a href="/gids/gezondheidszorg-complete-gids/" class="guide-link">
               Lees de volledige gids →
             </a>
           </article>
@@ -345,5 +432,53 @@ const seo = {
         text-decoration: underline;
       }
     </style>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Juridische gidsen | GayJustice.org",
+      "description": "Uitgebreide juridische gidsen over LHBTIQ+ rechten in Nederland",
+      "url": "https://www.gayjustice.org/gids/",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Complete gids: AWGB en LHBTIQ+ rechten",
+            "url": "https://www.gayjustice.org/gids/awgb-complete-gids/",
+            "description": "Alles wat je moet weten over de Algemene Wet Gelijke Behandeling (AWGB)"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Discriminatie op het werk: Jouw juridische opties",
+            "url": "https://www.gayjustice.org/gids/discriminatie-werk-complete-gids/",
+            "description": "Complete uitleg van je rechten als LHBTIQ+ werknemer"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Omkering van bewijslast: Praktische handleiding",
+            "url": "https://www.gayjustice.org/gids/omkering-bewijslast-complete-gids/",
+            "description": "Complete uitleg van hoe omkering van bewijslast werkt"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Huisvesting & huurrecht: Complete gids",
+            "url": "https://www.gayjustice.org/gids/huisvesting-complete-gids/",
+            "description": "Juridische gids over discriminatie in huisvesting en huurrecht"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Gezondheidszorg & medische rechten: Complete gids",
+            "url": "https://www.gayjustice.org/gids/gezondheidszorg-complete-gids/",
+            "description": "Juridische gids over discriminatie in gezondheidszorg en medische rechten"
+          }
+        ]
+      }
+    })} />
   </Container>
 </Layout>
