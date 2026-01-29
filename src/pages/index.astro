@@ -3,6 +3,69 @@ import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import IntroCard from "../components/IntroCard.astro";
 
+const faqData = [
+  {
+    question: "Wat is GayJustice.org?",
+    answer:
+      "GayJustice.org is een juridisch-informatief platform over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa.",
+  },
+  {
+    question: "Geeft GayJustice.org juridisch advies?",
+    answer:
+      "Nee. GayJustice.org biedt feitelijke informatie en juridische duiding, maar geen individueel juridisch advies of rechtsbijstand.",
+  },
+  {
+    question: "Wie is verantwoordelijk voor GayJustice.org?",
+    answer:
+      "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), een onafhankelijke stichting naar Nederlands recht.",
+  },
+  {
+    question: "Hoe kan ik contact opnemen?",
+    answer:
+      "Via de contactpagina of info@gayjustice.org. Voor individuele rechtsbijstand verwijzen wij door naar gespecialiseerde organisaties.",
+  },
+  {
+    question: "Wat geldt als discriminatie volgens de AWGB?",
+    answer:
+      "Discriminatie is verboden onderscheid op basis van o.a. seksuele oriëntatie of geslachtsidentiteit. Dit kan direct zijn (expliciete uitsluiting) of indirect (neutrale regel met ongelijke uitwerking). De AWGB beschermt bij werk, onderwijs, dienstverlening en huisvesting.",
+  },
+  {
+    question: "Hoe lang duurt een discriminatieprocedure?",
+    answer:
+      "College voor de Rechten van de Mens: 3-6 maanden voor een oordeel. Rechtbank: 6-18 maanden. Europees Hof voor de Rechten van de Mens: 3-7 jaar. De CGE-procedure is sneller maar niet bindend.",
+  },
+  {
+    question: "Kan ik anoniem een discriminatieklacht indienen?",
+    answer:
+      "Bij het College voor de Rechten van de Mens kan dit onder voorwaarden, maar anonimiteit beperkt de mogelijkheden voor onderzoek. Bij een rechtbankprocedure is anonimiteit niet mogelijk.",
+  },
+  {
+    question: "Welk bewijs heb ik nodig bij discriminatie?",
+    answer:
+      "Verzamel e-mails, WhatsApp-gesprekken, getuigenverklaringen, en beschrijvingen van vergelijkbare situaties. Door omkering van de bewijslast hoef je alleen aannemelijk te maken dat discriminatie heeft plaatsgevonden; de werkgever/organisatie moet dan bewijzen dat dit niet zo is.",
+  },
+  {
+    question: "Heb ik een advocaat nodig?",
+    answer:
+      "Voor een klacht bij het College voor de Rechten van de Mens niet verplicht. Voor een rechtbankprocedure is een advocaat sterk aanbevolen. Het Juridisch Loket biedt gratis eerste advies.",
+  },
+  {
+    question: "Welke schadevergoeding kan ik krijgen?",
+    answer:
+      "Dit varieert sterk per zaak. Typische bedragen liggen tussen €500 en €10,000, afhankelijk van de ernst, impact en duur van de discriminatie. In uitzonderlijke gevallen kunnen bedragen hoger uitvallen.",
+  },
+  {
+    question: "Mag mijn werkgever vragen naar mijn seksuele oriëntatie?",
+    answer:
+      "Over het algemeen niet. Vragen naar seksuele oriëntatie tijdens sollicitatie of op het werk is discriminatie volgens de AWGB, tenzij het relevante functie-eisen betreft (zeer zeldzaam).",
+  },
+  {
+    question: "Zijn religieuze organisaties uitgezonderd van de AWGB?",
+    answer:
+      "Beperkt. Religieuze organisaties hebben een uitzondering bij werving voor specifieke geestelijke functies, maar niet voor algemene functies zoals administratie, schoonmaak of onderhoud. Het is geen blanco vrijstelling.",
+  },
+];
+
 const seo = {
   title:
     "LHBTIQ+ rechten in Nederland en Europa | Juridische informatie – GayJustice.org",
@@ -27,68 +90,6 @@ const seo = {
     "huisvesting discriminatie",
     "gezondheidszorg transgender",
     "juridische gidsen",
-  ],
-  faq: [
-    {
-      question: "Wat is GayJustice.org?",
-      answer:
-        "GayJustice.org is een juridisch-informatief platform over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa.",
-    },
-    {
-      question: "Geeft GayJustice.org juridisch advies?",
-      answer:
-        "Nee. GayJustice.org biedt feitelijke informatie en juridische duiding, maar geen individueel juridisch advies of rechtsbijstand.",
-    },
-    {
-      question: "Wie is verantwoordelijk voor GayJustice.org?",
-      answer:
-        "GayJustice.org is een initiatief van Stichting Vrijheid & Gelijkheid (STVG), een onafhankelijke stichting naar Nederlands recht.",
-    },
-    {
-      question: "Hoe kan ik contact opnemen?",
-      answer:
-        "Via de contactpagina of info@gayjustice.org. Voor individuele rechtsbijstand verwijzen wij door naar gespecialiseerde organisaties.",
-    },
-    {
-      question: "Wat geldt als discriminatie volgens de AWGB?",
-      answer:
-        "Discriminatie is verboden onderscheid op basis van o.a. seksuele oriëntatie of geslachtsidentiteit. Dit kan direct zijn (expliciete uitsluiting) of indirect (neutrale regel met ongelijke uitwerking). De AWGB beschermt bij werk, onderwijs, dienstverlening en huisvesting.",
-    },
-    {
-      question: "Hoe lang duurt een discriminatieprocedure?",
-      answer:
-        "College voor de Rechten van de Mens: 3-6 maanden voor een oordeel. Rechtbank: 6-18 maanden. Europees Hof voor de Rechten van de Mens: 3-7 jaar. De CGE-procedure is sneller maar niet bindend.",
-    },
-    {
-      question: "Kan ik anoniem een discriminatieklacht indienen?",
-      answer:
-        "Bij het College voor de Rechten van de Mens kan dit onder voorwaarden, maar anonimiteit beperkt de mogelijkheden voor onderzoek. Bij een rechtbankprocedure is anonimiteit niet mogelijk.",
-    },
-    {
-      question: "Welk bewijs heb ik nodig bij discriminatie?",
-      answer:
-        "Verzamel e-mails, WhatsApp-gesprekken, getuigenverklaringen, en beschrijvingen van vergelijkbare situaties. Door omkering van de bewijslast hoef je alleen aannemelijk te maken dat discriminatie heeft plaatsgevonden; de werkgever/organisatie moet dan bewijzen dat dit niet zo is.",
-    },
-    {
-      question: "Heb ik een advocaat nodig?",
-      answer:
-        "Voor een klacht bij het College voor de Rechten van de Mens niet verplicht. Voor een rechtbankprocedure is een advocaat sterk aanbevolen. Het Juridisch Loket biedt gratis eerste advies.",
-    },
-    {
-      question: "Welke schadevergoeding kan ik krijgen?",
-      answer:
-        "Dit varieert sterk per zaak. Typische bedragen liggen tussen €500 en €10,000, afhankelijk van de ernst, impact en duur van de discriminatie. In uitzonderlijke gevallen kunnen bedragen hoger uitvallen.",
-    },
-    {
-      question: "Mag mijn werkgever vragen naar mijn seksuele oriëntatie?",
-      answer:
-        "Over het algemeen niet. Vragen naar seksuele oriëntatie tijdens sollicitatie of op het werk is discriminatie volgens de AWGB, tenzij het relevante functie-eisen betreft (zeer zeldzaam).",
-    },
-    {
-      question: "Zijn religieuze organisaties uitgezonderd van de AWGB?",
-      answer:
-        "Beperkt. Religieuze organisaties hebben een uitzondering bij werving voor specifieke geestelijke functies, maar niet voor algemene functies zoals administratie, schoonmaak of onderhoud. Het is geen blanco vrijstelling.",
-    },
   ],
 };
 ---
@@ -890,7 +891,7 @@ const seo = {
         set:html={JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          mainEntity: seo.faq.map((item) => ({
+          mainEntity: faqData.map((item) => ({
             "@type": "Question",
             name: item.question,
             acceptedAnswer: { "@type": "Answer", text: item.answer },
