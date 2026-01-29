@@ -10,11 +10,26 @@ type Props = {
 
 <div class="card intro-card">
   <div class="kickstart-box">
-    <h1>GayJustice.org - KickStart - Oprichtingsfase</h1>
-
-    <p class="intro-text">
-      <strong>De eenmalige oprichtingskosten voor GayJustice.org.</strong>
-    </p>
+    <div class="kickstart-grid">
+      <div class="kickstart-left">
+        <h1>GayJustice.org - KickStart - Oprichtingsfase</h1>
+        <p class="intro-text">
+          <strong>De eenmalige oprichtingskosten voor GayJustice.org.</strong>
+        </p>
+        <p class="kickstart-date">
+          <time datetime={new Date().toISOString()}>
+            {new Date().toLocaleDateString('nl-NL', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })}
+          </time>
+        </p>
+      </div>
+    </div>
 
     <div class="highlight-section">
       <h3>✅ - Terugbetaling van Kickstart-bijdragen</h3>
@@ -35,8 +50,8 @@ type Props = {
 
     <p>Deze kosten betreffen onder meer:</p>
     <ul>
-      <li>notariële vastlegging et governance;</li>
-      <li>technische infrastructuur (hosting, domeinen, security);</li>
+      <li><strong>notariële vastlegging;</strong></li>
+      <li><strong>technische infrastructuur;</strong></li>
     </ul>
 
     <p class="cta-text">
@@ -64,6 +79,18 @@ type Props = {
     border-radius: 8px;
     padding: 22px;
     text-align: left;
+    animation: dropIn 0.6s ease-out;
+  }
+
+  @keyframes dropIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .kickstart-box h2 {
@@ -71,7 +98,7 @@ type Props = {
     font-size: 1.8rem;
     font-weight: 700;
     color: #1e1b4b;
-    text-align: center;
+    text-align: left;
     line-height: 1.3;
   }
 
@@ -80,14 +107,40 @@ type Props = {
     font-size: 2.3rem;
     font-weight: 700;
     color: #1e1b4b;
-    text-align: center;
+    text-align: left;
     line-height: 1.3;
   }
 
+  .kickstart-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .kickstart-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kickstart-date {
+    font-size: 0.95rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    padding-top: 8px;
+    border-top: 2px solid #1e1b4b;
+    width: fit-content;
+  }
+
+  .kickstart-date time {
+    display: inline-block;
+  }
+
   .kickstart-box .intro-text {
-    margin: 0 0 20px;
+    margin: 0;
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
     color: rgba(0, 0, 0, 0.85);
     line-height: 1.6;
   }
@@ -136,7 +189,7 @@ type Props = {
 
   .kickstart-box .cta-text {
     margin: 24px 0 0;
-    text-align: center;
+    text-align: left;
   }
 
   .kickstart-link {
