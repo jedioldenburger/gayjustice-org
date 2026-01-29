@@ -41,9 +41,9 @@
 
 	/* Header/footer (chrome) */
 	--chrome-bg:
-		radial-gradient(900px 260px at 15% 0%, rgba(147, 51, 234, 0.45), transparent 60%),
-		radial-gradient(700px 240px at 90% 10%, rgba(168, 85, 247, 0.3), transparent 55%),
-		linear-gradient(135deg, #1a0033 0%, #2d1b4e 38%, #3d2463 72%, #4a2a7d 100%);
+		radial-gradient(900px 260px at 15% 0%, rgba(30, 27, 75, 0.6), transparent 60%),
+		radial-gradient(700px 240px at 90% 10%, rgba(49, 46, 129, 0.4), transparent 55%),
+		linear-gradient(135deg, #0f0e24 0%, #1e1b4b 38%, #2e2a6e 72%, #1e1b4b 100%);
 	--chrome-border: rgba(255, 255, 255, 0.14);
 	--header-bg: var(--chrome-bg);
 	--header-border: var(--chrome-border);
