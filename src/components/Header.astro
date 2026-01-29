@@ -138,10 +138,17 @@ const nav = [
     ],
   },
   {
-    hrefEn: "/en/donate",
-    hrefNl: "/doneren",
     labelEn: "Support",
     labelNl: "Steun",
+    isGroup: true,
+    submenu: [
+      {
+        hrefEn: "/en/donate",
+        hrefNl: "/doneren",
+        labelEn: "Donate",
+        labelNl: "Doneren",
+      },
+    ],
   },
   {
     hrefEn: "/en/contact",
