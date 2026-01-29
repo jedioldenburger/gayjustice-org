@@ -7,10 +7,10 @@
 	--shadow-hover: 0 18px 52px rgba(15, 23, 42, 0.12);
 	--ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-	--brand: #4f46e5;
+	--brand: #3f08b9;
 	--brand-ink: #ffffff;
-	--brand-soft: rgba(79, 70, 229, 0.12);
-	--accent: #16a34a;
+	--brand-soft: rgba(63, 8, 185, 0.12);
+	--accent: #3f08b9;
 
 	/* Default theme (light) */
 	--bg: #f8fafc;
@@ -98,16 +98,16 @@ body {
 }
 
 ::selection {
-	background: rgba(79, 70, 229, 0.22);
+	background: rgba(63, 8, 185, 0.22);
 }
 
 a {
-	color: inherit;
+	color: #3f08b9;
 }
 
 a.link,
 a.card-link {
-	color: var(--text);
+	color: #3f08b9;
 	font-weight: 650;
 	text-decoration: none;
 	text-decoration-thickness: 2px;
@@ -134,11 +134,22 @@ h3 {
 h1 {
 	font-size: clamp(2rem, 4vw, 3.1rem);
 	line-height: 1.1;
+	color: #3f08b9;
 }
 
 h2 {
-	font-size: clamp(1.4rem, 2.2vw, 2rem);
+	font-size: 1.8rem;
 	line-height: 1.2;
+	margin-bottom: 16px;
+	color: #3f08b9;
+}
+
+h3 {
+	font-size: 1.2rem;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	color: #3f08b9;
 }
 
 small {
@@ -278,7 +289,7 @@ small {
 }
 
 :focus-visible {
-	outline: 3px solid rgba(79, 70, 229, 0.35);
+	outline: 3px solid rgba(63, 8, 185, 0.35);
 	outline-offset: 2px;
 }
 

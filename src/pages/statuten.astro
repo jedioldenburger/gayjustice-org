@@ -1,0 +1,380 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+const seo = {
+  title: "Statuten & Governance Documenten | STVG",
+  description:
+    "Statuten en governance documenten van Stichting Vrijheid & Gelijkheid (STVG). Volledige transparantie over organisatie, bestuur, financiën en integriteit.",
+  canonical: "/statuten/",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/statuten/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/statutes/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    {
+      name: "Statuten",
+      url: "https://www.gayjustice.org/statuten/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Governance"
+    title="Statuten & Documenten"
+    lead="Statuten en governance documenten van Stichting Vrijheid & Gelijkheid (STVG). Volledige transparantie over organisatie, bestuur en werkwijze."
+  />
+
+  <Container>
+    <!-- Introductie STVG -->
+    <section class="section" id="stvg">
+      <div class="surface" style="padding: 22px;">
+        <h2>Stichting Vrijheid & Gelijkheid</h2>
+        <p>
+          <strong>Stichting Vrijheid &amp; Gelijkheid (STVG)</strong> is opgericht
+          in 2026 als drager van publieke informatievoorziening over grondrechten,
+          gelijke behandeling en mensenrechten in Nederland.
+        </p>
+        <p>
+          GayJustice.org is een thematisch platform van STVG, gericht op
+          juridische informatie over LGBTQ+-rechten, discriminatiebestrijding
+          en toegang tot rechtsbescherming.
+        </p>
+        <h3>Kernwaarden</h3>
+        <ul>
+          <li>
+            <strong>Onafhankelijkheid</strong> – Geen politieke, religieuze of
+            commerciële bindingen
+          </li>
+          <li>
+            <strong>Transparantie</strong> – Openheid over financiën, governance
+            en werkwijze
+          </li>
+          <li>
+            <strong>Toegankelijkheid</strong> – Gratis juridische informatie voor
+            iedereen
+          </li>
+          <li>
+            <strong>Betrouwbaarheid</strong> – Gebaseerd op Nederlandse wet- en
+            regelgeving
+          </li>
+          <li>
+            <strong>Integriteit</strong> – Ethische richtlijnen en kwaliteitscontrole
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Juridische Status -->
+    <section class="section" id="status">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridische Status</h2>
+        <div
+          style="display: grid; gap: 16px; margin-top: 20px;"
+        >
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">Rechtsvorm</span>
+            <span>Stichting (Foundation)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">Oprichting</span>
+            <span>2026</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">Zetel</span>
+            <span>Amsterdam, Nederland</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">KvK-registratie</span>
+            <span>In aanvraag</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">ANBI-status</span>
+            <span>In aanvraag (Algemeen Nut Beogende Instelling)</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">
+            <span style="font-weight: 600;">Doelstelling</span>
+            <span>Publieke informatievoorziening over grondrechten</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance Principes -->
+    <section class="section" id="governance">
+      <div class="surface" style="padding: 22px;">
+        <h2>Governance Principes</h2>
+        <p>
+          STVG hanteert strikte governance-standaarden om onafhankelijkheid,
+          integriteit en transparantie te waarborgen:
+        </p>
+        <ul>
+          <li>
+            <strong>Onafhankelijk bestuur</strong> – Bestuurders zonder
+            belangenconflicten
+          </li>
+          <li>
+            <strong>Financiële controle</strong> – Boekhoudkundige registratie en
+            jaarverslaglegging
+          </li>
+          <li>
+            <strong>Privacybescherming</strong> – Naleving AVG en EU-regelgeving
+          </li>
+          <li>
+            <strong>Integriteitscode</strong> – Ethische richtlijnen voor alle
+            betrokkenen
+          </li>
+          <li>
+            <strong>Transparante besluitvorming</strong> – Verantwoording aan donateurs
+            en publiek
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Statuten en Documenten -->
+    <section class="section" id="documenten">
+      <div class="surface" style="padding: 22px;">
+        <h2>Statuten en Documenten</h2>
+        <p style="margin-bottom: 20px;">
+          Alle governance documenten zijn publiek toegankelijk voor volledige
+          transparantie:
+        </p>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"
+        >
+          <!-- Statuten -->
+          <a
+            href="/pictures/A_Statuten_STVG.pdf"
+            target="_blank"
+            class="doc-card"
+            style="display: block; text-decoration: none; color: inherit;"
+          >
+            <div
+              class="surface"
+              style="padding: 20px; height: 100%; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1);"
+            >
+              <div
+                style="font-size: 2rem; margin-bottom: 12px; color: #3f08b9;"
+              >
+                📜
+              </div>
+              <h3
+                style="margin: 0 0 8px 0; font-size: 1.1rem; color: #3f08b9;"
+              >
+                Statuten
+              </h3>
+              <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+                Juridische grondslag, doelstellingen en organisatiestructuur van
+                de stichting.
+              </p>
+              <div
+                style="margin-top: 12px; font-size: 0.85rem; color: #3f08b9; font-weight: 600;"
+              >
+                Download PDF →
+              </div>
+            </div>
+          </a>
+
+          <!-- Bestuursreglement -->
+          <a
+            href="/pictures/B_Bestuursreglement_STVG.pdf"
+            target="_blank"
+            class="doc-card"
+            style="display: block; text-decoration: none; color: inherit;"
+          >
+            <div
+              class="surface"
+              style="padding: 20px; height: 100%; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1);"
+            >
+              <div
+                style="font-size: 2rem; margin-bottom: 12px; color: #3f08b9;"
+              >
+                👥
+              </div>
+              <h3
+                style="margin: 0 0 8px 0; font-size: 1.1rem; color: #3f08b9;"
+              >
+                Bestuursreglement
+              </h3>
+              <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+                Procedures voor besluitvorming, bestuursvergaderingen en
+                verantwoordelijkheden.
+              </p>
+              <div
+                style="margin-top: 12px; font-size: 0.85rem; color: #3f08b9; font-weight: 600;"
+              >
+                Download PDF →
+              </div>
+            </div>
+          </a>
+
+          <!-- Financieel Reglement -->
+          <a
+            href="/pictures/C_Financieel_Reglement_STVG.pdf"
+            target="_blank"
+            class="doc-card"
+            style="display: block; text-decoration: none; color: inherit;"
+          >
+            <div
+              class="surface"
+              style="padding: 20px; height: 100%; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1);"
+            >
+              <div
+                style="font-size: 2rem; margin-bottom: 12px; color: #3f08b9;"
+              >
+                💰
+              </div>
+              <h3
+                style="margin: 0 0 8px 0; font-size: 1.1rem; color: #3f08b9;"
+              >
+                Financieel Reglement
+              </h3>
+              <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+                Boekhoudregels, budgetprocedures en financiële
+                verantwoording.
+              </p>
+              <div
+                style="margin-top: 12px; font-size: 0.85rem; color: #3f08b9; font-weight: 600;"
+              >
+                Download PDF →
+              </div>
+            </div>
+          </a>
+
+          <!-- Privacyreglement -->
+          <a
+            href="/pictures/D_Privacyreglement_AVG_STVG.pdf"
+            target="_blank"
+            class="doc-card"
+            style="display: block; text-decoration: none; color: inherit;"
+          >
+            <div
+              class="surface"
+              style="padding: 20px; height: 100%; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1);"
+            >
+              <div
+                style="font-size: 2rem; margin-bottom: 12px; color: #3f08b9;"
+              >
+                🔒
+              </div>
+              <h3
+                style="margin: 0 0 8px 0; font-size: 1.1rem; color: #3f08b9;"
+              >
+                Privacyreglement (AVG)
+              </h3>
+              <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+                Privacybeleid conform AVG/GDPR en bescherming
+                persoonsgegevens.
+              </p>
+              <div
+                style="margin-top: 12px; font-size: 0.85rem; color: #3f08b9; font-weight: 600;"
+              >
+                Download PDF →
+              </div>
+            </div>
+          </a>
+
+          <!-- Integriteitscode -->
+          <a
+            href="/pictures/E_Integriteitscode_STVG.pdf"
+            target="_blank"
+            class="doc-card"
+            style="display: block; text-decoration: none; color: inherit;"
+          >
+            <div
+              class="surface"
+              style="padding: 20px; height: 100%; transition: transform 0.2s; border: 1px solid rgba(255, 255, 255, 0.1);"
+            >
+              <div
+                style="font-size: 2rem; margin-bottom: 12px; color: #3f08b9;"
+              >
+                ⚖️
+              </div>
+              <h3
+                style="margin: 0 0 8px 0; font-size: 1.1rem; color: #3f08b9;"
+              >
+                Integriteitscode
+              </h3>
+              <p style="margin: 0; font-size: 0.9rem; opacity: 0.8;">
+                Ethische normen, belangenverstrengeling en gedragscode voor
+                alle betrokkenen.
+              </p>
+              <div
+                style="margin-top: 12px; font-size: 0.85rem; color: #3f08b9; font-weight: 600;"
+              >
+                Download PDF →
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vragen over Governance?</h2>
+        <p>
+          Voor vragen over statuten, governance of organisatiestructuur kun je
+          contact opnemen via <a
+            href="/contact/"
+            style="text-decoration: underline; color: #3f08b9;">het
+            contactformulier</a
+          >.
+        </p>
+        <p style="margin-bottom: 0;">
+          Meer informatie over transparantie en verantwoording vind je op de <a
+            href="/transparantie/"
+            style="text-decoration: underline; color: #3f08b9;"
+            >Transparantie-pagina</a
+          >.
+        </p>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .doc-card:hover .surface {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(63, 8, 185, 0.15);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #3f08b9;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  ul {
+    margin: 16px 0;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #3f08b9;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
