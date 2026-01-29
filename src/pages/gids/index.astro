@@ -1,0 +1,321 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Juridische gidsen | Complete uitleg LHBTIQ+ rechten — GayJustice.org",
+  description:
+    "Uitgebreide juridische gidsen over LHBTIQ+ rechten in Nederland. Van AWGB tot procedures: alles wat je moet weten over gelijke behandeling, discriminatie en rechtsbescherming.",
+  canonical: "/gids/",
+  lang: "nl-NL",
+  pageType: "CollectionPage",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/gids/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/guides/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Juridische gidsen", url: "https://www.gayjustice.org/gids/" },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Juridische gidsen"
+    title="Complete juridische gidsen"
+    lead="Uitgebreide uitleg van wetten, procedures en rechtsbescherming voor LHBTIQ+ personen in Nederland en Europa."
+  />
+
+  <Container>
+    <section class="section">
+      <div class="surface" style="padding: 22px; margin-bottom: 20px;">
+        <p>
+          Onze juridische gidsen bieden diepgaande uitleg van wetgeving,
+          procedures en rechtsbescherming. Elke gids is 1,500+ woorden en bevat:
+        </p>
+        <ul>
+          <li>Volledige juridische context en wettelijke basis</li>
+          <li>Praktijkvoorbeelden en rechtspraak</li>
+          <li>Stap-voor-stap procedures</li>
+          <li>Verwijzingen naar officiële bronnen</li>
+          <li>Links naar relevante thema's en artikelen</li>
+        </ul>
+
+        <div
+          style="background: rgba(11, 15, 20, 0.05); border-left: 4px solid rgba(11, 15, 20, 0.1); padding: 14px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>⚖️ Let op:</strong> Deze gidsen bieden juridische informatie,
+            geen individueel juridisch advies. Voor persoonlijke rechtsbijstand raadpleeg
+            je een advocaat of het <a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener"
+              style="text-decoration: underline;">Juridisch Loket</a
+            >.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gidsen lijst -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Beschikbare gidsen</h2>
+
+        <div class="guide-grid">
+          <!-- Gids 1: AWGB -->
+          <article class="guide-card">
+            <div class="guide-header">
+              <span class="guide-badge">Complete gids</span>
+              <span class="guide-length">2,200 woorden</span>
+            </div>
+            <h3 class="guide-title">
+              <a href="/gids/awgb-complete-gids/">
+                Complete gids: AWGB en LHBTIQ+ rechten
+              </a>
+            </h3>
+            <p class="guide-description">
+              Alles wat je moet weten over de Algemene Wet Gelijke Behandeling
+              (AWGB): wie wordt beschermd, waar geldt de wet, hoe werkt omkering
+              bewijslast, welke procedures bestaan, en welke uitzonderingen
+              gelden.
+            </p>
+            <ul class="guide-topics">
+              <li>✓ Wat is de AWGB?</li>
+              <li>✓ Direct vs indirect discriminatie</li>
+              <li>✓ Omkering bewijslast</li>
+              <li>✓ Procedures (CGM, rechtbank, strafrecht)</li>
+              <li>✓ Schadevergoeding en rechtsherstel</li>
+              <li>✓ Religieuze uitzonderingen</li>
+            </ul>
+            <a href="/gids/awgb-complete-gids/" class="guide-link">
+              Lees de volledige gids →
+            </a>
+          </article>
+
+          <!-- Placeholder voor toekomstige gidsen -->
+          <article class="guide-card guide-placeholder">
+            <div class="guide-header">
+              <span class="guide-badge">Binnenkort</span>
+            </div>
+            <h3 class="guide-title">
+              Discriminatie op het werk: Jouw juridische opties
+            </h3>
+            <p class="guide-description">
+              Complete uitleg van je rechten als werknemer, procedures voor het
+              melden van discriminatie, en stappen naar rechtsherstel.
+            </p>
+            <p
+              style="margin-top: 12px; font-size: 0.9em; color: rgba(11, 15, 20, 0.6);"
+            >
+              <em>Deze gids is in voorbereiding.</em>
+            </p>
+          </article>
+
+          <article class="guide-card guide-placeholder">
+            <div class="guide-header">
+              <span class="guide-badge">Binnenkort</span>
+            </div>
+            <h3 class="guide-title">
+              Omkering van bewijslast: Praktische handleiding
+            </h3>
+            <p class="guide-description">
+              Hoe omkering van bewijslast werkt in discriminatiezaken, wat je
+              moet aantonen, en hoe je bewijs verzamelt.
+            </p>
+            <p
+              style="margin-top: 12px; font-size: 0.9em; color: rgba(11, 15, 20, 0.6);"
+            >
+              <em>Deze gids is in voorbereiding.</em>
+            </p>
+          </article>
+
+          <article class="guide-card guide-placeholder">
+            <div class="guide-header">
+              <span class="guide-badge">Binnenkort</span>
+            </div>
+            <h3 class="guide-title">
+              LHBTIQ+ asiel in Nederland: Juridisch kader
+            </h3>
+            <p class="guide-description">
+              Complete uitleg van asielprocedures voor LHBTIQ+ vluchtelingen,
+              bewijslast, geloofwaardigheid, en rechtsbescherming.
+            </p>
+            <p
+              style="margin-top: 12px; font-size: 0.9em; color: rgba(11, 15, 20, 0.6);"
+            >
+              <em>Deze gids is in voorbereiding.</em>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aanvullende bronnen -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Aanvullende informatie</h2>
+        <p>Naast deze diepgaande gidsen biedt GayJustice.org ook:</p>
+        <ul>
+          <li>
+            <strong
+              ><a href="/thema/" style="text-decoration: underline;">
+                Thema's</a
+              ></strong
+            > – Overzichtspagina's per rechtsgebied (mensenrechten, discriminatie
+            werk, onderwijs, gezondheidszorg, vluchtelingen)
+          </li>
+          <li>
+            <strong
+              ><a href="/blog/" style="text-decoration: underline;">
+                Blog</a
+              ></strong
+            > – Artikelen over actuele ontwikkelingen, rechtspraak en wetgeving
+          </li>
+          <li>
+            <strong
+              ><a href="/contact/" style="text-decoration: underline;">
+                Contact</a
+              ></strong
+            > – Voor doorverwijzing naar gespecialiseerde organisaties
+          </li>
+        </ul>
+
+        <p style="margin-top: 14px;">
+          Mis je een onderwerp? <a
+            href="/contact/"
+            style="text-decoration: underline;">Laat het ons weten</a
+          > – we breiden ons aanbod voortdurend uit.
+        </p>
+      </div>
+    </section>
+
+    <style is:global>
+      .guide-grid {
+        display: grid;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      @media (min-width: 768px) {
+        .guide-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .guide-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 0.2s ease;
+      }
+
+      .guide-card:hover {
+        border-color: rgba(250, 204, 21, 0.3);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .guide-placeholder {
+        opacity: 0.7;
+        border-style: dashed;
+      }
+
+      .guide-header {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+      }
+
+      .guide-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(250, 204, 21, 0.15);
+        color: #facc15;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .guide-placeholder .guide-badge {
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .guide-length {
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.7);
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .guide-title {
+        margin: 0 0 12px 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .guide-title a {
+        color: #facc15;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+
+      .guide-title a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      .guide-placeholder .guide-title {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .guide-description {
+        margin: 0 0 16px 0;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .guide-topics {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 16px 0;
+      }
+
+      .guide-topics li {
+        padding: 6px 0;
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.75);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .guide-topics li:last-child {
+        border-bottom: none;
+      }
+
+      .guide-link {
+        display: inline-block;
+        color: #facc15;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: opacity 0.2s;
+      }
+
+      .guide-link:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+    </style>
+  </Container>
+</Layout>
