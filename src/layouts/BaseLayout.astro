@@ -46,30 +46,32 @@ const isAdminPage = Astro.url.pathname.startsWith("/admin");
   <body>
     <slot />
 
-    <!-- Handle Netlify Identity login redirect -->
-    <script is:inline>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
+    {isAdminPage && (
+      <!-- Handle Netlify Identity login redirect -->
+      <script is:inline>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", (user) => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+        // Handle invite token in URL hash
+        if (
+          window.location.hash.includes("invite_token") ||
+          window.location.hash.includes("confirmation_token") ||
+          window.location.hash.includes("recovery_token")
+        ) {
+          // Let Identity widget process token, then redirect
+          if (window.netlifyIdentity) {
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
             });
           }
-        });
-      }
-      // Handle invite token in URL hash
-      if (
-        window.location.hash.includes("invite_token") ||
-        window.location.hash.includes("confirmation_token") ||
-        window.location.hash.includes("recovery_token")
-      ) {
-        // Let Identity widget process token, then redirect
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
         }
-      }
-    </script>
+      </script>
+    )}
   </body>
 </html>
