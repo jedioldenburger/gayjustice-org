@@ -1,0 +1,111 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Network - Future Implementations | GayJustice.org",
+  description:
+    "The GayJustice.org Network: future implementations for digital AI assistance, World Elderly Network and legal issues.",
+  canonical: "/en/network/",
+  lang: "en-US",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/netwerk/" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/network/" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/en/" },
+    {
+      name: "Network",
+      url: "https://www.gayjustice.org/en/network/",
+    },
+  ],
+};
+---
+
+<Layout
+  title="Network - GayJustice.org"
+  description="The GayJustice.org Network: future implementations for support and connection"
+>
+  <PageHeader
+    title="Network"
+    subtitle="Future implementations for support and connection"
+  />
+
+  <Container>
+    <section class="content-section">
+      <h2>Future Implementations</h2>
+
+      <div class="network-items">
+        <div class="network-card">
+          <h3>🤖 Digital AI Assistance</h3>
+          <p>
+            Smart assistance for legal questions, information and support
+            through artificial intelligence.
+          </p>
+        </div>
+
+        <div class="network-card">
+          <h3>🌍 World Elderly Network</h3>
+          <p>
+            International network for elderly LGBTIQ+ persons, focused on mutual
+            connection and support.
+          </p>
+        </div>
+
+        <div class="network-card">
+          <h3>⚖️ Legal Issues</h3>
+          <p>
+            Legal information, assistance with filing reports and guidance
+            through legal procedures.
+          </p>
+        </div>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  .content-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  h2 {
+    color: var(--brand);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .network-items {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .network-card {
+    background: white;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+
+  .network-card h3 {
+    color: var(--brand);
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .network-card p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .network-items {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+</style>
