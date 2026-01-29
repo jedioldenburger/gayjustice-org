@@ -20,6 +20,43 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gayjustice.org/projecten/rechtsbescherming-politieoptreden/#webpage",
+      "url": "https://gayjustice.org/projecten/rechtsbescherming-politieoptreden/",
+      "name": "Project: Rechtsbescherming bij politieoptreden | GayJustice.org",
+      "description": "Juridische informatie over politieoptreden, discriminatie en gelijke behandeling van homoseksuele personen. Rechten, procedures en toezichtmechanismen.",
+      "isPartOf": { "@id": "https://gayjustice.org/#website" },
+      "publisher": { "@id": "https://gayjustice.org/#organization" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Project",
+      "@id": "https://gayjustice.org/projecten/rechtsbescherming-politieoptreden/#project",
+      "name": "Rechtsbescherming bij politieoptreden",
+      "description": "Project gericht op juridische informatie en analyse rond politieoptreden in situaties waarin discriminatie, intimidatie of ongelijke behandeling van homoseksuele personen wordt ervaren.",
+      "about": ["Politieoptreden", "Discriminatie", "Gelijke behandeling", "Mensenrechten", "Homorechten"],
+      "status": "Active",
+      "inLanguage": "nl",
+      "publisher": { "@id": "https://gayjustice.org/#organization" },
+      "mainEntityOfPage": { "@id": "https://gayjustice.org/projecten/rechtsbescherming-politieoptreden/#webpage" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayjustice.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://gayjustice.org/projecten/" },
+        { "@type": "ListItem", "position": 3, "name": "Rechtsbescherming bij politieoptreden", "item": "https://gayjustice.org/projecten/rechtsbescherming-politieoptreden/" }
+      ]
+    })}
+  </script>
   <PageHeader
     eyebrow="Project"
     title="Rechtsbescherming bij politieoptreden"

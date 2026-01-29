@@ -20,6 +20,43 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gayjustice.org/projecten/holocaust-homoseksuele-slachtoffers/#webpage",
+      "url": "https://gayjustice.org/projecten/holocaust-homoseksuele-slachtoffers/",
+      "name": "Project: Holocaust – Homoseksuele slachtoffers | GayJustice.org",
+      "description": "Educatie over vervolging van homoseksuele personen tijdens de Holocaust en juridische erkenning binnen mensenrechten.",
+      "isPartOf": { "@id": "https://gayjustice.org/#website" },
+      "publisher": { "@id": "https://gayjustice.org/#organization" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Project",
+      "@id": "https://gayjustice.org/projecten/holocaust-homoseksuele-slachtoffers/#project",
+      "name": "Holocaust – homoseksuele slachtoffers",
+      "description": "Project gericht op historische en juridische duiding van vervolging van homoseksuele personen tijdens de Holocaust.",
+      "about": ["Mensenrechten", "Holocaust", "Homorechten", "Historische vervolging"],
+      "status": "Active",
+      "inLanguage": "nl",
+      "publisher": { "@id": "https://gayjustice.org/#organization" },
+      "mainEntityOfPage": { "@id": "https://gayjustice.org/projecten/holocaust-homoseksuele-slachtoffers/#webpage" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayjustice.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://gayjustice.org/projecten/" },
+        { "@type": "ListItem", "position": 3, "name": "Holocaust – homoseksuele slachtoffers", "item": "https://gayjustice.org/projecten/holocaust-homoseksuele-slachtoffers/" }
+      ]
+    })}
+  </script>
   <PageHeader
     eyebrow="Project"
     title="Holocaust – Homoseksuele slachtoffers"

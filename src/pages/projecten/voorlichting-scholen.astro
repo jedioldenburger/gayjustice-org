@@ -20,6 +20,43 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gayjustice.org/projecten/voorlichting-scholen/#webpage",
+      "url": "https://gayjustice.org/projecten/voorlichting-scholen/",
+      "name": "Project: Voorlichting op scholen | GayJustice.org",
+      "description": "Juridisch correcte informatie over gelijke behandeling en LHBTIQ+ rechten binnen het onderwijs.",
+      "isPartOf": { "@id": "https://gayjustice.org/#website" },
+      "publisher": { "@id": "https://gayjustice.org/#organization" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Project",
+      "@id": "https://gayjustice.org/projecten/voorlichting-scholen/#project",
+      "name": "Voorlichting op scholen",
+      "description": "Project gericht op juridische duiding van gelijke behandeling en mensenrechten binnen het onderwijs.",
+      "about": ["Onderwijs", "Gelijke behandeling", "LHBTIQ+ rechten", "Mensenrechten"],
+      "status": "Active",
+      "inLanguage": "nl",
+      "publisher": { "@id": "https://gayjustice.org/#organization" },
+      "mainEntityOfPage": { "@id": "https://gayjustice.org/projecten/voorlichting-scholen/#webpage" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayjustice.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://gayjustice.org/projecten/" },
+        { "@type": "ListItem", "position": 3, "name": "Voorlichting op scholen", "item": "https://gayjustice.org/projecten/voorlichting-scholen/" }
+      ]
+    })}
+  </script>
   <PageHeader
     eyebrow="Project"
     title="Voorlichting op scholen"

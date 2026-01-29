@@ -20,6 +20,43 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gayjustice.org/projecten/dakloze-homoseksuele-jongeren/#webpage",
+      "url": "https://gayjustice.org/projecten/dakloze-homoseksuele-jongeren/",
+      "name": "Project: Dakloze homoseksuele jongeren | GayJustice.org",
+      "description": "Informatie en rechtsbescherming voor dakloze homoseksuele jongeren, met focus op mensenrechten en doorverwijzing.",
+      "isPartOf": { "@id": "https://gayjustice.org/#website" },
+      "publisher": { "@id": "https://gayjustice.org/#organization" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Project",
+      "@id": "https://gayjustice.org/projecten/dakloze-homoseksuele-jongeren/#project",
+      "name": "Dakloze homoseksuele jongeren",
+      "description": "Project gericht op juridische en maatschappelijke context rond dakloze homoseksuele jongeren.",
+      "about": ["Dakloosheid", "Mensenrechten", "Homorechten", "Jeugd"],
+      "status": "Active",
+      "inLanguage": "nl",
+      "publisher": { "@id": "https://gayjustice.org/#organization" },
+      "mainEntityOfPage": { "@id": "https://gayjustice.org/projecten/dakloze-homoseksuele-jongeren/#webpage" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayjustice.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://gayjustice.org/projecten/" },
+        { "@type": "ListItem", "position": 3, "name": "Dakloze homoseksuele jongeren", "item": "https://gayjustice.org/projecten/dakloze-homoseksuele-jongeren/" }
+      ]
+    })}
+  </script>
   <PageHeader
     eyebrow="Project"
     title="Dakloze homoseksuele jongeren"

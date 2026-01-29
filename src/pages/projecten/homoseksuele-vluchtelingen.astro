@@ -20,6 +20,43 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://gayjustice.org/projecten/homoseksuele-vluchtelingen/#webpage",
+      "url": "https://gayjustice.org/projecten/homoseksuele-vluchtelingen/",
+      "name": "Project: Homoseksuele vluchtelingen | GayJustice.org",
+      "description": "Toegankelijke informatie over asielrecht en rechtsbescherming van homoseksuele vluchtelingen.",
+      "isPartOf": { "@id": "https://gayjustice.org/#website" },
+      "publisher": { "@id": "https://gayjustice.org/#organization" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Project",
+      "@id": "https://gayjustice.org/projecten/homoseksuele-vluchtelingen/#project",
+      "name": "Homoseksuele vluchtelingen",
+      "description": "Project gericht op juridische informatie over asielrecht en mensenrechten voor homoseksuele vluchtelingen.",
+      "about": ["Asielrecht", "Vluchtelingen", "Mensenrechten", "Homorechten"],
+      "status": "Active",
+      "inLanguage": "nl",
+      "publisher": { "@id": "https://gayjustice.org/#organization" },
+      "mainEntityOfPage": { "@id": "https://gayjustice.org/projecten/homoseksuele-vluchtelingen/#webpage" }
+    })}
+  </script>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayjustice.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Projecten", "item": "https://gayjustice.org/projecten/" },
+        { "@type": "ListItem", "position": 3, "name": "Homoseksuele vluchtelingen", "item": "https://gayjustice.org/projecten/homoseksuele-vluchtelingen/" }
+      ]
+    })}
+  </script>
   <PageHeader
     eyebrow="Project"
     title="Homoseksuele vluchtelingen"
