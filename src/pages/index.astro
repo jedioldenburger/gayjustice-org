@@ -356,17 +356,52 @@ const seo = {
             style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid rgba(250, 204, 21, 0.5); padding: 16px; margin: 20px 0; border-radius: 4px;"
           >
             <p style="margin: 0 0 10px 0; font-size: 0.95rem;">
-              <strong>📖 Juridische gidsen:</strong> Onze 5 complete gidsen bieden diepgaande uitleg:
+              <strong>📖 Juridische gidsen:</strong> Onze 5 complete gidsen bieden
+              diepgaande uitleg:
             </p>
             <ul style="margin: 0; padding-left: 20px; font-size: 0.92rem;">
-              <li><a href="/gids/awgb-complete-gids" style="text-decoration: underline; color: inherit; font-weight: 600;">AWGB-gids</a> (2,200 woorden) – Gelijke Behandeling</li>
-              <li><a href="/gids/discriminatie-werk-complete-gids" style="text-decoration: underline; color: inherit; font-weight: 600;">Discriminatie werk-gids</a> (1,900 woorden)</li>
-              <li><a href="/gids/omkering-bewijslast-complete-gids" style="text-decoration: underline; color: inherit; font-weight: 600;">Omkering bewijslast-gids</a> (1,700 woorden)</li>
-              <li><a href="/gids/huisvesting-complete-gids" style="text-decoration: underline; color: inherit; font-weight: 600;">Huisvesting-gids</a> (2,100 woorden) – Huurrecht & discriminatie</li>
-              <li><a href="/gids/gezondheidszorg-complete-gids" style="text-decoration: underline; color: inherit; font-weight: 600;">Gezondheidszorg-gids</a> (2,050 woorden) – Medische rechten</li>
+              <li>
+                <a
+                  href="/gids/awgb-complete-gids"
+                  style="text-decoration: underline; color: inherit; font-weight: 600;"
+                  >AWGB-gids</a
+                > (2,200 woorden) – Gelijke Behandeling
+              </li>
+              <li>
+                <a
+                  href="/gids/discriminatie-werk-complete-gids"
+                  style="text-decoration: underline; color: inherit; font-weight: 600;"
+                  >Discriminatie werk-gids</a
+                > (1,900 woorden)
+              </li>
+              <li>
+                <a
+                  href="/gids/omkering-bewijslast-complete-gids"
+                  style="text-decoration: underline; color: inherit; font-weight: 600;"
+                  >Omkering bewijslast-gids</a
+                > (1,700 woorden)
+              </li>
+              <li>
+                <a
+                  href="/gids/huisvesting-complete-gids"
+                  style="text-decoration: underline; color: inherit; font-weight: 600;"
+                  >Huisvesting-gids</a
+                > (2,100 woorden) – Huurrecht & discriminatie
+              </li>
+              <li>
+                <a
+                  href="/gids/gezondheidszorg-complete-gids"
+                  style="text-decoration: underline; color: inherit; font-weight: 600;"
+                  >Gezondheidszorg-gids</a
+                > (2,050 woorden) – Medische rechten
+              </li>
             </ul>
             <p style="margin: 10px 0 0 0; font-size: 0.9rem;">
-              <a href="/gids/" style="text-decoration: underline; color: inherit; font-weight: 600;">Alle gidsen bekijken →</a>
+              <a
+                href="/gids/"
+                style="text-decoration: underline; color: inherit; font-weight: 600;"
+                >Alle gidsen bekijken →</a
+              >
             </p>
           </div>
 
@@ -830,55 +865,65 @@ const seo = {
         }
       </style>
 
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "GayJustice.org",
-        "url": "https://www.gayjustice.org",
-        "logo": "https://www.gayjustice.org/logo.png",
-        "description": "Juridische informatie over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa",
-        "sameAs": [
-          "https://www.linkedin.com/company/gayjustice",
-          "https://twitter.com/gayjustice"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "info@gayjustice.org",
-          "contactType": "Customer Service",
-          "url": "https://www.gayjustice.org/contact/"
-        },
-        "foundingDate": "2026",
-        "founder": {
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Stichting Vrijheid & Gelijkheid (STVG)"
-        }
-      })} />
+          name: "GayJustice.org",
+          url: "https://www.gayjustice.org",
+          logo: "https://www.gayjustice.org/logo.png",
+          description:
+            "Juridische informatie over LHBTIQ+ rechten, gelijke behandeling en mensenrechten in Nederland en Europa",
+          sameAs: [
+            "https://www.linkedin.com/company/gayjustice",
+            "https://twitter.com/gayjustice",
+          ],
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "info@gayjustice.org",
+            contactType: "Customer Service",
+            url: "https://www.gayjustice.org/contact/",
+          },
+          foundingDate: "2026",
+          founder: {
+            "@type": "Organization",
+            name: "Stichting Vrijheid & Gelijkheid (STVG)",
+          },
+        })}
+      />
 
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": seo.faq.map(item => ({
-          "@type": "Question",
-          "name": item.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": item.answer
-          }
-        }))
-      })} />
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: seo.faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        })}
+      />
 
-      <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "GayJustice.org",
-            "item": "https://www.gayjustice.org"
-          }
-        ]
-      })} />
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "GayJustice.org",
+              item: "https://www.gayjustice.org",
+            },
+          ],
+        })}
+      />
     </section></Container
   ></Layout
 >
