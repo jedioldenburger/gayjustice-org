@@ -9,9 +9,7 @@ Disallow: /404
 # Crawl-delay for responsible crawling
 Crawl-delay: 0.5
 
-# Sitemaps
-Sitemap: https://www.gayjustice.org/sitemap.xml
-Sitemap: https://www.gayjustice.org/sitemap-blog.xml
+# Sitemaps (96 pages)
 Sitemap: https://www.gayjustice.org/sitemap-index.xml
 
 # Special handling for image crawler
