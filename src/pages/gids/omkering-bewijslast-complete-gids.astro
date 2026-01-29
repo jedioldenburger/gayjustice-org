@@ -1,0 +1,653 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title:
+    "Omkering van bewijslast: Praktische handleiding | Complete gids — GayJustice.org",
+  description:
+    "Complete uitleg van omkering van bewijslast in discriminatiezaken. Wat moet je aantonen, hoe verzamel je bewijs, en wat moet de gedaagde bewijzen? Praktische handleiding met voorbeelden.",
+  canonical: "/gids/omkering-bewijslast-complete-gids/",
+  lang: "nl-NL",
+  pageType: "Article",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/gids/omkering-bewijslast-complete-gids/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/guides/burden-of-proof-complete-guide/",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Juridische gidsen", url: "https://www.gayjustice.org/gids/" },
+    {
+      name: "Omkering bewijslast",
+      url: "https://www.gayjustice.org/gids/omkering-bewijslast-complete-gids/",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Omkering van bewijslast: Praktische handleiding",
+  description:
+    "Complete uitleg van omkering van bewijslast in discriminatiezaken: wat moet je aantonen, hoe verzamel je bewijs, en wat zijn de vereisten.",
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Juridische gidsen"
+    title="Omkering van bewijslast: Praktische handleiding"
+    lead="Complete uitleg van hoe omkering van bewijslast werkt in discriminatiezaken, wat je moet aantonen, en hoe je effectief bewijs verzamelt."
+  />
+
+  <Container>
+    <!-- Introductie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          <strong>Omkering van de bewijslast</strong> is een juridisch mechanisme
+          dat discriminatie makkelijker te bewijzen maakt. In plaats van dat jij als
+          slachtoffer volledig moet bewijzen dat er gediscrimineerd is, hoef je alleen
+          <em>aannemelijk</em> te maken dat discriminatie heeft plaatsgevonden. Daarna
+          moet de gedaagde partij bewijzen dat er <em>geen</em> sprake was van discriminatie.
+        </p>
+
+        <p style="margin-top: 16px;">
+          Dit principe is vastgelegd in de <strong
+            >Algemene wet gelijke behandeling (AWGB)</strong
+          >, de <strong
+            >Wet gelijke behandeling op grond van handicap of chronische ziekte
+            (Wgbh/cz)</strong
+          >, en Europese richtlijnen. Het maakt discriminatiezaken
+          toegankelijker voor slachtoffers.
+        </p>
+
+        <p style="margin-top: 16px;">
+          Deze gids legt uit hoe omkering van bewijslast werkt, wat je moet
+          aantonen, hoe je bewijs verzamelt, en wat er van de gedaagde partij
+          verwacht wordt.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Wat is omkering bewijslast? -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is omkering van de bewijslast?</h2>
+
+        <p>
+          Normaal gesproken geldt in rechtszaken: <strong
+            >"wie stelt, bewijst"</strong
+          >. Als je beweert dat je gediscrimineerd bent, moet je dat volledig
+          bewijzen. Dit is vaak lastig, omdat discriminatie vaak subtiel is en
+          gedaagden hun beweegredenen niet altijd expliciet maken.
+        </p>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Hoe werkt omkering?
+        </h3>
+        <p>
+          Bij discriminatiezaken geldt een <strong>tweestapsproces</strong>:
+        </p>
+        <ol>
+          <li>
+            <strong>Stap 1 – Aannemelijk maken (jouw taak):</strong> Je moet feiten
+            en omstandigheden aanvoeren waaruit discriminatie kan worden afgeleid.
+            Dit hoeft geen waterdicht bewijs te zijn, maar moet "aannemelijk" maken
+            dat discriminatie heeft plaatsgevonden.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Stap 2 – Weerleggen (taak gedaagde):</strong> Als jij voldoende
+            aannemelijk maakt, verschuift de bewijslast naar de gedaagde. Die moet
+            dan bewijzen dat er <em>geen</em> discriminatie was, of dat er een objectieve
+            rechtvaardiging bestaat.
+          </li>
+        </ol>
+
+        <p style="margin-top: 16px;">
+          Dit betekent niet dat je niks hoeft te bewijzen, maar het maakt
+          discriminatie wel makkelijker aan te tonen.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Wanneer geldt omkering bewijslast? -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wanneer geldt omkering van bewijslast?</h2>
+
+        <p>Omkering van bewijslast geldt in alle discriminatiezaken waarbij:</p>
+        <ul>
+          <li>
+            Je discriminatie claimt op basis van een <strong
+              >beschermde grond</strong
+            > (ras, geslacht, seksuele gerichtheid, godsdienst, handicap, leeftijd,
+            etc.);
+          </li>
+          <li>
+            De zaak valt onder de <strong>AWGB, Wgbh/cz</strong>, of andere
+            anti-discriminatiewetgeving;
+          </li>
+          <li>
+            Je een klacht indient bij het <strong
+              >College voor de Rechten van de Mens (CRM)</strong
+            > of de rechtbank.
+          </li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Waar geldt het niet?
+        </h3>
+        <ul>
+          <li>
+            <strong>Strafrecht:</strong> Bij strafrechtelijke discriminatiezaken (artikel
+            137c t/m 137g Sr) geldt de normale bewijsregel: de officier van justitie
+            moet "beyond reasonable doubt" bewijzen.
+          </li>
+          <li>
+            <strong>Niet-beschermde gronden:</strong> Discriminatie op basis van bijvoorbeeld
+            postcode, beroep, of andere niet-beschermde kenmerken valt niet onder
+            omkering bewijslast.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Wat moet je aannemelijk maken? -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat moet je aannemelijk maken? (Stap 1)</h2>
+
+        <p>
+          Om de bewijslast om te keren, moet je <strong
+            >feiten en omstandigheden</strong
+          > aanvoeren waaruit discriminatie kan worden afgeleid. Dit betekent niet
+          dat je discriminatie <em>moet bewijzen</em>, maar dat je voldoende <strong
+            >aanwijzingen</strong
+          > moet geven.
+        </p>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Voorbeelden van aanwijzingen:
+        </h3>
+        <ul>
+          <li>
+            <strong>Directe uitspraken:</strong> Iemand zegt expliciet dat ze geen
+            homo's aannemen, of dat "jullie soort mensen hier niet welkom is".
+          </li>
+          <li>
+            <strong>Opmerkingen over je identiteit:</strong> Regelmatige opmerkingen
+            over je seksuele gerichtheid, zoals "typisch homo-gedrag" of "je moet
+            je niet zo aanstellen".
+          </li>
+          <li>
+            <strong>Ongelijke behandeling zonder uitleg:</strong> Je wordt afgewezen
+            voor een baan of huis, terwijl anderen met vergelijkbare kwalificaties
+            wel worden aangenomen/toegelaten.
+          </li>
+          <li>
+            <strong>Timing van beslissingen:</strong> Je wordt ontslagen kort nadat
+            je uit de kast komt, zonder duidelijke reden.
+          </li>
+          <li>
+            <strong>Patroonmatig gedrag:</strong> Getuigenissen van anderen die soortgelijke
+            behandeling hebben ervaren.
+          </li>
+          <li>
+            <strong>Statistische gegevens:</strong> Cijfers die aantonen dat een bepaalde
+            groep systematisch wordt benadeeld (bijv. nul LHBTIQ+ werknemers in een
+            grote organisatie).
+          </li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Hoe sterk moeten je aanwijzingen zijn?
+        </h3>
+        <p>
+          De drempel ligt <strong>laag</strong>. Je hoeft geen waterdicht bewijs
+          te leveren. Het College voor de Rechten van de Mens en rechtbanken
+          kijken naar alle omstandigheden samen. Als het <em
+            >redelijkerwijs mogelijk</em
+          > is dat discriminatie heeft plaatsgevonden, is dat vaak voldoende.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <strong>Voorbeeld uit rechtspraak:</strong> In een zaak bij een uitgaansgelegenheid
+          werd een bezoeker geweigerd. Hij voerde aan dat dit te maken had met zijn
+          afkomst, omdat de portier had gezegd "we hebben al genoeg van jullie binnen".
+          Het College oordeelde dat dit voldoende aannemelijk maakte dat discriminatie
+          een rol speelde. De uitgaansgelegenheid moest vervolgens bewijzen dat dit
+          niet zo was.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. Wat moet de gedaagde bewijzen? -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat moet de gedaagde bewijzen? (Stap 2)</h2>
+
+        <p>
+          Als jij voldoende aannemelijk hebt gemaakt dat discriminatie heeft
+          plaatsgevonden, moet de gedaagde partij (werkgever, verhuurder,
+          winkel, etc.) bewijzen dat er <strong>geen</strong> sprake was van discriminatie.
+        </p>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Wat kan de gedaagde aanvoeren?
+        </h3>
+        <ol>
+          <li>
+            <strong>Alternatieve verklaring:</strong> De gedaagde moet een <em
+              >objectieve, niet-discriminatoire</em
+            > reden geven voor de beslissing. Bijvoorbeeld:
+            <ul style="margin-top: 8px;">
+              <li>
+                "We hebben iemand met meer ervaring aangenomen" (met bewijs van
+                die ervaring).
+              </li>
+              <li>
+                "De sollicitant voldeed niet aan de functie-eisen" (met
+                onderbouwing).
+              </li>
+              <li>
+                "Het ontslag was om financiële redenen" (met bewijs van
+                reorganisatie).
+              </li>
+            </ul>
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Objectieve rechtvaardiging:</strong> In sommige gevallen kan indirect
+            onderscheid gerechtvaardigd zijn als er een <strong
+              >legitiem doel</strong
+            > is en de middelen <strong>proportioneel</strong> zijn. Dit is een hoge
+            drempel.
+          </li>
+        </ol>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          Wat is niet genoeg?
+        </h3>
+        <ul>
+          <li>
+            <strong>Vage ontkenning:</strong> "We discrimineren niet" zonder nadere
+            toelichting is onvoldoende.
+          </li>
+          <li>
+            <strong>Subjectieve oordelen:</strong> "Het klikte niet" of "we hadden
+            een beter gevoel bij iemand anders" zonder objectieve criteria is zwak.
+          </li>
+          <li>
+            <strong>Achteraf verzonnen redenen:</strong> Als een werkgever eerst zegt
+            dat er geen budget is, en later zegt dat de functie niet meer bestaat,
+            is dat verdacht.
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          <strong>Voorbeeld uit rechtspraak:</strong> Een werkgever beweerde dat een
+          werknemer was ontslagen wegens "reorganisatie". Maar de functie werd kort
+          daarna opnieuw ingevuld, en het ontslag kwam direct na de coming-out van
+          de werknemer. Het College oordeelde dat de werkgever niet had bewezen dat
+          discriminatie geen rol speelde.
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. Praktische bewijsverzameling -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Praktische bewijsverzameling</h2>
+
+        <p>
+          Om discriminatie aannemelijk te maken, is het belangrijk om <strong
+            >bewijs</strong
+          > te verzamelen. Hoe meer bewijs je hebt, hoe sterker je zaak.
+        </p>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          ✓ Documenten bewaren
+        </h3>
+        <ul>
+          <li>
+            <strong>Schriftelijke communicatie:</strong> E-mails, WhatsApp-berichten,
+            brieven waarin discriminatoire uitspraken staan of waarin beslissingen
+            worden genomen.
+          </li>
+          <li>
+            <strong>Contracten en arbeidsvoorwaarden:</strong> Bewijs van je kwalificaties,
+            functie-eisen, en arbeidsovereenkomst.
+          </li>
+          <li>
+            <strong>Ontslagbrief of afwijzingsbrief:</strong> Documenten waarin staat
+            waarom je werd afgewezen of ontslagen.
+          </li>
+          <li>
+            <strong>Beoordelingen en functioneringsgesprekken:</strong> Bewijs van
+            positieve prestaties voorafgaand aan negatieve beslissingen.
+          </li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          ✓ Getuigenverklaringen
+        </h3>
+        <ul>
+          <li>
+            <strong>Collega's of vrienden:</strong> Mensen die discriminatoire uitspraken
+            of gedrag hebben gehoord of gezien.
+          </li>
+          <li>
+            <strong>Anderen met soortgelijke ervaringen:</strong> Getuigenissen van
+            anderen die door dezelfde persoon of organisatie zijn gediscrimineerd.
+          </li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          ✓ Tijdlijn bijhouden
+        </h3>
+        <p>
+          Houd een <strong>chronologisch overzicht</strong> bij van incidenten:
+        </p>
+        <ul>
+          <li>Wanneer kwam je out of werd je identiteit bekend?</li>
+          <li>Wanneer begonnen negatieve opmerkingen of behandeling?</li>
+          <li>Wanneer werd je ontslagen, afgewezen, of anders behandeld?</li>
+        </ul>
+        <p style="margin-top: 12px;">
+          Een duidelijke tijdlijn helpt om een <strong>causaal verband</strong> aan
+          te tonen tussen je identiteit en de negatieve behandeling.
+        </p>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          ✓ Vergelijkingsmateriaal
+        </h3>
+        <ul>
+          <li>
+            <strong>Andere sollicitanten/werknemers:</strong> Informatie over hoe
+            anderen met vergelijkbare kwalificaties werden behandeld.
+          </li>
+          <li>
+            <strong>Statistieken:</strong> Gegevens over diversiteit binnen de organisatie
+            (bijv. geen enkele openlijk LHBTIQ+ werknemer).
+          </li>
+        </ul>
+
+        <h3 style="font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px;">
+          ⚠️ Let op bij bewijsverzameling
+        </h3>
+        <ul>
+          <li>
+            <strong>Privacy:</strong> Je mag geen onrechtmatige opnames maken of gegevens
+            stelen. Check altijd wat legaal is.
+          </li>
+          <li>
+            <strong>Timing:</strong> Verzamel bewijs <em>zo snel mogelijk</em> na
+            incidenten. Herinneringen vervagen, en documenten kunnen verdwijnen.
+          </li>
+          <li>
+            <strong>Bewaar alles veilig:</strong> Maak back-ups van documenten en
+            berichten op een veilige plek.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. Voorbeelden uit rechtspraak -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Voorbeelden uit rechtspraak</h2>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 10px;">
+            ✓ Voorbeeld 1: Ontslag na coming-out
+          </h3>
+          <p>
+            Een werknemer kwam uit de kast als transgender. Binnen twee maanden
+            werd ze ontslagen wegens "reorganisatie". De werkgever kon echter
+            niet aantonen dat er daadwerkelijk een reorganisatie plaatsvond —
+            haar functie werd kort daarna opnieuw ingevuld.
+          </p>
+          <p style="margin-top: 8px; font-weight: 600; color: #16a34a;">
+            Uitkomst: College oordeelde dat de werkgever niet had bewezen dat
+            discriminatie geen rol speelde. Schadevergoeding: €8,000.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 10px;">
+            ✓ Voorbeeld 2: Afwijzing sollicitatie zonder uitleg
+          </h3>
+          <p>
+            Een sollicitant werd afgewezen voor een functie zonder duidelijke
+            reden. Hij had vergelijkbare kwalificaties als andere kandidaten die
+            wel werden aangenomen. Tijdens het sollicitatiegesprek had hij
+            genoemd dat hij een partner van hetzelfde geslacht had.
+          </p>
+          <p style="margin-top: 8px; font-weight: 600; color: #16a34a;">
+            Uitkomst: College oordeelde dat het vermoeden van discriminatie
+            aannemelijk was gemaakt. De werkgever kon geen objectieve reden voor
+            afwijzing geven. Schadevergoeding: €5,000.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 10px;">
+            ✓ Voorbeeld 3: Discriminatoire uitspraken op werk
+          </h3>
+          <p>
+            Een werknemer kreeg regelmatig te horen dat hij "zich niet zo
+            vrouwelijk moest gedragen" en dat zijn collega's "het raar vonden".
+            Na klachten hierover werd hij overgeplaatst naar een functie met
+            minder verantwoordelijkheden.
+          </p>
+          <p style="margin-top: 8px; font-weight: 600; color: #16a34a;">
+            Uitkomst: De uitspraken en de overplaatsing maakten discriminatie
+            aannemelijk. De werkgever kon niet bewijzen dat de overplaatsing om
+            andere redenen was. Schadevergoeding: €10,000 + herstel in oude
+            functie.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 10px;">
+            ✗ Voorbeeld 4: Onvoldoende bewijs
+          </h3>
+          <p>
+            Een sollicitant werd afgewezen en meende dat dit te maken had met
+            zijn seksuele gerichtheid. Hij kon echter geen concrete aanwijzingen
+            geven — zijn seksuele gerichtheid was niet ter sprake gekomen, en de
+            werkgever toonde aan dat een andere kandidaat objectief beter
+            gekwalificeerd was.
+          </p>
+          <p style="margin-top: 8px; font-weight: 600; color: #ef4444;">
+            Uitkomst: College oordeelde dat discriminatie niet aannemelijk was
+            gemaakt. Klacht afgewezen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Tips voor slachtoffers -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Tips voor slachtoffers</h2>
+
+        <ol>
+          <li>
+            <strong>Verzamel bewijs direct:</strong> Zodra je discriminatie vermoedt,
+            begin met het verzamelen van documenten, berichten, en getuigenverklaringen.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Vraag om schriftelijke toelichting:</strong> Als je wordt afgewezen
+            of ontslagen, vraag dan altijd <em>schriftelijk</em> om de reden. Dit
+            kan later als bewijs dienen.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Zoek juridisch advies:</strong> Neem contact op met een gespecialiseerde
+            organisatie (zoals COC Nederland, Art.1, of Juridisch Loket) of een advocaat.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Meld je zaak bij het College:</strong> Je kunt een klacht indienen
+            bij het College voor de Rechten van de Mens. Dit is gratis en kan snel.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Wees specifiek:</strong> Vermijd vage klachten. Benoem concrete
+            incidenten, datums, en personen.
+          </li>
+          <li style="margin-top: 12px;">
+            <strong>Houd het verband helder:</strong> Laat zien dat er een <em
+              >causaal verband</em
+            > is tussen je identiteit en de negatieve behandeling.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 8. Veelgestelde vragen -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Veelgestelde vragen</h2>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Hoe sterk moet mijn bewijs zijn?
+          </h3>
+          <p>
+            Je hoeft geen waterdicht bewijs te leveren. Het is voldoende als je
+            aannemelijk maakt dat discriminatie een rol <em>kan</em> hebben gespeeld.
+            Denk aan: directe uitspraken, timing van beslissingen, ongelijke behandeling
+            zonder uitleg, of getuigenverklaringen.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Wat als de gedaagde een alternatieve verklaring geeft?
+          </h3>
+          <p>
+            De gedaagde moet <em>bewijzen</em> dat de alternatieve verklaring waar
+            is. Een vage uitleg ("het klikte niet") is vaak niet voldoende. Ze moeten
+            objectieve redenen geven die niet aan discriminatie gerelateerd zijn.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Geldt omkering bewijslast ook bij strafrecht?
+          </h3>
+          <p>
+            Nee. Bij strafrechtelijke discriminatiezaken (artikel 137c t/m 137g
+            Sr) geldt de normale bewijsregel: de officier van justitie moet
+            "beyond reasonable doubt" bewijzen dat discriminatie heeft
+            plaatsgevonden.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Wat als ik geen directe uitspraken heb?
+          </h3>
+          <p>
+            Dat is geen probleem. Discriminatie is vaak subtiel. Je kunt ook
+            andere aanwijzingen gebruiken: timing van beslissingen, ongelijke
+            behandeling, patroonmatig gedrag, statistische gegevens, of
+            getuigenverklaringen.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Hoe lang duurt een discriminatiezaak?
+          </h3>
+          <p>
+            Bij het College voor de Rechten van de Mens: gemiddeld 3-6 maanden.
+            Bij de rechtbank: 6-18 maanden voor een vonnis. Als je snel
+            duidelijkheid wilt, is het College vaak de snelste route.
+          </p>
+        </div>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 8px;">
+            Kan ik schadevergoeding krijgen?
+          </h3>
+          <p>
+            Ja. Als discriminatie wordt vastgesteld, kun je schadevergoeding
+            claimen voor materiële schade (inkomstenverlies) en immateriële
+            schade (psychisch leed). Bedragen variëren tussen €500 en €15,000+,
+            afhankelijk van de ernst en impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gerelateerde content -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde gidsen en thema's</h2>
+        <ul>
+          <li>
+            <a
+              href="/gids/awgb-complete-gids/"
+              style="text-decoration: underline;"
+            >
+              Complete gids: AWGB en LHBTIQ+ rechten
+            </a> – Alle details over de Algemene wet gelijke behandeling
+          </li>
+          <li>
+            <a
+              href="/gids/discriminatie-werk-complete-gids/"
+              style="text-decoration: underline;"
+            >
+              Discriminatie op het werk: Jouw juridische opties
+            </a> – Praktische gids voor werknemers
+          </li>
+          <li>
+            <a
+              href="/thema/discriminatie-werk/"
+              style="text-decoration: underline;"
+            >
+              Thema: Discriminatie op het werk
+            </a> – Overzichtspagina met alle relevante informatie
+          </li>
+          <li>
+            <a href="/contact/" style="text-decoration: underline;">
+              Contact & doorverwijzing
+            </a> – Hulplijnen en gespecialiseerde organisaties
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="section">
+      <div
+        style="background: transparent; border-left: 4px solid #3f08b9; padding: 16px; border-radius: 2px;"
+      >
+        <p style="margin: 0; font-size: 0.95em; color: rgba(0, 0, 0, 0.9);">
+          <strong>⚖️ Let op:</strong> Deze gids biedt juridische informatie, geen
+          persoonlijk juridisch advies. Voor individuele rechtsbijstand neem je contact
+          op met een advocaat of het <a
+            href="https://www.juridischloket.nl"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: underline; color: #3f08b9;"
+            >Juridisch Loket</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
