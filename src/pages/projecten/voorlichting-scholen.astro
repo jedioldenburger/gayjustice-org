@@ -1,0 +1,249 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Project: Voorlichting op scholen",
+  description:
+    "Project voor juridisch correcte informatie over gelijke behandeling en LHBTIQ+ rechten in het onderwijs.",
+  canonical: "/projecten/voorlichting-scholen/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projecten", url: "https://www.gayjustice.org/projecten/" },
+    {
+      name: "Voorlichting op scholen",
+      url: "https://www.gayjustice.org/projecten/voorlichting-scholen/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Project"
+    title="Voorlichting op scholen"
+    lead="Dit project bijdragen aan juridisch correcte en feitelijke informatie over gelijke behandeling en LHBTIQ+ rechten binnen het onderwijs."
+  />
+
+  <Container>
+    <div class="content">
+      <!-- Doel -->
+      <section class="section">
+        <h2>Doel van dit project</h2>
+        <p>
+          Het doel is onderwijsinstellingen en educatieve beroepskrachten
+          voorzien van betrouwbare juridische informatie over gelijke
+          behandeling, niet-discriminatie en rechten van LHBTIQ+ studenten en
+          medewerkers.
+        </p>
+        <p>
+          Dit project ondersteunt veilige, inclusieve schoolomgevingen gebaseerd
+          op juridische beginselen en mensenrechten.
+        </p>
+      </section>
+
+      <!-- Context -->
+      <section class="section">
+        <h2>Context</h2>
+        <p>
+          Onderwijsinstellingen hebben wettelijke verplichtingen rond
+          veiligheid, gelijke behandeling en het voorkomen van discriminatie.
+          LHBTIQ+ jongeren dienen dezelfde rechtsbescherming te genieten als
+          alle andere leerlingen.
+        </p>
+        <p>
+          Dit project biedt scholen, leerkrachten en ouders toegang tot
+          duidelijke, juridisch korrekte informatie—zonder ideologische inslag.
+        </p>
+      </section>
+
+      <!-- Wat we doen -->
+      <section class="section">
+        <h2>Wat we doen</h2>
+        <ul>
+          <li>
+            ontwikkellen van informatieve materialen over wettelijke
+            verplichting tot gelijke behandeling;
+          </li>
+          <li>uitleg van nationale en Europese rechtskaders voor scholen;</li>
+          <li>duiding van procedures bij vermoeden van discriminatie;</li>
+          <li>
+            verwijzing naar erkende onderwijsorganisaties en toezichthouders;
+          </li>
+          <li>
+            ondersteuning van schoolleiders bij beleidsontwikkeling rond
+            inclusie.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Wat we niet doen -->
+      <section class="section">
+        <h2>Wat we niet doen</h2>
+        <ul>
+          <li>schrijven geen verplichte lesprogramma's;</li>
+          <li>voer geen ideologische of activistische inhoud in;</li>
+          <li>geven geen directe lesuitvoering zonder erkende partners;</li>
+          <li>beheren geen individuele geval-dossiers van leerlingen.</li>
+        </ul>
+      </section>
+
+      <!-- Juridisch kader -->
+      <section class="section">
+        <h2>Juridisch kader</h2>
+        <p>Dit project baseert zich op:</p>
+        <ul>
+          <li>Algemene Wet Gelijke Behandeling (AWGB);</li>
+          <li>Onderwijswet en -regelgeving;</li>
+          <li>Grondwet – gelijkheidsbeginsel;</li>
+          <li>VN-Kinderrechtenverdrag;</li>
+          <li>Europees Verdrag voor de Rechten van de Mens (EVRM).</li>
+        </ul>
+      </section>
+
+      <!-- Relatie tot GayJustice.org -->
+      <section class="section">
+        <h2>Relatie tot GayJustice.org</h2>
+        <p>
+          Dit project is onderdeel van GayJustice.org, een publiek juridisch
+          informatieplatform van Stichting Vrijheid & Gelijkheid (STVG).
+        </p>
+        <p>
+          We bieden juridische informatie en educatieve ondersteuning, geen
+          juridisch advies of rechtsbijstand.
+        </p>
+      </section>
+
+      <!-- Transparantie -->
+      <section class="section surface">
+        <h2>Transparantie</h2>
+        <p>
+          Dit project opereert gebaseerd op mensenrechtenprincipes en
+          onderwijswetgeving. Zie onze <a href="/transparantie"
+            >transparantiepagina</a
+          > voor meer informatie.
+        </p>
+      </section>
+
+      <!-- Gerelateerde content -->
+      <section class="section">
+        <h2>Gerelateerde thema's & projecten</h2>
+        <ul>
+          <li><a href="/thema/mensenrechten/">Thema: Mensenrechten</a></li>
+          <li><a href="/thema/gay-rechten/">Thema: Gay rights & LGBTIQ+</a></li>
+          <li>
+            <a href="/thema/discriminatie-werk/"
+              >Thema: Discriminatie op het werk</a>
+          </li>
+          <li>
+            <a href="/projecten/dakloze-homoseksuele-jongeren/"
+              >Project: Dakloze homoseksuele jongeren</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="surface" style="padding: 22px;">
+          <h3>Voor scholen en educateurs</h3>
+          <p>
+            Wil uw school samenwerken of meer informatie ontvangen? Neem contact
+            op.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/contact">Contact</a>
+            <a class="btn btn-outline" href="/missie">Missie</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .surface {
+    background: rgba(63, 8, 185, 0.02);
+    border-left: 4px solid #3f08b9;
+    border-radius: 2px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3f08b9;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #3f08b9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid #3f08b9;
+  }
+
+  .btn-primary:hover {
+    background: rgba(63, 8, 185, 0.05);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-outline:hover {
+    border-color: #3f08b9;
+  }
+</style>

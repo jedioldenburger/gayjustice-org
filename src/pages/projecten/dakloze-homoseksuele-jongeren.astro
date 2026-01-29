@@ -1,0 +1,250 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Project: Dakloze homoseksuele jongeren",
+  description:
+    "Project voor informatie en rechtsbescherming van dakloze homoseksuele jongeren, signalering en doorverwijzing.",
+  canonical: "/projecten/dakloze-homoseksuele-jongeren/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projecten", url: "https://www.gayjustice.org/projecten/" },
+    {
+      name: "Dakloze homoseksuele jongeren",
+      url: "https://www.gayjustice.org/projecten/dakloze-homoseksuele-jongeren/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Project"
+    title="Dakloze homoseksuele jongeren"
+    lead="Dit project biedt informatie en signalering rond rechtsbescherming van dakloze homoseksuele jongeren."
+  />
+
+  <Container>
+    <div class="content">
+      <!-- Doel -->
+      <section class="section">
+        <h2>Doel van dit project</h2>
+        <p>
+          Dit project beoogt het verbeteren van toegang tot informatie en
+          ondersteuning voor dakloze (of dakloos riskante) homoseksuele
+          jongeren, en het signaleren van juridische en maatschappelijke
+          knelpunten.
+        </p>
+        <p>
+          Het project erkent dat dakloosheid LHBTIQ+ jongeren onevenredig raakt,
+          en dat rechtsbescherming en menselijke waardigheid essentieel zijn.
+        </p>
+      </section>
+
+      <!-- Context -->
+      <section class="section">
+        <h2>Context</h2>
+        <p>
+          Homoseksuele en transgender jongeren hebben overproportioneel hoog
+          risico op dakloosheid—vaak door huiselijk geweld, afstoting door
+          familie, schooluitval, of ontbreken van adequate jeugdhulp.
+        </p>
+        <p>
+          Dakloze jongeren hebben recht op bescherming onder jeugdzorgwetgeving,
+          sociale bijstand en gelijke behandeling. Dit project faciliteert
+          informatie en doorverwijzing naar erkende hulporganisaties en
+          toezichthouders.
+        </p>
+      </section>
+
+      <!-- Wat we doen -->
+      <section class="section">
+        <h2>Wat we doen</h2>
+        <ul>
+          <li>
+            uitleg over juridische rechten van dakloze jongeren (jeugdzorg,
+            bijstand, huisvesting);
+          </li>
+          <li>
+            informatie over gelijke behandeling onafhankelijk van seksuele
+            oriëntatie;
+          </li>
+          <li>
+            doorverwijzing naar hulporganisaties, opvangcentra en
+            maatschappelijke diensten;
+          </li>
+          <li>
+            signalering van structurele knelpunten op basis van publieke
+            bronnen;
+          </li>
+          <li>samenwerking met partners in hulpverlening en onderzoek.</li>
+        </ul>
+      </section>
+
+      <!-- Wat we niet doen -->
+      <section class="section">
+        <h2>Wat we niet doen</h2>
+        <ul>
+          <li>bieden geen zelf opvang, huisvesting of crisisinterventie;</li>
+          <li>behandelen geen individuele dossiers;</li>
+          <li>voeren geen jeugdzakenprocedures;</li>
+          <li>geven geen medische of psychologische ondersteuning.</li>
+        </ul>
+      </section>
+
+      <!-- Juridisch kader -->
+      <section class="section">
+        <h2>Juridisch kader</h2>
+        <p>Dit project baseert zich op:</p>
+        <ul>
+          <li>Jeugdwet en daarvan afgeleide regelgeving;</li>
+          <li>Algemene Wet Gelijke Behandeling (AWGB);</li>
+          <li>Grondwet – gelijkheidsbeginsel en zorgplicht;</li>
+          <li>VN-Kinderrechtenverdrag en jongeren-mensenrechten;</li>
+          <li>Europees Verdrag voor de Rechten van de Mens (EVRM).</li>
+        </ul>
+      </section>
+
+      <!-- Relatie tot GayJustice.org -->
+      <section class="section">
+        <h2>Relatie tot GayJustice.org</h2>
+        <p>
+          Dit project is onderdeel van GayJustice.org, een publiek juridisch
+          informatieplatform van Stichting Vrijheid & Gelijkheid (STVG).
+        </p>
+        <p>
+          GayJustice.org biedt informatie en verwijzingen, geen directe
+          hulpverlening of juridisch advies.
+        </p>
+      </section>
+
+      <!-- Transparantie -->
+      <section class="section surface">
+        <h2>Transparantie</h2>
+        <p>
+          Dit project opereert gericht op rechtsbescherming en mensenrechten.
+          Zie onze <a href="/transparantie">transparantiepagina</a> voor bestuuring
+          en financieringskaders.
+        </p>
+      </section>
+
+      <!-- Gerelateerde content -->
+      <section class="section">
+        <h2>Gerelateerde thema's & projecten</h2>
+        <ul>
+          <li><a href="/thema/mensenrechten/">Thema: Mensenrechten</a></li>
+          <li><a href="/thema/gay-rechten/">Thema: Gay rights & LGBTIQ+</a></li>
+          <li>
+            <a href="/thema/gezondheidszorg/"
+              >Thema: Gezondheidszorg & transgender</a>
+          </li>
+          <li>
+            <a href="/projecten/voorlichting-scholen/"
+              >Project: Voorlichting op scholen</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="surface" style="padding: 22px;">
+          <h3>Voor jeugdhulp en hulpverleners</h3>
+          <p>Wil je samenwerken of informatie delen? Neem contact op.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/contact">Contact</a>
+            <a class="btn btn-outline" href="/missie">Missie</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .surface {
+    background: rgba(63, 8, 185, 0.02);
+    border-left: 4px solid #3f08b9;
+    border-radius: 2px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3f08b9;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #3f08b9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid #3f08b9;
+  }
+
+  .btn-primary:hover {
+    background: rgba(63, 8, 185, 0.05);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-outline:hover {
+    border-color: #3f08b9;
+  }
+</style>

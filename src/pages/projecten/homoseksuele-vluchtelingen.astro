@@ -1,0 +1,242 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Project: Homoseksuele vluchtelingen",
+  description:
+    "Project voor toegankelijke informatie over rechtsbescherming van homoseksuele vluchtelingen en asielrecht.",
+  canonical: "/projecten/homoseksuele-vluchtelingen/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projecten", url: "https://www.gayjustice.org/projecten/" },
+    {
+      name: "Homoseksuele vluchtelingen",
+      url: "https://www.gayjustice.org/projecten/homoseksuele-vluchtelingen/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Project"
+    title="Homoseksuele vluchtelingen"
+    lead="Dit project biedt toegankelijke informatie over rechtsbescherming van homoseksuele vluchtelingen en asielrecht."
+  />
+
+  <Container>
+    <div class="content">
+      <!-- Doel -->
+      <section class="section">
+        <h2>Doel van dit project</h2>
+        <p>
+          Dit project beoogt toegankelijke, juridisch correcte informatie bieden
+          over rechtsbescherming van homoseksuele vluchtelingen en asielrecht.
+        </p>
+        <p>
+          Het erkent dat seksuele oriëntatie en genderidentiteit erkende
+          asielgronden zijn, en dat procedures complex en juridisch zwaar zijn
+          voor personen zonder juridische ondersteuning.
+        </p>
+      </section>
+
+      <!-- Context -->
+      <section class="section">
+        <h2>Context</h2>
+        <p>
+          In meer dan 60 landen, inclusief veel landen waaruit migratie
+          plaatsvindt, worden homoseksuele handelen gekriminaliseerd of zijn
+          LHBTIQ+ personen onderwerp van wettelijke discriminatie en geweld.
+        </p>
+        <p>
+          Nederland erkent vervolgingsgevaar op grond van seksuele oriëntatie en
+          genderidentiteit als asielgrond. Dit project helpt homoseksuele
+          vluchtelingen en asielzoekers de juridische routes en procedures te
+          begrijpen.
+        </p>
+      </section>
+
+      <!-- Wat we doen -->
+      <section class="section">
+        <h2>Wat we doen</h2>
+        <ul>
+          <li>uitleg van Nederlands en internationaal asielrecht;</li>
+          <li>duiding van procedures bij asielinstelling (IND);</li>
+          <li>uitleg over wetgeving rond vervolging en persecutie;</li>
+          <li>analyse van relevante rechtspraak en EHRM-uitspraken;</li>
+          <li>
+            verwijzing naar gespecialiseerde juridische- en hulporganisaties;
+          </li>
+          <li>informatie over internationale beschermingsmechanismen.</li>
+        </ul>
+      </section>
+
+      <!-- Wat we niet doen -->
+      <section class="section">
+        <h2>Wat we niet doen</h2>
+        <ul>
+          <li>begeleiden geen asielaanvragen;</li>
+          <li>geven geen juridisch advies voor individuele zaken;</li>
+          <li>voeren geen procedures;</li>
+          <li>bieden geen medische of psychologische ondersteuning.</li>
+        </ul>
+      </section>
+
+      <!-- Juridisch kader -->
+      <section class="section">
+        <h2>Juridisch kader</h2>
+        <p>Dit project baseert zich op:</p>
+        <ul>
+          <li>VN-Vluchtelingenverdrag (artikel 1A(2));</li>
+          <li>
+            Europees Verdrag voor de Rechten van de Mens (EVRM, artikelen 2, 3,
+            8);
+          </li>
+          <li>EU-kwalificatierichtlijn;</li>
+          <li>Nederlandse Vreemdelingenwet en asielregelgeving;</li>
+          <li>EHRM-jurisprudentie op vervolging en seksuele oriëntatie.</li>
+        </ul>
+      </section>
+
+      <!-- Relatie tot GayJustice.org -->
+      <section class="section">
+        <h2>Relatie tot GayJustice.org</h2>
+        <p>
+          Dit project is onderdeel van GayJustice.org, een publiek juridisch
+          informatieplatform van Stichting Vrijheid & Gelijkheid (STVG).
+        </p>
+        <p>
+          GayJustice.org biedt informatie en verwijzingen, geen juridisch advies
+          of individuele rechtsbijstand.
+        </p>
+      </section>
+
+      <!-- Transparantie -->
+      <section class="section surface">
+        <h2>Transparantie</h2>
+        <p>
+          Dit project opereert gericht op rechtsbescherming van vluchtelingen en
+          asielzoekers. Zie onze <a href="/transparantie">transparantiepagina</a
+          > voor bestuuring en programmakaders.
+        </p>
+      </section>
+
+      <!-- Gerelateerde content -->
+      <section class="section">
+        <h2>Gerelateerde thema's & projecten</h2>
+        <ul>
+          <li><a href="/thema/mensenrechten/">Thema: Mensenrechten</a></li>
+          <li><a href="/thema/gay-rechten/">Thema: Gay rights & LGBTIQ+</a></li>
+          <li>
+            <a href="/thema/politieke-verantwoordelijkheid/"
+              >Thema: Politieke verantwoordelijkheid</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="surface" style="padding: 22px;">
+          <h3>Voor vluchtelingen en hulpverleners</h3>
+          <p>
+            Wil je samenwerken, informatie delen of vragen stellen? Neem contact
+            op.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/contact">Contact</a>
+            <a class="btn btn-outline" href="/missie">Missie</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .surface {
+    background: rgba(63, 8, 185, 0.02);
+    border-left: 4px solid #3f08b9;
+    border-radius: 2px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3f08b9;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #3f08b9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid #3f08b9;
+  }
+
+  .btn-primary:hover {
+    background: rgba(63, 8, 185, 0.05);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-outline:hover {
+    border-color: #3f08b9;
+  }
+</style>
