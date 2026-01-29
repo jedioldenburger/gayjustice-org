@@ -6,6 +6,7 @@ import type { SeoInput } from "@/utils/seo";
 
 const { seo } = Astro.props as { seo?: SeoInput };
 const htmlLang = seo?.lang || SITE.defaultLocale;
+const isAdminPage = Astro.url.pathname.startsWith("/admin");
 ---
 
 <!doctype html>
@@ -31,10 +32,14 @@ const htmlLang = seo?.lang || SITE.defaultLocale;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Netlify Identity widget for Decap CMS authentication -->
-    <script
-      src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"
-    ></script>
+    {isAdminPage && (
+      <>
+        <!-- Netlify Identity widget for Decap CMS authentication (admin only) -->
+        <script
+          src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"
+        ></script>
+      </>
+    )}
 
     <SEO {...seo ?? {}} />
   </head>
