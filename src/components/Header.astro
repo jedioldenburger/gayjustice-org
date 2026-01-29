@@ -446,20 +446,47 @@ const isGroupActive = (submenu: any[] | undefined) => {
         });
       }
 
-      // Desktop dropdown groups (hover)
+      // Desktop dropdown groups (hover with delay)
       const desktopGroups = document.querySelectorAll(".nav-group");
+      const closeDelays = new Map();
+
       desktopGroups.forEach((group) => {
         const trigger = group.querySelector(".nav-group-trigger");
         if (!trigger) return;
 
-        group.addEventListener("mouseenter", () => {
+        const openMenu = () => {
+          // Clear any pending close
+          if (closeDelays.has(group)) {
+            clearTimeout(closeDelays.get(group));
+            closeDelays.delete(group);
+          }
           trigger.setAttribute("aria-expanded", "true");
           group.setAttribute("aria-expanded", "true");
-        });
+        };
 
-        group.addEventListener("mouseleave", () => {
+        const closeMenu = () => {
           trigger.setAttribute("aria-expanded", "false");
           group.setAttribute("aria-expanded", "false");
+        };
+
+        const scheduleClose = () => {
+          // Small delay before closing to allow mouse to reach submenu
+          const timeoutId = setTimeout(closeMenu, 100);
+          closeDelays.set(group, timeoutId);
+        };
+
+        group.addEventListener("mouseenter", openMenu);
+        group.addEventListener("mouseleave", scheduleClose);
+
+        // Also support click for touch devices in desktop view
+        trigger.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isOpen = trigger.getAttribute("aria-expanded") === "true";
+          if (isOpen) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
         });
       });
 
@@ -650,8 +677,20 @@ const isGroupActive = (submenu: any[] | undefined) => {
     padding: 0.5rem 0;
     min-width: 220px;
     z-index: 100;
-    margin-top: 0.5rem;
+    margin-top: 0;
+    padding-top: 0.75rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Invisible bridge to prevent menu from closing when moving mouse to submenu */
+  .nav-submenu::before {
+    content: "";
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+    background: transparent;
   }
 
   .nav-group[aria-expanded="true"] .nav-submenu,
