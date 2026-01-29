@@ -231,14 +231,16 @@ small {
 }
 
 .btn-primary {
-	background: linear-gradient(135deg, #4c1d95, #6d28d9);
-	color: var(--brand-ink);
-	box-shadow: 0 10px 22px rgba(79, 70, 229, 0.18);
+	background: transparent;
+	color: #3f08b9;
+	border-color: #3f08b9;
+	box-shadow: none;
 }
 
 .btn-primary:hover {
-	filter: brightness(1.02);
-	box-shadow: 0 14px 28px rgba(79, 70, 229, 0.22);
+	background: rgba(63, 8, 185, 0.05);
+	border-color: #3f08b9;
+	box-shadow: 0 4px 12px rgba(63, 8, 185, 0.15);
 }
 
 .btn-join {
