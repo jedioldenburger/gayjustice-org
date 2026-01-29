@@ -1,0 +1,1000 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Discriminatie op het werk: Complete gids — GayJustice.org",
+  description:
+    "Alles over discriminatie op het werk: wat zijn je rechten als LHBTIQ+ werknemer, hoe meld je discriminatie, welke procedures bestaan, en wat zijn je kansen op schadevergoeding? Met praktijkvoorbeelden en stapsgewijze uitleg.",
+  canonical: "/gids/discriminatie-werk-complete-gids/",
+  lang: "nl-NL",
+  pageType: "WebPage",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/gids/discriminatie-werk-complete-gids/",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/guides/workplace-discrimination/",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Juridische gidsen", url: "https://www.gayjustice.org/gids/" },
+    {
+      name: "Discriminatie op het werk",
+      url: "https://www.gayjustice.org/gids/discriminatie-werk-complete-gids/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Complete juridische gids"
+    title="Discriminatie op het werk: Jouw juridische opties"
+    lead="Wat zijn je rechten als LHBTIQ+ werknemer, hoe meld je discriminatie, welke procedures bestaan, en hoe kom je tot rechtsherstel? Complete uitleg met praktijkvoorbeelden en stapsgewijze procedures."
+  />
+
+  <Container>
+    <!-- Disclaimer -->
+    <section class="section">
+      <div
+        style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 16px; margin-bottom: 24px; border-radius: 2px;"
+      >
+        <p style="margin: 0; font-size: 0.95em;">
+          <strong>⚖️ Let op:</strong> Deze gids biedt juridische informatie, geen
+          individueel juridisch advies. Voor persoonlijke rechtsbijstand raadpleeg
+          je een advocaat of het <a
+            href="https://www.juridischloket.nl"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: underline; color: inherit;"
+            >Juridisch Loket</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <!-- Inhoudsopgave -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Inhoudsopgave</h2>
+        <nav aria-label="Gids navigatie">
+          <ol style="line-height: 1.8;">
+            <li><a href="#wat-is">Wat is discriminatie op het werk?</a></li>
+            <li><a href="#wie-beschermd">Wie wordt beschermd?</a></li>
+            <li><a href="#wanneer">Wanneer gebeurt discriminatie?</a></li>
+            <li><a href="#bewijs">Bewijs verzamelen</a></li>
+            <li><a href="#procedures">Welke procedures bestaan?</a></li>
+            <li><a href="#tijdlijn">Hoe lang duurt het?</a></li>
+            <li>
+              <a href="#schadevergoeding">Schadevergoeding en rechtsherstel</a>
+            </li>
+            <li><a href="#voorbeelden">Praktijkvoorbeelden</a></li>
+            <li>
+              <a href="#volgende-stappen">Wat te doen bij discriminatie</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 1. Wat is discriminatie op het werk? -->
+    <section class="section" id="wat-is">
+      <div class="surface" style="padding: 22px;">
+        <h2>1. Wat is discriminatie op het werk?</h2>
+        <p>
+          Discriminatie op het werk is elke vorm van <strong
+            >ongelijke behandeling</strong
+          > op basis van iemands seksuele gerichtheid, genderidentiteit of genderexpressie.
+          Dit is <strong>verboden</strong> onder de <a
+            href="/gids/awgb-complete-gids/"
+            style="text-decoration: underline;"
+            >Algemene Wet Gelijke Behandeling (AWGB)</a
+          >, artikel 5 lid 1.
+        </p>
+
+        <h3>Direct discriminatie</h3>
+        <p>
+          <strong>Directe discriminatie</strong> betekent dat je expliciet wordt benadeeld
+          vanwege je LHBTIQ+ identiteit. Voorbeelden:
+        </p>
+        <ul>
+          <li>
+            "We nemen geen homoseksuele mensen aan" (weigering sollicitatie)
+          </li>
+          <li>
+            Je wordt ontslagen na je coming-out, met als reden "niet passend bij
+            onze werksfeer"
+          </li>
+          <li>
+            Geen promotie krijgen omdat je transgender bent: "Dat past niet bij
+            een leidinggevende functie"
+          </li>
+          <li>
+            Lagere salarisverhoging dan collega's met soortgelijke prestaties,
+            na het bekend worden van je relatie
+          </li>
+        </ul>
+
+        <h3>Indirect discriminatie</h3>
+        <p>
+          <strong>Indirecte discriminatie</strong> gebeurt wanneer een schijnbaar
+          neutrale regel of werkwijze LHBTIQ+ werknemers onevenredig benadeelt. Voorbeelden:
+        </p>
+        <ul>
+          <li>
+            Verplichte deelname aan religieuze bijeenkomsten die
+            homoseksualiteit veroordelen
+          </li>
+          <li>
+            Dresscode die transgender personen dwingt tot kleding van hun
+            geboortegeslacht
+          </li>
+          <li>
+            Partnerbonussen alleen voor gehuwde heteroseksuele koppels, niet
+            voor geregistreerde partners
+          </li>
+          <li>
+            Werken in organisaties met uitzonderingsgrond (religieuze functie):
+            zie hieronder bij uitzonderingen
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          <strong>Belangrijk:</strong> Indirect discriminatie kan alleen gerechtvaardigd
+          worden als er een <strong>objectieve reden</strong> is en de maatregel
+          <strong>noodzakelijk en proportioneel</strong> is. In de praktijk lukt dit
+          werkgevers zelden.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Wie wordt beschermd? -->
+    <section class="section" id="wie-beschermd">
+      <div class="surface" style="padding: 22px;">
+        <h2>2. Wie wordt beschermd?</h2>
+        <p>De AWGB beschermt alle werknemers tegen discriminatie, inclusief:</p>
+        <ul>
+          <li>
+            <strong>LHBTIQ+ werknemers</strong> (ongeacht of ze open zijn over hun
+            geaardheid)
+          </li>
+          <li>
+            <strong>Sollicitanten</strong> die worden geweigerd vanwege vermoede geaardheid
+          </li>
+          <li>
+            <strong>Stagiaires, zzp'ers, en freelancers</strong> in sommige gevallen
+            (afhankelijk van de arbeidsrelatie)
+          </li>
+          <li>
+            <strong
+              >Werknemers die gediscrimineerd worden door associatie</strong
+            >
+            (bijv. omdat hun partner LHBTIQ+ is)
+          </li>
+          <li>
+            <strong>Werknemers die worden gediscrimineerd op vermoeden</strong> (zelfs
+            als dit vermoeden onjuist is)
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          Je hoeft <strong>niet open te zijn</strong> over je geaardheid om beschermd
+          te worden. Ook discriminatie op basis van <strong>vermoeden</strong> valt
+          onder de AWGB.
+        </p>
+
+        <div
+          style="background: rgba(11, 15, 20, 0.05); border-left: 4px solid rgba(11, 15, 20, 0.1); padding: 14px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>💡 Let op:</strong> Werkgevers mogen <strong>niet</strong> vragen
+            naar je seksuele gerichtheid tijdens sollicitatiegesprekken. Dergelijke
+            vragen zijn een mogelijke aanwijzing voor discriminatie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Wanneer gebeurt discriminatie? -->
+    <section class="section" id="wanneer">
+      <div class="surface" style="padding: 22px;">
+        <h2>3. Wanneer gebeurt discriminatie?</h2>
+        <p>
+          Discriminatie op het werk kan plaatsvinden in alle fasen van de
+          arbeidsrelatie:
+        </p>
+
+        <h3>Bij werving en selectie</h3>
+        <ul>
+          <li>
+            Weigering van sollicitatie na coming-out in gesprek of via social
+            media
+          </li>
+          <li>
+            Vragen over seksuele gerichtheid, partnerrelaties, of
+            "gezinssituatie" gericht op LHBTIQ+ status
+          </li>
+          <li>
+            Afwijzing met redenen als "niet passend bij onze bedrijfscultuur"
+            terwijl je wel gekwalificeerd bent
+          </li>
+          <li>
+            Vacatureteksten met discriminerende taal (zeer zeldzaam, maar komt
+            voor)
+          </li>
+        </ul>
+
+        <h3>Tijdens het dienstverband</h3>
+        <ul>
+          <li>
+            <strong>Intimidatie en beledigingen:</strong> Homofobe, bifobe of transfobe
+            opmerkingen van collega's of leidinggevenden
+          </li>
+          <li>
+            <strong>Uitsluiting:</strong> Niet uitgenodigd worden voor teamuitjes,
+            sociale activiteiten, of informele overleggen
+          </li>
+          <li>
+            <strong>Benadeling bij arbeidsvoorwaarden:</strong> Slechtere bonussen,
+            minder verlof, lagere salarisverhoging dan collega's
+          </li>
+          <li>
+            <strong>Geen doorgroeimogelijkheden:</strong> Promoties worden consequent
+            aan je voorbij gegaan
+          </li>
+          <li>
+            <strong>Ongewenste aandacht:</strong> Indiscrete vragen over je privéleven,
+            relaties, of medische transitie
+          </li>
+          <li>
+            <strong>Gedwongen "terug in de kast":</strong> Werkgever weigert dat je
+            open bent over je geaardheid naar klanten of collega's
+          </li>
+        </ul>
+
+        <h3>Bij ontslag</h3>
+        <ul>
+          <li>
+            Ontslag kort na coming-out, met voorwendsel ("reorganisatie",
+            "functioneren")
+          </li>
+          <li>
+            Ontslag na klacht over discriminatie op het werk (victimisatie)
+          </li>
+          <li>
+            Ontslag tijdens medische transitie met als reden "impact op team"
+          </li>
+          <li>
+            Constructief ontslag: werkomstandigheden worden zo onhoudbaar
+            gemaakt dat je gedwongen wordt zelf op te stappen
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 4. Bewijs verzamelen -->
+    <section class="section" id="bewijs">
+      <div class="surface" style="padding: 22px;">
+        <h2>4. Bewijs verzamelen</h2>
+        <p>
+          Bij discriminatiezaken geldt <strong
+            >omkering van de bewijslast</strong
+          >: jij hoeft discriminatie niet te <strong>bewijzen</strong>, maar
+          alleen
+          <strong>aannemelijk te maken</strong>. Daarna moet de werkgever
+          bewijzen dat er <strong>geen</strong> sprake was van discriminatie.
+        </p>
+
+        <h3>Wat betekent "aannemelijk maken"?</h3>
+        <p>
+          Je moet voldoende feiten en omstandigheden aandragen waaruit een
+          rechter zou kunnen <strong>vermoeden</strong> dat er discriminatie plaatsvond.
+          Dit kan zijn:
+        </p>
+        <ul>
+          <li>
+            <strong>Timeline:</strong> Ontslag kort (dagen/weken) na coming-out
+          </li>
+          <li>
+            <strong>E-mails of berichten:</strong> Discriminerende opmerkingen van
+            collega's/leidinggevenden
+          </li>
+          <li>
+            <strong>Getuigenverklaringen:</strong> Collega's die discriminatie hebben
+            gezien of gehoord
+          </li>
+          <li>
+            <strong>Vergelijkbare gevallen:</strong> Heteroseksuele collega's met
+            soortgelijke prestaties krijgen wel promotie
+          </li>
+          <li>
+            <strong>Patroon:</strong> Meerdere incidenten over langere periode
+          </li>
+          <li>
+            <strong>Inconsistenties:</strong> Werkgever geeft wisselende redenen voor
+            beslissingen
+          </li>
+        </ul>
+
+        <h3>Praktische tips voor bewijsverzameling</h3>
+        <ul>
+          <li>
+            <strong>Documenteer alles:</strong> Maak notities van gesprekken, datums,
+            locaties, getuigen
+          </li>
+          <li>
+            <strong>Bewaar e-mails en berichten:</strong> Maak screenshots en back-ups
+          </li>
+          <li>
+            <strong>Performance reviews:</strong> Verzamel positieve beoordelingen
+            die tegenspreken dat je "functioneert"
+          </li>
+          <li>
+            <strong>Klacht indienen:</strong> Doe een formele klacht bij HR – de reactie
+            hierop kan bewijs zijn
+          </li>
+          <li>
+            <strong>Getuigen:</strong> Vraag collega's of ze willen getuigen (schriftelijk
+            of mondeling)
+          </li>
+          <li>
+            <strong>Juridisch advies:</strong> Raadpleeg een advocaat vroeg in het
+            proces – zij weten wat relevant is
+          </li>
+        </ul>
+
+        <div
+          style="background: rgba(11, 15, 20, 0.05); border-left: 4px solid rgba(11, 15, 20, 0.1); padding: 14px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>🔍 Voorbeeld van aannemelijk maken:</strong> Je wordt ontslagen
+            3 weken na je coming-out. Je hebt jarenlang goede beoordelingen gehad,
+            maar plotseling krijg je te horen dat je "niet functioneert". Je hebt
+            e-mails waarin collega's homofobe grappen maken. <strong
+              >Gecombineerd</strong
+            > maken deze feiten discriminatie aannemelijk – dan moet de werkgever
+            bewijzen dat het ontslag niets met je geaardheid te maken had.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Welke procedures bestaan? -->
+    <section class="section" id="procedures">
+      <div class="surface" style="padding: 22px;">
+        <h2>5. Welke procedures bestaan?</h2>
+        <p>
+          Bij discriminatie op het werk heb je <strong>drie routes</strong> naar rechtsherstel.
+          Je kunt ze ook <strong>combineren</strong> (bijv. eerst CGM, daarna rechtbank).
+        </p>
+
+        <h3>Route 1: College voor de Rechten van de Mens (CGM)</h3>
+        <p>
+          Het <a
+            href="https://mensenrechten.nl"
+            target="_blank"
+            rel="noopener"
+            style="text-decoration: underline;"
+            >College voor de Rechten van de Mens</a
+          > beoordeelt of er discriminatie heeft plaatsgevonden.
+        </p>
+        <ul>
+          <li><strong>Kosten:</strong> Gratis</li>
+          <li><strong>Advocaat nodig:</strong> Nee (wel aanbevolen)</li>
+          <li><strong>Duur:</strong> 3-6 maanden</li>
+          <li>
+            <strong>Resultaat:</strong> Niet-bindend oordeel (werkgever hoeft zich
+            er niet aan te houden)
+          </li>
+          <li>
+            <strong>Voordeel:</strong> Relatief snel, laagdrempelig, geen procesrisico
+          </li>
+          <li>
+            <strong>Nadeel:</strong> Geen schadevergoeding, geen dwingend rechtsherstel
+          </li>
+        </ul>
+        <p style="margin-top: 12px;">
+          <strong>Wanneer kiezen:</strong> Als je wilt weten of er discriminatie was,
+          een signaal wilt afgeven naar de werkgever, of als voorbereiding op een
+          rechtszaak.
+        </p>
+
+        <h3>Route 2: Civiele rechtbank (kort geding of bodemprocedure)</h3>
+        <p>
+          Bij de rechtbank vorder je schadevergoeding, rechtsherstel (bijv.
+          terugkeer in functie), of andere maatregelen.
+        </p>
+        <ul>
+          <li>
+            <strong>Kosten:</strong> Griffierecht (€300-€600) + advocaatkosten (€2.000-€10.000+)
+          </li>
+          <li><strong>Advocaat nodig:</strong> Sterk aanbevolen</li>
+          <li>
+            <strong>Duur:</strong> Kort geding 2-4 weken, bodemprocedure 6-18 maanden
+          </li>
+          <li>
+            <strong>Resultaat:</strong> Bindend vonnis met mogelijke schadevergoeding
+          </li>
+          <li>
+            <strong>Voordeel:</strong> Dwingend rechtsherstel, schadevergoeding mogelijk
+          </li>
+          <li>
+            <strong>Nadeel:</strong> Duur, tijdrovend, procesrisico (als je verliest,
+            betaal je mogelijk werkgevers kosten)
+          </li>
+        </ul>
+        <p style="margin-top: 12px;">
+          <strong>Wanneer kiezen:</strong> Als je aanzienlijke schade hebt geleden,
+          terugkeer in je baan wilt, of als CGM-oordeel niet wordt gevolgd.
+        </p>
+
+        <h3>Route 3: Strafrecht (aangifte bij politie)</h3>
+        <p>
+          Discriminatie op het werk is ook een <strong>misdrijf</strong> (artikel
+          137g Wetboek van Strafrecht). Je kunt aangifte doen bij de politie.
+        </p>
+        <ul>
+          <li><strong>Kosten:</strong> Gratis</li>
+          <li><strong>Advocaat nodig:</strong> Nee</li>
+          <li><strong>Duur:</strong> Afhankelijk van Openbaar Ministerie</li>
+          <li>
+            <strong>Resultaat:</strong> Mogelijk strafvervolging en boete of gevangenisstraf
+            voor discriminerende werkgever/collega
+          </li>
+          <li>
+            <strong>Voordeel:</strong> Geen kosten, signaal dat discriminatie een
+            misdrijf is
+          </li>
+          <li>
+            <strong>Nadeel:</strong> Geen schadevergoeding voor jou, weinig controle
+            over de procedure, lage vervolgingskans
+          </li>
+        </ul>
+        <p style="margin-top: 12px;">
+          <strong>Wanneer kiezen:</strong> Bij ernstige discriminatie of intimidatie,
+          of als aanvullende route naast civiele procedure.
+        </p>
+
+        <div
+          style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 14px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>💡 Strategie:</strong> Veel juristen adviseren om te starten met
+            een CGM-klacht (gratis, snel). Als het CGM oordeelt dat er discriminatie
+            was, is dit <strong>sterk bewijs</strong> in een latere rechtszaak.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Hoe lang duurt het? -->
+    <section class="section" id="tijdlijn">
+      <div class="surface" style="padding: 22px;">
+        <h2>6. Hoe lang duurt het?</h2>
+        <p>
+          De duur van een discriminatieprocedure varieert sterk per route en
+          situatie:
+        </p>
+
+        <table
+          style="width: 100%; border-collapse: collapse; margin: 16px 0; border: 1px solid rgba(255, 255, 255, 0.12);"
+        >
+          <thead>
+            <tr style="background: rgba(255, 255, 255, 0.05);">
+              <th
+                style="padding: 12px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Procedure</th
+              >
+              <th
+                style="padding: 12px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Gemiddelde duur</th
+              >
+              <th
+                style="padding: 12px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Opmerkingen</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >College voor de Rechten van de Mens</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >3-6 maanden</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Relatief snel, niet-bindend oordeel</td
+              >
+            </tr>
+            <tr style="background: rgba(255, 255, 255, 0.02);">
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Kort geding rechtbank</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >2-4 weken</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Voor spoedeisende zaken (bijv. ontslag terugdraaien)</td
+              >
+            </tr>
+            <tr>
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Bodemprocedure rechtbank</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >6-18 maanden</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Afhankelijk van complexiteit en drukte rechtbank</td
+              >
+            </tr>
+            <tr style="background: rgba(255, 255, 255, 0.02);">
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Hoger beroep</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >12-24 maanden extra</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Als één partij in beroep gaat tegen vonnis</td
+              >
+            </tr>
+            <tr>
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Cassatie bij Hoge Raad</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >18-36 maanden extra</td
+              >
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Alleen voor principiële rechtsvragen</td
+              >
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px;">
+          <strong>Let op:</strong> Deze tijdlijnen zijn indicatief. Sommige procedures
+          lopen sneller, andere trager. Complexe zaken met veel getuigen of technische
+          juridische vragen kunnen langer duren.
+        </p>
+
+        <h3>Waarom duurt het zo lang?</h3>
+        <ul>
+          <li>
+            <strong>Bewijsvergaring:</strong> Beide partijen moeten documenten en
+            getuigenverklaringen aanleveren
+          </li>
+          <li>
+            <strong>Mondelinge behandelingen:</strong> Meerdere zittingen nodig
+          </li>
+          <li>
+            <strong>Drukte rechtbanken:</strong> Lange wachtlijsten voor zittingen
+          </li>
+          <li>
+            <strong>Hoger beroep:</strong> Partijen kunnen in beroep gaan tegen vonnis
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 7. Schadevergoeding en rechtsherstel -->
+    <section class="section" id="schadevergoeding">
+      <div class="surface" style="padding: 22px;">
+        <h2>7. Schadevergoeding en rechtsherstel</h2>
+        <p>
+          Als een rechter oordeelt dat er discriminatie plaatsvond, kun je recht
+          hebben op verschillende vormen van rechtsherstel:
+        </p>
+
+        <h3>Schadevergoeding</h3>
+        <p>
+          De hoogte van schadevergoeding hangt af van de ernst, duur, en impact
+          van de discriminatie. Nederlandse rechtbanken kennen toe:
+        </p>
+        <ul>
+          <li>
+            <strong>Materiële schade:</strong> Inkomstenverlies door ontslag, gemiste
+            promoties, advocaatkosten
+          </li>
+          <li>
+            <strong>Immateriële schade:</strong> Voor aantasting persoonlijkheid,
+            psychische klachten, reputatieschade
+          </li>
+        </ul>
+
+        <p style="margin-top: 12px; font-weight: 600;">
+          Typische bedragen immateriële schadevergoeding:
+        </p>
+        <ul>
+          <li><strong>Lichte discriminatie:</strong> €500 - €2.000</li>
+          <li>
+            <strong>Matige discriminatie:</strong> €2.000 - €5.000 (bijv. langdurige
+            intimidatie)
+          </li>
+          <li>
+            <strong>Ernstige discriminatie:</strong> €5.000 - €10.000+ (bijv. ontslag
+            na coming-out met zware psychische gevolgen)
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          <strong>Materiële schade</strong> kan hoger uitvallen: bij ontslag kan dit
+          maanden salaris en wervingskosten omvatten.
+        </p>
+
+        <h3>Andere vormen van rechtsherstel</h3>
+        <p>Naast schadevergoeding kan een rechter ook bevelen:</p>
+        <ul>
+          <li>
+            <strong>Herstel in oude functie:</strong> Je krijgt je baan terug (bij
+            onterecht ontslag)
+          </li>
+          <li>
+            <strong>Beleidswijzigingen:</strong> Werkgever moet anti-discriminatie
+            beleid invoeren
+          </li>
+          <li>
+            <strong>Publicatie van vonnis:</strong> Werkgever moet vonnis publiceren
+            (signaalfunctie)
+          </li>
+          <li>
+            <strong>Excuses:</strong> Formeel excuus van werkgever
+          </li>
+          <li>
+            <strong>Dwangsom:</strong> Boete als werkgever vonnis niet naleeft
+          </li>
+        </ul>
+
+        <div
+          style="background: rgba(11, 15, 20, 0.05); border-left: 4px solid rgba(11, 15, 20, 0.1); padding: 14px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>🔍 Voorbeeld:</strong> In een rechtszaak krijgt een transgender
+            persoon €7.500 schadevergoeding na ontslag tijdens medische transitie.
+            De rechter oordeelt dat de werkgever naliet voldoende onderzoek te doen
+            naar de echte reden van ontslag, en dat discriminatie aannemelijk is.
+            De werkgever moet ook excuses aanbieden en het vonnis op het intranet
+            publiceren.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Praktijkvoorbeelden -->
+    <section class="section" id="voorbeelden">
+      <div class="surface" style="padding: 22px;">
+        <h2>8. Praktijkvoorbeelden</h2>
+        <p>
+          Echte rechtszaken laten zien hoe discriminatie zich manifesteert en
+          hoe rechters oordelen:
+        </p>
+
+        <h3>Voorbeeld 1: Ontslag na coming-out</h3>
+        <p>
+          <strong>Situatie:</strong> Een werknemer komt na 5 jaar dienstverband uit
+          de kast als homoseksueel. Binnen 3 weken krijgt hij te horen dat hij "niet
+          meer past bij de bedrijfscultuur" en wordt ontslagen. In de jaren ervoor
+          had hij alleen positieve beoordelingen.
+        </p>
+        <p>
+          <strong>Rechtbank:</strong> Oordeelt dat discriminatie aannemelijk is: de
+          timing, het ontbreken van eerdere klachten, en de vage ontslagreden wijzen
+          op discriminatie. De werkgever slaagt er niet in te bewijzen dat het ontslag
+          niets met de coming-out te maken had.
+        </p>
+        <p>
+          <strong>Uitkomst:</strong> €8.500 schadevergoeding + 3 maanden salaris als
+          transitievergoeding.
+        </p>
+
+        <h3>Voorbeeld 2: Weigering sollicitatie</h3>
+        <p>
+          <strong>Situatie:</strong> Een sollicitant vermeldt op zijn CV dat hij bestuurslid
+          is van een LHBTIQ+ belangenorganisatie. Na een positief eerste gesprek krijgt
+          hij te horen dat hij "helaas niet de juiste cultuurfit" is, terwijl zijn
+          kwalificaties perfect matchen.
+        </p>
+        <p>
+          <strong>College voor de Rechten van de Mens:</strong> Oordeelt dat het discriminatie
+          is. De term "cultuurfit" zonder concrete argumenten suggereert discriminatie
+          op grond van geaardheid.
+        </p>
+        <p>
+          <strong>Uitkomst:</strong> Het CGM-oordeel wordt gebruikt in een civiele
+          procedure, waarin de sollicitant €3.000 schadevergoeding krijgt.
+        </p>
+
+        <h3>Voorbeeld 3: Transgender persoon tijdens transitie</h3>
+        <p>
+          <strong>Situatie:</strong> Een transgender vrouw begint met medische transitie.
+          Ze informeert haar werkgever, die eerst begripvol reageert. Maar na 2 maanden
+          krijgt ze te horen dat "klanten niet klaar zijn voor deze verandering" en
+          wordt overgeplaatst naar een backoffice-functie met lager salaris.
+        </p>
+        <p>
+          <strong>Rechtbank:</strong> Oordeelt dat dit directe discriminatie is. De
+          werkgever mag beslissingen niet baseren op vermeende vooroordelen van klanten.
+          De "klantreactie" is geen rechtvaardiging.
+        </p>
+        <p>
+          <strong>Uitkomst:</strong> Herstel in oude functie + €6.000 schadevergoeding
+          + salariscompensatie voor gemiste maanden.
+        </p>
+
+        <h3>Voorbeeld 4: Intimidatie en geen actie van werkgever</h3>
+        <p>
+          <strong>Situatie:</strong> Een homoseksuele werknemer wordt maandenlang
+          gepest door collega's met homofobe opmerkingen. Hij meldt dit bij HR, maar
+          er wordt geen actie ondernomen. Uiteindelijk zegt hij zelf zijn baan op
+          vanwege werkstress.
+        </p>
+        <p>
+          <strong>Rechtbank:</strong> Oordeelt dat de werkgever <strong
+            >aansprakelijk</strong
+          > is voor discriminatie door collega's, omdat de werkgever *niet* ingreep
+          na de HR-klacht. De werkgever heeft een zorgplicht discriminatie te voorkomen
+          en te stoppen.
+        </p>
+        <p>
+          <strong>Uitkomst:</strong> €5.500 schadevergoeding wegens constructief ontslag
+          + gemist salaris tot nieuwe baan.
+        </p>
+      </div>
+    </section>
+
+    <!-- 9. Wat te doen bij discriminatie -->
+    <section class="section" id="volgende-stappen">
+      <div class="surface" style="padding: 22px;">
+        <h2>9. Wat te doen bij discriminatie</h2>
+        <p>
+          Als je discriminatie ervaart op het werk, volg dan deze stappen voor
+          optimale kansen op rechtsherstel:
+        </p>
+
+        <h3>Stap 1: Documenteer alles</h3>
+        <ul>
+          <li>
+            Schrijf op: datum, tijd, locatie, wat er gezegd/gedaan werd, wie
+            erbij was
+          </li>
+          <li>Bewaar e-mails, berichten, en andere communicatie</li>
+          <li>
+            Maak screenshots van discriminerende berichten of beleid (sla op
+            buiten werksystemen)
+          </li>
+          <li>Verzamel je arbeidscontract, beoordelingen, en CAO-documenten</li>
+        </ul>
+
+        <h3>Stap 2: Formele klacht bij werkgever</h3>
+        <ul>
+          <li>
+            Dien een <strong>schriftelijke klacht</strong> in bij HR of leidinggevende
+          </li>
+          <li>
+            Beschrijf de situatie feitelijk, zonder emotie (datum, betrokkenen,
+            wat er gebeurde)
+          </li>
+          <li>
+            Vraag om concrete actie en een deadline voor reactie (bijv. 2 weken)
+          </li>
+          <li>
+            Bewaar een kopie van de klacht en alle reacties – dit is belangrijk
+            bewijs
+          </li>
+        </ul>
+
+        <h3>Stap 3: Zoek juridisch advies</h3>
+        <ul>
+          <li>
+            <strong>Juridisch Loket:</strong> Gratis eerste advies over je situatie
+            en mogelijkheden (<a
+              href="https://www.juridischloket.nl"
+              target="_blank"
+              rel="noopener"
+              style="text-decoration: underline;">juridischloket.nl</a
+            >)
+          </li>
+          <li>
+            <strong>Gespecialiseerde advocaat:</strong> Zoek een advocaat met ervaring
+            in discriminatierecht
+          </li>
+          <li>
+            <strong>Vakbond:</strong> Als je lid bent, kan je vakbond juridische bijstand
+            bieden
+          </li>
+          <li>
+            <strong>Rechtsbijstandsverzekering:</strong> Check of je verzekering arbeidsrecht
+            dekt
+          </li>
+        </ul>
+
+        <h3>Stap 4: Kies een procedure</h3>
+        <p>Bespreek met je advocaat welke route het beste past:</p>
+        <ul>
+          <li>
+            <strong>College voor de Rechten van de Mens:</strong> Gratis, snel, niet-bindend
+            (3-6 maanden)
+          </li>
+          <li>
+            <strong>Kort geding:</strong> Voor spoedeisende zaken zoals onterecht
+            ontslag (2-4 weken)
+          </li>
+          <li>
+            <strong>Bodemprocedure rechtbank:</strong> Voor schadevergoeding en rechtsherstel
+            (6-18 maanden)
+          </li>
+          <li>
+            <strong>Strafrecht:</strong> Aangifte bij politie (gratis, lage vervolgingskans)
+          </li>
+        </ul>
+
+        <h3>Stap 5: Zorg voor jezelf</h3>
+        <p>
+          Discriminatie en een juridische procedure zijn belastend. Vergeet
+          niet:
+        </p>
+        <ul>
+          <li>
+            Zoek sociale steun bij vrienden, familie, of LHBTIQ+ organisaties
+          </li>
+          <li>
+            Overweeg psychologische hulp of counseling (kan ook bewijs zijn voor
+            schade)
+          </li>
+          <li>
+            Neem de tijd om te herstellen – juridische procedures zijn
+            marathons, geen sprints
+          </li>
+        </ul>
+
+        <div
+          style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 16px; margin: 16px 0; border-radius: 2px;"
+        >
+          <p style="margin: 0 0 10px 0; font-weight: 600;">
+            💡 Belangrijke hulplijnen
+          </p>
+          <ul style="margin: 0; padding-left: 20px;">
+            <li>
+              <strong>College voor de Rechten van de Mens:</strong> 030-888 38 88,
+              <a
+                href="https://mensenrechten.nl"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: underline; color: inherit;"
+                >mensenrechten.nl</a
+              >
+            </li>
+            <li>
+              <strong>Juridisch Loket:</strong> 0900-8020 (lokaal tarief), <a
+                href="https://www.juridischloket.nl"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: underline; color: inherit;"
+                >juridischloket.nl</a
+              >
+            </li>
+            <li>
+              <strong>COC Nederland (belangenbehartiging):</strong> 020-623 45 96,
+              <a
+                href="https://www.coc.nl"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: underline; color: inherit;">coc.nl</a
+              >
+            </li>
+            <li>
+              <strong>Transgender Netwerk Nederland:</strong>
+              <a
+                href="https://www.transgendernetwerk.nl"
+                target="_blank"
+                rel="noopener"
+                style="text-decoration: underline; color: inherit;"
+                >transgendernetwerk.nl</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gerelateerde informatie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Gerelateerde informatie</h2>
+        <ul>
+          <li>
+            <a
+              href="/gids/awgb-complete-gids/"
+              style="text-decoration: underline;"
+            >
+              Complete gids: AWGB en LHBTIQ+ rechten
+            </a> – Algemene Wet Gelijke Behandeling, omkering bewijslast, uitzonderingen
+          </li>
+          <li>
+            <a
+              href="/thema/discriminatie-werk/"
+              style="text-decoration: underline;"
+            >
+              Thema: Discriminatie op het werk
+            </a> – Overzicht van rechten, praktijkvoorbeelden, verwijzingen naar hulporganisaties
+          </li>
+          <li>
+            <a href="/thema/mensenrechten/" style="text-decoration: underline;">
+              Thema: Mensenrechten en juridisch kader
+            </a> – Constitutionele bescherming, EVRM, EU-recht
+          </li>
+          <li>
+            <a href="/contact/" style="text-decoration: underline;">Contact</a> –
+            Voor doorverwijzing naar gespecialiseerde organisaties
+          </li>
+        </ul>
+      </div>
+    </section>
+  </Container>
+</Layout>
+
+<style>
+  a {
+    color: #facc15;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    color: #facc15;
+    font-size: 1.15rem;
+  }
+
+  ul,
+  ol {
+    line-height: 1.7;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .surface {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+  }
+</style>

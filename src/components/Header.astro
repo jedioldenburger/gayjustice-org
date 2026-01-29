@@ -94,22 +94,60 @@ const nav = [
     ],
   },
   {
-    hrefEn: "/en/topics",
-    hrefNl: "/thema",
-    labelEn: "Topics",
-    labelNl: "Thema's",
+    labelEn: "Knowledge",
+    labelNl: "Kennis",
+    isGroup: true,
+    submenu: [
+      {
+        hrefEn: "/en/topics",
+        hrefNl: "/thema",
+        labelEn: "Topics",
+        labelNl: "Thema's",
+      },
+      {
+        hrefEn: "/en/guides",
+        hrefNl: "/gids",
+        labelEn: "Legal Guides",
+        labelNl: "Juridische gidsen",
+      },
+      {
+        hrefEn: "/en/blog",
+        hrefNl: "/blog",
+        labelEn: "Blog & Articles",
+        labelNl: "Blog & artikelen",
+      },
+    ],
   },
   {
-    hrefEn: "/en/blog",
-    hrefNl: "/blog",
-    labelEn: "Blog",
-    labelNl: "Blog",
+    labelEn: "Projects",
+    labelNl: "Projecten",
+    isGroup: true,
+    submenu: [
+      {
+        hrefEn: "/en/projects",
+        hrefNl: "/projecten",
+        labelEn: "Initiatives",
+        labelNl: "Initiatieven",
+      },
+      {
+        hrefEn: "/en/projects/setup",
+        hrefNl: "/projecten/opzet",
+        labelEn: "Project Setup",
+        labelNl: "Projectopzet",
+      },
+    ],
   },
   {
     hrefEn: "/en/donate",
     hrefNl: "/doneren",
     labelEn: "Support",
     labelNl: "Steun",
+  },
+  {
+    hrefEn: "/en/contact",
+    hrefNl: "/contact",
+    labelEn: "Contact",
+    labelNl: "Contact",
   },
 ].map((item: any) => ({
   label: isEn ? item.labelEn : item.labelNl,
