@@ -1,0 +1,222 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const seo = {
+  title: "Project: Rechtsbescherming bij politieoptreden",
+  description:
+    "Juridische informatie over politieoptreden, discriminatie en gelijke behandeling. We bieden uitleg over rechten, procedures en toezichtmechanismen.",
+  canonical: "/projecten/rechtsbescherming-politieoptreden/",
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Projecten", url: "https://www.gayjustice.org/projecten/" },
+    {
+      name: "Rechtsbescherming bij politieoptreden",
+      url: "https://www.gayjustice.org/projecten/rechtsbescherming-politieoptreden/",
+    },
+  ],
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Project"
+    title="Rechtsbescherming bij politieoptreden"
+    lead="Dit project richt zich op juridische informatie en analyse rond politieoptreden in situaties waarin discriminatie, intimidatie of ongelijke behandeling van homoseksuele personen wordt ervaren."
+  />
+
+  <Container>
+    <div class="content">
+      <!-- Doel van dit project -->
+      <section class="section">
+        <h2>Doel van dit project</h2>
+        <p>
+          Dit project heeft tot doel rechtsbescherming en juridische helderheid te bieden aan homoseksuele personen die te maken krijgen met politieoptreden waarbij mogelijk sprake is van discriminatie, intimidatie of ongelijke behandeling.
+        </p>
+        <p>
+          Het project richt zich niet op individuele beschuldigingen, maar op structurele juridische kaders, rechten en plichten, en controlemechanismen binnen de rechtsstaat.
+        </p>
+      </section>
+
+      <!-- Context -->
+      <section class="section">
+        <h2>Context</h2>
+        <p>
+          De politie heeft in Nederland een wettelijke taak om de openbare orde te handhaven en burgers te beschermen. Tegelijkertijd geldt dat iedere vorm van politieoptreden moet voldoen aan de beginselen van gelijkheid, proportionaliteit en non-discriminatie.
+        </p>
+        <p>
+          In de praktijk ervaren sommige homoseksuele personen spanningen bij:
+        </p>
+        <ul>
+          <li>identiteitscontroles;</li>
+          <li>handhaving in de openbare ruimte;</li>
+          <li>meldingen van geweld of bedreiging;</li>
+          <li>interacties waarbij seksuele oriëntatie een rol speelt.</li>
+        </ul>
+        <p>
+          Dit project brengt in kaart welke rechten burgers hebben, welke normen gelden voor politieoptreden, en welke juridische routes bestaan bij klachten of geschillen.
+        </p>
+      </section>
+
+      <!-- Wat we doen -->
+      <section class="section">
+        <h2>Wat we doen</h2>
+        <p>Binnen dit project:</p>
+        <ul>
+          <li>geven we uitleg over relevante wet- en regelgeving;</li>
+          <li>duiden we rechtspraak over discriminatie en politieoptreden;</li>
+          <li>beschrijven we klachtenprocedures (politie, Nationale Ombudsman, rechter);</li>
+          <li>verwijzen we naar onafhankelijke toezichthouders en hulporganisaties;</li>
+          <li>analyseren we structurele patronen op basis van publieke bronnen.</li>
+        </ul>
+      </section>
+
+      <!-- Wat we niet doen -->
+      <section class="section">
+        <h2>Wat we niet doen</h2>
+        <p>Dit project:</p>
+        <ul>
+          <li>behandelt geen individuele zaken;</li>
+          <li>doet geen beschuldigingen aan individuele agenten;</li>
+          <li>voert geen procedures namens personen;</li>
+          <li>is geen vervanging van juridische bijstand;</li>
+          <li>neemt geen activistisch of politiek standpunt in.</li>
+        </ul>
+      </section>
+
+      <!-- Juridische kaders -->
+      <section class="section">
+        <h2>Juridische kaders</h2>
+        <p>Dit project baseert zich onder meer op:</p>
+        <ul>
+          <li>Grondwet (artikel 1 – gelijkheidsbeginsel);</li>
+          <li>Algemene Wet Gelijke Behandeling (AWGB);</li>
+          <li>Politiewet 2012;</li>
+          <li>Europees Verdrag voor de Rechten van de Mens (EVRM);</li>
+          <li>relevante rechtspraak van Nederlandse rechters en het EHRM.</li>
+        </ul>
+      </section>
+
+      <!-- Relatie tot GayJustice.org -->
+      <section class="section">
+        <h2>Relatie tot GayJustice.org</h2>
+        <p>
+          Dit project is onderdeel van GayJustice.org, een publiek juridisch informatieplatform van Stichting Vrijheid & Gelijkheid (STVG).
+        </p>
+        <p>
+          GayJustice.org biedt juridische informatie en duiding, geen juridisch advies of rechtsbijstand.
+        </p>
+      </section>
+
+      <!-- Transparantie -->
+      <section class="section surface">
+        <h2>Transparantie</h2>
+        <p>
+          Het project opereert onafhankelijk, zonder politieke, commerciële of institutionele bindingen. Financiering, indien van toepassing, valt onder de algemene transparantie- en governanceprincipes van STVG.
+        </p>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="surface" style="padding: 22px;">
+          <h3>Vragen of feedback?</h3>
+          <p>
+            We staan open voor samenwerking en input. Stuur ons een bericht met je vraag of voorstel.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="/contact">Contact</a>
+            <a class="btn btn-outline" href="/missie">Missie</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  .content {
+    max-width: 800px;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .surface {
+    background: rgba(63, 8, 185, 0.02);
+    border-left: 4px solid #3f08b9;
+    border-radius: 2px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #3f08b9;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  p {
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.6;
+    margin: 1rem 0;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #3f08b9;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid #3f08b9;
+  }
+
+  .btn-primary:hover {
+    background: rgba(63, 8, 185, 0.05);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #3f08b9;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-outline:hover {
+    border-color: #3f08b9;
+  }
+</style>
