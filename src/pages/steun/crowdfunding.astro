@@ -1,0 +1,215 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Crowdfunding voor GayJustice.org | Publieke ondersteuning",
+  description:
+    "Crowdfunding voor GayJustice.org ondersteunt concrete publieke doelen zoals juridische gidsen en educatieve content. Geen beloningen, geen investeringen.",
+  canonical: "/steun/crowdfunding",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/steun/crowdfunding",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/support/crowdfunding",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/steun/doneren" },
+    {
+      name: "Crowdfunding",
+      url: "https://www.gayjustice.org/steun/crowdfunding",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Crowdfunding voor GayJustice.org",
+  about: {
+    "@type": "FundingSource",
+    name: "Publieke crowdfunding",
+    description:
+      "Collectieve ondersteuning voor publieke juridische informatie zonder beloningen of investeringen",
+  },
+  audience: {
+    "@type": "Audience",
+    audienceType: "General public",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Crowdfunding voor GayJustice.org"
+    lead="Collectieve ondersteuning voor concrete publieke projecten zoals juridische gidsen en educatieve content."
+  />
+
+  <Container>
+    <!-- Wat is crowdfunding bij GayJustice.org -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat is crowdfunding bij GayJustice.org?</h2>
+        <p>
+          Crowdfunding biedt de mogelijkheid om collectief bij te dragen aan <strong
+            >afgebakende onderdelen</strong
+          > van GayJustice.org, zoals de ontwikkeling van juridische gidsen, thematische
+          dossiers of educatieve publicaties.
+        </p>
+
+        <p style="margin-top: 16px;">
+          In tegenstelling tot commerciële crowdfunding richt GayJustice.org
+          zich uitsluitend op <strong>publieke, niet-exclusieve doelen</strong>.
+          Bijdragen via crowdfunding:
+        </p>
+        <ul>
+          <li>zijn vrijwillig en eenmalig;</li>
+          <li>leveren geen beloningen, producten of privileges op;</li>
+          <li>geven geen invloed op inhoud of besluitvorming;</li>
+          <li>zijn niet investerend en kennen geen rendement.</li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          Crowdfundingcampagnes worden uitsluitend ingezet voor <strong
+            >duidelijk omschreven projecten</strong
+          >, met een vast begin- en eindpunt. Na afronding wordt transparant
+          gecommuniceerd over het resultaat en de besteding van middelen.
+        </p>
+
+        <p style="margin-top: 16px;">
+          GayJustice.org is een initiatief van <strong
+            >Stichting Vrijheid & Gelijkheid (STVG)</strong
+          >, een Sociaal Belang Behartigende Instelling (SBBI).
+        </p>
+      </div>
+    </section>
+
+    <!-- Wat crowdfunding IS en IS NIET -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat crowdfunding is vs wat het niet is</h2>
+
+        <h3 style="color: #22c55e; margin-top: 20px;">
+          Crowdfunding bij GayJustice.org IS:
+        </h3>
+        <ul>
+          <li>publieke ondersteuning van informatievoorziening;</li>
+          <li>projectgebonden en tijdelijk;</li>
+          <li>transparant en doelgericht.</li>
+        </ul>
+
+        <h3 style="color: #ef4444; margin-top: 20px;">
+          Crowdfunding bij GayJustice.org is NIET:
+        </h3>
+        <ul>
+          <li>een investering;</li>
+          <li>een donatie met fiscale aftrek;</li>
+          <li>een aankoop of voorverkoop;</li>
+          <li>een manier om invloed te verkrijgen.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Huidige status -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Huidige status</h2>
+        <p class="muted">
+          Er zijn momenteel geen actieve crowdfundingcampagnes. Toekomstige
+          campagnes worden aangekondigd op deze pagina.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Crowdfunding%20vraag`}
+            >Neem contact op over crowdfunding</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Afbakening -->
+    <section class="section">
+      <div
+        style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 16px; border-radius: 2px;"
+      >
+        <p style="margin: 0; font-size: 0.95em;">
+          <strong>⚖️ Afbakening:</strong> GayJustice.org biedt geen juridisch advies
+          en behandelt geen individuele zaken. Crowdfundingbijdragen zijn niet fiscaal
+          aftrekbaar en geven geen rechten of verplichtingen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Andere steunmogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Andere manieren om te steunen</h2>
+        <ul>
+          <li>
+            <a href="/steun/doneren" style="text-decoration: underline;">
+              Doneren
+            </a> – Vrijwillige donaties voor algemene ondersteuning
+          </li>
+          <li>
+            <a
+              href="/steun/subsidies-fondsen"
+              style="text-decoration: underline;"
+            >
+              Subsidies & fondsen
+            </a> – Institutionele financiering
+          </li>
+          <li>
+            <a
+              href="/steun/bijdragen-erkenning"
+              style="text-decoration: underline;"
+            >
+              Bijdragen & erkenning
+            </a> – Kennis en expertise delen
+          </li>
+          <li>
+            <a href="/steun/kickstart" style="text-decoration: underline;">
+              Kickstart
+            </a> – Eenmalige ondersteuning oprichtingsfase
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  a {
+    color: #facc15;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+</style>

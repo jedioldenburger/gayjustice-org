@@ -1,0 +1,210 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Doneren aan GayJustice.org | Steun juridische LHBTIQ+ informatie",
+  description:
+    "Steun GayJustice.org met een vrijwillige donatie. Transparant, onafhankelijk en brongebaseerd juridisch informatieplatform voor LHBTIQ+ rechten in Nederland.",
+  canonical: "/steun/doneren",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/steun/doneren" },
+    { hreflang: "en", href: "https://www.gayjustice.org/en/support/donate" },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/steun/doneren" },
+    { name: "Doneren", url: "https://www.gayjustice.org/steun/doneren" },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Doneren aan GayJustice.org",
+  about: {
+    "@type": "Organization",
+    name: "Stichting Vrijheid & Gelijkheid",
+    legalName: "Stichting Vrijheid & Gelijkheid",
+    nonprofitStatus: "NonprofitType",
+    sameAs: "https://gayjustice.org",
+  },
+  audience: {
+    "@type": "Audience",
+    audienceType: "General public",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Doneren aan GayJustice.org"
+    lead="Steun GayJustice.org met een vrijwillige donatie voor onafhankelijke, brongebaseerde juridische informatie over LHBTIQ+ rechten."
+  />
+
+  <Container>
+    <!-- Introductie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          GayJustice.org is een <strong
+            >publiek juridisch informatieplatform</strong
+          > over LHBTIQ+ rechten in Nederland en Europa. Het platform wordt ontwikkeld
+          en beheerd door <strong>Stichting Vrijheid & Gelijkheid (STVG)</strong
+          >, een Sociaal Belang Behartigende Instelling (SBBI).
+        </p>
+
+        <p style="margin-top: 16px;">
+          Vrijwillige donaties maken het mogelijk om:
+        </p>
+        <ul>
+          <li>juridische informatie vrij toegankelijk te houden;</li>
+          <li>content periodiek te actualiseren;</li>
+          <li>betrouwbare bronverwijzingen te onderhouden;</li>
+          <li>
+            onafhankelijk te opereren, zonder commerciële of politieke invloed.
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          Doneren aan GayJustice.org is <strong>vrijblijvend</strong> en zonder tegenprestatie.
+          Bijdragen geven geen recht op invloed, inhoudelijke sturing of juridische
+          ondersteuning.
+        </p>
+      </div>
+    </section>
+
+    <!-- Doneermogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Hoe je kunt doneren</h2>
+        <p>
+          Deze pagina is bewust niet commercieel ingericht: geen producten, geen
+          aanbiedingen, geen prijsstellingen. Het is simpelweg een manier om een
+          publiek informatieplatform te ondersteunen.
+        </p>
+
+        <p class="muted" style="margin-top: 16px;">
+          Betaalintegraties worden ingericht. Tot die tijd kun je direct contact
+          opnemen om een donatie af te spreken.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Donatie%20vraag`}
+            >Neem contact op over doneren</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Afbakening -->
+    <section class="section">
+      <div
+        style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 16px; border-radius: 2px;"
+      >
+        <p style="margin: 0; font-size: 0.95em;">
+          <strong>⚖️ Afbakening:</strong> GayJustice.org verstrekt geen juridisch
+          advies en behandelt geen individuele zaken. Donaties zijn niet fiscaal aftrekbaar
+          en geven geen rechten of verplichtingen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Juridische status -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Juridische status</h2>
+        <p>
+          Stichting Vrijheid &amp; Gelijkheid (STVG) is een <strong
+            >Sociaal Belang Behartigende Instelling (SBBI)</strong
+          > naar Nederlands recht en werkt zonder winstoogmerk.
+        </p>
+        {
+          SITE.identifiers.kvk && (
+            <p style="margin-top: 12px;">
+              <strong>KvK:</strong> {SITE.identifiers.kvk}
+              {SITE.identifiers.rsin && (
+                <>
+                  {" "}
+                  | <strong>RSIN:</strong> {SITE.identifiers.rsin}
+                </>
+              )}
+            </p>
+          )
+        }
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 20px;">
+          <a class="btn btn-outline" href="/transparantie">Transparantie</a>
+          <a
+            class="btn btn-outline"
+            href="https://www.stvg.org/transparantie"
+            target="_blank"
+            rel="noopener noreferrer">Governance (STVG)</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Andere steunmogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Andere manieren om te steunen</h2>
+        <ul>
+          <li>
+            <a href="/steun/crowdfunding" style="text-decoration: underline;">
+              Crowdfunding
+            </a> – Collectieve publieke ondersteuning voor concrete projecten
+          </li>
+          <li>
+            <a
+              href="/steun/subsidies-fondsen"
+              style="text-decoration: underline;"
+            >
+              Subsidies & fondsen
+            </a> – Institutionele financiering zonder inhoudelijke beïnvloeding
+          </li>
+          <li>
+            <a
+              href="/steun/bijdragen-erkenning"
+              style="text-decoration: underline;"
+            >
+              Bijdragen & erkenning
+            </a> – Kennis, feedback en expertise delen
+          </li>
+          <li>
+            <a href="/steun/kickstart" style="text-decoration: underline;">
+              Kickstart (oprichtingsfase)
+            </a> – Eenmalige ondersteuning voor oprichtingskosten
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
+
+<style>
+  .muted {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  a {
+    color: #facc15;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

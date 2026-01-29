@@ -1,0 +1,237 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Bijdragen & erkenning | Samenwerking GayJustice.org",
+  description:
+    "Informatie over bijdragen aan GayJustice.org zonder lidmaatschap, status of invloed. Transparant en onafhankelijk.",
+  canonical: "/steun/bijdragen-erkenning",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/steun/bijdragen-erkenning",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/support/contributions",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/steun/doneren" },
+    {
+      name: "Bijdragen & erkenning",
+      url: "https://www.gayjustice.org/steun/bijdragen-erkenning",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  audience: {
+    "@type": "Audience",
+    audienceType: "Contributors and professionals",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Bijdragen & erkenning"
+    lead="Bijdragen aan GayJustice.org zonder lidmaatschap, status of invloed op inhoud en besluitvorming."
+  />
+
+  <Container>
+    <!-- Introductie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          Niet alle ondersteuning aan GayJustice.org is financieel. Sommige
+          bijdragen bestaan uit <strong>kennis, feedback, onderzoek</strong>,
+          signalering van jurisprudentie of praktische ondersteuning.
+        </p>
+
+        <p style="margin-top: 16px;">Bijdragen zijn altijd:</p>
+        <ul>
+          <li>
+            <strong>vrijwillig</strong> – Geen verplichtingen of verwachtingen
+          </li>
+          <li>
+            <strong>niet-exclusief</strong> – Bijdragers behouden alle rechten
+          </li>
+          <li>
+            <strong>zonder zeggenschap</strong> – Geen bestuurlijke of redactionele
+            invloed
+          </li>
+          <li>
+            <strong>zonder naamvermelding</strong> – Tenzij expliciet gewenst
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          GayJustice.org kent <strong
+            >geen erelidmaatschappen, titels of statusvormen</strong
+          > op basis van bijdragen.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vormen van bijdragen -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Vormen van bijdragen</h2>
+        <p>
+          Bijdragen aan GayJustice.org kunnen verschillende vormen aannemen:
+        </p>
+
+        <h3 style="margin-top: 20px;">Juridische expertise</h3>
+        <ul>
+          <li>Signalering van relevante jurisprudentie</li>
+          <li>Feedback op juridische gidsen en artikelen</li>
+          <li>Verificatie van bronnen en verwijzingen</li>
+          <li>Suggesties voor nieuwe onderwerpen</li>
+        </ul>
+
+        <h3 style="margin-top: 20px;">Praktijkervaring</h3>
+        <ul>
+          <li>Delen van ervaringen met discriminatiezaken (anoniem)</li>
+          <li>Inzichten in werkelijke procedures bij CGM of rechtbanken</li>
+          <li>Feedback over toegankelijkheid van informatie</li>
+          <li>Gebruikerstesten van nieuwe content</li>
+        </ul>
+
+        <h3 style="margin-top: 20px;">Technische ondersteuning</h3>
+        <ul>
+          <li>Toegankelijkheidsverbetering (a11y)</li>
+          <li>Vertalingen naar Engels</li>
+          <li>Infrastructurele improvements</li>
+          <li>Data-analyse en SEO feedback</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Erkenning en privacy -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Erkenning en privacy</h2>
+        <p>
+          GayJustice.org respecteert de privacy en autonomie van bijdragers:
+        </p>
+        <ul>
+          <li>
+            <strong>Standaard anoniem:</strong> Bijdragen worden niet toegeschreven
+            tenzij expliciet gewenst
+          </li>
+          <li>
+            <strong>Geen verplichte publiciteit:</strong> Bijdragers bepalen zelf
+            of ze genoemd willen worden
+          </li>
+          <li>
+            <strong>Geen statusonderscheid:</strong> Alle bijdragers worden gelijk
+            behandeld
+          </li>
+          <li>
+            <strong>Geen commerciële exploitatie:</strong> Bijdragen worden niet gebruikt
+            voor marketing
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          Als een bijdrager wél genoemd wil worden, kan dit op de volgende
+          manieren:
+        </p>
+        <ul>
+          <li>Vermelding in colofon of credits sectie</li>
+          <li>Verwijzing naar professionele website of profiel</li>
+          <li>Auteurschap van specifieke article (indien van toepassing)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Bijdragen leveren</h2>
+        <p>
+          Wil je bijdragen aan GayJustice.org met kennis, feedback of expertise?
+          Neem contact op om mogelijkheden te bespreken.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Bijdrage%20aan%20GayJustice`}
+            >Neem contact op</a
+          >
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.95em; color: var(--muted);">
+          We beantwoorden alle serieuze aanbiedingen, maar kunnen niet alles
+          toepassen. Ons beoordelingsproces richt zich op brongebaseerde,
+          juridisch accurate informatie.
+        </p>
+      </div>
+    </section>
+
+    <!-- Andere steunmogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Andere manieren om te steunen</h2>
+        <ul>
+          <li>
+            <a href="/steun/doneren" style="text-decoration: underline;">
+              Doneren
+            </a> – Vrijwillige financiële ondersteuning
+          </li>
+          <li>
+            <a href="/steun/crowdfunding" style="text-decoration: underline;">
+              Crowdfunding
+            </a> – Collectieve ondersteuning voor projecten
+          </li>
+          <li>
+            <a
+              href="/steun/subsidies-fondsen"
+              style="text-decoration: underline;"
+            >
+              Subsidies & fondsen
+            </a> – Institutionele financiering
+          </li>
+          <li>
+            <a href="/steun/kickstart" style="text-decoration: underline;">
+              Kickstart
+            </a> – Oprichtingsfase ondersteuning
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
+
+<style>
+  a {
+    color: #facc15;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #facc15;
+  }
+</style>

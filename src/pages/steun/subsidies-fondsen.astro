@@ -1,0 +1,222 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Subsidies & fondsen | Financiering GayJustice.org",
+  description:
+    "Informatie over subsidies en fondsen voor GayJustice.org. Transparante financiering zonder inhoudelijke beïnvloeding of politieke binding.",
+  canonical: "/steun/subsidies-fondsen",
+  lang: "nl-NL",
+  alternates: [
+    {
+      hreflang: "nl",
+      href: "https://www.gayjustice.org/steun/subsidies-fondsen",
+    },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/support/grants-funds",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/steun/doneren" },
+    {
+      name: "Subsidies & fondsen",
+      url: "https://www.gayjustice.org/steun/subsidies-fondsen",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  about: {
+    "@type": "FundingSource",
+    name: "Maatschappelijke subsidies en fondsen",
+    description:
+      "Publieke en maatschappelijke financiering zonder inhoudelijke invloed",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Subsidies & fondsen"
+    lead="Institutionele ondersteuning voor publieke juridische informatie zonder inhoudelijke beïnvloeding."
+  />
+
+  <Container>
+    <!-- Introductie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          GayJustice.org kan worden ondersteund via <strong
+            >subsidies en maatschappelijke fondsen</strong
+          > die aansluiten bij het doel van Stichting Vrijheid & Gelijkheid (STVG):
+          het bevorderen van mensenrechten, rechtsbescherming en gelijke behandeling.
+        </p>
+
+        <p style="margin-top: 16px;">
+          Wij accepteren uitsluitend ondersteuning die:
+        </p>
+        <ul>
+          <li>verenigbaar is met onafhankelijke informatievoorziening;</li>
+          <li>geen inhoudelijke of redactionele voorwaarden stelt;</li>
+          <li>
+            geen data- of rapportageverplichtingen richting financiers oplegt;
+          </li>
+          <li>
+            geen politieke, commerciële of religieuze sturing introduceert.
+          </li>
+        </ul>
+
+        <p style="margin-top: 16px;">
+          Subsidies worden uitsluitend ingezet voor <strong
+            >publieke doelen</strong
+          > zoals onderzoek, publicatie, educatie en infrastructuur.
+        </p>
+      </div>
+    </section>
+
+    <!-- Voorwaarden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Voorwaarden voor aanvaarding</h2>
+        <p>
+          Om de onafhankelijkheid van GayJustice.org te waarborgen, gelden de
+          volgende voorwaarden voor subsidies en fondsen:
+        </p>
+
+        <h3 style="margin-top: 20px;">✓ Wel aanvaard:</h3>
+        <ul>
+          <li>Publieke subsidies zonder politieke voorwaarden</li>
+          <li>Maatschappelijke fondsen met publiek belang</li>
+          <li>Projectgebonden financiering voor juridische gidsen</li>
+          <li>Infrastructurele ondersteuning (technisch, administratief)</li>
+          <li>Ondersteuning voor onderzoek en publicaties</li>
+        </ul>
+
+        <h3 style="margin-top: 20px;">✗ Niet aanvaard:</h3>
+        <ul>
+          <li>Financiering met inhoudelijke voorwaarden</li>
+          <li>Politieke of religieuze gebonden subsidies</li>
+          <li>Commerciële sponsoring met merkrechten</li>
+          <li>Financiering met data-access eisen</li>
+          <li>Ondersteuning met bestuurlijke invloed</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Transparantie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Transparantie over financiering</h2>
+        <p>
+          GayJustice.org hanteert het principe van <strong
+            >volledige transparantie</strong
+          > over ontvangen subsidies en fondsen:
+        </p>
+        <ul>
+          <li>
+            Alle subsidies boven €1.000 worden gepubliceerd op de
+            transparantiepagina
+          </li>
+          <li>
+            Subsidieverstrekkers worden vermeld zonder endorsement of
+            preferentie
+          </li>
+          <li>
+            Financiële verantwoording volgt de normen voor SBBI-instellingen
+          </li>
+          <li>
+            Besteding van subsidies wordt gerapporteerd in het jaarverslag
+          </li>
+        </ul>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 20px;">
+          <a class="btn btn-outline" href="/transparantie"
+            >Bekijk transparantieverslag</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Contact over subsidies</h2>
+        <p>
+          Bent u een fonds of subsidieverstrekker en wilt u GayJustice.org
+          ondersteunen? Neem contact op voor meer informatie over projecten en
+          financieringsmogelijkheden.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Subsidie%20aanvraag`}
+            >Neem contact op</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Andere steunmogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Andere manieren om te steunen</h2>
+        <ul>
+          <li>
+            <a href="/steun/doneren" style="text-decoration: underline;">
+              Doneren
+            </a> – Vrijwillige donaties
+          </li>
+          <li>
+            <a href="/steun/crowdfunding" style="text-decoration: underline;">
+              Crowdfunding
+            </a> – Collectieve publieke ondersteuning
+          </li>
+          <li>
+            <a
+              href="/steun/bijdragen-erkenning"
+              style="text-decoration: underline;"
+            >
+              Bijdragen & erkenning
+            </a> – Kennis en expertise
+          </li>
+          <li>
+            <a href="/steun/kickstart" style="text-decoration: underline;">
+              Kickstart
+            </a> – Oprichtingsfase ondersteuning
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
+
+<style>
+  a {
+    color: #facc15;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+</style>

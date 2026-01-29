@@ -1,0 +1,312 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/Container.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { SITE } from "@/config/site";
+
+const seo = {
+  title: "Kickstart GayJustice.org | Oprichtingsfase & kosten",
+  description:
+    "Transparantie over de oprichtingsfase van GayJustice.org: notaris, infrastructuur en basisopzet. Geen investering, geen rendement.",
+  canonical: "/steun/kickstart",
+  lang: "nl-NL",
+  alternates: [
+    { hreflang: "nl", href: "https://www.gayjustice.org/steun/kickstart" },
+    {
+      hreflang: "en",
+      href: "https://www.gayjustice.org/en/support/kickstart",
+    },
+  ],
+  breadcrumbs: [
+    { name: "GayJustice.org", url: "https://www.gayjustice.org/" },
+    { name: "Steun", url: "https://www.gayjustice.org/steun/doneren" },
+    {
+      name: "Kickstart",
+      url: "https://www.gayjustice.org/steun/kickstart",
+    },
+  ],
+};
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  about: {
+    "@type": "CreativeWork",
+    name: "Oprichtingsfase GayJustice.org",
+  },
+};
+---
+
+<Layout seo={seo}>
+  <PageHeader
+    eyebrow="Steun"
+    title="Kickstart – oprichtingsfase"
+    lead="Transparantie over eenmalige oprichtingskosten voor GayJustice.org. Geen investering, geen rendement, geen eigendomsrechten."
+  />
+
+  <Container>
+    <!-- Introductie -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <p>
+          GayJustice.org bevindt zich in een <strong>initiële opbouwfase</strong
+          >. In deze fase worden eenmalige kosten gemaakt voor juridische,
+          organisatorische en technische inrichting.
+        </p>
+
+        <p style="margin-top: 16px;">Deze kosten betreffen onder meer:</p>
+        <ul>
+          <li>notariële vastlegging en governance;</li>
+          <li>technische infrastructuur (hosting, domeinen, security);</li>
+          <li>basispublicaties en bronstructuur;</li>
+          <li>initiële content ontwikkeling (juridische gidsen);</li>
+          <li>opzet transparantie- en governance documenten.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Aard van Kickstart ondersteuning -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Wat Kickstart ondersteuning is</h2>
+        <p>
+          Bijdragen in de Kickstart-fase zijn uitsluitend bedoeld voor <strong
+            >het mogelijk maken van publieke informatievoorziening</strong
+          >. Deze bijdragen zijn:
+        </p>
+        <ul>
+          <li><strong>Eenmalig</strong> – Geen terugkerende betalingen</li>
+          <li><strong>Niet-investerend</strong> – Geen financieel rendement</li>
+          <li>
+            <strong>Zonder eigendomsrechten</strong> – Geen aandelen of participaties
+          </li>
+          <li>
+            <strong>Zonder zeggenschap</strong> – Geen bestuurlijke of redactionele
+            invloed
+          </li>
+          <li>
+            <strong>Publiek gericht</strong> – Uitsluitend voor algemeen toegankelijke
+            informatie
+          </li>
+        </ul>
+
+        <div
+          style="background: rgba(250, 204, 21, 0.08); border-left: 4px solid #facc15; padding: 16px; margin-top: 20px; border-radius: 2px;"
+        >
+          <p style="margin: 0; font-size: 0.95em;">
+            <strong>⚖️ Belangrijk:</strong> Kickstart ondersteuning is <strong
+              >geen investering</strong
+            >. Het is een vrijwillige bijdrage aan een publiek project,
+            vergelijkbaar met culturele of educatieve fondsen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparantie over kosten -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Transparantie over oprichtingskosten</h2>
+        <p>
+          GayJustice.org hanteert volledige transparantie over
+          oprichtingskosten:
+        </p>
+
+        <h3 style="margin-top: 20px;">
+          Eenmalige oprichtingskosten (indicatief)
+        </h3>
+        <table
+          style="width: 100%; border-collapse: collapse; margin: 16px 0; border: 1px solid rgba(255, 255, 255, 0.12);"
+        >
+          <thead>
+            <tr style="background: rgba(255, 255, 255, 0.05);">
+              <th
+                style="padding: 12px; text-align: left; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Categorie</th
+              >
+              <th
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Kosten</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Notaris & oprichting</td
+              >
+              <td
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >€1.500 - €2.500</td
+              >
+            </tr>
+            <tr style="background: rgba(255, 255, 255, 0.02);">
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Technische infrastructuur (2 jaar)</td
+              >
+              <td
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >€500 - €1.000</td
+              >
+            </tr>
+            <tr>
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Basis content ontwikkeling</td
+              >
+              <td
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Vrijwillig</td
+              >
+            </tr>
+            <tr style="background: rgba(255, 255, 255, 0.02);">
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Governance documenten</td
+              >
+              <td
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >€200 - €500</td
+              >
+            </tr>
+            <tr style="font-weight: 600;">
+              <td
+                style="padding: 12px; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >Totaal (indicatief)</td
+              >
+              <td
+                style="padding: 12px; text-align: right; border: 1px solid rgba(255, 255, 255, 0.12);"
+                >€2.200 - €4.000</td
+              >
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top: 16px; font-size: 0.95em; color: var(--muted);">
+          Deze cijfers zijn indicatief en worden na afronding van de
+          oprichtingsfase volledig verantwoord in het eerste
+          transparantieverslag.
+        </p>
+      </div>
+    </section>
+
+    <!-- Huidige status -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Huidige status</h2>
+        <p>
+          De oprichtingsfase is <strong>actief</strong>. GayJustice.org is
+          operationeel als publiek informatieplatform, maar de formele
+          vastlegging en governance-structuur is nog in opbouw.
+        </p>
+
+        <div style="margin-top: 20px;">
+          <h3 style="font-size: 1rem; margin-bottom: 10px;">✓ Afgerond:</h3>
+          <ul>
+            <li>Domeinregistratie en technische infrastructuur</li>
+            <li>Eerste juridische gidsen (AWGB, discriminatie op het werk)</li>
+            <li>Basis website en navigatiestructuur</li>
+          </ul>
+
+          <h3 style="font-size: 1rem; margin-top: 20px; margin-bottom: 10px;">
+            ⏳ In uitvoering:
+          </h3>
+          <ul>
+            <li>Formele notariële vastlegging STVG</li>
+            <li>Governance documenten en beleidskaders</li>
+            <li>Uitbreiding content (thema's, blog, resources)</li>
+            <li>Transparantie- en financiële verantwoordingssystemen</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Ondersteuning Kickstart-fase</h2>
+        <p>
+          Wil je GayJustice.org ondersteunen in de oprichtingsfase? Neem contact
+          op voor meer informatie over eenmalige ondersteuning.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+          <a
+            class="btn btn-primary"
+            href={`mailto:${SITE.email}?subject=Kickstart%20ondersteuning`}
+            >Neem contact op</a
+          >
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.95em; color: var(--muted);">
+          Na afronding van de Kickstart-fase verschuift de focus naar reguliere
+          donaties, subsidies en crowdfunding voor specifieke projecten.
+        </p>
+      </div>
+    </section>
+
+    <!-- Andere steunmogelijkheden -->
+    <section class="section">
+      <div class="surface" style="padding: 22px;">
+        <h2>Andere manieren om te steunen</h2>
+        <ul>
+          <li>
+            <a href="/steun/doneren" style="text-decoration: underline;">
+              Doneren
+            </a> – Vrijwillige donaties voor algemene ondersteuning
+          </li>
+          <li>
+            <a href="/steun/crowdfunding" style="text-decoration: underline;">
+              Crowdfunding
+            </a> – Collectieve ondersteuning voor projecten
+          </li>
+          <li>
+            <a
+              href="/steun/subsidies-fondsen"
+              style="text-decoration: underline;"
+            >
+              Subsidies & fondsen
+            </a> – Institutionele financiering
+          </li>
+          <li>
+            <a
+              href="/steun/bijdragen-erkenning"
+              style="text-decoration: underline;"
+            >
+              Bijdragen & erkenning
+            </a> – Kennis en expertise delen
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <p style="margin-top: 40px;">
+      <small>Laatst bijgewerkt: januari 2026</small>
+    </p>
+  </Container>
+
+  <script type="application/ld+json" set:html={JSON.stringify(pageJsonLd)} />
+</Layout>
+
+<style>
+  a {
+    color: #facc15;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #facc15;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+</style>
